@@ -19,4 +19,14 @@
     <servlet-name>viewAppointmentController</servlet-name>
     <url-pattern>/viewAppointmentController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientServletFile</display-name>
+    <servlet-name>PatientServletFile</servlet-name>
+    <servlet-class>com.project .controller.PatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletFile</servlet-name>
+    <url-pattern>/Patient</url-pattern>
+  </servlet-mapping>
 </web-app>

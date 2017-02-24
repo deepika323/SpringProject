@@ -225,95 +225,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--footer-->
 	
 		<!-- Services -->
-		<div class="services" id="services">
-			<div class="container">
-
-				<div class="inner-w3">
-					    <div class="sub-hd">
-						<h3 class="tittle">ABOUT <span>US</span></h3>
-					</div>
-					</div>
-				 
-				<div class="inner_tabs">
-				    <h2 class="tittle">Welcome to Medicinal</h2>
-					<p class="sub-para">Welcome to Medicinal amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem  </p>
-					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
-						<ul id="myTab" class="nav nav-tabs" role="tablist">
-							<li role="presentation" class="active"><a href="#expeditions" id="expeditions-tab" role="tab" data-toggle="tab" aria-controls="expeditions" aria-expanded="true">Medical Surgery</a></li>
-							<li role="presentation"><a href="#tours" role="tab" id="tours-tab" data-toggle="tab" aria-controls="tours">Departments</a></li>
-							<li role="presentation"><a href="#tree" role="tab" id="tree-tab" data-toggle="tab" aria-controls="tree">Patient life</a></li>
-							<li role="presentation"><a href="#safari" role="tab" id="safari-tab" data-toggle="tab" aria-controls="safari">Baby Birth</a></li>
-							<li role="presentation"><a href="#trekking" role="tab" id="trekking-tab" data-toggle="tab" aria-controls="trekking">Lab Testing</a></li>
-						</ul>
-						<div id="myTabContent" class="tab-content">
-							<div role="tabpanel" class="tab-pane fade in active" id="expeditions" aria-labelledby="expeditions-tab">
-								<div class="col-md-5 col-sm-5 tab-image">
-									<img src="images/4.jpg" alt="Medicinal">
-								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="tours" aria-labelledby="tours-tab">
-								<div class="col-md-5 col-sm-5 tab-image">
-									<img src="images/8.jpg" alt="Medicinal">
-								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="tree" aria-labelledby="tree-tab">
-								<div class="col-md-5 col-sm-5 tab-image">
-									<img src="images/5.jpg" alt="Medicinal">
-								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p> This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact form, accompanied by English versions from the 1914 translation by H. Rackham. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="safari" aria-labelledby="safari-tab">
-								<div class="col-md-5 col-sm-5 tab-image">
-									<img src="images/6.jpg" alt="Medicinal">
-								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose.</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-							<div role="tabpanel" class="tab-pane fade" id="trekking" aria-labelledby="trekking-tab">
-								<div class="col-md-5 col-sm-5 tab-image">
-									<img src="images/7.jpg" alt="Medicinal">
-								</div>
-								<div class="col-md-7 col-sm-7 tab-info">
-									<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures.</p>
-								</div>
-								<div class="clearfix"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				
-			</div>
-		</div>
-		<!-- //Services -->
+				<!-- //Services -->
 		<!--medicinal-->
 			<div class="medicinal-w3">
 				<div class="container">
 				    <div class="sub-hd">
-						<h3 class="tittle two">OUR <span>SERVICES</span></h3>
+						<h3 class="tittle two">ADMIN <span>SERVICES</span></h3>
 					</div>
 					<div class="medicinal-w3-grids one">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
+								<h4>APPOINTMENTS</h4>
+								<p>&diams;Make Appointments &nbsp;&nbsp;&nbsp;&nbsp;<br>&diams;Remove Appointments  <br>&diams;Update Appointments &nbsp;</p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon1"></a>
+									<a id="app" class="hi-icon icon1"></a>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -321,12 +248,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon2"></a>
+									<a id="app3"  class="hi-icon icon2"></a>
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
+								<h4>DISCHARGE SUMMARY</h4>
+								<p></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -335,12 +262,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="medicinal-w3-grids">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
+								<h4>MEDICAL REPORT</h4>
+								<p></p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon3"></a>
+									<a id="app2" class="hi-icon icon3"></a>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -348,12 +275,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a href="#" class="hi-icon icon4"></a>
+									<a  id="app4" class="hi-icon icon4"></a>
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
-								<h4>LOREM IPSUM DOLOR</h4>
-								<p>sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi. </p>
+								<h4>BILLS</h4>
+								<p></p>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="medicinal-w3-grids">
+						<div class="col-md-6 medicinal-w3-grid">
+							<div class="col-md-8 medicinal-w3-left">
+								<h4>DEPARTMENT</h4>
+								<p></p>
+							</div>
+							<div class="col-md-4 medicinal-w3-right">
+								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+									<a   id="app5" class="hi-icon icon1"></a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-6 medicinal-w3-grid">
+							<div class="col-md-4 medicinal-w3-right">
+								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+									<a  id="app6" class="hi-icon icon2"></a>
+								</div>
+							</div>
+							<div class="col-md-8 medicinal-w3-left1">
+								<h4>DOCTOR</h4>
+								<p></p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -361,24 +315,139 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				</div>
 			</div>
+			
+			
+			
+			
+			
+			
 			<!--medicinal-->
+			
+			<script type="text/javascript">					
+				$(document).ready(function(){
+
+					$("#tender").hide();
+					$("#tender2").hide();
+					$("#tender3").hide();
+					$("#tender4").hide();
+					$("#tender5").hide();
+					$("#tender6").hide();
+					$("#app").click(function(){
+						
+						$("#tender").show();
+						$("#tender2").hide();	
+						$("#tender3").hide();
+						$("#tender4").hide();
+
+						$("#tender5").hide();
+						$("#tender6").hide();
+						$('html, body').animate({
+						        scrollTop: $("#tender").offset().top
+						    }, 1000);
+						
+													
+						});
+
+					
+
+					$("#app5").click(function(){
+						
+						$("#tender5").show();
+						$("#tender").hide();
+						$("#tender2").hide();	
+						$("#tender3").hide();
+						$("#tender4").hide();
+
+						$("#tender6").hide();
+						$('html, body').animate({
+						        scrollTop: $("#tender5").offset().top
+						    }, 1000);
+						
+													
+						});
+
+					$("#app6").click(function(){
+						
+						$("#tender6").show();
+						$("#tender5").hide();
+						$("#tender").hide();
+						$("#tender2").hide();	
+						$("#tender3").hide();
+						$("#tender4").hide();
+						$('html, body').animate({
+						        scrollTop: $("#tender6").offset().top
+						    }, 1000);
+						
+													
+						});
+						
+					$("#app3").click(function(){
+						
+						$("#tender3").show();
+						$("#tender").hide();	
+						$("#tender2").hide();
+						$("#tender4").hide();
+
+						$("#tender5").hide();
+						$("#tender6").hide();
+						$('html, body').animate({
+						        scrollTop: $("#tender3").offset().top
+						    }, 1000);
+						
+													
+						});
+					$("#app2").click(function(){
+						
+						$("#tender2").show();
+						$("#tender").hide();
+						$("#tender3").hide();
+						$("#tender4").hide();
+
+						$("#tender5").hide();
+						$("#tender6").hide();	
+						$('html, body').animate({
+						        scrollTop: $("#tender2").offset().top
+						    }, 1000);
+						
+													
+						});
+					$("#app4").click(function(){
+						
+						$("#tender2").hide();
+						$("#tender4").show();
+						$("#tender").hide();
+						$("#tender3").hide();
+
+						$("#tender5").hide();
+						$("#tender6").hide();	
+						$('html, body').animate({
+						        scrollTop: $("#tender4").offset().top
+						    }, 1000);
+						
+													
+						});
+					
+				});
+				</script>
+				
+			<!-- appointment -->
 			<div class="grid_2" id="tender">
    	 <div class="container">
 	       <div class="sub-hd">
-						<h3 class="tittle">SUCCESSFUL <span>STORIES</span></h3>
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
 					</div>
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>CREATE APPOINTMENT</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>CREATE APPOINTMENT</h4>
+				   <p class="p1">abcd</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
@@ -386,13 +455,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>UPDATE APPOINTMENT</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>UPDATE APPOINTMENT</h4>
+				   <p class="p1">abcd</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
@@ -403,13 +472,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>REMOVE APPOINTMENT</h3>
+				   	 
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>REMOVE APPOINTMENT</h4>
+				   <p class="p1">abcd</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
@@ -417,13 +486,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>VIEW APPOINTMENT</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>VIEW APPOINTMENT</h4>
+				   <p class="p1">abcd</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
@@ -431,6 +500,257 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  </div>
    	 </div>
    </div>
+   
+<!-- Discharge Summary -->
+			<div class="grid_2" id="tender3">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>CREATE DISCHARGE SUMMARY</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>CREATE DISCHARGE SUMMARY</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>VIEW DISCHARGE SUMMARY</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>VIEW DISCHARGE SUMMARY</h4>
+				   <p class="p1">qwerty</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	  <div class="box_2">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>UPDATE DISCHARGE SUMMARY</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>UPDATE DISCHARGE SUMMARY</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>REMOVE DISCHARGE SUMMARY</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>REMOVE DISCHARGE SUMMARY</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	 </div>
+   </div>
+<!-- Doctor -->
+			<div class="grid_2" id="tender6">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>CREATE DOCTOR</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>CREATE DOCTOR</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>REMOVE DOCTOR</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>REMOVE DOCTOR</h4>
+				   <p class="p1">qwerty</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	  
+   	 </div>
+   </div>
+      
+<!-- Department -->
+			<div class="grid_2" id="tender5">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>CREATE DEPARTMENT</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>CREATE DEPARTMENTY</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>REMOVE DEPARTMENT</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>REMOVE DEPARTMENT</h4>
+				   <p class="p1">qwerty</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	  
+   	 </div>
+   </div>
+   
+<!-- Bill -->
+			<div class="grid_2" id="tender4">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>CREATE BILLS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>CREATE BILLS</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>VIEW BILLS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>VIEW BILLS</h4>
+				   <p class="p1">qwerty</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	  <div class="box_2">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>UPDATE BILLS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>UPDATE BILLS</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>REMOVE BILLS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>REMOVE BILLS</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	 </div>
+   </div>
+   
+   
+<!-- Medical Report -->
+			<div class="grid_2" id="tender2">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>VIEW MEDICAL REPORT</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>VIEW MEDICAL REPORT</h4>
+				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>LIST MEDICAL REPORT</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>LIST MEDICAL REPORT</h4>
+				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		
+   	  </div>
+   	 </div>
+   </div>
+   
 		<!--//team-->
 			<!---news-->
 						<div class="review-slider">
