@@ -230,13 +230,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="medicinal-w3">
 				<div class="container">
 				    <div class="sub-hd">
-						<h3 class="tittle two">ADMIN <span>SERVICES</span></h3>
+						<h3 class="tittle two">PATIENT <span>SERVICES</span></h3>
 					</div>
 					<div class="medicinal-w3-grids one">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
-								<h4>APPOINTMENTS</h4>
-								<p>&diams;Make Appointments &nbsp;&nbsp;&nbsp;&nbsp;<br>&diams;Remove Appointments  <br>&diams;Update Appointments &nbsp;</p>
+								<h4>LIST APPOINTMENTS</h4>
+								<p></p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
@@ -252,7 +252,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
-								<h4>DISCHARGE SUMMARY</h4>
+								<h4>VIEW MEDICAL REPORT</h4>
 								<p></p>
 							</div>
 							<div class="clearfix"></div>
@@ -262,7 +262,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="medicinal-w3-grids">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
-								<h4>MEDICAL REPORT</h4>
+								<h4>VIEW DISCHARGE SUMMARY</h4>
 								<p></p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
@@ -279,7 +279,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
-								<h4>BILLS</h4>
+								<h4>VIEW BILLS</h4>
 								<p></p>
 							</div>
 							<div class="clearfix"></div>
@@ -289,7 +289,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="medicinal-w3-grids">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
-								<h4>DEPARTMENT</h4>
+								<h4>VIEW MEDICINES</h4>
 								<p></p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
@@ -299,18 +299,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a  id="app6" class="hi-icon icon2"></a>
-								</div>
-							</div>
-							<div class="col-md-8 medicinal-w3-left1">
-								<h4>DOCTOR</h4>
-								<p></p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
+						
+							
+							
 						<div class="clearfix"></div>
 					</div>
 				</div>
