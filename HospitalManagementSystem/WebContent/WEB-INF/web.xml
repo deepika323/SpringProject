@@ -11,6 +11,16 @@
   </welcome-file-list>
   <servlet>
     <description></description>
+    <display-name>viewAppointmentController</display-name>
+    <servlet-name>viewAppointmentController</servlet-name>
+    <servlet-class>doctorServlet.viewAppointmentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewAppointmentController</servlet-name>
+    <url-pattern>/viewAppointmentController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>PatientServletFile</display-name>
     <servlet-name>PatientServletFile</servlet-name>
     <servlet-class>com.project .controller.PatientServlet</servlet-class>
