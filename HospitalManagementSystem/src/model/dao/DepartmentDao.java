@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Department;
+import model.bean.Department;
 
 public interface DepartmentDao {
 	public boolean insertDepartment(Department newDepartment) throws ClassNotFoundException, SQLException, IOException;

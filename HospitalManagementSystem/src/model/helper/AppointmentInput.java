@@ -1,11 +1,11 @@
-package helper;
+package model.helper;
 
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import bean.Reception;
+import model.bean.Reception;
 
 public class AppointmentInput {
 

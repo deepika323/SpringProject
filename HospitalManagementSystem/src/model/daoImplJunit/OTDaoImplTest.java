@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -10,10 +10,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.MedicalReport;
-import bean.OT;
-import dao.MedicalReportDaoImpl;
-import dao.OTDaoImpl;
+import model.bean.MedicalReport;
+import model.bean.OT;
+import model.dao.MedicalReportDaoImpl;
+import model.dao.OTDaoImpl;
 
 public class OTDaoImplTest {
 

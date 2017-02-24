@@ -1,7 +1,7 @@
-package dao;
+package model.dao;
 
-import static helper.ConnectToDb.closeConnection;
-import static helper.ConnectToDb.openConnection;
+import static model.helper.ConnectToDb.closeConnection;
+import static model.helper.ConnectToDb.openConnection;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Bill;
+import model.bean.Bill;
 
 public class BillDaoImpl implements BillDao {
 	

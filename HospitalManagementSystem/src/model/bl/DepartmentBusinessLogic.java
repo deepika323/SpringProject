@@ -1,17 +1,17 @@
-package businessLogic;
+package model.bl;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Department;
-import bean.Doctor;
-import bean.Staff;
-import bean.Technician;
-import dao.DepartmentDaoImpl;
-import dao.DoctorDaoImpl;
-import dao.StaffDaoImpl;
-import dao.TechnicianDaoImpl;
+import model.bean.Department;
+import model.bean.Doctor;
+import model.bean.Staff;
+import model.bean.Technician;
+import model.dao.DepartmentDaoImpl;
+import model.dao.DoctorDaoImpl;
+import model.dao.StaffDaoImpl;
+import model.dao.TechnicianDaoImpl;
 
 
 

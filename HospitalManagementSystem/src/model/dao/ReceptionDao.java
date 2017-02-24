@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Reception;
+import model.bean.Reception;
 
 public interface ReceptionDao {
 	public boolean insertReception(Reception newReception) throws ClassNotFoundException,SQLException, IOException;

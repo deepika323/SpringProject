@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -11,8 +11,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.Reception;
-import dao.ReceptionDaoImpl;
+import model.bean.Reception;
+import model.dao.ReceptionDaoImpl;
 
 public class ReceptionDaoImplTest {
 

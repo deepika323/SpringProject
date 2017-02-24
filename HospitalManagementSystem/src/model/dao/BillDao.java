@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Bill;
+import model.bean.Bill;
 
 public interface BillDao {
 	public boolean insertBill(Bill newBill) throws ClassNotFoundException, SQLException, IOException;

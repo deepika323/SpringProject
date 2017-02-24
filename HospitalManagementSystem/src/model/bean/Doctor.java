@@ -1,4 +1,4 @@
-package bean;
+package model.bean;
 
 public class Doctor implements Comparable<Doctor>{
 	private int doctorId;

@@ -1,4 +1,4 @@
-package dao;
+package model.dao;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.sql.Connection;
-import static helper.ConnectToDb.*;
+import static model.helper.ConnectToDb.*;
 
-import bean.OT;
+import model.bean.OT;
 
 public class OTDaoImpl implements OTDao {
 	

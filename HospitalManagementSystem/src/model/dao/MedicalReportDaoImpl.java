@@ -1,4 +1,4 @@
-package dao;
+package model.dao;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.io.IOException;
 import java.sql.Connection;
-import static helper.ConnectToDb.*;
+import static model.helper.ConnectToDb.*;
 
-import bean.MedicalReport;
+import model.bean.MedicalReport;
 
 public class MedicalReportDaoImpl implements MedicalReportDao {
 

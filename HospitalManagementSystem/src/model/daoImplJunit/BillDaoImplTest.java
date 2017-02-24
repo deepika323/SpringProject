@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -10,9 +10,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.Bill;
-import bean.Person;
-import dao.BillDaoImpl;
+import model.bean.Bill;
+import model.bean.Person;
+import model.dao.BillDaoImpl;
 
 public class BillDaoImplTest {
 

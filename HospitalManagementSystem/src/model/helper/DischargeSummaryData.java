@@ -1,4 +1,4 @@
-package helper;
+package model.helper;
 
 import java.io.IOException;
 import java.sql.Date;
@@ -7,9 +7,9 @@ import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import bean.DischargeSummary;
-import bean.MedicalReport;
-import businessLogic.AdminBusinessLogic;
+import model.bean.DischargeSummary;
+import model.bean.MedicalReport;
+import model.bl.AdminBusinessLogic;
 
 public class DischargeSummaryData {
 	

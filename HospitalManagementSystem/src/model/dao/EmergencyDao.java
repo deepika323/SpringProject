@@ -1,8 +1,8 @@
-package dao;
+package model.dao;
 
 import java.util.ArrayList;
 
-import bean.Emergency;
+import model.bean.Emergency;
 
 public interface EmergencyDao {
 	public boolean insertEmergency(Emergency newEmergency);

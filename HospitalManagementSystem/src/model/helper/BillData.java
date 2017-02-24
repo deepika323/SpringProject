@@ -1,10 +1,10 @@
-package helper;
+package model.helper;
 
 import java.sql.Date;
 import java.util.Calendar;
 import java.util.Scanner;
 
-import bean.Bill;
+import model.bean.Bill;
 
 public class BillData {
 

@@ -1,4 +1,4 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -6,9 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import static helper.ConnectToDb.*;
+import static model.helper.ConnectToDb.*;
 
-import bean.Doctor;
+import model.bean.Doctor;
 
 public class DoctorDaoImpl implements DoctorDao {
 	

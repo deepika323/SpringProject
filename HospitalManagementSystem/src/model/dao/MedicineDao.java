@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Medicine;
+import model.bean.Medicine;
 
 public interface MedicineDao {
 	public boolean insertMedicine(Medicine newMedicine) throws ClassNotFoundException, SQLException, IOException;

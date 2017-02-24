@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Ward;
+import model.bean.Ward;
 
 public interface WardDao {
 	public boolean insertWard(Ward newWard) throws ClassNotFoundException, SQLException, IOException;

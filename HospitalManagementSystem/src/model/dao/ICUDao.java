@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.ICU;
+import model.bean.ICU;
 
 public interface ICUDao {
 	public boolean insertICU(ICU newICU) throws ClassNotFoundException, SQLException, IOException;

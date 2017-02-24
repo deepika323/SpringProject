@@ -1,9 +1,9 @@
-package helper;
+package model.helper;
 import java.sql.Date;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import bean.Person;
+import model.bean.Person;
 
 public class PersonInput {
 

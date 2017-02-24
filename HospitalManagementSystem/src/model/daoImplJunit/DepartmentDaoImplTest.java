@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -9,9 +9,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.Department;
-import bean.Doctor;
-import dao.DepartmentDaoImpl;
+import model.bean.Department;
+import model.bean.Doctor;
+import model.dao.DepartmentDaoImpl;
 
 public class DepartmentDaoImplTest {
 	

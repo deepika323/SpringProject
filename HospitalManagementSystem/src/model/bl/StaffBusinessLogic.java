@@ -1,13 +1,13 @@
-package businessLogic;
+package model.bl;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Staff;
-import bean.Ward;
-import dao.StaffDaoImpl;
-import dao.WardDaoImpl;
+import model.bean.Staff;
+import model.bean.Ward;
+import model.dao.StaffDaoImpl;
+import model.dao.WardDaoImpl;
 
 public class StaffBusinessLogic {
 

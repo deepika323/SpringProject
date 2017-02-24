@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -11,9 +11,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.DischargeSummary;
-import bean.Person;
-import dao.DischargeSummaryDaoImpl;
+import model.bean.DischargeSummary;
+import model.bean.Person;
+import model.dao.DischargeSummaryDaoImpl;
 
 public class DischargeSummaryDaoImplTest {
 

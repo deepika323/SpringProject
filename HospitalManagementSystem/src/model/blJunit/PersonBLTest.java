@@ -1,4 +1,4 @@
-package BL_JUnitTest;
+package model.blJunit;
 
 import static org.junit.Assert.*;
 
@@ -10,11 +10,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.Bill;
-import bean.DischargeSummary;
-import bean.MedicalReport;
-import bean.Person;
-import businessLogic.PersonBusinessLogic;
+import model.bean.Bill;
+import model.bean.DischargeSummary;
+import model.bean.MedicalReport;
+import model.bean.Person;
+import model.bl.PersonBusinessLogic;
+
 
 public class PersonBLTest {
 

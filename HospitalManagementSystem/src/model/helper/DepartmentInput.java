@@ -1,8 +1,8 @@
-package helper;
+package model.helper;
 
 import java.util.Scanner;
 
-import bean.Department;
+import model.bean.Department;
 
 public class DepartmentInput {
 

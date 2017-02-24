@@ -1,13 +1,13 @@
-package businessLogic;
+package model.bl;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.MedicalReport;
-import bean.Technician;
-import dao.MedicalReportDaoImpl;
-import dao.TechnicianDaoImpl;
+import model.bean.MedicalReport;
+import model.bean.Technician;
+import model.dao.MedicalReportDaoImpl;
+import model.dao.TechnicianDaoImpl;
 
 public class TechnicianBusinessLogic {
 	

@@ -1,22 +1,22 @@
-package businessLogic;
+package model.bl;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.Bill;
-import bean.DischargeSummary;
-import bean.Doctor;
-import bean.MedicalReport;
-import bean.Medicine;
-import bean.Person;
-import bean.Reception;
-import dao.BillDaoImpl;
-import dao.DischargeSummaryDaoImpl;
-import dao.MedicalReportDaoImpl;
-import dao.MedicineDaoimpl;
-import dao.PersonDaoImpl;
-import dao.ReceptionDaoImpl;
+import model.bean.Bill;
+import model.bean.DischargeSummary;
+import model.bean.Doctor;
+import model.bean.MedicalReport;
+import model.bean.Medicine;
+import model.bean.Person;
+import model.bean.Reception;
+import model.dao.BillDaoImpl;
+import model.dao.DischargeSummaryDaoImpl;
+import model.dao.MedicalReportDaoImpl;
+import model.dao.MedicineDaoimpl;
+import model.dao.PersonDaoImpl;
+import model.dao.ReceptionDaoImpl;
 
 public class PersonBusinessLogic {
 	

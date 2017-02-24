@@ -1,4 +1,4 @@
-package junitTest;
+package model.daoImplJunit;
 
 import static org.junit.Assert.*;
 
@@ -9,8 +9,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import bean.Technician;
-import dao.TechnicianDaoImpl;
+import model.bean.Technician;
+import model.dao.TechnicianDaoImpl;
 
 public class TechnicianDaoImplTest {
 

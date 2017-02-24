@@ -1,9 +1,9 @@
-package helper;
+package model.helper;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import bean.Medicine;
+import model.bean.Medicine;
 
 public class MedicineData {
 

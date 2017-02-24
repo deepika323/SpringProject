@@ -1,10 +1,10 @@
-package dao;
+package model.dao;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import bean.OT;
+import model.bean.OT;
 
 public interface OTDao {
 	public boolean insertOT(OT newOT) throws ClassNotFoundException, SQLException, IOException;
