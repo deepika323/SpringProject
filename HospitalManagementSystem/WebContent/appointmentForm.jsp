@@ -87,15 +87,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> doctor ID </span></h3>
 			<br>
 			<br>
-				<form >
+				<form action="./viewAppointmentController">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+						   <form action="./viewAppointmentController">
 								<input type="text" placeholder="Doctor ID" required="" name="doctorId">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
-							<form action="./admin.jsp">
+							<form action="./doctor.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>

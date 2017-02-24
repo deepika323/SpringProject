@@ -13,7 +13,7 @@
     <description></description>
     <display-name>viewAppointmentController</display-name>
     <servlet-name>viewAppointmentController</servlet-name>
-    <servlet-class>doctorServlet.viewAppointmentController</servlet-class>
+    <servlet-class>controller.doctorServlet.viewAppointmentController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>viewAppointmentController</servlet-name>
