@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -105,34 +106,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
+								
+								 <table>
+    
 				<div class="section_room">
+				
 					<select id="doctor"  class="frm-field required">
-						<option value="null">SELECT DOCTOR</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
+					<c:forEach var="element" items="${doctorList}">
+					<div id=${element.departmentId}>
+						<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
+						</div>
+    </c:forEach>						
 					</select>
 				</div>
 				<div class="section_room">
 					<select id="department" class="frm-field required">
-						<option value="null">SELECT DEPARTMENT</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
+					<c:forEach var="element" items="${departmentList}">
+										<option value=${element.departmentId}>${element.departmentName}</option>
+					</c:forEach>						
 					</select>
 				</div>
 								<input type="number" placeholder="Appointment Registration Fee" required="">
 
 								<textarea placeholder="Purpose For Visit"></textarea>
-								<input type="submit" value="CONFIRM REGISTRATION" >
+								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>
-							<form action="./index.jsp">
-								<input type="submit" value="CANCEL" >
+							<form action="./admin.jsp">
+								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
 				</form>
@@ -142,6 +143,38 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 			</div>
 	</div>
+	
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var valueSelected
+		$("#department").on('change', function (e) {
+		    var optionSelected = $("option:selected", this);
+		    valueSelected = this.value;
+		    $('option').show();
+		    $('#'+valueSelected).hide();
+		    
+		    
+		});
+		
+		
+		});
+	</script>
+	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
+
+	$(document).ready(function(){
+			{
+		$("#confirm").click(function()
+		{
+		alert("abcd");
+			});
+
+
+			}
+		});
+
+	</script>-->
+	
 	<!--//single-->	
 
 	  <!--/start-footer-section-->

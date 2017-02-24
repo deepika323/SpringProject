@@ -169,7 +169,14 @@ public class AdminBusinessLogic {
 	}
 	public ArrayList<Department> listDepartment() throws ClassNotFoundException, SQLException, IOException
 	{
-		return dd.displayAllDepartments();
+	
+		ArrayList<Department> departmentList=new ArrayList<Department>();
+		departmentList=dd.displayAllDepartments();
+		Department dept=new Department();
+		dept.setDepartmentName("Select Department");
+		dept.setDepartmentId(0);
+		departmentList.add(0,dept );
+		return departmentList;
 	}
 	public Department viewDepartment(int departmentId) throws ClassNotFoundException, SQLException, IOException
 	{
@@ -192,7 +199,13 @@ public class AdminBusinessLogic {
 	}
 	public ArrayList<Doctor> listDoctor() throws ClassNotFoundException, SQLException, IOException
 	{
-		return dod.displayAllDoctors();
+		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
+		doctorList=dod.displayAllDoctors();
+		Doctor doc=new Doctor();
+		doc.setDoctorName("Select Doctor");
+		doc.setDoctorId(0);
+		doctorList.add(0,doc );
+		return doctorList;
 	}
 	public Doctor viewDoctor(int doctorId) throws ClassNotFoundException, SQLException, IOException
 	{

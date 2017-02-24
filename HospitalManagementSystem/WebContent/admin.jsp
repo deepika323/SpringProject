@@ -439,7 +439,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddAppointment"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE APPOINTMENT</h3>
 				   	  <p></p>

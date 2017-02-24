@@ -131,7 +131,7 @@ a i.dribble {
     width: 100%;
     font-weight: normal;
     background: none;
-    border: none;
+    border: 1px solid #ddd;
     color: #848484;
     outline: none;
     font-size: 16px;
@@ -155,7 +155,7 @@ a i.dribble {
 }
 .section_room{
     float: left;
-    width: 33%;	
+    width: 50%;	
 }
 .sear-sub{
     float: right;

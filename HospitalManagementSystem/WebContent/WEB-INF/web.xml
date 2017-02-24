@@ -39,4 +39,14 @@
     <servlet-name>ListAppointmentServlet</servlet-name>
     <url-pattern>/AppointmentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddAppointment</display-name>
+    <servlet-name>AddAppointment</servlet-name>
+    <servlet-class>controller.adminServlet.AddAppointment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddAppointment</servlet-name>
+    <url-pattern>/AddAppointment</url-pattern>
+  </servlet-mapping>
 </web-app>
