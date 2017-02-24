@@ -1,14 +1,11 @@
-<%@page import="model.bean.*"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<title>VIEW APPOINTMENT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -33,48 +30,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </script>
 </head>
 <body>
-<!--start-home-->
-
-<div class="main-header" id="house">
-			<div class="header-strip">
-			   <div class="container">
-				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></p>
-				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> + 655 8858 54892</p>
-				<div class="social-icons">
-					<ul>					
-						<li><a href="#"><i class="facebook"> </i></a></li>
-						<li><a href="#"><i class="twitter"> </i></a></li>
-						<li><a href="#"><i class="google-plus"> </i></a></li>	
-						<li><a href="#"><i class="dribble"> </i></a></li>										
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			</div>
-			<div class="header-middle">
-			  <div class="header-search">
-			   <form action="#" method="post">
-				<div class="search">
-					<input type="search" value="Search" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-	</div>
-		<!--header-top-->
+<!--header-top-->
 			<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
@@ -87,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<h1><a class="navbar-brand" href="index.html"><span>M</span>edicinal  <img src="images/logo.png" alt=" " /></a></h1>
+							<h1><a class="navbar-brand" href="index.jsp"><span>M</span>edicinal  <img src="images/logo.png" alt=" " /></a></h1>
 						</div>
 					</div>
 
@@ -96,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="index.html" class="menu__link"><span class="menu__helper">Home</span></a></li>
+										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
 										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
 										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
 										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
@@ -112,128 +68,65 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 </div>
-<div>
-<table border="1">
-	<tr>
-	<th>Person ID</th>
-	<th>Registration No</th>
-	<th>Purpose</th>
-	<th>Payment</th>
-	<th>Appointment Date</th>
-	</tr>
-	 <c:forEach var="appointment" items="${appList}">
-        <tr>
-            <td>${appointment.regNo}</td> 
-            <td>${appointment.personId}</td> 
-            <td>${appointment.purpose}</td>
-            <td>${appointment.payment}</td>
-            <td>${appointment.appointmentDate}</td>
-        </tr> 
-    </c:forEach>
-</table>
-</div>
 <!--//header-top-->
- <!-- //Line Slider --><!-- 
+ <!-- //Line Slider -->
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">Single <span>Page</span></h3>
+						<h3 class="tittle">MY <span>APPOINTMENTS</span></h3>
 					</div>
 			</div>
-		</div> -->
-	<!--/single--><!-- 
+		</div>
+	<!--/single-->
  <div class="single">
 			<div class="container">
 				<div class="article-post w3l">
 				<div class="post-details s-page">
-				   <img src="images/wallhaven-27263.jpg" alt="image" class="img-responsive">
-					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-					<p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.
-					 eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur vitae velit in neque dictum blandit. <b>Proin in iaculis neque.</b> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-					<p class="eget">Duis dapibus aliquam mi, eget euismod sem scelerisque ut. <b>Vivamus at elit quis urna adipiscing iaculis.</b> Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-					<p class="eget">Duis dapibus aliquam mi, eget euismod sem scelerisque ut. Vivamus at elit quis urna adipiscing iaculis. Curabitur <b>vitae velit in neque dictum blandit.</b> Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pellentesque habitant morbi tristique senectus et netus <b>et malesuada fames ac turpis egestas.</b> </p>
-				</div>
-				post-details
-				<div class="clearfix"> </div>
-				</div>	
-		   <div class="top-single w3l">
-			    <div class="single-middle">
-				  <ul class="social-share">
-					<li><span>SHARE</span></li>
-					<li><a href="#"><i> </i></a></li>						
-					<li><a href="#"><i class="tin"> </i></a></li>
-					<li><a href="#"><i class="message"> </i></a></li>				
-				</ul>
-				<a href="#"><i class="arrow"> </i></a>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="top-comments">
-			<h3>10 <span> Comments</span> </h3>
-			<div class="met">
-				<div class="code-in">
-					<p class="smith"><a href="#">Robert Smith</a> <span>05 march 2016, 15:20</span></p>
-					<p class="reply"><a href="#"><i> </i>REPLY</a></p>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="comments-top-top">
-					<div class="men" >
-						<i class="glyphicon glyphicon-user"></i>
-					</div>					
-						<p class="men-it">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less </p>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<div class="met met-in">
-				<div class="code-in">
-					<p class="smith"><a href="#">Robert Smith</a> <span>02 april 2016, 15:20</span></p>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="comments-top-top top-in">
-					<div class="men" >
-						<i class="glyphicon glyphicon-user"></i>
-					</div>					
-						<p class="men-it two">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less </p>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-			<div class="met">
-				<div class="code-in">
-					<p class="smith"><a href="#">Robert Smith</a> <span>18 may 2016, 15:20</span></p>
-					<p class="reply"><a href="#"><i> </i>REPLY</a></p>
-					<div class="clearfix"> </div>
-				</div>
-				<div class="comments-top-top">
-					<div class="men" >
-						<i class="glyphicon glyphicon-user"></i>
-					</div>					
-						<p class="men-it">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.The point of using Lorem Ipsum is that it has a more-or-less </p>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
+				
 		<div class="leave w3l">
-			<h3>Leave <span> a comment </span></h3>
-				<form>
+			<h3>Enter <span> doctor ID </span></h3>
+			<br>
+			<br>
+				<form >
 					<div class="single-grid">
 						<div class="single-us">
+						
 						   <form>
-								<input type="text" placeholder="Name" required="">
-								<input type="text" placeholder="Email" required="">
-								<textarea placeholder="Message"></textarea>
-								<input type="submit" value="SEND" >
-
+								<input type="text" placeholder="Doctor ID" required="" name="doctorId">
+								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
-
+							<form action="./admin.jsp">
+								<input  type="submit" value="CANCEL" >
+						   </form>
 						</div>
 				</form>
+				
 				</div>
 			</div>			
 		</div>
 			</div>
-	</div> -->
+	</div>
+	
+	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
+
+	$(document).ready(function(){
+			{
+		$("#confirm").click(function()
+		{
+		alert("abcd");
+			});
+
+
+			}
+		});
+
+	</script>-->
+	
 	<!--//single-->	
 
 	  <!--/start-footer-section-->
+	  <br>
+	  <br>
 			<div class="footer-section">
 				<div class="container">
 					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
