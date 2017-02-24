@@ -9,4 +9,34 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>viewAppointmentController</display-name>
+    <servlet-name>viewAppointmentController</servlet-name>
+    <servlet-class>doctorServlet.viewAppointmentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewAppointmentController</servlet-name>
+    <url-pattern>/viewAppointmentController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PatientServletFile</display-name>
+    <servlet-name>PatientServletFile</servlet-name>
+    <servlet-class>com.project .controller.PatientServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientServletFile</servlet-name>
+    <url-pattern>/Patient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListAppointmentServlet</display-name>
+    <servlet-name>ListAppointmentServlet</servlet-name>
+    <servlet-class>com.project.controller.ListAppointment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListAppointmentServlet</servlet-name>
+    <url-pattern>/AppointmentServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
