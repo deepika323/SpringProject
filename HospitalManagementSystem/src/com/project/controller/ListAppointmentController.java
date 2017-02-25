@@ -1,6 +1,7 @@
 package com.project.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -25,7 +26,13 @@ public class ListAppointmentController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String personId=request.getParameter("personId");
-		ArrayList<Reception> receptionList = pb.myAppointments(personId);
+		ArrayList<Reception> receptionList=new ArrayList<Reception>();
+		try {
+			receptionList = pb.myAppointments(personId);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		if(receptionList.size()==0)
 		{

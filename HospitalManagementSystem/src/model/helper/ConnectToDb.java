@@ -22,7 +22,7 @@ public class ConnectToDb {
 		//p.load(fis);
 		
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521";
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
 		String user = "sapient";
 		String pwd = "sapient";
 		

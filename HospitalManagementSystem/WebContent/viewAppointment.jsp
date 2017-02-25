@@ -2,7 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -112,8 +112,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 </div>
-<div>
-<table border="1">
+<br><br>
+<style>
+table {
+    /*border-collapse: collapse;*/
+    align:center;
+    width:50%;
+}
+th {
+background-color: #4CAF50;
+    color: white;
+    height: 50px;
+}
+table,th,td
+{
+ 	padding: 15px;
+    border:1px solid black;
+        border-bottom: 1px solid #ddd;
+}
+tr:hover{background-color:#f5f5f5}
+tr:nth-child(even) {background-color: #f2f2f2}
+caption
+{
+ text-align:center;
+font-weight: bold;
+}
+
+</style>
+ 
+<div style="overflow-x:auto;width:100%">
+<table  border="1" cellpadding="5">
+ <caption>&#9; Appointment List</caption>
 	<tr>
 	<th>Person ID</th>
 	<th>Registration No</th>
@@ -123,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</tr>
 	 <c:forEach var="appointment" items="${appList}">
         <tr>
-            <td>${appointment.regNo}</td> 
+        	<td>${appointment.regNo}</td> 
             <td>${appointment.personId}</td> 
             <td>${appointment.purpose}</td>
             <td>${appointment.payment}</td>
@@ -132,6 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </c:forEach>
 </table>
 </div>
+<br><br>
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">

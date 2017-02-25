@@ -97,7 +97,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form >
+				<form action="./newAppointmentController">
 					<div class="single-grid">
 						<div class="single-us">
 						
@@ -111,16 +111,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
 				<div class="section_room">
 				
-					<select id="doctor"  class="frm-field required">
+					<select id="doctor"  class="frm-field required" required >
+					<option  id='0' value="">Select Doctor</option>
 					<c:forEach var="element" items="${doctorList}">
-					<div id=${element.departmentId}>
+					<!--  <div id=${element.departmentId}>-->
 						<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
-						</div>
+						<!--  </div>-->
+					
     </c:forEach>						
 					</select>
 				</div>
 				<div class="section_room">
 					<select id="department" class="frm-field required">
+					<option  id='0' value="">Select Department</option>
 					<c:forEach var="element" items="${departmentList}">
 										<option value=${element.departmentId}>${element.departmentName}</option>
 					</c:forEach>						
@@ -128,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 								<input type="number" placeholder="Appointment Registration Fee" required="">
 
-								<textarea placeholder="Purpose For Visit"></textarea>
+								<textarea required placeholder="Purpose For Visit"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>
@@ -153,9 +156,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		    valueSelected = this.value;
 		    $('option').show();
 		    $('#'+valueSelected).hide();
+		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
+		    $("#doctor").fadeIn();
+		    $("#0").show();
 		    
+		    	    
 		    
 		});
+		
+		
 		
 		
 		});

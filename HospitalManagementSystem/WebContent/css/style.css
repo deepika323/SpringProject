@@ -1961,6 +1961,7 @@ p.reply i:hover{
 .single-us input[type="text"],.leave textarea,.leave input[type="submit"] {
   font-size: 1em;
   width: 100%;
+  font-weight:bold;
   padding: 0.8em 1em;
   margin: 0.5em 0;
   background: #fff;
@@ -1968,9 +1969,16 @@ p.reply i:hover{
   border: 1px solid #ddd;
   color: #888;
   -webkit-appearance: none;
+  
 }
+.single-us input::-webkit-input-placeholder,.leave textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+
+font-weight: normal;
+  }
+
 .single-us input[type="number"],.leave textarea,.leave input[type="submit"] {
   font-size: 1em;
+   font-weight:bold;
   width: 100%;
   padding: 0.8em 1em;
   margin: 0.5em 0;
@@ -1979,6 +1987,9 @@ p.reply i:hover{
   border: 1px solid #ddd;
   color: #888;
   -webkit-appearance: none;
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
 }
 .leave input[type="submit"] {
   border: none;
@@ -3127,13 +3138,21 @@ float:left;
 	}
 	.single-us input[type="text"], .leave textarea, .leave input[type="submit"] {
     font-size: 0.9em;
+    font-weight:bold;
     width: 100%;
     padding: 0.6em 1em;
+   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
 	}
 	.single-us input[type="number"], .leave textarea, .leave input[type="submit"] {
     font-size: 0.9em;
+     font-weight:bold;
     width: 100%;
     padding: 0.6em 1em;
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
 	}
 	.leave input[type="submit"] {
 		width:37%;
