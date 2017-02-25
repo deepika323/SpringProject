@@ -6,7 +6,7 @@ public class Medicine implements Comparable<Medicine> {
 	private int quantity;
 	private String dosage;
 	private float price;
-	private int patientId;
+	private int appointmentId;
 	private int billNo;
 	public int getsNo() {
 		return sNo;
@@ -14,7 +14,7 @@ public class Medicine implements Comparable<Medicine> {
 	@Override
 	public String toString() {
 		return "Medicine [sNo=" + sNo + ", medicineName=" + medicineName + ", quantity=" + quantity + ", dosage="
-				+ dosage + ", price=" + price + ", patientId=" + patientId + "]";
+				+ dosage + ", price=" + price + ", appointmentId=" + appointmentId + "]";
 	}
 	public void setsNo(int sNo) {
 		this.sNo = sNo;
@@ -44,10 +44,10 @@ public class Medicine implements Comparable<Medicine> {
 		this.price = price;
 	}
 	public int getPatientId() {
-		return patientId;
+		return appointmentId;
 	}
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 	public int getBillNo() {
 		return billNo;
@@ -62,7 +62,7 @@ public class Medicine implements Comparable<Medicine> {
 		result = prime * result + billNo;
 		result = prime * result + ((dosage == null) ? 0 : dosage.hashCode());
 		result = prime * result + ((medicineName == null) ? 0 : medicineName.hashCode());
-		result = prime * result + patientId;
+		result = prime * result + appointmentId;
 		result = prime * result + Float.floatToIntBits(price);
 		result = prime * result + quantity;
 		result = prime * result + sNo;
@@ -89,7 +89,7 @@ public class Medicine implements Comparable<Medicine> {
 				return false;
 		} else if (!medicineName.equals(other.medicineName))
 			return false;
-		if (patientId != other.patientId)
+		if (appointmentId != other.appointmentId)
 			return false;
 		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
 			return false;

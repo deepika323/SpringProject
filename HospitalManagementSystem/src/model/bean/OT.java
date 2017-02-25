@@ -6,7 +6,7 @@ public class OT {
 	String equipments;
 	int patientId;
 	int staffId;
-	int doctorId;
+	String doctorId;
 	
 	public int getStaffId() {
 		return staffId;
@@ -14,10 +14,10 @@ public class OT {
 	public void setStaffId(int staffId) {
 		this.staffId = staffId;
 	}
-	public int getDoctorId() {
+	public String getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
 	public int getPatientId() {

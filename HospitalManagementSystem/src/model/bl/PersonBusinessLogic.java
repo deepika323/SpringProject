@@ -10,13 +10,13 @@ import model.bean.Doctor;
 import model.bean.MedicalReport;
 import model.bean.Medicine;
 import model.bean.Person;
-import model.bean.Reception;
+import model.bean.Appointment;
 import model.dao.BillDaoImpl;
 import model.dao.DischargeSummaryDaoImpl;
 import model.dao.MedicalReportDaoImpl;
 import model.dao.MedicineDaoimpl;
 import model.dao.PersonDaoImpl;
-import model.dao.ReceptionDaoImpl;
+import model.dao.AppointmentDaoImpl;
 
 public class PersonBusinessLogic {
 	
@@ -24,12 +24,12 @@ public class PersonBusinessLogic {
 	BillDaoImpl bd= new BillDaoImpl();
 	DischargeSummaryDaoImpl dsd = new DischargeSummaryDaoImpl();
 	MedicalReportDaoImpl mrd = new MedicalReportDaoImpl();
-	ReceptionDaoImpl rd = new ReceptionDaoImpl();
+	AppointmentDaoImpl rd = new AppointmentDaoImpl();
 	MedicineDaoimpl md = new MedicineDaoimpl();
 		
-	public ArrayList<Reception> listReception() throws ClassNotFoundException, SQLException, IOException
+	public ArrayList<Appointment> listAppointment() throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.displayAllReceptions();
+		return rd.displayAllAppointments();
 	}
 	
 	public MedicalReport viewMedicalReport(int patientId) throws ClassNotFoundException, SQLException, IOException
@@ -93,13 +93,13 @@ public class PersonBusinessLogic {
 			else return null;
 		}
 	}
-	public ArrayList<Reception> myAppointments(String personId) throws ClassNotFoundException, SQLException, IOException
+	public ArrayList<Appointment> myAppointments(String personId) throws ClassNotFoundException, SQLException, IOException
 	{
-		ArrayList<Reception> receptionList=new ArrayList<Reception>();
-		receptionList=rd.displayAllReceptions();
-		//System.out.println(receptionList);
-		ArrayList<Reception> doctorAppintments=new ArrayList<Reception>();
-		for(Reception rl: receptionList){
+		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
+		appointmentList=rd.displayAllAppointments();
+		//System.out.println(appointmentList);
+		ArrayList<Appointment> doctorAppintments=new ArrayList<Appointment>();
+		for(Appointment rl: appointmentList){
 			if(rl.getPersonId().equals(personId)){
 				doctorAppintments.add(rl);
 			}

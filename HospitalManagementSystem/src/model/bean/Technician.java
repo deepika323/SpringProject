@@ -1,7 +1,7 @@
 package model.bean;
 
 public class Technician implements Comparable<Technician> {
-	int technicianId;
+	String technicianId;
 	String technicianName;
 	String specialization;
 	String timing;
@@ -16,10 +16,10 @@ public class Technician implements Comparable<Technician> {
 				+ ", technicianPhoneNo=" + technicianPhoneNo + ", technicianPassword=" + technicianPassword
 				+ ", departmentId=" + departmentId + "]";
 	}
-	public int getTechnicianId() {
+	public String getTechnicianId() {
 		return technicianId;
 	}
-	public void setTechnicianId(int technicianId) {
+	public void setTechnicianId(String technicianId) {
 		this.technicianId = technicianId;
 	}
 	public String getTechnicianName() {
@@ -71,7 +71,7 @@ public class Technician implements Comparable<Technician> {
 		result = prime * result + departmentId;
 		result = prime * result + ((specialization == null) ? 0 : specialization.hashCode());
 		result = prime * result + ((technicianAddress == null) ? 0 : technicianAddress.hashCode());
-		result = prime * result + technicianId;
+		result = prime * result + ((technicianId == null) ? 0 : technicianId.hashCode());
 		result = prime * result + ((technicianName == null) ? 0 : technicianName.hashCode());
 		result = prime * result + ((technicianPassword == null) ? 0 : technicianPassword.hashCode());
 		result = prime * result + (int) (technicianPhoneNo ^ (technicianPhoneNo >>> 32));
@@ -99,7 +99,10 @@ public class Technician implements Comparable<Technician> {
 				return false;
 		} else if (!technicianAddress.equals(other.technicianAddress))
 			return false;
-		if (technicianId != other.technicianId)
+		if (technicianId == null) {
+			if (other.technicianId != null)
+				return false;
+		} else if (!technicianId.equals(other.technicianId))
 			return false;
 		if (technicianName == null) {
 			if (other.technicianName != null)

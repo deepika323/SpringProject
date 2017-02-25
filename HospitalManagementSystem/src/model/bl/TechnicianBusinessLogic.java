@@ -14,10 +14,10 @@ public class TechnicianBusinessLogic {
 	MedicalReportDaoImpl mrd=new MedicalReportDaoImpl();
 	TechnicianDaoImpl td= new TechnicianDaoImpl();
 	
-	public Technician technicianLogin(int technicianId, String technicianPassword) throws ClassNotFoundException, SQLException, IOException
+	public Technician technicianLogin(String technicianId, String technicianPassword) throws ClassNotFoundException, SQLException, IOException
 	{
 		Technician technician;
-		if(td.displayTechnician(technicianId).getTechnicianId()==0)
+		if(td.displayTechnician(technicianId).getTechnicianId()==null)
 		{
 			return null;
 		}

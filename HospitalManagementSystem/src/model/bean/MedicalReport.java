@@ -3,31 +3,31 @@ package model.bean;
 import java.sql.Date;
 
 public class MedicalReport implements Comparable<MedicalReport> {
-	private int patientId;
+	private int appointmentId;
 	private Date visitDate;
 	private String diagnosis;
 	private String investigations;
 	private String tests;
 	private String recommendations;
-	private int doctorId;
-	private int technicianId;
-	public int getDoctorId() {
+	private String doctorId;
+	private String technicianId;
+	public String getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
-	public int getTechnicianId() {
-		return doctorId;
-	}
-	public void setTechnicianId(int technicianId) {
+	public String getTechnicianId() {
+		return technicianId;
+	};
+	public void setTechnicianId(String technicianId) {
 		this.technicianId = technicianId;
 	}
 	public int getPatientId() {
-		return patientId;
+		return appointmentId;
 	}
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 	public Date getVisitDate() {
 		return visitDate;
@@ -64,7 +64,7 @@ public class MedicalReport implements Comparable<MedicalReport> {
 	
 	@Override
 	public String toString() {
-		return "MedicalReport [patientId=" + patientId + ", visitDate=" + visitDate + ", diagnosis=" + diagnosis
+		return "MedicalReport [appointmentId=" + appointmentId + ", visitDate=" + visitDate + ", diagnosis=" + diagnosis
 				+ ", investigations=" + investigations + ", tests=" + tests + ", recommendations=" + recommendations
 				+ ", doctorId=" + doctorId + ", technicianId=" + technicianId + "]";
 	}
@@ -73,11 +73,11 @@ public class MedicalReport implements Comparable<MedicalReport> {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((diagnosis == null) ? 0 : diagnosis.hashCode());
-		result = prime * result + doctorId;
+		result = prime * result + ((doctorId == null) ? 0 : doctorId.hashCode());
 		result = prime * result + ((investigations == null) ? 0 : investigations.hashCode());
-		result = prime * result + patientId;
+		result = prime * result + appointmentId;
 		result = prime * result + ((recommendations == null) ? 0 : recommendations.hashCode());
-		result = prime * result + technicianId;
+		result = prime * result + ((technicianId == null) ? 0 : technicianId.hashCode());
 		result = prime * result + ((tests == null) ? 0 : tests.hashCode());
 		result = prime * result + ((visitDate == null) ? 0 : visitDate.hashCode());
 		return result;
@@ -96,21 +96,27 @@ public class MedicalReport implements Comparable<MedicalReport> {
 				return false;
 		} else if (!diagnosis.equals(other.diagnosis))
 			return false;
-		if (doctorId != other.doctorId)
+		if (doctorId == null) {
+			if (other.doctorId != null)
+				return false;
+		} else if (!doctorId.equals(other.doctorId))
 			return false;
 		if (investigations == null) {
 			if (other.investigations != null)
 				return false;
 		} else if (!investigations.equals(other.investigations))
 			return false;
-		if (patientId != other.patientId)
+		if (appointmentId != other.appointmentId)
 			return false;
 		if (recommendations == null) {
 			if (other.recommendations != null)
 				return false;
 		} else if (!recommendations.equals(other.recommendations))
 			return false;
-		if (technicianId != other.technicianId)
+		if (technicianId == null) {
+			if (other.technicianId != null)
+				return false;
+		} else if (!technicianId.equals(other.technicianId))
 			return false;
 		if (tests == null) {
 			if (other.tests != null)

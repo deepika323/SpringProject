@@ -43,7 +43,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(4);
+		 dischargeSummary.setDoctorId("4");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");
@@ -68,7 +68,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(0);
+		 dischargeSummary.setDoctorId("0");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");
@@ -98,7 +98,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(0);
+		 dischargeSummary.setDoctorId("0");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");
@@ -126,7 +126,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(0);
+		 dischargeSummary.setDoctorId("0");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");
@@ -143,7 +143,7 @@ public class DischargeSummaryDaoImplTest {
 		 newDischargeSummary.setBedNo(0);
 		 newDischargeSummary.setAdmissionDate(date);
 		 newDischargeSummary.setDischargeDate(date);
-		 newDischargeSummary.setDoctorId(0);
+		 newDischargeSummary.setDoctorId("0");
 		 newDischargeSummary.setHistory("Leg Patient");
 		 newDischargeSummary.setOnExamination("Check Up Successful");
 		 newDischargeSummary.setOperationDone("Leg CheckUp");
@@ -167,7 +167,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(0);
+		 dischargeSummary.setDoctorId("0");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");
@@ -194,7 +194,7 @@ public class DischargeSummaryDaoImplTest {
 		 Date date=Date.valueOf(str);
 		 dischargeSummary.setAdmissionDate(date);
 		 dischargeSummary.setDischargeDate(date);
-		 dischargeSummary.setDoctorId(0);
+		 dischargeSummary.setDoctorId("0");
 		 dischargeSummary.setHistory("Eye Patient");
 		 dischargeSummary.setOnExamination("Check Up Successful");
 		 dischargeSummary.setOperationDone("Eye CheckUp");

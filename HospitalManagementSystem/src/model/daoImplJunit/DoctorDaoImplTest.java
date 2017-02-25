@@ -32,9 +32,9 @@ public class DoctorDaoImplTest {
 		
 		
 		//Create necessary tables and insert one tuple for negative insert testing 
-		dd.deleteDoctor(4);
+		dd.deleteDoctor("DO4");
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(4);
+		doctor.setDoctorId("DO4");
 		doctor.setDoctorAddress("Gurgaon");
 		doctor.setDoctorName("Dr Modi");
 		doctor.setDoctorPhoneNo(1234567890);
@@ -51,7 +51,7 @@ public class DoctorDaoImplTest {
 		
 		
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(0);
+		doctor.setDoctorId("DO0");
 		doctor.setDoctorAddress("Gurgaon");
 		doctor.setDoctorName("Dr Modi");
 		doctor.setDoctorPhoneNo(1234567890);
@@ -66,14 +66,14 @@ public class DoctorDaoImplTest {
 	@Test
 	public void testDeleteDoctorNegative() throws ClassNotFoundException, SQLException, IOException {
 		
-		assertFalse(dd.deleteDoctor(12131));
+		assertFalse(dd.deleteDoctor("doc1234"));
 	}
 	
 	@Test
 	public void testDeleteDoctor() throws ClassNotFoundException, SQLException, IOException {
 		
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(5);
+		doctor.setDoctorId("5");
 		doctor.setDoctorAddress("Gurgaon");
 		doctor.setDoctorName("Dr Gandhi");
 		doctor.setDoctorPhoneNo(1234567890);
@@ -82,15 +82,15 @@ public class DoctorDaoImplTest {
 		doctor.setDepartmentId(0);
 		doctor.setDoctorPassword("pass");
 		dd.insertDoctor(doctor);
-		assertTrue(dd.deleteDoctor(5));
+		assertTrue(dd.deleteDoctor("5"));
 	}
 
 	@Test
 	public void testUpdateDoctor() throws ClassNotFoundException, SQLException, IOException {
 		
-		dd.deleteDoctor(6);
+		dd.deleteDoctor("6");
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(6);
+		doctor.setDoctorId("6");
 		doctor.setDoctorAddress("Gurgaon");
 		doctor.setDoctorName("fgdg");
 		doctor.setDoctorPhoneNo(1234567890);
@@ -100,7 +100,7 @@ public class DoctorDaoImplTest {
 		doctor.setDoctorPassword("pass");
 		dd.insertDoctor(doctor);
 		Doctor newdoctor=new Doctor();
-		newdoctor.setDoctorId(6);
+		newdoctor.setDoctorId("6");
 		newdoctor.setDoctorAddress("Mumbai");
 		newdoctor.setDoctorName("dadasd");
 		newdoctor.setDoctorPhoneNo(1876543210);
@@ -109,7 +109,7 @@ public class DoctorDaoImplTest {
 		newdoctor.setDepartmentId(0);
 		newdoctor.setDoctorPassword("pass");
 		
-		assertTrue(dd.updateDoctor(6,newdoctor));
+		assertTrue(dd.updateDoctor("6",newdoctor));
 		
 		//assertEquals(newdoctor.getDoctorAddress(), dd.displayDoctor(1).getDoctorAddress());
 		
@@ -130,16 +130,16 @@ public class DoctorDaoImplTest {
 		newdoctor.setDepartmentId(0);
 		newdoctor.setDoctorPassword("pass");
 		
-		assertFalse(dd.updateDoctor(2343, newdoctor));
+		assertFalse(dd.updateDoctor("2343", newdoctor));
 	}
 
 	@Test
 	public void testDisplayDoctor() throws ClassNotFoundException, SQLException, IOException {
 		
 		
-		dd.deleteDoctor(7);
+		dd.deleteDoctor("7");
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(7);
+		doctor.setDoctorId("7");
 		doctor.setDoctorAddress("Gurgaon");
 		doctor.setDoctorName("Dr Batra");
 		doctor.setDoctorPhoneNo(1234567890);
@@ -151,7 +151,7 @@ public class DoctorDaoImplTest {
 		
 		
 		
-		assertEquals(doctor, dd.displayDoctor(7));
+		assertEquals(doctor, dd.displayDoctor("7"));
 		
 		
 	}
@@ -159,7 +159,7 @@ public class DoctorDaoImplTest {
 	public void testDisplayDoctorNegative() throws ClassNotFoundException, SQLException, IOException {
 		
 		
-		assertEquals(0,dd.displayDoctor(234234).getDoctorId());
+		assertEquals(0,dd.displayDoctor("234234").getDoctorId());
 		
 	}
 

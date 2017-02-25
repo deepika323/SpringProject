@@ -31,7 +31,7 @@ public class BillDaoImpl implements BillDao {
 		float tests = newBill.getTests();
 		float medicines = newBill.getMedicines();
 		
-		pstmt=con.prepareStatement("insert into BillingSection (billNo,patientId,serialNo,doctorVisit,bedCharges,tests,medicines" +
+		pstmt=con.prepareStatement("insert into Bill (billNo,patientId,serialNo,doctorVisit,bedCharges,tests,medicines" +
 				") values (?,?,?,?,?,?,?)");
 		
 		pstmt.setInt(1,billNo);
@@ -60,7 +60,7 @@ public class BillDaoImpl implements BillDao {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("delete from BillingSection where billNo = ?");
+		pstmt=con.prepareStatement("delete from Bill where billNo = ?");
 		
 		pstmt.setInt(1,billId);
 		
@@ -81,7 +81,7 @@ public class BillDaoImpl implements BillDao {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("update Billingsection set patientId=?,serialNo=?,doctorVisit=?,bedCharges=?," +
+		pstmt=con.prepareStatement("update Bill set patientId=?,serialNo=?,doctorVisit=?,bedCharges=?," +
 				"tests=?,medicines=? where billNo=?");
 		
 
@@ -112,7 +112,7 @@ public class BillDaoImpl implements BillDao {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("select * from Billingsection where billNo = ?");
+		pstmt=con.prepareStatement("select * from Bill where billNo = ?");
 		pstmt.setInt(1,billId);
 		
 		rs=pstmt.executeQuery();
@@ -141,7 +141,7 @@ public class BillDaoImpl implements BillDao {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("select * from Billingsection");
+		pstmt=con.prepareStatement("select * from Bill");
 		
 		
 		rs=pstmt.executeQuery();

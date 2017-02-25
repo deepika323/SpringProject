@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.bean.Reception;
+import model.bean.Appointment;
 import model.bl.PersonBusinessLogic;
 
 
@@ -26,7 +26,7 @@ public class ListAppointmentController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String personId=request.getParameter("personId");
-		ArrayList<Reception> receptionList=new ArrayList<Reception>();
+		ArrayList<Appointment> receptionList=new ArrayList<Appointment>();
 		try {
 			receptionList = pb.myAppointments(personId);
 		} catch (ClassNotFoundException | SQLException e) {

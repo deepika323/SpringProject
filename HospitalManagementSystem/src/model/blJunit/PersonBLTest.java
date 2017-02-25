@@ -33,7 +33,7 @@ public class PersonBLTest {
 
 	@Test
 	public void testListReception() throws ClassNotFoundException, SQLException, IOException {
-		assertNotEquals(null, pbl.listReception());
+		assertNotEquals(null, pbl.listAppointment());
 	}
 
 	@Test
@@ -42,11 +42,11 @@ public class PersonBLTest {
 		MedicalReport newMedicalReport = new MedicalReport();
 		
 		newMedicalReport.setDiagnosis("Good");
-		newMedicalReport.setDoctorId(1);
+		newMedicalReport.setDoctorId("1");
 		newMedicalReport.setInvestigations("Good");
 		newMedicalReport.setPatientId(1);
 		newMedicalReport.setRecommendations("Good");
-		newMedicalReport.setTechnicianId(1);
+		newMedicalReport.setTechnicianId("1");
 		newMedicalReport.setTests("Good");
 		newMedicalReport.setVisitDate(Date.valueOf("2017-11-11"));
 		
@@ -75,7 +75,7 @@ public class PersonBLTest {
 		ds.setAdmissionDate(Date.valueOf("2017-11-11"));
 		ds.setBedNo(1);
 		ds.setDischargeDate(Date.valueOf("2017-11-11"));
-		ds.setDoctorId(1);
+		ds.setDoctorId("1");
 		ds.setHistory("Good");
 		ds.setOnExamination("Good");
 		ds.setOperationDone("Good");

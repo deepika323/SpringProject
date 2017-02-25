@@ -21,7 +21,7 @@ public class DoctorDaoImpl implements DoctorDao {
 		
 		con= openConnection();
 		
-		int doctorId =newDoctor.getDoctorId();
+		String doctorId =newDoctor.getDoctorId();
 		String doctorName = newDoctor.getDoctorName();
 		String doctorAddress=newDoctor.getDoctorAddress();
 		String doctorSpecializtion=newDoctor.getSpecialization();
@@ -33,7 +33,7 @@ public class DoctorDaoImpl implements DoctorDao {
 		pstmt=con.prepareStatement("insert into doctor (doctorId,doctorName,specialization,timing,doctorAddress,"
 				+ "doctorPhoneNo,departmentId,Password) values" + "(?,?,?,?,?,?,?,?)");
 		
-		pstmt.setInt(1,doctorId);
+		pstmt.setString(1,doctorId);
 		pstmt.setString(2,doctorName);
 		pstmt.setString(3, doctorSpecializtion);
 		pstmt.setString(4, doctorTiming);
@@ -58,13 +58,13 @@ public class DoctorDaoImpl implements DoctorDao {
 	}
 
 	@Override
-	public boolean deleteDoctor(int doctorId) throws ClassNotFoundException, SQLException, IOException {
+	public boolean deleteDoctor(String doctorId) throws ClassNotFoundException, SQLException, IOException {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("delete from doctor where doctorId = ?");
+		pstmt=con.prepareStatement("delete from doctor where doctorId like ?");
 		
-		pstmt.setInt(1,doctorId);
+		pstmt.setString(1,doctorId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -81,7 +81,7 @@ public class DoctorDaoImpl implements DoctorDao {
 	}
 
 	@Override
-	public boolean updateDoctor(int doctorId, Doctor renewDoctor) throws ClassNotFoundException, SQLException, IOException {
+	public boolean updateDoctor(String doctorId, Doctor renewDoctor) throws ClassNotFoundException, SQLException, IOException {
 		
 		con= openConnection();
 		
@@ -89,7 +89,7 @@ public class DoctorDaoImpl implements DoctorDao {
 		pstmt=con.prepareStatement("update doctor set doctorName = ? , specialization =? "
 				+ ", timing=? ,doctorAddress=? "
 				+ ", doctorPhoneNo=?, departmentId=?, Password=? "
-				+ "where doctorId= ?");
+				+ "where doctorId like ?");
 		
 
 		pstmt.setString(1,renewDoctor.getDoctorName());
@@ -99,7 +99,7 @@ public class DoctorDaoImpl implements DoctorDao {
 		pstmt.setLong(5, renewDoctor.getDoctorPhoneNo());
 		pstmt.setInt(6, renewDoctor.getDepartmentId());
 		pstmt.setString(7, renewDoctor.getDoctorPassword());
-		pstmt.setInt(8, doctorId);
+		pstmt.setString(8, doctorId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -120,20 +120,20 @@ public class DoctorDaoImpl implements DoctorDao {
 	}
 
 	@Override
-	public Doctor displayDoctor(int doctorId) throws ClassNotFoundException, SQLException, IOException {
+	public Doctor displayDoctor(String doctorId) throws ClassNotFoundException, SQLException, IOException {
 		
 		con= openConnection();
 		
 		
 		pstmt=con.prepareStatement("select * from doctor where doctorId = ?");
-		pstmt.setInt(1,doctorId);
+		pstmt.setString(1,doctorId);
 		
 		rs=pstmt.executeQuery();
 		
 		Doctor doctor=new Doctor();
 		while(rs.next())
 		{
-			doctor.setDoctorId(rs.getInt("doctorId"));
+			doctor.setDoctorId(rs.getString("doctorId"));
 			doctor.setDepartmentId(rs.getInt("departmentId"));
 			doctor.setDoctorAddress(rs.getString("doctorAddress"));
 			doctor.setDoctorName(rs.getString("doctorName"));
@@ -163,7 +163,7 @@ public class DoctorDaoImpl implements DoctorDao {
 		while(rs.next())
 		{
 			Doctor doctor=new Doctor();
-			doctor.setDoctorId(rs.getInt("doctorId"));
+			doctor.setDoctorId(rs.getString("doctorId"));
 			doctor.setDepartmentId(rs.getInt("departmentId"));
 			doctor.setDoctorAddress(rs.getString("doctorAddress"));
 			doctor.setDoctorName(rs.getString("doctorName"));

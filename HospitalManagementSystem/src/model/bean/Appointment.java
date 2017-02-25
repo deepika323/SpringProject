@@ -2,12 +2,12 @@ package model.bean;
 
 import java.sql.Date;
 
-public class Reception  {
+public class Appointment  {
 	int regNo;
 	String personId;
 	String purpose;
 	float payment;
-	int doctorId;
+	String doctorId;
 	Date appointmentDate;
 	
 	@Override
@@ -39,10 +39,10 @@ public class Reception  {
 	public void setPayment(float payment) {
 		this.payment = payment;
 	}
-	public int getDoctorId() {
+	public String getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
 	public Date getAppointmentDate() {
@@ -57,7 +57,7 @@ public class Reception  {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((appointmentDate == null) ? 0 : appointmentDate.hashCode());
-		result = prime * result + doctorId;
+		result = prime * result + ((doctorId == null) ? 0 : doctorId.hashCode());
 		result = prime * result + Float.floatToIntBits(payment);
 		result = prime * result + ((personId == null) ? 0 : personId.hashCode());
 		result = prime * result + ((purpose == null) ? 0 : purpose.hashCode());
@@ -72,13 +72,16 @@ public class Reception  {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Reception other = (Reception) obj;
+		Appointment other = (Appointment) obj;
 		if (appointmentDate == null) {
 			if (other.appointmentDate != null)
 				return false;
 		} else if (!appointmentDate.equals(other.appointmentDate))
 			return false;
-		if (doctorId != other.doctorId)
+		if (doctorId == null) {
+			if (other.doctorId != null)
+				return false;
+		} else if (!doctorId.equals(other.doctorId))
 			return false;
 		if (Float.floatToIntBits(payment) != Float.floatToIntBits(other.payment))
 			return false;
@@ -96,5 +99,5 @@ public class Reception  {
 			return false;
 		return true;
 	}
-	
+		
 }

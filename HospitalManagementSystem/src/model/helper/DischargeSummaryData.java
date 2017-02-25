@@ -60,7 +60,7 @@ public class DischargeSummaryData {
 		
 		//System.out.println(mr);
 		
-		int doctorId=mr.getDoctorId();
+		String doctorId=mr.getDoctorId();
 		Date admissionDate=mr.getVisitDate();
 	
 		Date dischargeDate=new Date(Calendar.getInstance().getTime().getTime());

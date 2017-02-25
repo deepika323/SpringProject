@@ -6,17 +6,17 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 	@Override
 	public int hashCode() {
 		final int prime = 31;
-		int result = 1; 
+		int result = 1;
 		result = prime * result + ((admissionDate == null) ? 0 : admissionDate.hashCode());
 		result = prime * result + bedNo;
 		result = prime * result + ((dischargeDate == null) ? 0 : dischargeDate.hashCode());
-		result = prime * result + doctorId;
+		result = prime * result + ((doctorId == null) ? 0 : doctorId.hashCode());
 		result = prime * result + ((history == null) ? 0 : history.hashCode());
 		result = prime * result + ((onExamination == null) ? 0 : onExamination.hashCode());
 		result = prime * result + ((operationDone == null) ? 0 : operationDone.hashCode());
 		result = prime * result + ((operativeFindings == null) ? 0 : operativeFindings.hashCode());
 		result = prime * result + otId;
-		result = prime * result + patientId;
+		result = prime * result + appointmentId;
 		result = prime * result + ((recommendations == null) ? 0 : recommendations.hashCode());
 		result = prime * result + serialNo;
 		result = prime * result + ((treatmentGiven == null) ? 0 : treatmentGiven.hashCode());
@@ -27,7 +27,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 		return "DischargeSummary [serialNo=" + serialNo + ", admissionDate=" + admissionDate + ", dischargeDate="
 				+ dischargeDate + ", history=" + history + ", onExamination=" + onExamination + ", operationDone="
 				+ operationDone + ", operativeFindings=" + operativeFindings + ", treatmentGiven=" + treatmentGiven
-				+ ", recommendations=" + recommendations + ", patientId=" + patientId + ", otId=" + otId + ", doctorId="
+				+ ", recommendations=" + recommendations + ", appointmentId=" + appointmentId + ", otId=" + otId + ", doctorId="
 				+ doctorId + ", bedNo=" + bedNo + "]";
 	}
 	@Override
@@ -51,7 +51,10 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 				return false;
 		} else if (!dischargeDate.equals(other.dischargeDate))
 			return false;
-		if (doctorId != other.doctorId)
+		if (doctorId == null) {
+			if (other.doctorId != null)
+				return false;
+		} else if (!doctorId.equals(other.doctorId))
 			return false;
 		if (history == null) {
 			if (other.history != null)
@@ -75,7 +78,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 			return false;
 		if (otId != other.otId)
 			return false;
-		if (patientId != other.patientId)
+		if (appointmentId != other.appointmentId)
 			return false;
 		if (recommendations == null) {
 			if (other.recommendations != null)
@@ -100,9 +103,9 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 	private String operativeFindings;
 	private String treatmentGiven;
 	private String recommendations;
-	private int patientId;
+	private int appointmentId;
 	private int otId;
-	private int doctorId;
+	private String doctorId;
 	private int bedNo;
 	
 	public int getSerialNo() {
@@ -160,10 +163,10 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 		this.recommendations = recommendations;
 	}
 	public int getPatientId() {
-		return patientId;
+		return appointmentId;
 	}
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 	public int getOtId() {
 		return otId;
@@ -171,10 +174,10 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 	public void setOtId(int otId) {
 		this.otId = otId;
 	}
-	public int getDoctorId() {
+	public String getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
 	public int getBedNo() {
@@ -183,6 +186,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 	public void setBedNo(int bedNo) {
 		this.bedNo = bedNo;
 	}
+	
 	@Override
 	public int compareTo(DischargeSummary o) {
 //		if(this.equals(o))

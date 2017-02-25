@@ -40,7 +40,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    ward.setDateDischarged(dateDischarged);
-	    ward.setStaffId(0);
+	    ward.setStaffId("0");
 	    ward.setPatientId(0);
 		assertTrue(wd.insertWard(ward));
 	}
@@ -58,7 +58,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    ward.setDateDischarged(dateDischarged);
-	    ward.setStaffId(0);
+	    ward.setStaffId("0");
 	    ward.setPatientId(0);
 		
 		assertFalse(wd.insertWard(ward));
@@ -77,7 +77,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    ward.setDateDischarged(dateDischarged);
-	    ward.setStaffId(0);
+	    ward.setStaffId("0");
 	    ward.setPatientId(0);
 		wd.insertWard(ward);
 	}
@@ -100,7 +100,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    ward.setDateDischarged(dateDischarged);
-	    ward.setStaffId(0);
+	    ward.setStaffId("0");
 	    ward.setPatientId(0);
 		wd.insertWard(ward);
 		Ward newward = new Ward();
@@ -113,7 +113,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    dateDischarged=Date.valueOf(str);
 	    newward.setDateDischarged(dateDischarged);
-	    newward.setStaffId(0);
+	    newward.setStaffId("0");
 	    newward.setPatientId(0);
 	    assertTrue(wd.updateWard(1,newward));
 		
@@ -132,7 +132,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    newward.setDateDischarged(dateDischarged);
-	    newward.setStaffId(0);
+	    newward.setStaffId("0");
 	    newward.setPatientId(0);
 		
 		assertFalse(wd.updateWard(2343, newward));
@@ -151,7 +151,7 @@ public class WardDaoImplTest {
 		str="2015-03-31";  
 	    Date dateDischarged=Date.valueOf(str);
 	    ward.setDateDischarged(dateDischarged);
-	    ward.setStaffId(0);
+	    ward.setStaffId("0");
 	    ward.setPatientId(0);
 		wd.insertWard(ward);
 		

@@ -41,8 +41,8 @@ public class MedicalReportDaoImplTest {
 		medicalreport.setTests("ghi");
 		medicalreport.setRecommendations("jkl");
 		//medicalreport.setRegNo(0);
-		medicalreport.setDoctorId(0);
-		medicalreport.setTechnicianId(0);
+		medicalreport.setDoctorId("0");
+		medicalreport.setTechnicianId("0");
 		assertTrue(mrd.insertMedicalReport(medicalreport));
 	}
 
@@ -59,8 +59,8 @@ public class MedicalReportDaoImplTest {
 		medicalreport.setTests("ghi");
 		medicalreport.setRecommendations("jkl");
 		//medicalreport.setRegNo(1);
-		medicalreport.setDoctorId(0);
-		medicalreport.setTechnicianId(0);
+		medicalreport.setDoctorId("0");
+		medicalreport.setTechnicianId("0");
 		
 		mrd.insertMedicalReport(medicalreport);
 	}
@@ -78,8 +78,8 @@ public class MedicalReportDaoImplTest {
 		medicalreport.setTests("ghi");
 		medicalreport.setRecommendations("jkl");
 		//medicalreport.setRegNo(12345);
-		medicalreport.setDoctorId(0);
-		medicalreport.setTechnicianId(0);
+		medicalreport.setDoctorId("0");
+		medicalreport.setTechnicianId("0");
 		mrd.insertMedicalReport(medicalreport);
 		assertTrue(mrd.deleteMedicalReport(0));
 	}
@@ -102,8 +102,8 @@ public class MedicalReportDaoImplTest {
 		medicalreport.setTests("ghi");
 		medicalreport.setRecommendations("jkl");
 		//medicalreport.setRegNo(0);
-		medicalreport.setDoctorId(0);
-		medicalreport.setTechnicianId(0);
+		medicalreport.setDoctorId("0");
+		medicalreport.setTechnicianId("0");
 		mrd.insertMedicalReport(medicalreport);
 		medicalreport.setPatientId(1);
 		str="2015-03-31";  
@@ -115,8 +115,8 @@ public class MedicalReportDaoImplTest {
 		newmedicalreport.setTests("ghi");
 		newmedicalreport.setRecommendations("jkl");
 		//newmedicalreport.setRegNo(0);
-		newmedicalreport.setDoctorId(0);
-		newmedicalreport.setTechnicianId(0);
+		newmedicalreport.setDoctorId("0");
+		newmedicalreport.setTechnicianId("0");
 		assertTrue(mrd.updateMedicalReport(0,newmedicalreport));
 	}
 	
@@ -132,8 +132,8 @@ public class MedicalReportDaoImplTest {
 		newmedicalreport.setTests("ghi");
 		newmedicalreport.setRecommendations("jkl");
 	//	newmedicalreport.setRegNo(0);
-		newmedicalreport.setDoctorId(0);
-		newmedicalreport.setTechnicianId(0);
+		newmedicalreport.setDoctorId("0");
+		newmedicalreport.setTechnicianId("0");
 		
 		assertFalse(mrd.updateMedicalReport(2343, newmedicalreport));
 	}
@@ -151,8 +151,8 @@ public class MedicalReportDaoImplTest {
 		medicalreport.setTests("ghi");
 		medicalreport.setRecommendations("jkl");
 		
-		medicalreport.setDoctorId(0);
-		medicalreport.setTechnicianId(0);
+		medicalreport.setDoctorId("0");
+		medicalreport.setTechnicianId("0");
 		mrd.insertMedicalReport(medicalreport);
 		
 		assertEquals(medicalreport, mrd.displayMedicalReport(0));

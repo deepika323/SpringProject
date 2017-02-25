@@ -34,16 +34,16 @@ public class DoctorBLTest {
 	@Test
 	public void testDoctorLogin() throws ClassNotFoundException, SQLException, IOException {
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(4);
+		doctor.setDoctorId("DO1");
 		doctor.setDoctorPassword("pass");
 		
-		assertEquals(doctor.getDoctorId(), dbl.doctorLogin(4, "pass").getDoctorId());
+		assertEquals(doctor.getDoctorId(), dbl.doctorLogin("DO1", "pass").getDoctorId());
 	}
 
 	@Test
 	public void testMyAppointments() throws ClassNotFoundException, SQLException, IOException {
 		Doctor doctor=new Doctor();
-		doctor.setDoctorId(4);
+		doctor.setDoctorId("DO1");
 		doctor.setDoctorPassword("pass");
 		assertNotEquals(null,dbl.myAppointments(doctor.getDoctorId()));
 	}
@@ -52,11 +52,11 @@ public class DoctorBLTest {
 	public void testAddMedicalReport() throws ClassNotFoundException, SQLException, IOException {
 		
 		newMedicalReport.setDiagnosis("Good");
-		newMedicalReport.setDoctorId(1);
+		newMedicalReport.setDoctorId("1");
 		newMedicalReport.setInvestigations("Good");
 		newMedicalReport.setPatientId(1);
 		newMedicalReport.setRecommendations("Good");
-		newMedicalReport.setTechnicianId(1);
+		newMedicalReport.setTechnicianId("1");
 		newMedicalReport.setTests("Good");
 		newMedicalReport.setVisitDate(Date.valueOf("2017-11-11"));
 		assertTrue(dbl.addMedicalReport(newMedicalReport));
@@ -74,11 +74,11 @@ public class DoctorBLTest {
 
 		int patientId = 1;
 		newMedicalReport.setDiagnosis("Good");
-		newMedicalReport.setDoctorId(1);
+		newMedicalReport.setDoctorId("1");
 		newMedicalReport.setInvestigations("Good");
 		newMedicalReport.setPatientId(1);
 		newMedicalReport.setRecommendations("Good");
-		newMedicalReport.setTechnicianId(1);
+		newMedicalReport.setTechnicianId("1");
 		newMedicalReport.setTests("Good");
 		newMedicalReport.setVisitDate(Date.valueOf("2017-11-11"));
 		
