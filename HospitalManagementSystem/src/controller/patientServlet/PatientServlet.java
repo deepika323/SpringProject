@@ -1,4 +1,4 @@
-package com.project .controller;
+package controller.patientServlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.project.controller;
+package controller.patientServlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -25,29 +25,27 @@ public class ListAppointmentController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		HttpSession session=request.getSession();
 		String personId=request.getParameter("personId");
-		ArrayList<Appointment> receptionList=new ArrayList<Appointment>();
+		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
 		try {
-			receptionList = pb.myAppointments(personId);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+			try {
+				appointmentList=pb.myAppointments(personId);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		 request.setAttribute("appList", appointmentList);
 		
-		if(receptionList.size()==0)
-		{
-			RequestDispatcher dispatch=request.getRequestDispatcher("ErrorPage.jsp");
-			dispatch.forward(request, response);
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");
+		    rd.forward(request, response);
+		if(request.getParameter("personId")==null){
+			String message="Patient not found";
+			session.setAttribute("message", message);
+			response.sendRedirect("ErrorPage.jsp");
 		}
-		else 
-		{
-		
-			RequestDispatcher dispatch=request.getRequestDispatcher("listAppointments.jsp");
-			request.setAttribute("list", receptionList);
-			dispatch.forward(request, response);
-		}
-		
-		HttpSession session=request.getSession();
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
