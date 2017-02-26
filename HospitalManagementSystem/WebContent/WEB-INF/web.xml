@@ -49,4 +49,44 @@
     <servlet-name>AddAppointment</servlet-name>
     <url-pattern>/AddAppointment</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewAppointmentController</display-name>
+    <servlet-name>NewAppointmentController</servlet-name>
+    <servlet-class>controller.adminServlet.NewAppointmentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewAppointmentController</servlet-name>
+    <url-pattern>/NewAppointmentController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindAppointment</display-name>
+    <servlet-name>FindAppointment</servlet-name>
+    <servlet-class>controller.adminServlet.FindAppointment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindAppointment</servlet-name>
+    <url-pattern>/FindAppointment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindOrRemoveController</display-name>
+    <servlet-name>FindOrRemoveController</servlet-name>
+    <servlet-class>controller.adminServlet.FindOrRemoveController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindOrRemoveController</servlet-name>
+    <url-pattern>/FindOrRemoveController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteAppointment</display-name>
+    <servlet-name>DeleteAppointment</servlet-name>
+    <servlet-class>controller.adminServlet.DeleteAppointment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteAppointment</servlet-name>
+    <url-pattern>/DeleteAppointment</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -103,8 +103,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
-										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
+										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">About Us</span></a></li>
+										<li class="menu__item"><a href="doctor.jsp" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
 										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
 										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
 									</ul>
@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="medicinal-w3">
 				<div class="container">
 				    <div class="sub-hd">
-						<h3 class="tittle two">ADMIN <span>SERVICES</span></h3>
+						<h3 class="tittle two">ADMIN <span>PORTAL</span></h3>
 					</div>
 					<div class="medicinal-w3-grids one">
 						<div class="col-md-6 medicinal-w3-grid">
@@ -470,7 +470,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_2">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <a name="find"  href="./FindOrRemoveController?selectedValue=Remove"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE APPOINTMENT</h3>
 				   	 
@@ -484,7 +484,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a name="find"  href="./FindOrRemoveController?selectedValue=Find"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>VIEW APPOINTMENT</h3>
 				   	  <p></p>
