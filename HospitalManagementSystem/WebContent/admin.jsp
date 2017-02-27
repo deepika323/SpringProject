@@ -453,7 +453,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a name="find" href="./FindOrRemoveController?selectedValue=Update"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>UPDATE APPOINTMENT</h3>
 				   	  <p></p>
@@ -621,7 +621,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>CREATE DEPARTMENTY</h4>
+				   <h4>CREATE DEPARTMENT</h4>
 				   <p class="p1">abcd</p>
  				</div>
 				<div class="clearfix"></div>
