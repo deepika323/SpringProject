@@ -28,7 +28,7 @@ public class DischargeSummaryServlet extends HttpServlet {
 		try { 
 			if(pb.viewDischargeSummary(serialNo).getPatientId()!=0){
 				
-				request.setAttribute("report", pb.viewDischargeSummary(serialNo));
+				request.setAttribute("dischargeSummary", pb.viewDischargeSummary(serialNo));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/dischargeSummary.jsp");
 			    rd.forward(request, response);
 			}//Add Discharge Summary jsp and recheck logic.
