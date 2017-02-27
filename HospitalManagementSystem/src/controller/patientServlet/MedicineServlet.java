@@ -23,7 +23,8 @@ public class MedicineServlet extends HttpServlet {
 				//Code for Getting Medicine result.
 		
 				HttpSession session=request.getSession();
-				String patientId=request.getParameter("patientId");
+				String patientId =(String)session.getAttribute("patientId");
+				
 				PersonBusinessLogic pb = new PersonBusinessLogic();
 				
 				try { 

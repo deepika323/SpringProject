@@ -154,13 +154,13 @@ font-weight: bold;
 	</tr>
 	 <c:forEach var="medicine" items="${medicineList}">
         <tr>
-        	<td>${appointment.sNo}</td> 
-            <td>${appointment.medicineName}</td> 
-            <td>${appointment.quantity}</td>
-            <td>${appointment.dosage}</td>
-            <td>${appointment.price}</td>
-            <td>${appointment.appointmentId}</td>
-            <td>${appointment.billNo}</td>
+        	<td>${medicine.sNo}</td> 
+            <td>${medicine.medicineName}</td> 
+            <td>${medicine.quantity}</td>
+            <td>${medicine.dosage}</td>
+            <td>${medicine.price}</td>
+            <td>${medicine.appointmentId}</td>
+            <td>${medicine.billNo}</td>
         </tr> 
     </c:forEach>
 </table>

@@ -1,16 +1,12 @@
 
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Medicinal a Medical Architects Multi purpose Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -240,6 +236,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
 									<a id="app" class="hi-icon icon1" href="./AppointmentServlet"></a>
 								</div>
 							</div>
@@ -248,7 +245,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a id="app3"  class="hi-icon icon2"></a>
+								<c:set var="patientId" scope="session" value="1"/><%--MANAGE VALUES --%>
+									<a id="app3"  class="hi-icon icon2" href="./MedicalReport" ></a>
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
@@ -267,7 +265,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b" >
-									<a id="app2" class="hi-icon icon3" href="./DischargeSummary"></a>
+									<c:set var="serialNo" scope="session" value="1"/><%--MANAGE VALUES --%>
+									<a id="app2" class="hi-icon icon3" href="./DischargeSummary" ></a>
 								</div>
 							</div>
 							<div class="clearfix"></div>
@@ -275,7 +274,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a  id="app4" class="hi-icon icon4"></a>
+								<c:set var="billNo" scope="session" value="1"/><%--MANAGE VALUES --%>
+									<a  id="app4" class="hi-icon icon4" href="./Bill"></a>
 								</div>
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
@@ -294,7 +294,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a   id="app5" class="hi-icon icon1"></a>
+								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
+									<a   id="app5" class="hi-icon icon1" href="./Medicine"></a>
 								</div>
 							</div>
 							

@@ -25,7 +25,8 @@ public class ListAppointmentController extends HttpServlet {
 		//Code for Getting relevant Appointment List.
 		
 		HttpSession session=request.getSession();
-		String personId=request.getParameter("personId");
+		String personId =(String)session.getAttribute("personId");
+		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
 		
