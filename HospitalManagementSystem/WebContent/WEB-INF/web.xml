@@ -39,4 +39,24 @@
     <servlet-name>ListAppointmentServlet</servlet-name>
     <url-pattern>/AppointmentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addMedicalReportController</display-name>
+    <servlet-name>addMedicalReportController</servlet-name>
+    <servlet-class>controller.doctorServlet.addMedicalReportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addMedicalReportController</servlet-name>
+    <url-pattern>/addMedicalReportController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeMedicalReportController</display-name>
+    <servlet-name>removeMedicalReportController</servlet-name>
+    <servlet-class>controller.doctorServlet.removeMedicalReportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeMedicalReportController</servlet-name>
+    <url-pattern>/removeMedicalReportController</url-pattern>
+  </servlet-mapping>
 </web-app>
