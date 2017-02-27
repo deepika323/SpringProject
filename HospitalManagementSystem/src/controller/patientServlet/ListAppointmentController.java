@@ -19,24 +19,24 @@ import model.bl.PersonBusinessLogic;
 public class ListAppointmentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	PersonBusinessLogic pb = new PersonBusinessLogic();
-	
-	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//Code for Getting relevant Appointment List.
+		
 		HttpSession session=request.getSession();
 		String personId=request.getParameter("personId");
+		PersonBusinessLogic pb = new PersonBusinessLogic();
 		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
-		try {
+		
 			try {
 				appointmentList=pb.myAppointments(personId);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		
 		 request.setAttribute("appList", appointmentList);
 		
 		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");

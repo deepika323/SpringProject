@@ -89,4 +89,44 @@
     <servlet-name>DeleteAppointment</servlet-name>
     <url-pattern>/DeleteAppointment</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MedicalReportServlet</display-name>
+    <servlet-name>MedicalReportServlet</servlet-name>
+    <servlet-class>controller.patientServlet.MedicalReportServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MedicalReportServlet</servlet-name>
+    <url-pattern>/MedicalReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DischargeSummaryServlet</display-name>
+    <servlet-name>DischargeSummaryServlet</servlet-name>
+    <servlet-class>controller.patientServlet.DischargeSummaryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DischargeSummaryServlet</servlet-name>
+    <url-pattern>/DischargeSummary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BillServlet</display-name>
+    <servlet-name>BillServlet</servlet-name>
+    <servlet-class>controller.patientServlet.BillServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BillServlet</servlet-name>
+    <url-pattern>/Bill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MedicineServlet</display-name>
+    <servlet-name>MedicineServlet</servlet-name>
+    <servlet-class>controller.patientServlet.MedicineServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MedicineServlet</servlet-name>
+    <url-pattern>/Medicine</url-pattern>
+  </servlet-mapping>
 </web-app>
