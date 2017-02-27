@@ -145,7 +145,7 @@ font-weight: bold;
  <caption>&#9; Discharge Summary</caption>
 	<tr>
 	<th>Bill No</th>
-	<th>appointment Id</th>
+	<th>Patient Id</th>
 	<th>Serial No</th>
 	<th>Doctor Visit</th>
 	<th>Bed Charges</th>
@@ -156,7 +156,7 @@ font-weight: bold;
 	
         <tr>
         	<td>${bill.billNo}</td> 
-            <td>${bill.appointmentId}</td> 
+            <td>${bill.patientId}</td> 
             <td>${bill.serialNo}</td>
             <td>${bill.doctorVisit}</td>
             <td>${bill.bedCharges}</td>

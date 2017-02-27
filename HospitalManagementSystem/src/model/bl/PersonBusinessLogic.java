@@ -42,9 +42,9 @@ public class PersonBusinessLogic {
 		return bd.displayBill(billNo);
 	}
 	
-	public DischargeSummary viewDischargeSummary(int patientId) throws ClassNotFoundException, SQLException, IOException
+	public DischargeSummary viewDischargeSummary(int serialNo) throws ClassNotFoundException, SQLException, IOException
 	{
-		return dsd.displayDischargeSummary(patientId);
+		return dsd.displayDischargeSummary(serialNo);
 	}
 	
 //	public boolean addPerson(Person newPerson) throws ClassNotFoundException, SQLException
