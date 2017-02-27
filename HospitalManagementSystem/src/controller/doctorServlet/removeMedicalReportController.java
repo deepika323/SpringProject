@@ -1,4 +1,4 @@
-package controller.patientServlet;
+package controller.doctorServlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -11,45 +11,38 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.bean.Appointment;
-import model.bl.PersonBusinessLogic;
+import model.bl.DoctorBusinessLogic;
 
-
-
-public class ListAppointmentController extends HttpServlet {
+public class removeMedicalReportController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		//Code for Getting relevant Appointment List.
-		
 		HttpSession session=request.getSession();
-		String personId=request.getParameter("personId");
-		PersonBusinessLogic pb = new PersonBusinessLogic();
-		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
-		
+		int patientId=Integer.parseInt(request.getParameter("patientId"));
+		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
+		boolean result=false;
+		try {
 			try {
-				appointmentList=pb.myAppointments(personId);
+				result=dbl.removeMedicalReport(patientId);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
-			} catch (SQLException e) {
-				e.printStackTrace();
 			}
-		
-		 request.setAttribute("appList", appointmentList);
-		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");
-		    rd.forward(request, response);
-		if(request.getParameter("personId")==null){
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		if(request.getParameter("patientId")==null){
 			String message="Patient not found";
 			session.setAttribute("message", message);
-			response.sendRedirect("ErrorPage.jsp");
+			response.sendRedirect("output.jsp");
 		}
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setAttribute("patientId", patientId);
 		
+	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/removeMedicalReport.jsp");
+	    rd.forward(request, response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
 		doGet(request, response);
 	}
 
