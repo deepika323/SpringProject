@@ -16,7 +16,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 		result = prime * result + ((operationDone == null) ? 0 : operationDone.hashCode());
 		result = prime * result + ((operativeFindings == null) ? 0 : operativeFindings.hashCode());
 		result = prime * result + otId;
-		result = prime * result + appointmentId;
+		result = prime * result + patientId;
 		result = prime * result + ((recommendations == null) ? 0 : recommendations.hashCode());
 		result = prime * result + serialNo;
 		result = prime * result + ((treatmentGiven == null) ? 0 : treatmentGiven.hashCode());
@@ -27,7 +27,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 		return "DischargeSummary [serialNo=" + serialNo + ", admissionDate=" + admissionDate + ", dischargeDate="
 				+ dischargeDate + ", history=" + history + ", onExamination=" + onExamination + ", operationDone="
 				+ operationDone + ", operativeFindings=" + operativeFindings + ", treatmentGiven=" + treatmentGiven
-				+ ", recommendations=" + recommendations + ", appointmentId=" + appointmentId + ", otId=" + otId + ", doctorId="
+				+ ", recommendations=" + recommendations + ", appointmentId=" + patientId + ", otId=" + otId + ", doctorId="
 				+ doctorId + ", bedNo=" + bedNo + "]";
 	}
 	@Override
@@ -78,7 +78,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 			return false;
 		if (otId != other.otId)
 			return false;
-		if (appointmentId != other.appointmentId)
+		if (patientId != other.patientId)
 			return false;
 		if (recommendations == null) {
 			if (other.recommendations != null)
@@ -103,7 +103,7 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 	private String operativeFindings;
 	private String treatmentGiven;
 	private String recommendations;
-	private int appointmentId;
+	private int patientId;
 	private int otId;
 	private String doctorId;
 	private int bedNo;
@@ -163,10 +163,10 @@ public class DischargeSummary implements Comparable<DischargeSummary>{
 		this.recommendations = recommendations;
 	}
 	public int getPatientId() {
-		return appointmentId;
+		return patientId;
 	}
 	public void setPatientId(int appointmentId) {
-		this.appointmentId = appointmentId;
+		this.patientId = appointmentId;
 	}
 	public int getOtId() {
 		return otId;

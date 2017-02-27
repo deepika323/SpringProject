@@ -33,7 +33,7 @@
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
     <servlet-name>ListAppointmentServlet</servlet-name>
-    <servlet-class>com.project.controller.ListAppointment</servlet-class>
+    <servlet-class>controller.patientServlet.ListAppointmentController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListAppointmentServlet</servlet-name>
