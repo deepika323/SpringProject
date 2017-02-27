@@ -144,35 +144,24 @@ font-weight: bold;
 <table  border="1" cellpadding="5">
  <caption>&#9; Discharge Summary</caption>
 	<tr>
+	<th>Bill No</th>
+	<th>appointment Id</th>
 	<th>Serial No</th>
-	<th>Admission Date</th>
-	<th>DischargeDate</th>
-	<th>History</th>
-	<th>On Examination</th>
-	<th>Operation Done</th>
-	<th>Operative Findings</th>
-	<th>Treatment Given</th>
-	<th>Recommendations</th>
-	<th>Appointment Id</th>
-	<th>Ot Id</th>
-	<th>Doctor Id</th>
-	<th>Bed No</th>
+	<th>Doctor Visit</th>
+	<th>Bed Charges</th>
+	<th>Tests</th>
+	<th>Medicines</th>
+	
 	</tr>
 	
         <tr>
-        	<td>${dischargeSummary.serialNo}</td> 
-            <td>${dischargeSummary.admissionDate}</td> 
-            <td>${dischargeSummaryt.dischargeDate}</td>
-            <td>${dischargeSummary.history}</td>
-            <td>${dischargeSummary.onExamination}</td>
-            <td>${dischargeSummary.operationDone}</td>
-            <td>${dischargeSummary.operativeFindings}</td>
-            <td>${dischargeSummary.treatmentGiven}</td>
-            <td>${dischargeSummary.recommendations}</td>
-            <td>${dischargeSummary.appointmentId}</td>
-            <td>${dischargeSummary.otId}</td>
-            <td>${dischargeSummary.doctorId}</td>
-            <td>${dischargeSummary.bedNo}</td>
+        	<td>${bill.billNo}</td> 
+            <td>${bill.appointmentId}</td> 
+            <td>${bill.serialNo}</td>
+            <td>${bill.doctorVisit}</td>
+            <td>${bill.bedCharges}</td>
+            <td>${bill.tests}</td>
+            <td>${bill.medicines}</td>
         </tr> 
 
 </table>

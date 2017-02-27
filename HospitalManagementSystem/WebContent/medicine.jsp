@@ -1,5 +1,5 @@
 <%@page import="model.bean.*"%>
-<%-- <%@page import="java.util.ArrayList"%> --%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -142,39 +142,27 @@ font-weight: bold;
  
 <div style="overflow-x:auto;width:100%">
 <table  border="1" cellpadding="5">
- <caption>&#9; Discharge Summary</caption>
+ <caption>&#9; Medicine List</caption>
 	<tr>
 	<th>Serial No</th>
-	<th>Admission Date</th>
-	<th>DischargeDate</th>
-	<th>History</th>
-	<th>On Examination</th>
-	<th>Operation Done</th>
-	<th>Operative Findings</th>
-	<th>Treatment Given</th>
-	<th>Recommendations</th>
+	<th>Medicine Name</th>
+	<th>Quantity</th>
+	<th>Dosage</th>
+	<th>Price</th>
 	<th>Appointment Id</th>
-	<th>Ot Id</th>
-	<th>Doctor Id</th>
-	<th>Bed No</th>
+	<th>Bill No</th>
 	</tr>
-	
+	 <c:forEach var="medicine" items="${medicineList}">
         <tr>
-        	<td>${dischargeSummary.serialNo}</td> 
-            <td>${dischargeSummary.admissionDate}</td> 
-            <td>${dischargeSummaryt.dischargeDate}</td>
-            <td>${dischargeSummary.history}</td>
-            <td>${dischargeSummary.onExamination}</td>
-            <td>${dischargeSummary.operationDone}</td>
-            <td>${dischargeSummary.operativeFindings}</td>
-            <td>${dischargeSummary.treatmentGiven}</td>
-            <td>${dischargeSummary.recommendations}</td>
-            <td>${dischargeSummary.appointmentId}</td>
-            <td>${dischargeSummary.otId}</td>
-            <td>${dischargeSummary.doctorId}</td>
-            <td>${dischargeSummary.bedNo}</td>
+        	<td>${appointment.sNo}</td> 
+            <td>${appointment.medicineName}</td> 
+            <td>${appointment.quantity}</td>
+            <td>${appointment.dosage}</td>
+            <td>${appointment.price}</td>
+            <td>${appointment.appointmentId}</td>
+            <td>${appointment.billNo}</td>
         </tr> 
-
+    </c:forEach>
 </table>
 </div>
 <br><br>
