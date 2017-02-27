@@ -2,6 +2,8 @@ package controller.adminServlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -9,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 //import javax.servlet.http.HttpSession;
 
+import model.bean.Department;
+import model.bean.Doctor;
 import model.bl.AdminBusinessLogic;
 
 /**
@@ -45,6 +49,9 @@ public class FindAppointment extends HttpServlet {
 		}
 		String operation=request.getParameter("selectedValue");
 		
+		
+		//To DELETE
+		
 		if(operation.equalsIgnoreCase("Remove"))
 		{
 			String servlet="./DeleteAppointment";
@@ -54,7 +61,9 @@ public class FindAppointment extends HttpServlet {
 		request.setAttribute("button", button);
 		request.setAttribute("regNo", regNo);
 		}
-		else
+		
+		//TO FIND AND DISPLAY
+		else if(operation.equalsIgnoreCase("Find"))
 		{
 			String servlet="./admin.jsp";
 			String button="CONTINUE";
@@ -62,6 +71,25 @@ public class FindAppointment extends HttpServlet {
 		request.setAttribute("servlet", servlet);
 		request.setAttribute("button", button);
 
+		}
+		
+		//TO UPDATE
+		else {
+			ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
+			ArrayList<Department> departmentList=new ArrayList<Department>();
+			try {
+				doctorList=abl.listDoctor();
+				departmentList=abl.listDepartment();
+				
+			} catch (ClassNotFoundException | SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+			 request.setAttribute("doctorList", doctorList);
+			 request.setAttribute("departmentList", departmentList);
+			RequestDispatcher rd = getServletContext().getRequestDispatcher("/updateForm.jsp");
+		    rd.forward(request, response);
+			
 		}
 
 		//PrintWriter writerA = response.getWriter();
