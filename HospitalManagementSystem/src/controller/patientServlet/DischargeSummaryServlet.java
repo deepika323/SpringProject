@@ -23,7 +23,8 @@ public class DischargeSummaryServlet extends HttpServlet {
 		
 		//Code for getting discharge summary using serial number
 		HttpSession session=request.getSession();
-		int serialNo = Integer.parseInt(request.getParameter("serialNo"));
+		//int serialNo = Integer.parseInt(request.getParameter("serialNo"));
+		int serialNo=1;
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
 			if(pb.viewDischargeSummary(serialNo).getPatientId()!=0){

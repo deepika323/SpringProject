@@ -266,8 +266,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p></p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-									<a id="app2" class="hi-icon icon3"></a>
+								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b" >
+									<a id="app2" class="hi-icon icon3" href="./DischargeSummary"></a>
 								</div>
 							</div>
 							<div class="clearfix"></div>

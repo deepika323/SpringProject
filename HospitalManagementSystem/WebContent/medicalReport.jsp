@@ -1,5 +1,5 @@
 <%@page import="model.bean.*"%>
-<%-- <%@page import="java.util.ArrayList"%> --%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -142,39 +142,29 @@ font-weight: bold;
  
 <div style="overflow-x:auto;width:100%">
 <table  border="1" cellpadding="5">
- <caption>&#9; Discharge Summary</caption>
+ <caption>&#9; Medical Report</caption>
 	<tr>
-	<th>Serial No</th>
-	<th>Admission Date</th>
-	<th>DischargeDate</th>
-	<th>History</th>
-	<th>On Examination</th>
-	<th>Operation Done</th>
-	<th>Operative Findings</th>
-	<th>Treatment Given</th>
-	<th>Recommendations</th>
 	<th>Appointment Id</th>
-	<th>Ot Id</th>
+	<th>Visit Date</th>
+	<th>Diagnosis</th>
+	<th>Investigations</th>
+	<th>Tests</th>
+	<th>Recommendations</th>
 	<th>Doctor Id</th>
-	<th>Bed No</th>
+	<th>Technician Id</th>
 	</tr>
-	
+	 
         <tr>
-        	<td>${dischargeSummary.serialNo}</td> 
-            <td>${dischargeSummary.admissionDate}</td> 
-            <td>${dischargeSummaryt.dischargeDate}</td>
-            <td>${dischargeSummary.history}</td>
-            <td>${dischargeSummary.onExamination}</td>
-            <td>${dischargeSummary.operationDone}</td>
-            <td>${dischargeSummary.operativeFindings}</td>
-            <td>${dischargeSummary.treatmentGiven}</td>
-            <td>${dischargeSummary.recommendations}</td>
-            <td>${dischargeSummary.appointmentId}</td>
-            <td>${dischargeSummary.otId}</td>
-            <td>${dischargeSummary.doctorId}</td>
-            <td>${dischargeSummary.bedNo}</td>
+        	<td>${report.appointmentId}</td> 
+            <td>${report.visitDate}</td> 
+            <td>${report.diagnosis}</td>
+            <td>${report.investigations}</td>
+            <td>${report.tests}</td>
+            <td>${report.recommendations}</td>
+            <td>${report.doctorId}</td>
+            <td>${report.technicianId}</td>
         </tr> 
-
+    
 </table>
 </div>
 <br><br>
