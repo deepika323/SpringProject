@@ -103,8 +103,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
-										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
+										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">About Us</span></a></li>
+										<li class="menu__item"><a href="doctor.jsp" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
 										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
 										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
 									</ul>
@@ -230,7 +230,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="medicinal-w3">
 				<div class="container">
 				    <div class="sub-hd">
-						<h3 class="tittle two">ADMIN <span>SERVICES</span></h3>
+						<h3 class="tittle two">ADMIN <span>PORTAL</span></h3>
 					</div>
 					<div class="medicinal-w3-grids one">
 						<div class="col-md-6 medicinal-w3-grid">
@@ -343,7 +343,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender6").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -361,7 +361,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender6").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender5").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -376,7 +376,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender4").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender6").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -392,7 +392,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender6").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender3").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -407,7 +407,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender6").hide();	
 						$('html, body').animate({
 						        scrollTop: $("#tender2").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -422,7 +422,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender6").hide();	
 						$('html, body').animate({
 						        scrollTop: $("#tender4").offset().top
-						    }, 1000);
+						    }, 800);
 						
 													
 						});
@@ -439,7 +439,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddAppointment"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE APPOINTMENT</h3>
 				   	  <p></p>
@@ -470,7 +470,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_2">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <a name="find"  href="./FindOrRemoveController?selectedValue=Remove"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE APPOINTMENT</h3>
 				   	 
@@ -484,7 +484,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a name="find"  href="./FindOrRemoveController?selectedValue=Find"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>VIEW APPOINTMENT</h3>
 				   	  <p></p>
@@ -735,7 +735,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>LIST MEDICAL REPORT</h3>
 				   </div>
@@ -751,140 +751,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 </div>
    </div>
    
-		<!--//team-->
-			<!---news-->
-						<div class="review-slider">
-		<div class="sub-hd">
-						<h3 class="tittle">OUR LATEST <span>NEWS</span></h3>
-					</div>
-								 <ul id="flexiselDemo1">
-								<li>
-									<a href="single.html"><img src="images/n1.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>May 22</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n2.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>May 28</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n3.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>June 16</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n4.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR</h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>July 24</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n1.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 27</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n5.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 25</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-								<li>
-									<a href="single.html"><img src="images/n6.jpg" alt=""/></a>
-									<div class="slide-title"><h4>LOREM IPSUM DOLOR </h4></div>
-									<div class="prom-bottom">
-									<div class="prom-left">
-										<h5>Aug 30</h5>
-									</div>
-									<div class="prom-right">
-									<h5> 2016 </h5>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-									
-								</li>
-							</ul>
-							<script type="text/javascript">
-						$(window).load(function() {
-							
-						  $("#flexiselDemo1").flexisel({
-								visibleItems:4,
-								animationSpeed: 1000,
-								autoPlay: true,
-								autoPlaySpeed: 3000,    		
-								pauseOnHover: false,
-								enableResponsiveBreakpoints: true,
-								responsiveBreakpoints: { 
-									portrait: { 
-										changePoint:480,
-										visibleItems: 2
-									}, 
-									landscape: { 
-										changePoint:640,
-										visibleItems: 3
-									},
-									tablet: { 
-										changePoint:800,
-										visibleItems: 4
-									}
-								}
-							});
-							});
-						</script>
-						<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
-				</div>		
-   <!--//news-->
+   <!--
+   <div id="abcd">
+   <jsp:include page="ErrorPage.jsp"></jsp:include>
+   </div>
+   
+   
+   <script type="text/javascript">
+   							
+   					$(document).ready(function()
+   					{
+   						//$("#abcd").hide();
+										
+										$("listmr").click(function()
+												{
+													$("abcd").hide();
+												});
+   					});
+										</script>-->
+      <!--//news-->
    <div class="bottom">
 		<div class="container">
 			<div class="bottom-top">

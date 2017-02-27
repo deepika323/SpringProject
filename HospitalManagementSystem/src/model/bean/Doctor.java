@@ -1,7 +1,7 @@
 package model.bean;
 
 public class Doctor implements Comparable<Doctor>{
-	private int doctorId;
+	private String doctorId;
 	private String doctorName;
 	private String specialization;
 	private String timing;
@@ -21,10 +21,10 @@ public class Doctor implements Comparable<Doctor>{
 				+ ", doctorPassword=" + doctorPassword + ", departmentId=" + departmentId + "]";
 	}
 	int departmentId;
-	public int getDoctorId() {
+	public String getDoctorId() {
 		return doctorId;
 	}
-	public void setDoctorId(int doctorId) {
+	public void setDoctorId(String doctorId) {
 		this.doctorId = doctorId;
 	}
 	public String getDoctorName() {
@@ -71,7 +71,7 @@ public class Doctor implements Comparable<Doctor>{
 		int result = 1;
 		result = prime * result + departmentId;
 		result = prime * result + ((doctorAddress == null) ? 0 : doctorAddress.hashCode());
-		result = prime * result + doctorId;
+		result = prime * result + ((doctorId == null) ? 0 : doctorId.hashCode());
 		result = prime * result + ((doctorName == null) ? 0 : doctorName.hashCode());
 		result = prime * result + ((doctorPassword == null) ? 0 : doctorPassword.hashCode());
 		result = prime * result + (int) (doctorPhoneNo ^ (doctorPhoneNo >>> 32));
@@ -95,7 +95,10 @@ public class Doctor implements Comparable<Doctor>{
 				return false;
 		} else if (!doctorAddress.equals(other.doctorAddress))
 			return false;
-		if (doctorId != other.doctorId)
+		if (doctorId == null) {
+			if (other.doctorId != null)
+				return false;
+		} else if (!doctorId.equals(other.doctorId))
 			return false;
 		if (doctorName == null) {
 			if (other.doctorName != null)

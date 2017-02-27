@@ -15,16 +15,16 @@ public class ConnectToDb {
 
 	public static Connection openConnection() throws SQLException, ClassNotFoundException, IOException{
 		
-		FileInputStream fis=new FileInputStream("Connection.properties");
+		//FileInputStream fis=new FileInputStream("Connections.properties");
 		
-		Properties p = new Properties();
+		//Properties p = new Properties();
 		
-		p.load(fis);
+		//p.load(fis);
 		
-		String driver = p.getProperty("dn");
-		String url = p.getProperty("url");
-		String user = p.getProperty("user");
-		String pwd = p.getProperty("pwd");
+		String driver = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521:XE";
+		String user = "sapient";
+		String pwd = "sapient";
 		
 		Connection con;
 		Class.forName(driver);

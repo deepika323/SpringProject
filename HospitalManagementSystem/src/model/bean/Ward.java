@@ -8,26 +8,26 @@ public class Ward implements Comparable<Ward> {
 	private String location;
 	private Date dateAdmitted;
 	private Date dateDischarged;
-	private int staffId;
-	private int patientId;
+	private String staffId;
+	private int appointmentId;
 	
 	
 	@Override
 	public String toString() {
 		return "Ward [bedNo=" + bedNo + ", type=" + type + ", location=" + location + ", dateAdmitted=" + dateAdmitted
-				+ ", dateDischarged=" + dateDischarged + ", staffId=" + staffId + ", patientId=" + patientId + "]";
+				+ ", dateDischarged=" + dateDischarged + ", staffId=" + staffId + ", appointmentId=" + appointmentId + "]";
 	}
-	public int getStaffId() {
+	public String getStaffId() {
 		return staffId;
 	}
-	public void setStaffId(int staffId) {
+	public void setStaffId(String staffId) {
 		this.staffId = staffId;
 	}
 	public int getPatientId() {
-		return patientId;
+		return appointmentId;
 	}
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 	public int getBedNo() {
 		return bedNo;
@@ -67,8 +67,8 @@ public class Ward implements Comparable<Ward> {
 		result = prime * result + ((dateAdmitted == null) ? 0 : dateAdmitted.hashCode());
 		result = prime * result + ((dateDischarged == null) ? 0 : dateDischarged.hashCode());
 		result = prime * result + ((location == null) ? 0 : location.hashCode());
-		result = prime * result + patientId;
-		result = prime * result + staffId;
+		result = prime * result + appointmentId;
+		result = prime * result + ((staffId == null) ? 0 : staffId.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
 		return result;
 	}
@@ -98,9 +98,12 @@ public class Ward implements Comparable<Ward> {
 				return false;
 		} else if (!location.equals(other.location))
 			return false;
-		if (patientId != other.patientId)
+		if (appointmentId != other.appointmentId)
 			return false;
-		if (staffId != other.staffId)
+		if (staffId == null) {
+			if (other.staffId != null)
+				return false;
+		} else if (!staffId.equals(other.staffId))
 			return false;
 		if (type == null) {
 			if (other.type != null)

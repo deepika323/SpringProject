@@ -4,22 +4,23 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.bean.Reception;
+import model.bean.Appointment;
 import model.bl.DoctorBusinessLogic;
 
 public class viewAppointmentController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
-		ArrayList<Reception> appList=null;
-		int doctorId=Integer.parseInt(request.getParameter("doctorId"));
+		ArrayList<Appointment> appList=new ArrayList<Appointment>();
+		String doctorId=request.getParameter("doctorId");
 		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		try {
 			try {
@@ -30,6 +31,10 @@ public class viewAppointmentController extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		 request.setAttribute("appList", appList);
+		
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");
+		    rd.forward(request, response);
 		if(request.getParameter("doctorId")==null){
 			String message="Doctor not found";
 			session.setAttribute("message", message);

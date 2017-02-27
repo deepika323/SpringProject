@@ -34,7 +34,7 @@ public class MedicalReportData {
 		medicalReport.setRecommendations(sc.nextLine());
 		
 		System.out.println("Enter Technician ID:\n");
-		medicalReport.setTechnicianId(Integer.parseInt(sc.nextLine()));
+		medicalReport.setTechnicianId(sc.nextLine());
 		
 		return medicalReport;
 	}

@@ -15,7 +15,7 @@ public class StaffBusinessLogic {
 	WardDaoImpl wd = new WardDaoImpl();
 	//OTDaoImpl ot = new OTDaoImpl();
 	
-	public Staff staffLogin(int staffId, String staffPassword) throws ClassNotFoundException, SQLException, IOException
+	public Staff staffLogin(String staffId, String staffPassword) throws ClassNotFoundException, SQLException, IOException
 	{
 		Staff staff;
 		if(sd.displayStaff(staffId).getStaffPhoneNo()==0)
@@ -34,7 +34,7 @@ public class StaffBusinessLogic {
 		}
 	}
 	
-	public ArrayList<Ward> myWards(int staffId) throws ClassNotFoundException, SQLException, IOException
+	public ArrayList<Ward> myWards(String staffId) throws ClassNotFoundException, SQLException, IOException
 	{
 		ArrayList<Ward> wardList=new ArrayList<Ward>();
 		
@@ -44,7 +44,7 @@ public class StaffBusinessLogic {
 		
 		for(Ward wl: wardList)
 		{
-			if(wl.getStaffId()==staffId)
+			if(wl.getStaffId().equals(staffId))
 			{
 				myWards.add(wl);
 			}

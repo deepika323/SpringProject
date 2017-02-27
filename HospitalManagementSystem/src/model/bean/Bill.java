@@ -2,7 +2,7 @@ package model.bean;
 
 public class Bill implements Comparable<Bill> {
 	private int billNo;
-	private int patientId;
+	private int appointmentId;
 	private int serialNo;
 	private float doctorVisit;
 	private float bedCharges;
@@ -12,7 +12,7 @@ public class Bill implements Comparable<Bill> {
 	
 	@Override
 	public String toString() {
-		return "Bill [billNo=" + billNo + ", patientId=" + patientId + ", serialNo=" + serialNo + ", doctorVisit="
+		return "Bill [billNo=" + billNo + ", appointmentId=" + appointmentId + ", serialNo=" + serialNo + ", doctorVisit="
 				+ doctorVisit + ", bedCharges=" + bedCharges + ", tests=" + tests + ", medicines=" + medicines + "]";
 	}
 	@Override
@@ -23,7 +23,7 @@ public class Bill implements Comparable<Bill> {
 		result = prime * result + billNo;
 		result = prime * result + Float.floatToIntBits(doctorVisit);
 		result = prime * result + Float.floatToIntBits(medicines);
-		result = prime * result + patientId;
+		result = prime * result + appointmentId;
 		result = prime * result + serialNo;
 		result = prime * result + Float.floatToIntBits(tests);
 		return result;
@@ -45,7 +45,7 @@ public class Bill implements Comparable<Bill> {
 			return false;
 		if (Float.floatToIntBits(medicines) != Float.floatToIntBits(other.medicines))
 			return false;
-		if (patientId != other.patientId)
+		if (appointmentId != other.appointmentId)
 			return false;
 		if (serialNo != other.serialNo)
 			return false;
@@ -84,10 +84,10 @@ public class Bill implements Comparable<Bill> {
 		this.medicines = medicines;
 	}
 	public int getPatientId() {
-		return patientId;
+		return appointmentId;
 	}
-	public void setPatientId(int patientId) {
-		this.patientId = patientId;
+	public void setPatientId(int appointmentId) {
+		this.appointmentId = appointmentId;
 	}
 	public int getSerialNo() {
 		return serialNo;

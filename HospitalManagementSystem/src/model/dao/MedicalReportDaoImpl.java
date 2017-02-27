@@ -38,8 +38,8 @@ public class MedicalReportDaoImpl implements MedicalReportDao {
 		pstmt.setString(4, investigations);
 		pstmt.setString(5, tests);
 		pstmt.setString(6, recommendations);
-		pstmt.setInt(7, newMedicalReport.getDoctorId());
-		pstmt.setInt(8, newMedicalReport.getTechnicianId());
+		pstmt.setString(7, newMedicalReport.getDoctorId());
+		pstmt.setString(8, newMedicalReport.getTechnicianId());
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -130,8 +130,8 @@ public class MedicalReportDaoImpl implements MedicalReportDao {
 			medicalreport.setRecommendations(rs.getString("recommendations"));
 			medicalreport.setInvestigations(rs.getString("investigations"));
 			medicalreport.setTests(rs.getString("tests"));
-			medicalreport.setTechnicianId(rs.getInt("TECHNICIANID"));
-			medicalreport.setDoctorId(rs.getInt("DoctorID"));
+			medicalreport.setTechnicianId(rs.getString("TECHNICIANID"));
+			medicalreport.setDoctorId(rs.getString("DoctorID"));
 			
 		}
 		
@@ -162,8 +162,8 @@ public class MedicalReportDaoImpl implements MedicalReportDao {
 			medicalreport.setTests(rs.getString("tests"));
 			medicalreport.setRecommendations(rs.getString("recommendations"));
 
-			medicalreport.setTechnicianId(rs.getInt("TECHNICIANID"));
-			medicalreport.setDoctorId(rs.getInt("DoctorID"));
+			medicalreport.setTechnicianId(rs.getString("TECHNICIANID"));
+			medicalreport.setDoctorId(rs.getString("DoctorID"));
 			medicalReportList.add(medicalreport);
 		}
 		

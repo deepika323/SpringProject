@@ -28,7 +28,7 @@ public class WardDaoImpl implements WardDao {
 		String wardLocation=newWard.getLocation();
 		Date dateAdmitted=newWard.getDateAdmitted();
 		Date dateDischarged=newWard.getDateDischarged();
-		int staffId=newWard.getStaffId();
+		String staffId=newWard.getStaffId();
 		int patientId=newWard.getPatientId();
 		
 		
@@ -41,7 +41,7 @@ public class WardDaoImpl implements WardDao {
 		pstmt.setString(3, wardLocation);
 		pstmt.setDate(4, dateAdmitted);
 		pstmt.setDate(5, dateDischarged);
-		pstmt.setInt(6, staffId);
+		pstmt.setString(6, staffId);
 		pstmt.setInt(7, patientId);
 
 
@@ -107,7 +107,7 @@ public class WardDaoImpl implements WardDao {
 		pstmt.setDate(3, renewWard.getDateAdmitted());
 		pstmt.setDate(4, renewWard.getDateDischarged());
 		pstmt.setInt(5, renewWard.getPatientId());
-		pstmt.setInt(6, renewWard.getStaffId());
+		pstmt.setString(6, renewWard.getStaffId());
 		pstmt.setInt(7, bedNo);
 		
 		int rows=pstmt.executeUpdate();
@@ -147,7 +147,7 @@ public class WardDaoImpl implements WardDao {
 			ward.setDateAdmitted(rs.getDate("dateAdmitted"));
 			ward.setDateDischarged(rs.getDate("dateDischarged"));
 			ward.setPatientId(rs.getInt("patientId"));
-			ward.setStaffId(rs.getInt("staffId"));
+			ward.setStaffId(rs.getString("staffId"));
 		}
 		
 		closeConnection(con);
@@ -175,7 +175,7 @@ public class WardDaoImpl implements WardDao {
 			ward.setDateAdmitted(rs.getDate("dateAdmitted"));
 			ward.setDateDischarged(rs.getDate("dateDischarged"));
 			ward.setPatientId(rs.getInt("patientId"));
-			ward.setStaffId(rs.getInt("staffId"));
+			ward.setStaffId(rs.getString("staffId"));
 			wardList.add(ward);
 		}
 		

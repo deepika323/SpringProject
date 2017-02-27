@@ -1,6 +1,7 @@
-package com.project.controller;
+package controller.patientServlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.bean.Reception;
+import model.bean.Appointment;
 import model.bl.PersonBusinessLogic;
 
 
@@ -24,23 +25,27 @@ public class ListAppointmentController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String personId=request.getParameter("personId");
-		ArrayList<Reception> receptionList = pb.myAppointments(personId);
-		
-		if(receptionList.size()==0)
-		{
-			RequestDispatcher dispatch=request.getRequestDispatcher("ErrorPage.jsp");
-			dispatch.forward(request, response);
-		}
-		else 
-		{
-		
-			RequestDispatcher dispatch=request.getRequestDispatcher("listAppointments.jsp");
-			request.setAttribute("list", receptionList);
-			dispatch.forward(request, response);
-		}
-		
 		HttpSession session=request.getSession();
+		String personId=request.getParameter("personId");
+		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
+		try {
+			try {
+				appointmentList=pb.myAppointments(personId);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		 request.setAttribute("appList", appointmentList);
+		
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");
+		    rd.forward(request, response);
+		if(request.getParameter("personId")==null){
+			String message="Patient not found";
+			session.setAttribute("message", message);
+			response.sendRedirect("ErrorPage.jsp");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

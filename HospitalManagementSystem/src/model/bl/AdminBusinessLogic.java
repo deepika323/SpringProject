@@ -10,7 +10,7 @@ import model.bean.DischargeSummary;
 import model.bean.Doctor;
 import model.bean.MedicalReport;
 import model.bean.Person;
-import model.bean.Reception;
+import model.bean.Appointment;
 import model.bean.Staff;
 import model.bean.Technician;
 import model.dao.BillDaoImpl;
@@ -18,14 +18,14 @@ import model.dao.DepartmentDaoImpl;
 import model.dao.DischargeSummaryDaoImpl;
 import model.dao.MedicalReportDaoImpl;
 import model.dao.PersonDaoImpl;
-import model.dao.ReceptionDaoImpl;
+import model.dao.AppointmentDaoImpl;
 import model.dao.DoctorDaoImpl;
 import model.dao.StaffDaoImpl;
 import model.dao.TechnicianDaoImpl;
 
 public class AdminBusinessLogic {
 	
-	ReceptionDaoImpl rd=new ReceptionDaoImpl();
+	AppointmentDaoImpl rd=new AppointmentDaoImpl();
 	MedicalReportDaoImpl mrd=new MedicalReportDaoImpl();
 	DischargeSummaryDaoImpl dsd=new DischargeSummaryDaoImpl();
 	BillDaoImpl bd=new BillDaoImpl();
@@ -55,27 +55,27 @@ public class AdminBusinessLogic {
 		}
 	}
 	
-	/**********************************************Reception
+	/**********************************************Appointment
 	 * @throws IOException **********************************************/
-	public boolean addReception(Reception newReception) throws ClassNotFoundException, SQLException, IOException
+	public boolean addAppointment(Appointment newAppointment) throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.insertReception(newReception);	
+		return rd.insertAppointment(newAppointment);	
 	}
-	public boolean removeReception(int regNo) throws ClassNotFoundException, SQLException, IOException
+	public boolean removeAppointment(int regNo) throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.deleteReception(regNo);
+		return rd.deleteAppointment(regNo);
 	}
-	public boolean modifyReception(int regNo, Reception newReception) throws ClassNotFoundException, SQLException, IOException
+	public boolean modifyAppointment(int regNo, Appointment newAppointment) throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.updateReception(regNo,newReception);
+		return rd.updateAppointment(regNo,newAppointment);
 	}
-	public ArrayList<Reception> listReception() throws ClassNotFoundException, SQLException, IOException
+	public ArrayList<Appointment> listAppointment() throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.displayAllReceptions();
+		return rd.displayAllAppointments();
 	}
-	public Reception viewReceptions(int regNo) throws ClassNotFoundException, SQLException, IOException
+	public Appointment viewAppointments(int regNo) throws ClassNotFoundException, SQLException, IOException
 	{
-		return rd.displayReception(regNo);
+		return rd.displayAppointment(regNo);
 	}
 	
 	
@@ -169,7 +169,8 @@ public class AdminBusinessLogic {
 	}
 	public ArrayList<Department> listDepartment() throws ClassNotFoundException, SQLException, IOException
 	{
-		return dd.displayAllDepartments();
+	return dd.displayAllDepartments();
+		
 	}
 	public Department viewDepartment(int departmentId) throws ClassNotFoundException, SQLException, IOException
 	{
@@ -182,19 +183,20 @@ public class AdminBusinessLogic {
 	{
 		return dod.insertDoctor(newDoctor);	
 	}
-	public boolean removeDoctor(int doctorId) throws ClassNotFoundException, SQLException, IOException
+	public boolean removeDoctor(String doctorId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return dod.deleteDoctor(doctorId);
 	}
-	public boolean modifyDoctor(int doctorId, Doctor newDoctor) throws ClassNotFoundException, SQLException, IOException
+	public boolean modifyDoctor(String doctorId, Doctor newDoctor) throws ClassNotFoundException, SQLException, IOException
 	{
 		return dod.updateDoctor(doctorId,newDoctor);
 	}
 	public ArrayList<Doctor> listDoctor() throws ClassNotFoundException, SQLException, IOException
 	{
 		return dod.displayAllDoctors();
+		
 	}
-	public Doctor viewDoctor(int doctorId) throws ClassNotFoundException, SQLException, IOException
+	public Doctor viewDoctor(String doctorId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return dod.displayDoctor(doctorId);
 	}
@@ -204,11 +206,11 @@ public class AdminBusinessLogic {
 	{
 		return sd.insertStaff(newStaff);	
 	}
-	public boolean removeStaff(int staffId) throws ClassNotFoundException, SQLException, IOException
+	public boolean removeStaff(String staffId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return sd.deleteStaff(staffId);
 	}
-	public boolean modifyStaff(int staffId, Staff newStaff) throws ClassNotFoundException, SQLException, IOException
+	public boolean modifyStaff(String staffId, Staff newStaff) throws ClassNotFoundException, SQLException, IOException
 	{
 		return sd.updateStaff(staffId,newStaff);
 	}
@@ -216,7 +218,7 @@ public class AdminBusinessLogic {
 	{
 		return sd.displayAllStaffs();
 	}
-	public Staff viewStaff(int staffId) throws ClassNotFoundException, SQLException, IOException
+	public Staff viewStaff(String staffId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return sd.displayStaff(staffId);
 	}
@@ -226,11 +228,11 @@ public class AdminBusinessLogic {
 	{
 		return td.insertTechnician(newTechnician);	
 	}
-	public boolean removeTechnician(int technicianId) throws ClassNotFoundException, SQLException, IOException
+	public boolean removeTechnician(String technicianId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return td.deleteTechnician(technicianId);
 	}
-	public boolean modifyTechnician(int technicianId, Technician newTechnician) throws ClassNotFoundException, SQLException, IOException
+	public boolean modifyTechnician(String technicianId, Technician newTechnician) throws ClassNotFoundException, SQLException, IOException
 	{
 		return td.updateTechnician(technicianId,newTechnician);
 	}
@@ -238,7 +240,7 @@ public class AdminBusinessLogic {
 	{
 		return td.displayAllTechnicians();
 	}
-	public Technician viewTechnician(int technicianId) throws ClassNotFoundException, SQLException, IOException
+	public Technician viewTechnician(String technicianId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return td.displayTechnician(technicianId);
 	}

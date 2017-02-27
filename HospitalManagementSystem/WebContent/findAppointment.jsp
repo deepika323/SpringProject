@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">MY <span>APPOINTMENTS</span></h3>
+						<h3 class="tittle">Find <span>APPOINTMENT</span></h3>
 					</div>
 			</div>
 		</div>
@@ -82,20 +82,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="article-post w3l">
 				<div class="post-details s-page">
-				
 		<div class="leave w3l">
-			<h3>Enter <span> doctor ID </span></h3>
+			<h3>Enter <span> Appointment ID </span></h3>
 			<br>
 			<br>
-				<form action="./viewAppointmentController">
+				<form action="./FindAppointment">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form action="./viewAppointmentController">
-								<input type="text" placeholder="Doctor ID" required="" name="doctorId">
+						   <form action="./FindAppointment">
+						   	
+								<input type="text" placeholder="Appointment ID to ${button}" required="" name="regNo">
+								<input type="text" value="${button}" hidden name="selectedValue">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
-							<form action="./doctor.jsp">
+							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>

@@ -8,8 +8,8 @@ import model.bean.Technician;
 
 public interface TechnicianDao {
 	public boolean insertTechnician (Technician newTechnician) throws ClassNotFoundException, SQLException, IOException;
-	public boolean deleteTechnician(int technicianId) throws ClassNotFoundException, SQLException, IOException;
-	public boolean updateTechnician(int technicianId, Technician renewTechnician) throws ClassNotFoundException, SQLException, IOException;
-	public Technician displayTechnician(int technicianId) throws ClassNotFoundException, SQLException, IOException;
+	public boolean deleteTechnician(String technicianId) throws ClassNotFoundException, SQLException, IOException;
+	public boolean updateTechnician(String technicianId, Technician renewTechnician) throws ClassNotFoundException, SQLException, IOException;
+	public Technician displayTechnician(String technicianId) throws ClassNotFoundException, SQLException, IOException;
 	public ArrayList<Technician> displayAllTechnicians() throws ClassNotFoundException, SQLException, IOException;
 }

@@ -25,7 +25,7 @@ public class OTDaoImpl implements OTDao {
 		String equipments = newOT.getEquipments();
 		int patientId = newOT.getPatientId();
 		int staffId = newOT.getStaffId();
-		int doctorId = newOT.getDoctorId();
+		String doctorId = newOT.getDoctorId();
 		
 		pstmt=con.prepareStatement("insert into ot (otId,description,equipments,patientId,staffId,doctorId)"
 				+ "values" + "(?,?,?,?,?,?)");
@@ -35,7 +35,7 @@ public class OTDaoImpl implements OTDao {
 		pstmt.setString(3, equipments);
 		pstmt.setInt(4,patientId);
 		pstmt.setInt(5,staffId);
-		pstmt.setInt(6,doctorId);
+		pstmt.setString(6,doctorId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -90,7 +90,7 @@ public class OTDaoImpl implements OTDao {
 		pstmt.setString(2, renewOT.getEquipments());
 		pstmt.setInt(3, renewOT.getPatientId());
 		pstmt.setInt(4, renewOT.getStaffId());
-		pstmt.setInt(5, renewOT.getDoctorId());
+		pstmt.setString(5, renewOT.getDoctorId());
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -124,7 +124,7 @@ public class OTDaoImpl implements OTDao {
 			ot.setEquipments(rs.getString("equipments"));
 			ot.setPatientId(rs.getInt("patientId"));
 		    ot.setStaffId(rs.getInt("staffId"));
-			ot.setDoctorId(rs.getInt("doctorId"));
+			ot.setDoctorId(rs.getString("doctorId"));
 		}
 		
 		closeConnection(con);
@@ -152,7 +152,7 @@ public class OTDaoImpl implements OTDao {
 			ot.setEquipments(rs.getString("equipments"));
 			ot.setPatientId(rs.getInt("patientId"));
 		    ot.setStaffId(rs.getInt("staffId"));
-			ot.setDoctorId(rs.getInt("doctorId"));
+			ot.setDoctorId(rs.getString("doctorId"));
 		}
 		
 		closeConnection(con);

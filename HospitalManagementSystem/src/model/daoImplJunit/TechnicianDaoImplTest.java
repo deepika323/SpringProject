@@ -28,9 +28,9 @@ public class TechnicianDaoImplTest {
 
 	@Test
 	public void testInsertTechnician() throws ClassNotFoundException, SQLException, IOException {
-		dd.deleteTechnician(1);
+		dd.deleteTechnician("1");
 		Technician technician=new Technician();
-		technician.setTechnicianId(1);
+		technician.setTechnicianId("1");
 		technician.setTechnicianAddress("Gurgaon");
 		technician.setTechnicianName("Dr Batra");
 		technician.setTechnicianPhoneNo(1234567890);
@@ -47,9 +47,9 @@ public class TechnicianDaoImplTest {
 	@Test
 	public void testDeleteTechnician() throws ClassNotFoundException, SQLException, IOException {
 		
-		dd.deleteTechnician(1);
+		dd.deleteTechnician("1");
 		Technician technician=new Technician();
-		technician.setTechnicianId(1);
+		technician.setTechnicianId("1");
 		technician.setTechnicianAddress("Gurgaon");
 		technician.setTechnicianName("Dr Batra");
 		technician.setTechnicianPhoneNo(1234567890);
@@ -58,15 +58,15 @@ public class TechnicianDaoImplTest {
 		technician.setDepartmentId(0);
 		technician.setTechnicianPassword("pass");
 		dd.insertTechnician(technician);
-		assertTrue(dd.deleteTechnician(1));
+		assertTrue(dd.deleteTechnician("1"));
 	}
 
 	@Test
 	public void testUpdateTechnician() throws ClassNotFoundException, SQLException, IOException {
 		
-		dd.deleteTechnician(1);
+		dd.deleteTechnician("1");
 		Technician technician=new Technician();
-		technician.setTechnicianId(1);
+		technician.setTechnicianId("1");
 		technician.setTechnicianAddress("Gurgaon");
 		technician.setTechnicianName("Dr Batra");
 		technician.setTechnicianPhoneNo(1234567890);
@@ -76,7 +76,7 @@ public class TechnicianDaoImplTest {
 		technician.setTechnicianPassword("pass");
 		dd.insertTechnician(technician);
 		Technician newtechnician=new Technician();
-		newtechnician.setTechnicianId(1);
+		newtechnician.setTechnicianId("1");
 		newtechnician.setTechnicianAddress("Mumbai");
 		newtechnician.setTechnicianName("Dr Batra");
 		newtechnician.setTechnicianPhoneNo(1876543210);
@@ -84,7 +84,7 @@ public class TechnicianDaoImplTest {
 		newtechnician.setTiming("5-6");
 		newtechnician.setDepartmentId(0);
 		technician.setTechnicianPassword("pass");
-		assertTrue(dd.updateTechnician(1,newtechnician));
+		assertTrue(dd.updateTechnician("1",newtechnician));
 		
 		//assertEquals(newtechnician.getTechnicianAddress(), dd.displayTechnician(1).getTechnicianAddress());
 		
@@ -94,9 +94,9 @@ public class TechnicianDaoImplTest {
 	@Test
 	public void testDisplayTechnician() throws ClassNotFoundException, SQLException, IOException {
 		
-		dd.deleteTechnician(1);
+		dd.deleteTechnician("1");
 		Technician technician=new Technician();
-		technician.setTechnicianId(1);
+		technician.setTechnicianId("1");
 		technician.setTechnicianAddress("Gurgaon");
 		technician.setTechnicianName("Dr Batra");
 		technician.setTechnicianPhoneNo(1234567890);
@@ -106,7 +106,7 @@ public class TechnicianDaoImplTest {
 		technician.setTechnicianPassword("pass");
 		dd.insertTechnician(technician);
 		
-		assertEquals(technician, dd.displayTechnician(1));
+		assertEquals(technician, dd.displayTechnician("1"));
 		
 		
 	}

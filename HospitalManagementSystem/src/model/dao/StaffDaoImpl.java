@@ -23,7 +23,7 @@ public class StaffDaoImpl implements StaffDao {
 	public boolean insertStaff(Staff newStaff) throws ClassNotFoundException, SQLException, IOException {		
 		con= openConnection();
 	 
-	int staffId=newStaff.getStaffId();
+	String staffId=newStaff.getStaffId();
 	String staffName=newStaff.getStaffName();
 	String staffAddress=newStaff.getStaffAddress();
 	String specialization=newStaff.getSpecialization();
@@ -39,7 +39,7 @@ public class StaffDaoImpl implements StaffDao {
 			"timing,specialization,staffAddress,staffPhoneNo,departmentId,Password) values" + 
 			"(?,?,?,?,?,?,?,?)");
 	
-	pstmt.setInt(1,staffId);
+	pstmt.setString(1,staffId);
 	pstmt.setString(2,staffName );
 	pstmt.setString(3, timing);
 	pstmt.setString(4, specialization);
@@ -62,13 +62,13 @@ public class StaffDaoImpl implements StaffDao {
 	}
 
 	@Override
-	public boolean deleteStaff(int staffId) throws ClassNotFoundException, SQLException, IOException {
+	public boolean deleteStaff(String staffId) throws ClassNotFoundException, SQLException, IOException {
 		con= openConnection();
 		
 		
 		pstmt=con.prepareStatement("delete from staff where staffId = ?");
 		
-		pstmt.setInt(1,staffId);
+		pstmt.setString(1,staffId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -86,7 +86,7 @@ public class StaffDaoImpl implements StaffDao {
 	}
 
 	@Override
-	public boolean updateStaff(int staffId, Staff renewStaff) throws ClassNotFoundException, SQLException, IOException {
+	public boolean updateStaff(String staffId, Staff renewStaff) throws ClassNotFoundException, SQLException, IOException {
 
 		con= openConnection();
 		
@@ -104,7 +104,7 @@ public class StaffDaoImpl implements StaffDao {
 		pstmt.setLong(5, renewStaff.getStaffPhoneNo());
 		pstmt.setInt(6, renewStaff.getDepartmentId());
 		pstmt.setString(7, renewStaff.getStaffPassword());
-		pstmt.setInt(8, staffId);
+		pstmt.setString(8, staffId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -125,21 +125,21 @@ public class StaffDaoImpl implements StaffDao {
 	}
 
 	@Override
-	public Staff displayStaff(int staffId) throws ClassNotFoundException, SQLException , IOException{
+	public Staff displayStaff(String staffId) throws ClassNotFoundException, SQLException , IOException{
 
 
 		con= openConnection();
 		
 		
 		pstmt=con.prepareStatement("select * from staff where staffId = ?");
-		pstmt.setInt(1,staffId);
+		pstmt.setString(1,staffId);
 		
 		rs=pstmt.executeQuery();
 		
 		Staff staff=new Staff();
 		while(rs.next())
 		{
-			staff.setStaffId(rs.getInt("staffId"));
+			staff.setStaffId(rs.getString("staffId"));
 			staff.setDepartmentId(rs.getInt("departmentId"));
 			staff.setStaffAddress(rs.getString("staffAddress"));
 			staff.setStaffName(rs.getString("staffName"));
@@ -172,7 +172,7 @@ public class StaffDaoImpl implements StaffDao {
 		while(rs.next())
 		{
 			Staff staff=new Staff();
-			staff.setStaffId(rs.getInt("staffId"));
+			staff.setStaffId(rs.getString("staffId"));
 			staff.setDepartmentId(rs.getInt("departmentId"));
 			staff.setStaffAddress(rs.getString("staffAddress"));
 			staff.setStaffName(rs.getString("staffName"));

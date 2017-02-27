@@ -5,18 +5,18 @@ import java.util.Calendar;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import model.bean.Reception;
+import model.bean.Appointment;
 
 public class AppointmentInput {
 
-	private Reception recep;
-	public Reception getRecep() {
+	private Appointment recep;
+	public Appointment getRecep() {
 		return recep;
 	}
 	public boolean input()
 	{	
 		Scanner sc=new Scanner(System.in);
-		recep=new Reception();
+		recep=new Appointment();
 		String personId;
 		System.out.print("Enter Person ID : ");
 		personId=sc.nextLine();
@@ -50,7 +50,7 @@ public class AppointmentInput {
 		//System.out.println(regNo);
 		//check values for validation
 		recep.setPersonId(personId);
-		recep.setDoctorId(doctorId);
+		recep.setDoctorId("doctorId");
 		recep.setPayment(fee);
 		recep.setRegNo(regNo);
 		recep.setAppointmentDate(currentDate);

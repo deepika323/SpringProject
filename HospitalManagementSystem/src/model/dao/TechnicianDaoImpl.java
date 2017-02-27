@@ -23,7 +23,7 @@ public class TechnicianDaoImpl implements TechnicianDao {
 		// TODO Auto-generated method stub
 		con= openConnection();
 		
-		int technicianId=newTechnician.getTechnicianId();
+		String technicianId=newTechnician.getTechnicianId();
 		String technicianName=newTechnician.getTechnicianName();
 		String technicianAddress=newTechnician.getTechnicianAddress();
 		String specialization=newTechnician.getSpecialization();
@@ -39,7 +39,7 @@ public class TechnicianDaoImpl implements TechnicianDao {
 				"timing,specialization,technicianAddress,technicianPhoneNo,departmentId,Password) values" + 
 				"(?,?,?,?,?,?,?,?)");
 		
-		pstmt.setInt(1,technicianId);
+		pstmt.setString(1,technicianId);
 		pstmt.setString(2,technicianName );
 		pstmt.setString(3, timing);
 		pstmt.setString(4, specialization);
@@ -61,14 +61,14 @@ public class TechnicianDaoImpl implements TechnicianDao {
 	}
 
 	@Override
-	public boolean deleteTechnician(int technicianId) throws ClassNotFoundException, SQLException, IOException {
+	public boolean deleteTechnician(String technicianId) throws ClassNotFoundException, SQLException, IOException {
 		// TODO Auto-generated method stub
         con= openConnection();
 		
 		
 		pstmt=con.prepareStatement("delete from technician where technicianId = ?");
 		
-		pstmt.setInt(1,technicianId);
+		pstmt.setString(1,technicianId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -85,7 +85,7 @@ public class TechnicianDaoImpl implements TechnicianDao {
 	}
 
 	@Override
-	public boolean updateTechnician(int technicianId, Technician renewTechnician) throws ClassNotFoundException, SQLException , IOException{
+	public boolean updateTechnician(String technicianId, Technician renewTechnician) throws ClassNotFoundException, SQLException , IOException{
 		// TODO Auto-generated method stub
         con= openConnection();
 		
@@ -103,7 +103,7 @@ public class TechnicianDaoImpl implements TechnicianDao {
 		pstmt.setLong(5, renewTechnician.getTechnicianPhoneNo());
 		pstmt.setInt(6, renewTechnician.getDepartmentId());
 		pstmt.setString(7, renewTechnician.getTechnicianPassword());
-		pstmt.setInt(8, technicianId);
+		pstmt.setString(8, technicianId);
 		
 		int rows=pstmt.executeUpdate();
 		
@@ -121,13 +121,13 @@ public class TechnicianDaoImpl implements TechnicianDao {
 	}
 
 	@Override
-	public Technician displayTechnician(int technicianId) throws ClassNotFoundException, SQLException , IOException{
+	public Technician displayTechnician(String technicianId) throws ClassNotFoundException, SQLException , IOException{
 		// TODO Auto-generated method stub
         con= openConnection();
 		
 		
 		pstmt=con.prepareStatement("select * from technician where technicianId = ?");
-		pstmt.setInt(1,technicianId);
+		pstmt.setString(1,technicianId);
 		
 		rs=pstmt.executeQuery();
 		
@@ -165,7 +165,7 @@ public class TechnicianDaoImpl implements TechnicianDao {
 		while(rs.next())
 		{
 			Technician technician=new Technician();
-			technician.setTechnicianId(rs.getInt("technicianId"));
+			technician.setTechnicianId(rs.getString("technicianId"));
 			technician.setDepartmentId(rs.getInt("departmentId"));
 			technician.setTechnicianAddress(rs.getString("technicianAddress"));
 			technician.setTechnicianName(rs.getString("technicianName"));

@@ -27,9 +27,9 @@ public class StaffDaoImplTest {
 
 	@Test
 	public void testInsertStaff() throws ClassNotFoundException, SQLException, IOException {
-		sd.deleteStaff(1);
+		sd.deleteStaff("1");
 		Staff staff = new Staff();
-		staff.setStaffId(1);
+		staff.setStaffId("1");
 		staff.setStaffName("abc");
 		staff.setSpecialization("def");
 		staff.setTiming("123");
@@ -45,7 +45,7 @@ public class StaffDaoImplTest {
 		
 		
 		Staff staff = new Staff();
-		staff.setStaffId(0);
+		staff.setStaffId("0");
 		staff.setStaffName("abc");
 		staff.setSpecialization("def");
 		staff.setTiming("123");
@@ -60,14 +60,14 @@ public class StaffDaoImplTest {
 	@Test
 	public void testDeleteStaffNegative() throws ClassNotFoundException, SQLException, IOException
 	{
-		assertFalse(sd.deleteStaff(2423424));
+		assertFalse(sd.deleteStaff("2423424"));
 	}
 
 	@Test
 	public void testDeleteStaff() throws ClassNotFoundException, SQLException, IOException {
-		sd.deleteStaff(1);
+		sd.deleteStaff("1");
 		Staff staff = new Staff();
-		staff.setStaffId(1);
+		staff.setStaffId("1");
 		staff.setStaffName("abc");
 		staff.setSpecialization("def");
 		staff.setTiming("123");
@@ -76,7 +76,7 @@ public class StaffDaoImplTest {
 		staff.setStaffPassword("jkl");
 		staff.setDepartmentId(0);
 		sd.insertStaff(staff);
-		assertTrue(sd.deleteStaff(1));
+		assertTrue(sd.deleteStaff("1"));
 	}
 	
 	@Test
@@ -91,15 +91,15 @@ public class StaffDaoImplTest {
 		newstaff.setStaffPhoneNo(12345);
 		newstaff.setStaffPassword("jkl");
 		newstaff.setDepartmentId(0);
-		assertFalse(sd.updateStaff(23423,newstaff));
+		assertFalse(sd.updateStaff("23423",newstaff));
 		
 	}
 
 	@Test
 	public void testUpdateStaff() throws ClassNotFoundException, SQLException, IOException {
-		sd.deleteStaff(1);
+		sd.deleteStaff("1");
 		Staff staff = new Staff();
-		staff.setStaffId(1);
+		staff.setStaffId("1");
 		staff.setStaffName("abc");
 		staff.setSpecialization("def");
 		staff.setTiming("123");
@@ -109,7 +109,7 @@ public class StaffDaoImplTest {
 		staff.setDepartmentId(0);
 		sd.insertStaff(staff);
 		Staff newstaff = new Staff();
-		newstaff.setStaffId(1);
+		newstaff.setStaffId("1");
 		newstaff.setStaffName("abc");
 		newstaff.setSpecialization("def");
 		newstaff.setTiming("123");
@@ -117,19 +117,19 @@ public class StaffDaoImplTest {
 		newstaff.setStaffPhoneNo(12345);
 		newstaff.setStaffPassword("jkl");
 		newstaff.setDepartmentId(0);
-		assertTrue(sd.updateStaff(1,newstaff));
+		assertTrue(sd.updateStaff("1",newstaff));
 	}
 
 	@Test
 	public void testDisplayStaffNegative() throws ClassNotFoundException, SQLException, IOException
 	{
-		assertEquals(0, sd.displayStaff(324).getStaffId());
+		assertEquals(0, sd.displayStaff("324").getStaffId());
 	}
 	@Test
 	public void testDisplayStaff() throws ClassNotFoundException, SQLException, IOException {
-		sd.deleteStaff(1);
+		sd.deleteStaff("1");
 		Staff staff = new Staff();
-		staff.setStaffId(1);
+		staff.setStaffId("1");
 		staff.setStaffName("abc");
 		staff.setSpecialization("def");
 		staff.setTiming("123");
@@ -139,7 +139,7 @@ public class StaffDaoImplTest {
 		staff.setDepartmentId(0);
 		sd.insertStaff(staff);
 		
-		assertEquals(staff, sd.displayStaff(1));
+		assertEquals(staff, sd.displayStaff("1"));
 	}
 
 	@Test
