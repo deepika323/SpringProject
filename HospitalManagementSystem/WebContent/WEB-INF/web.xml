@@ -149,4 +149,44 @@
     <servlet-name>RetrieveDoctorList</servlet-name>
     <url-pattern>/RetrieveDoctorList</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewMR</display-name>
+    <servlet-name>ViewMR</servlet-name>
+    <servlet-class>controller.adminServlet.ViewMR</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewMR</servlet-name>
+    <url-pattern>/ViewMR</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AjaxTest</display-name>
+    <servlet-name>AjaxTest</servlet-name>
+    <servlet-class>controller.adminServlet.AjaxTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AjaxTest</servlet-name>
+    <url-pattern>/AjaxTest</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DischargeAjax</display-name>
+    <servlet-name>DischargeAjax</servlet-name>
+    <servlet-class>controller.adminServlet.DischargeAjax</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DischargeAjax</servlet-name>
+    <url-pattern>/DischargeAjax</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddDischargeSummary</display-name>
+    <servlet-name>AddDischargeSummary</servlet-name>
+    <servlet-class>controller.adminServlet.AddDischargeSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDischargeSummary</servlet-name>
+    <url-pattern>/AddDischargeSummary</url-pattern>
+  </servlet-mapping>
 </web-app>

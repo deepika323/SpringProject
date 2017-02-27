@@ -7,6 +7,7 @@ public class MedicalReport implements Comparable<MedicalReport> {
 	private Date visitDate;
 	private String diagnosis;
 	private String investigations;
+	private String personId;
 	private String tests;
 	private String recommendations;
 	private String doctorId;
@@ -37,6 +38,18 @@ public class MedicalReport implements Comparable<MedicalReport> {
 	}
 	public String getDiagnosis() {
 		return diagnosis;
+	}
+	public int getAppointmentId() {
+		return appointmentId;
+	}
+	public void setAppointmentId(int appointmentId) {
+		this.appointmentId = appointmentId;
+	}
+	public String getPersonId() {
+		return personId;
+	}
+	public void setPersonId(String personId) {
+		this.personId = personId;
 	}
 	public void setDiagnosis(String diagnosis) {
 		this.diagnosis = diagnosis;
@@ -72,10 +85,11 @@ public class MedicalReport implements Comparable<MedicalReport> {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + appointmentId;
 		result = prime * result + ((diagnosis == null) ? 0 : diagnosis.hashCode());
 		result = prime * result + ((doctorId == null) ? 0 : doctorId.hashCode());
 		result = prime * result + ((investigations == null) ? 0 : investigations.hashCode());
-		result = prime * result + appointmentId;
+		result = prime * result + ((personId == null) ? 0 : personId.hashCode());
 		result = prime * result + ((recommendations == null) ? 0 : recommendations.hashCode());
 		result = prime * result + ((technicianId == null) ? 0 : technicianId.hashCode());
 		result = prime * result + ((tests == null) ? 0 : tests.hashCode());
@@ -91,6 +105,8 @@ public class MedicalReport implements Comparable<MedicalReport> {
 		if (getClass() != obj.getClass())
 			return false;
 		MedicalReport other = (MedicalReport) obj;
+		if (appointmentId != other.appointmentId)
+			return false;
 		if (diagnosis == null) {
 			if (other.diagnosis != null)
 				return false;
@@ -106,7 +122,10 @@ public class MedicalReport implements Comparable<MedicalReport> {
 				return false;
 		} else if (!investigations.equals(other.investigations))
 			return false;
-		if (appointmentId != other.appointmentId)
+		if (personId == null) {
+			if (other.personId != null)
+				return false;
+		} else if (!personId.equals(other.personId))
 			return false;
 		if (recommendations == null) {
 			if (other.recommendations != null)
