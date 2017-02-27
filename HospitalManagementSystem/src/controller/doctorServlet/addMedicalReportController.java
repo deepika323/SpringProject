@@ -37,8 +37,8 @@ public class addMedicalReportController extends HttpServlet {
 		String investigations=request.getParameter("investigations");
 		String tests=request.getParameter("tests");
 		String recommendations=request.getParameter("recommendations");
-		int doctorId=Integer.parseInt(request.getParameter("doctorId"));
-		int technicianId=Integer.parseInt(request.getParameter("technicianId"));
+		String doctorId=request.getParameter("doctorId");
+		String technicianId=request.getParameter("technicianId");
 		
 		MedicalReport newMedicalReport = new MedicalReport();
 		newMedicalReport.setPatientId(patientId);

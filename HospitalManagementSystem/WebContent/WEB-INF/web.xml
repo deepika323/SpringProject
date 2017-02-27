@@ -101,16 +101,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>RetrieveDoctorDepartment</display-name>
-    <servlet-name>RetrieveDoctorDepartment</servlet-name>
-    <servlet-class>controller.doctorServlet.RetrieveDoctorDepartment</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RetrieveDoctorDepartment</servlet-name>
-    <url-pattern>/RetrieveDoctorDepartment</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>MedicalReportServlet</display-name>
     <servlet-name>MedicalReportServlet</servlet-name>
     <servlet-class>controller.patientServlet.MedicalReportServlet</servlet-class>
@@ -148,5 +138,15 @@
   <servlet-mapping>
     <servlet-name>MedicineServlet</servlet-name>
     <url-pattern>/Medicine</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveDoctorList</display-name>
+    <servlet-name>RetrieveDoctorList</servlet-name>
+    <servlet-class>controller.doctorServlet.RetrieveDoctorList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveDoctorList</servlet-name>
+    <url-pattern>/RetrieveDoctorList</url-pattern>
   </servlet-mapping>
 </web-app>
