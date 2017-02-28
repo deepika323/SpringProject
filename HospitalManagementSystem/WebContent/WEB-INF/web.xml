@@ -219,4 +219,14 @@
     <servlet-name>AddDoctor</servlet-name>
     <url-pattern>/AddDoctor</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveDoctor</display-name>
+    <servlet-name>RemoveDoctor</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveDoctor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveDoctor</servlet-name>
+    <url-pattern>/RemoveDoctor</url-pattern>
+  </servlet-mapping>
 </web-app>
