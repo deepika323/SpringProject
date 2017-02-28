@@ -101,25 +101,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="single-us">
 						
 						   <form>
-								<input type="text" id="personid" name="personId" placeholder="Person ID" required="" >
-								
+								<input type="text" id="doctorid" name="doctorId" placeholder="Doctor ID" required="" >
+								<input type="text" id="doctorname" name="personId" placeholder="Doctor Name" required="" >
+								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
+								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
+								<input type="text" id="address" name="address" placeholder="address" required="" >
+								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
-								
-								 
-    
-				<div class="section_room">
-				
-					<select id="doctor" name="doctorId" class="frm-field required" required >
-					<option  id='0' value="">Select Doctor</option>
-					<c:forEach var="element" items="${doctorList}">
-					<!--  <div id=${element.departmentId}>-->
-						<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
-						<!--  </div>-->
-					
-    </c:forEach>						
-					</select>
-				</div>
+		
 				<div class="section_room">
 					<select id="department" class="frm-field required">
 					<option  id='D0' value="Default">Select Department</option>
@@ -128,9 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</c:forEach>						
 					</select>
 				</div>
-								<input type="number" name="fee" placeholder="Appointment Registration Fee" required="">
-
-								<textarea name="purpose" required placeholder="Purpose For Visit"></textarea>
+								<textarea name="comments" required placeholder="Comments"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>

@@ -33,19 +33,23 @@ public class AddDoctor extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
+		
+		ArrayList<Department> departmentList=new ArrayList<Department>();
 		
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		
 		try {
-			doctorList=abl.listDoctor();
+			
+			departmentList=abl.listDepartment();
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}		
-		 request.setAttribute("doctorList", doctorList);	
-		 RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDoctor.jsp");
-		 rd.forward(request, response);
+		 request.setAttribute("departmentList", departmentList);
+			
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDoctor.jsp");
+		    rd.forward(request, response);
 	}
 
 	/**
