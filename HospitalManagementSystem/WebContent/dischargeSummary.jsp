@@ -158,7 +158,7 @@ font-weight: bold;
 	<th>Doctor Id</th>
 	<th>Bed No</th>
 	</tr>
-	
+	<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
         <tr>
         	<td>${dischargeSummary.serialNo}</td> 
             <td>${dischargeSummary.admissionDate}</td> 
@@ -174,6 +174,7 @@ font-weight: bold;
             <td>${dischargeSummary.doctorId}</td>
             <td>${dischargeSummary.bedNo}</td> 
         </tr> 
+            </c:forEach>
 
 </table>
 </div>

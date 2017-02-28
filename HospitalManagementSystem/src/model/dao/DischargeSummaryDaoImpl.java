@@ -196,5 +196,45 @@ public class DischargeSummaryDaoImpl implements DischargeSummaryDao {
 		closeConnection(con);
 		return dischargeSummaryList;
 	}
+	
+	
+	@Override
+	public ArrayList<DischargeSummary> displayMyDischargeSummarys(String personId) throws ClassNotFoundException, SQLException, IOException {
+
+		con= openConnection();
+		
+		
+		pstmt=con.prepareStatement("select *  from dischargesummary,appointment where dischargesummary.patientId=appointment.regno and appointment.personId like ?");
+		pstmt.setString(1,personId);
+		
+		rs=pstmt.executeQuery();
+		
+		ArrayList<DischargeSummary> dischargeSummaryList=new ArrayList<DischargeSummary>();
+		
+		
+		while(rs.next())
+		{
+			DischargeSummary dischargeSummary = new DischargeSummary();
+			
+			dischargeSummary.setSerialNo(rs.getInt("serialNo"));
+			 dischargeSummary.setPatientId(rs.getInt("patientId"));
+			 dischargeSummary.setOtId(rs.getInt("otId"));
+			 dischargeSummary.setBedNo(rs.getInt("bedNo"));
+			 dischargeSummary.setAdmissionDate(rs.getDate("admissionDate"));
+			 dischargeSummary.setDischargeDate(rs.getDate("dischargeDate"));
+			 dischargeSummary.setDoctorId(rs.getString("doctorId"));
+			 dischargeSummary.setHistory(rs.getString("history"));
+			 dischargeSummary.setOnExamination(rs.getString("onExamination"));
+			 dischargeSummary.setOperationDone(rs.getString("operationDone"));
+			 dischargeSummary.setOperativeFindings(rs.getString("operativeFindings"));
+			 dischargeSummary.setTreatmentGiven(rs.getString("treatmentGiven"));
+			 dischargeSummary.setRecommendations(rs.getString("recommendations"));
+			dischargeSummaryList.add(dischargeSummary);
+		}
+		
+		closeConnection(con);
+		return dischargeSummaryList;
+	}
+
 
 }

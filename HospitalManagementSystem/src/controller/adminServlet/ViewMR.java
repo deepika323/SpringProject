@@ -49,6 +49,12 @@ public class ViewMR extends HttpServlet {
 			e.printStackTrace();
 		}
 		 request.setAttribute("mr", mr);
+		 
+		 String servlet="./admin.jsp";
+			String button="CONTINUE";
+			
+		request.setAttribute("servlet", servlet);
+		request.setAttribute("button", button);
 		//PrintWriter pw=response.getWriter();
 		
 		//pw.println("MR "+mr);

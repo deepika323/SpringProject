@@ -172,4 +172,38 @@ public class MedicalReportDaoImpl implements MedicalReportDao {
 		return medicalReportList;
 	}
 
+	@Override
+	public ArrayList<MedicalReport> displayMyMedicalReports(String personId) throws ClassNotFoundException, SQLException, IOException {
+		con= openConnection();
+		
+		
+		pstmt=con.prepareStatement("select *  from medicalreport,appointment where medicalreport.patientId=appointment.regno and appointment.personId like ?");
+		
+		pstmt.setString(1,personId);
+		
+		
+		rs=pstmt.executeQuery();
+		
+		ArrayList<MedicalReport> medicalReportList=new ArrayList<MedicalReport>();
+		
+			while(rs.next())
+		{
+				MedicalReport medicalreport=new MedicalReport();
+				
+			medicalreport.setPatientId(rs.getInt("patientId"));
+			medicalreport.setVisitDate(rs.getDate("visitDate"));
+			medicalreport.setDiagnosis(rs.getString("diagnosis"));
+			medicalreport.setInvestigations(rs.getString("investigations"));
+			medicalreport.setTests(rs.getString("tests"));
+			medicalreport.setRecommendations(rs.getString("recommendations"));
+
+			medicalreport.setTechnicianId(rs.getString("TECHNICIANID"));
+			medicalreport.setDoctorId(rs.getString("DoctorID"));
+			medicalReportList.add(medicalreport);
+		}
+		
+		closeConnection(con);
+
+		return medicalReportList;
+	}
 }

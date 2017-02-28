@@ -116,13 +116,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="leave w3l">
 
-	  	<h3 align="left" color=black><span>Appointment Details :</span></h3><br>
-  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient's Appointment Number : <span>${mr.visitDate} </span></h3>      
-           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patient's Person ID :<span>${mr.}</span></h3>
-           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doctor's ID :<span>${appointment.doctorId}</span></h3> 
-           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purpose for the visit :<span>${appointment.purpose}</span></h3>
-           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment : <span>&#8377 ${appointment.payment}</span></h3>
-            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appointment Date :<span>${appointment.appointmentDate}</span></h3>
+	  	<h3 align="left" color=black><span>Medical Report :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient's Appointment Number : <span>${mr.appointmentId} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Diagnosis : <span>${mr.diagnosis}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doctor's ID : <span>${mr.doctorId}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tests : <span>${mr.tests}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommendations : <span>${mr.recommendations}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visit Date :<span>${mr.visitDate}</span></h3>
       </div>
             <br>
              <div class="single">

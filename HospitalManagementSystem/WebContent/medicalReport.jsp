@@ -142,9 +142,9 @@ font-weight: bold;
  
 <div style="overflow-x:auto;width:100%">
 <table  border="1" cellpadding="5">
- <caption>&#9; Medical Report</caption>
+ <caption>&#9; Medical Reports</caption>
 	<tr>
-	<th>Appointment Id</th>
+	<th>Medical Report Id</th>
 	<th>Visit Date</th>
 	<th>Diagnosis</th>
 	<th>Investigations</th>
@@ -153,7 +153,7 @@ font-weight: bold;
 	<th>Doctor Id</th>
 	<th>Technician Id</th>
 	</tr>
-	 
+	 <c:forEach var="report" items="${reportList}">
         <tr>
         	<td>${report.appointmentId}</td> 
             <td>${report.visitDate}</td> 
@@ -164,7 +164,7 @@ font-weight: bold;
             <td>${report.doctorId}</td>
             <td>${report.technicianId}</td>
         </tr> 
-    
+    </c:forEach>
 </table>
 </div>
 <br><br>
