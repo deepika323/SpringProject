@@ -283,7 +283,7 @@
     <description></description>
     <display-name>AddDoctor</display-name>
     <servlet-name>AddDoctor</servlet-name>
-    <servlet-class>controller.adminServlet.Doctor</servlet-class>
+    <servlet-class>controller.adminServlet.AddDoctor</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddDoctor</servlet-name>
