@@ -68,7 +68,7 @@ public class PersonBusinessLogic {
 	public ArrayList<Medicine> myMedicines(int patientId) throws ClassNotFoundException, SQLException, IOException
 	{
 		ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
-		medicineList=md.displayAllMedicines();
+		medicineList=md.displayAllMedicines(patientId);
 		ArrayList<Medicine> patientMedicines=new ArrayList<Medicine>();
 		for(Medicine ml: medicineList){
 			if(ml.getPatientId()==patientId){

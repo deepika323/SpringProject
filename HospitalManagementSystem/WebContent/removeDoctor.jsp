@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">REMOVE <span>DOCTOR</span></h3>
+						<h3 class="tittle">REMOVE <span>DOCTOR </span></h3>
 					</div>
 			</div>
 		</div>

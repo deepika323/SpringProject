@@ -142,7 +142,8 @@ public class DoctorBLTest {
 
 	@Test
 	public void testListMedicine() throws ClassNotFoundException, SQLException, IOException {
-		assertNotEquals(null,dbl.listMedicine());
+		int patientId=1;
+		assertNotEquals(null,dbl.listMedicine(patientId));
 	}
 
 	@Test

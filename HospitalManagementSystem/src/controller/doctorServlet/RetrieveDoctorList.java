@@ -1,6 +1,7 @@
 package controller.doctorServlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -12,7 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.bean.Department;
 import model.bean.Doctor;
+import model.bean.Medicine;
+import model.bean.Technician;
 import model.bl.AdminBusinessLogic;
+import model.bl.DoctorBusinessLogic;
 
 /**
  * Servlet implementation class RetrieveDoctorList
@@ -35,12 +39,14 @@ public class RetrieveDoctorList extends HttpServlet {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
+		ArrayList<Technician> technicianList=new ArrayList<Technician>();
 		ArrayList<Department> departmentList=new ArrayList<Department>();
-		
+ 		
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		
 		try {
 			doctorList=abl.listDoctor();
+			technicianList=abl.listTechnician();
 			departmentList=abl.listDepartment();
 			
 		} catch (ClassNotFoundException | SQLException e) {
@@ -48,10 +54,17 @@ public class RetrieveDoctorList extends HttpServlet {
 			e.printStackTrace();
 		}		
 		 request.setAttribute("doctorList", doctorList);
+		 request.setAttribute("technicianList", technicianList);
 		 request.setAttribute("departmentList", departmentList);
+		 
+		 
+//		PrintWriter pw=response.getWriter();
+//		 pw.println(doctorList);
+//		 pw.println(technicianList);
+//		 
 			
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReportForm.jsp");
-		    rd.forward(request, response);
+   RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReportForm.jsp");
+	   rd.forward(request, response);
 	}
 
 	/**

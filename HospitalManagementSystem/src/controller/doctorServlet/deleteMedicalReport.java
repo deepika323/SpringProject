@@ -1,40 +1,35 @@
-package controller.adminServlet;
+package controller.doctorServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.bl.AdminBusinessLogic;
+import model.bl.DoctorBusinessLogic;
 
 /**
- * Servlet implementation class RemoveDoctor
+ * Servlet implementation class deleteMedicalReport
  */
-public class RemoveDoctor extends HttpServlet {
+public class deleteMedicalReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RemoveDoctor() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String doctorId= request.getParameter("doctorId");
+		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
-		boolean status=false;
+		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
+		
 			try {
-				status=abl.removeDoctor(doctorId);
+				boolean status=abl.removeMedicalReport(regNo);
+				boolean status1=dbl.removeMedicalReport(regNo);
 			}
 		 catch (SQLException e) {
 			e.printStackTrace();
@@ -42,13 +37,11 @@ public class RemoveDoctor extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			if(status==true){
 			PrintWriter out=response.getWriter();
-			 out.println("<script type=\"text/javascript\">");  
-			 out.println("alert('Doctor Deleted');");
-			 out.println("location='admin.jsp';");
-			 out.println("</script>");
-			}
+			   out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Medical Report Deleted');");
+			   out.println("location='doctor.jsp'");
+			   out.println("</script>");
 	}
 
 	/**

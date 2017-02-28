@@ -654,7 +654,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddBillPID"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE BILLS</h3>
 				   </div>
@@ -667,7 +667,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="./FindOrRemoveBillController?selectedValue=Find"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>VIEW BILLS</h3>
 				   </div>
@@ -683,7 +683,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_2">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <a href="./FindOrRemoveBillController?selectedValue=Update"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>UPDATE BILLS</h3>
 				   </div>
@@ -696,7 +696,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a href="./FindOrRemoveBillController?selectedValue=Remove"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE BILLS</h3>
 				   </div>

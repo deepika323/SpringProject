@@ -12,29 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 import model.bl.AdminBusinessLogic;
 
 /**
- * Servlet implementation class RemoveDoctor
+ * Servlet implementation class DeleteBill
  */
-public class RemoveDoctor extends HttpServlet {
+public class DeleteBill extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RemoveDoctor() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		String doctorId= request.getParameter("doctorId");
+		Integer billNo=Integer.parseInt(request.getParameter("billNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
-		boolean status=false;
+		
 			try {
-				status=abl.removeDoctor(doctorId);
+				boolean status=abl.removeBill(billNo);
 			}
 		 catch (SQLException e) {
 			e.printStackTrace();
@@ -42,13 +33,11 @@ public class RemoveDoctor extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			if(status==true){
 			PrintWriter out=response.getWriter();
-			 out.println("<script type=\"text/javascript\">");  
-			 out.println("alert('Doctor Deleted');");
-			 out.println("location='admin.jsp';");
-			 out.println("</script>");
-			}
+			 out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Bill Deleted');");
+			   out.println("location='admin.jsp';");
+			   out.println("</script>");
 	}
 
 	/**

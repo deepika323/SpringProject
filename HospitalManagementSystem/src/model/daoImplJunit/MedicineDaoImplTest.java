@@ -136,7 +136,8 @@ public class MedicineDaoImplTest {
 	}
 	@Test
 	public void testDisplayAllMedicines() throws ClassNotFoundException, SQLException, IOException {
-		assertNotEquals(null, md.displayAllMedicines());
+		int patientId = 1;
+		assertNotEquals(null, md.displayAllMedicines(patientId));
 	}
 
 }
