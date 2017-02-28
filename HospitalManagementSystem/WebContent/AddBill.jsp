@@ -95,11 +95,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						   <form>
 						   
-								<input type="text" id="personid" name="personId" placeholder="Person ID" required="" >
+								<c:param name="personId" value="${personId}"></c:param>
 								
-								<jsp:forward page="./AddBill">
-									<c:param name="personId" value="personId"></c:param>
-								</jsp:forward>
 								
 								
 								<div class="section_room">
