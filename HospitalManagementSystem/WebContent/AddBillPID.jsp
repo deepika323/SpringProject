@@ -89,45 +89,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewBillController">
+				<form action="./AddBill">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+						  
 						   
-								<input type="text" id="personid" name="personId" placeholder="Person ID" required="" >
+								<input type="text" id="personid" name="personId" placeholder="Person ID" required  >
 								
-								<jsp:forward page="./AddBill">
-									<c:param name="personId" value="personId"></c:param>
-								</jsp:forward>
+								<input type="submit" value="CONTINUE" id="submit">
 								
 								
-								<div class="section_room">
-							
-								<select id="discharge" name="discharge" class="frm-field required" required >
-								<option  id='0' value="">Select Discharge Summary Serial Number</option>
-								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
-									<option id=${dischargeSummary.serialNo} value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
-			    				</c:forEach>						
-								</select>
-								</div>
-								 
-    
-								<input type="number" id="docfee" name="docfee" placeholder="Doctor Visting Charges" required="">
-								
-								<input type="number" id="bedfee" name="bedfee" placeholder="Bed Charges" required="">
-								
-								<input type="number" name="tests" id="tests" placeholder="Test/s Charges" required="">
-
-								<input type="number" name="medicines" id="medicines" placeholder="Test/s Charges" required="">
-							
-								<input id="confirm" type="submit" value="CREATE BILL" >
-
-						   </form>
-							<form action="./admin.jsp">
-								<input  type="submit" value="CANCEL" >
-						   </form>
-						</div>
 				</form>
 				
 				</div>

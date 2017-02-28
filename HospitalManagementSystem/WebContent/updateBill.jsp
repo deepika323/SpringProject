@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ADD BILL</title>
+<title>UPDATE BILL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">ADD <span>BILL</span></h3>
+						<h3 class="tittle">UPDATE <span>BILL</span></h3>
 					</div>
 			</div>
 		</div>
@@ -89,30 +89,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewBillController">
+			
+			
+				<form action="./UpdateBill">
 					<div class="single-grid">
 						<div class="single-us">
 						
 						   <form>
-						   
-								<input type="text" id="personid" name="personId" placeholder="Person ID" required="" >
+						       <h3>Bill Number :<span>${bill.billNo}</span></h3>
+						       <input type="text" id="billNo" name="billNo" value="${bill.billNo}"  hidden required="" >
+								<input type="text" id="personid" name="personId" value="${bill.appointmentId}" hidden placeholder="Person ID" required="" >
+								<h3>PERSON ID :<span>${bill.appointmentId}</span></h3>
 								
-								<jsp:forward page="./AddBill">
-									<c:param name="personId" value="personId"></c:param>
-								</jsp:forward>
-								
-								
-								<div class="section_room">
-							
-								<select id="discharge" name="discharge" class="frm-field required" required >
-								<option  id='0' value="">Select Discharge Summary Serial Number</option>
-								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
-									<option id=${dischargeSummary.serialNo} value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
-			    				</c:forEach>						
-								</select>
-								</div>
+								<h3>Discharge Summary Serial Number :<span>${bill.serialNo}</span></h3>
 								 
-    
 								<input type="number" id="docfee" name="docfee" placeholder="Doctor Visting Charges" required="">
 								
 								<input type="number" id="bedfee" name="bedfee" placeholder="Bed Charges" required="">
@@ -121,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								<input type="number" name="medicines" id="medicines" placeholder="Test/s Charges" required="">
 							
-								<input id="confirm" type="submit" value="CREATE BILL" >
+								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
 
 						   </form>
 							<form action="./admin.jsp">
@@ -129,61 +119,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   </form>
 						</div>
 				</form>
-				
 				</div>
 			</div>			
 		</div>
 			</div>
 	</div>
 	
-	
-	<%-- <script type="text/javascript">
-	$(document).ready(function(){
-		var valueSelected
-		$("#department").on('change', function (e) {
-		    var optionSelected = $("option:selected", this);
-		    valueSelected = this.value;
-		    $('option').show();
-		    //$('#'+valueSelected).show();
-		    $("#department > option").each(function() {
-		        var docval=this.value;
-		        if(docval!=valueSelected){
-		        	$('#'+docval).hide();
-		        }
-		    });
-		    
-		    if(valueSelected=="Default"){
-		    	$('option').show();
-		    	
-		    }
-		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
-		    $("#doctor").fadeIn();
-		    $("#0").show();
-		    $("#D0").show();
-		    
-		    	    
-		    
-		});
-		
-		
-		
-		
-		});--%>
-	</script>
-	<!-- <script type="text/javascript">
 
-	$(document).ready(function(){
-			{
-		$("#confirm").click(function()
-		{
-		alert($("#doctor").val());
-			});
-
-
-			}
-		});
-
-	</script>-->
 	
 	<!--//single-->	
 
