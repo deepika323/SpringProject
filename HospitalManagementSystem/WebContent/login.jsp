@@ -136,22 +136,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="leave w3l">
 			<h3>Enter <span> your details </span></h3>
 			<br>
-				<form >
+				<form action="./LogInController">
 					<div class="single-grid">
 						<div class="single-us">
 						   <form>
-						   		<INPUT TYPE="radio" NAME="radios" VALUE="radio1" CHECKED>
-             					 Staff
+						   		<INPUT TYPE="radio" NAME="radios" VALUE="radio1" id="radios" CHECKED>
+             					Staff
             					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio2">
+            					<INPUT TYPE="radio" NAME="radios" VALUE="radio2" id="radios">
              					Patient
             					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio3">
+            					<INPUT TYPE="radio" NAME="radios" VALUE="radio3" id="radios">
              					Doctor
              					<BR>
-								<input type="text" placeholder=" ID" required="">
-								<input type="text" placeholder="Password" required="">
-								<input type="submit" value="SIGN IN" >
+								<input type="text" placeholder="ID" id="ID" name="ID" required="">
+								<input type="text" placeholder="Password" id="password" name="password" required="">
+								<input type="submit" value="LogIn" >
 
 						   </form>
 							<form action="./index.jsp">

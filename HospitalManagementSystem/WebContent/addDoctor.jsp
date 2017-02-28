@@ -101,12 +101,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="single-us">
 						
 						   <form>
-								<input type="text" id="doctorid" name="doctorId" placeholder="Doctor ID" required="" >
-								<input type="text" id="doctorname" name="personId" placeholder="Doctor Name" required="" >
+								<input type="text" id="id" name="id" placeholder="ID" required="" >
+								<input type="text" id="name" name="name" placeholder="Name" required="" >
 								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
 								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
-								<input type="text" id="address" name="address" placeholder="address" required="" >
+								<textarea rows="3" cols="50" placeholder="Address"></textarea>
 								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
+								<input type="password" placeholder="Password" required="">
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
 		
@@ -118,7 +119,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</c:forEach>						
 					</select>
 				</div>
-								<textarea name="comments" required placeholder="Comments"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>

@@ -137,16 +137,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> your details </span></h3>
 			<br>
 			<br>
-				<form >
+				<form action="./SignUpController">
 					<div class="single-grid">
 						<div class="single-us">
 						   <form>
-								<input type="text" placeholder="Name" required="">
-								<input type="text" placeholder="Email" required="">
-								<input type="text" placeholder="Mobile Number" required="">
-								<input type="number" placeholder="Age" required="">
-								<textarea placeholder="Message"></textarea>
-								<input type="submit" value="SIGN UP" >
+						   		<input type="text" name="personId" placeholder="ID(Any identification number for eg. aadhar card, pan card, etc.)" required="">
+						   		<input type="text" name="personIdType" placeholder="ID Type" required="">
+								<input type="text" name="personName" placeholder="Name" required="">
+								Select Date of Birth:&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="personDateOfBirth" placeholder="Date Of Birth" required="">
+								<input type="number" name="personAge" placeholder="Age" required+"">
+								<br><br>
+								Select Gender
+								<br><br>
+								<input type="radio" name="radio" value="male">Male
+								&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio" value="female">Female
+								<textarea name="personAddress" rows="3" cols="50" placeholder="Address"></textarea>
+								<input name="personPhoneNo" type="number" placeholder="Phone No" required="">
+								<input name="personPassword" type="password" placeholder="Password" required="">
+								<input type="submit" value="SignUp" >
 
 						   </form>
 							<form action="./index.jsp">

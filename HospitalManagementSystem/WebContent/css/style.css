@@ -1958,7 +1958,7 @@ p.reply i{
 p.reply i:hover{
     background: url(../images/icons.png)no-repeat -174px -23px;
 }
-.single-us input[type="text"],.leave textarea,.leave input[type="submit"] {
+.single-us input[type="text"],.single-us input[type="password"],.leave textarea,.leave input[type="submit"] {
   font-size: 1em;
   width: 100%;
   font-weight:bold;

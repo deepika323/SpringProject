@@ -289,4 +289,24 @@
     <servlet-name>AddDoctor</servlet-name>
     <url-pattern>/AddDoctor</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogInController</display-name>
+    <servlet-name>LogInController</servlet-name>
+    <servlet-class>controller.loginSignUp.LogInController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogInController</servlet-name>
+    <url-pattern>/LogInController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SignUpController</display-name>
+    <servlet-name>SignUpController</servlet-name>
+    <servlet-class>controller.loginSignUp.SignUpController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SignUpController</servlet-name>
+    <url-pattern>/SignUpController</url-pattern>
+  </servlet-mapping>
 </web-app>
