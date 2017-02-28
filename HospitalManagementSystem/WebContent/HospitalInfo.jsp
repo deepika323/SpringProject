@@ -1,10 +1,17 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ADD BILL</title>
+<title>Hospital Info</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -12,11 +19,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
+<link rel="stylesheet" href="css/swipebox.css">
 <link href="css/style.css" rel='stylesheet' type='text/css' />	
 <link rel="stylesheet" href="css/slider.css">
 <script src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <!--/web-font-->
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
@@ -33,7 +42,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
-	<!--header-top-->
+<!--start-home-->
+<div class="main-header" id="house">
+			<div class="header-strip">
+			   <div class="container">
+				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></p>
+				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> + 655 8858 54892</p>
+				<div class="social-icons">
+					<ul>					
+						<li><a href="#"><i class="facebook"> </i></a></li>
+						<li><a href="#"><i class="twitter"> </i></a></li>
+						<li><a href="#"><i class="google-plus"> </i></a></li>	
+						<li><a href="#"><i class="dribble"> </i></a></li>										
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			</div>
+			
+		<!--header-top-->
 			<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
@@ -46,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<h1><a class="navbar-brand" href="index.jsp"><span>M</span>edicinal  <img src="images/logo.png" alt=" " /></a></h1>
+							<h1><a class="navbar-brand" href="index.html"><span>M</span>edicinal  <img src="images/logo.png" alt=" " /></a></h1>
 						</div>
 					</div>
 
@@ -55,138 +82,213 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
+										<li class="menu__item"><a href="index.html" class="menu__link"><span class="menu__helper">Home</span></a></li>
 										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
 										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
-										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
+										<li class="menu__item menu__item--current"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
 										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
 									</ul>
 								</nav>
 							</div>
 					</div>
+					
 					<!-- /.navbar-collapse -->
 				</nav>
 
 			   <div class="clearfix"></div>
 			</div>
 	</div>
+</div>
 <!--//header-top-->
  <!-- //Line Slider -->
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">ADD <span>BILL</span></h3>
+						<h3 class="tittle">OUR <span>DEPARTMENTS</span></h3>
 					</div>
 			</div>
 		</div>
-	<!--/single-->
- <div class="single">
-			<div class="container">
-				<div class="article-post w3l">
-				<div class="post-details s-page">
-				
-		<div class="leave w3l">
-			<h3>Enter <span> required details </span></h3>
-			<br>
-			<br>
-				<form action="./NewBillController">
-					<div class="single-grid">
-						<div class="single-us">
-						
-						   <form>
-						   
-								<c:param name="personId" value="${personId}"></c:param>
-								
-								
-								
-								<div class="section_room">
-							
-								<select id="discharge" name="discharge" class="frm-field required" required >
-								<option  id='0' value="">Select Discharge Summary Serial Number</option>
-								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
-									<option id=${dischargeSummary.serialNo} value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
-			    				</c:forEach>						
-								</select>
-								</div>
-								 
-    
-								<input type="number" id="docfee" name="docfee" placeholder="Doctor Visting Charges" required="">
-								
-								<input type="number" id="bedfee" name="bedfee" placeholder="Bed Charges" required="">
-								
-								<input type="number" name="tests" id="tests" placeholder="Test/s Charges" required="">
+		
+		
+		<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+	$scope.doctor = [];
 
-								<input type="number" name="medicines" id="medicines" placeholder="Test/s Charges" required="">
-							
-								<input id="confirm" type="submit" value="CREATE BILL" >
-
-						   </form>
-							<form action="./admin.jsp">
-								<input  type="submit" value="CANCEL" >
-						   </form>
-						</div>
-				</form>
-				
-				</div>
-			</div>			
-		</div>
-			</div>
-	</div>
 	
-	
-	<%-- <script type="text/javascript">
-	$(document).ready(function(){
-		var valueSelected
-		$("#department").on('change', function (e) {
-		    var optionSelected = $("option:selected", this);
-		    valueSelected = this.value;
-		    $('option').show();
-		    //$('#'+valueSelected).show();
-		    $("#department > option").each(function() {
-		        var docval=this.value;
-		        if(docval!=valueSelected){
-		        	$('#'+docval).hide();
-		        }
-		    });
-		    
-		    if(valueSelected=="Default"){
-		    	$('option').show();
-		    	
-		    }
-		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
-		    $("#doctor").fadeIn();
-		    $("#0").show();
-		    $("#D0").show();
-		    
-		    	    
-		    
-		});
-		
-		
-		
-		
-		});--%>
-	</script>
-	<!-- <script type="text/javascript">
+	 <c:forEach var="element" items="${doctorList}" varStatus="status">
+     $scope.doctor.push({name: '${element.doctorName}',id: '${element.doctorId}'});   
+ </c:forEach>
 
+
+	$scope.department = [];
+
+	
+	 <c:forEach var="element" items="${departmentList}" varStatus="status">
+    $scope.department.push({name: '${element.departmentName}',id: '${element.departmentId}'});   
+</c:forEach>
+	 
+});
+</script>
+		
+<div ng-app="myApp" ng-controller="namesCtrl">
+
+<!-- <p>Looping with objects:</p>
+<ul>
+  <li ng-repeat="x in doctor">
+    {{x.name +','+x.id}}
+  </li>
+</ul>
+<ul>
+  <li ng-repeat="x in department | filter:test">
+    {{x.name +','+x.id}}
+  </li>
+</ul>-->
+		
+			<!--/gallery-->	
+<div id="gallery" class="gallery">
+	<div class="container">
+		<div class="gallery_gds w3l">
+			<ul class="simplefilter wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                
+                <li id="1" data-filter="1">DEPARTMENTS</li>
+                <li id="2" data-filter="2">DOCTORS</li>
+
+            </ul>
+
+            
+
+
+            <div class="filtr-container wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                       	<script>
 	$(document).ready(function(){
-			{
-		$("#confirm").click(function()
-		{
-		alert($("#doctor").val());
+
+		$("#test").hide();
+		$("#test2").hide();
+
+		$("#1").click(function(){
+			$("#test").show();
+			$('.doctor').hide();
+			$('.department').show();
+			$("#test2").hide();
+			});
+		$("#2").click(function(){
+			$("#test2").show();
+			$('.doctor').show();
+			$('.department').hide();
+			$("#test").hide();
+			});
+		$("#0").click(function(){
+			$("#test2").hide();
+			$("#test").hide();
 			});
 
-
-			}
 		});
 
-	</script>-->
+
+
+	</script>
+     <p><input id="test" type="text" placeholder="Search Department " ng-model="test"></p>       
+     <div  class="department" ng-repeat="x in department | filter:test" id={{x.id}}>
+                <div class=" col-md-4 filtr-item" data-category="1" data-sort="Busy streets">
+     
+					<a href="./DisplayDepartment?deptId={{x.id}}" >
+						<div class="item item-type-double">
+							<div class="item-hover">
+								<div class="item-info">
+									<div class="date">{{x.name}}</div>			
+									<div class="line"></div>			
+									<div class="headline">{{x.name}}</div>
+									<div class="line"></div>
+								</div>
+								<div class="mask"></div>
+							</div>
+							<div class="item-img"><img src="images/g1.jpg" alt=" " /></div>
+						</div>
+					</a>
+					<label>{{x.name}}</label>
+                </div>
+                </div>
+					                
+     <p><input id="test2" type="text" placeholder="Search Doctor " ng-model="test2"></p> 					                
+     <div  class="doctor" ng-repeat="x in doctor | filter:test2" id={{x.id}}>
+                <div class=" col-md-4 filtr-item" data-category="2" data-sort="Busy streets">
+     
+					<a href="./DisplayDoctor?docId={{x.id}}">
+						<div class="item item-type-double">
+							<div class="item-hover">
+								<div class="item-info">
+									<div class="date">{{x.name}}</div>			
+									<div class="line"></div>			
+									<div class="headline">{{x.name}}</div>
+									<div class="line"></div>
+								</div>
+								<div class="mask"></div>
+							</div>
+							<div class="item-img"><img src="images/g2.jpg" alt=" " /></div>
+						</div>
+					</a>
+					<label>{{x.name}}</label>
+                </div>
+                </div>
+					                
+</div>
+
+               <div class="clearfix"> </div>
+            </div>
+		</div>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<!-- swipe box js -->
+	<!--test  -->
 	
-	<!--//single-->	
+	<div id="list">
+	<ul class="simplefilter wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+                <li class="active" data-filter="all">ALL</li>
+                <li data-filter="a">DEPARTMENT</li>
+                <li data-filter="b">DOCTOR</li>
+                <li data-filter="c">STAFF</li>
+                <li data-filter="d">PATIENTS</li>
+            </ul>
+            </div>
+	
+				<script src="js/jquery.swipebox.min.js"></script> 
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+				</script>
+				<script type="text/javascript">					
+				$(document).ready(function(){
+
+					$("#list").hide();
+					$("#im").click(function(){
+						
+						$("#list").show();		
+						});
+					
+				});
+				</script>
+			<!-- //swipe box js -->
+
+	<!--//gallery-->
+	 <!-- Include jQuery & Filterizr -->
+    
+    <script src="js/jquery.filterizr.js"></script>
+    <script src="js/controls.js"></script>
+
+    <!-- Kick off Filterizr -->
+    <script type="text/javascript">
+        $(function() {
+            //Initialize filterizr with default options
+            $('.filtr-container').filterizr();
+        });
+    </script>
+	<!--//gallery-->
 
 	  <!--/start-footer-section-->
-	  <br>
-	  <br>
 			<div class="footer-section">
 				<div class="container">
 					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
@@ -264,7 +366,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 			</div>
 		</div>
-	<!--//end-footer-section-->
 	<!--//footer-->
 	<div class="footer-bottom">
 		<div class="container">
@@ -287,7 +388,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										
 									});
 								</script>
-								<!--end-smooth-scrolling-->
+								<!--//end-smooth-scrolling-->
 		<a href="#house" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<script src="js/bootstrap.js"></script>
 

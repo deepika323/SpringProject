@@ -309,4 +309,57 @@
     <servlet-name>SignUpController</servlet-name>
     <url-pattern>/SignUpController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveDoctor</display-name>
+    <servlet-name>RemoveDoctor</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveDoctor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveDoctor</servlet-name>
+    <url-pattern>/RemoveDoctor</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Findbill</display-name>
+    <servlet-name>Findbill</servlet-name>
+    <servlet-class>controller.adminServlet.Findbill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Findbill</servlet-name>
+    <url-pattern>/Findbill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBill</display-name>
+    <servlet-name>DeleteBill</servlet-name>
+    <servlet-class>controller.adminServlet.DeleteBill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBill</servlet-name>
+    <url-pattern>/DeleteBill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindOrRemoveBillController</display-name>
+    <servlet-name>FindOrRemoveBillController</servlet-name>
+    <servlet-class>controller.adminServlet.FindOrRemoveBillController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindOrRemoveBillController</servlet-name>
+    <url-pattern>/FindOrRemoveBillController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBill</display-name>
+    <servlet-name>UpdateBill</servlet-name>
+    <servlet-class>controller.adminServlet.UpdateBill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBill</servlet-name>
+    <url-pattern>/UpdateBill</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

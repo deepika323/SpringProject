@@ -105,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
 										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
 										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
-										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
+										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Departments</span></a></li>
 										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
 									</ul>
 								</nav>
