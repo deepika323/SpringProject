@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ADD MEDICAL REPORT</title>
-
+<title>VIEW BILL</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -30,7 +28,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 </script>
-
 </head>
 <body>
 <!--header-top-->
@@ -76,90 +73,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">MEDICAL REPORT <span>FORM</span></h3>
+						<h3 class="tittle">Find <span>BILL</span></h3>
 					</div>
 			</div>
 		</div>
 	<!--/single-->
  <div class="single">
-     <div class="container">
-		<div class="article-post w3l">
-			<div class="post-details s-page">
-				
-				<div class="leave w3l">
-					<h3>Enter <span> required details </span></h3>
-					<br>
-					<br>
-					<form action="./addMedicalReportController">
+			<div class="container">
+				<div class="article-post w3l">
+				<div class="post-details s-page">
+		<div class="leave w3l">
+			<h3>Enter <span> BILL NUMBER </span></h3>
+			<br>
+			<br>
+				<form action="./FindBill">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
-								<input type="text" placeholder="Patient ID" required="" name="patientId">
-						  		Select Visit Date: <input type="date" required="" name="visitDate"/>		
-								<textarea placeholder="diagnosis" name="diagnosis"></textarea>
-								<textarea placeholder="investigations" name="investigations"></textarea>
-								<textarea placeholder="tests" name="tests"></textarea>
-								<textarea placeholder="recommendations" name="recommendations"></textarea>
-							
-								<div class="section_room">
-				
-									<select id="doctor"  name="doctorId" class="frm-field required" required >
-										<option  id='0' value="">Select Doctor</option>
-										<c:forEach var="element" items="${doctorList}">
-											<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
-										</c:forEach>						
-									</select>
-								</div>
-								
-								<div class="section_room">
-				
-									<select id="technician"  name="technicianId" class="frm-field required" required >
-										<option  id='0' value="">Select Technician</option>
-										<c:forEach var="element" items="${technicianList}">
-											<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>
-										</c:forEach>						
-									</select>
-								</div>
-								
-								</hr>
-								
-								<input type="number" placeholder="Medicine Serial No" required="" name="sNo">
-								<input type="text" placeholder="Medicine Name" required="" name="medicineName">
-								<input type="number" placeholder="Quantity" required="" name="quantity">
-								<input type="text" placeholder="Dosage" required="" name="dosage">
-								<input type="number" placeholder="Price" required="" name="price">
-								
-								<input id="confirm" type="submit" value="ADD" >
-
+						   <form action="./FindBill">
+						   	
+								<input type="text" placeholder="Bill ID to ${button}" required="" name="billNo">
+								<input type="text" value="${button}" hidden name="selectedValue">
+								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
-							<form action="./doctor.jsp">
+							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-					</div>
 				</form>
 				
 				</div>
 			</div>			
 		</div>
+			</div>
 	</div>
-</div>
 	
-	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
-
-	$(document).ready(function(){
-			{
-		$("#confirm").click(function()
-		{
-		alert("abcd");
-			});
-
-
-			}
-		});
-
-	</script>-->
+	
 	
 	<!--//single-->	
 

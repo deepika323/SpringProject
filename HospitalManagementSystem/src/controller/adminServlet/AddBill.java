@@ -1,10 +1,16 @@
 package controller.adminServlet;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.bl.PersonBusinessLogic;
 
 
 public class AddBill extends HttpServlet {
@@ -12,8 +18,29 @@ public class AddBill extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
+		String personId = request.getParameter("personId");
+		
+		PersonBusinessLogic pb = new PersonBusinessLogic();
+		try { 
+		
+			
+			if(pb.listMyDischargeSummary(personId)!=null){
+				
+				request.setAttribute(personId, personId);
+				request.setAttribute("dischargeSummaryList", pb.listMyDischargeSummary(personId));
+				RequestDispatcher rd = getServletContext().getRequestDispatcher("/AddBill.jsp");
+			    rd.forward(request, response);
+			}
+			
+		} catch (ClassNotFoundException| IOException e) {
+			// TODO Auto-generated catch block 
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block 
+			e.printStackTrace();
+		} 
 	}
 
 

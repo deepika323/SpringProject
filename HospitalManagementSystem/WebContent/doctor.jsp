@@ -308,7 +308,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="clearfix"></div>
 					</div>
-					<div class="medicinal-w3-grids">
+					<!-- <div class="medicinal-w3-grids">
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
 								<h4>MEDICINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
@@ -327,7 +327,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="clearfix"></div>
 						</div>
-						<div class="col-md-6 medicinal-w3-grid">
+						<div class="col-md-6 medicinal-w3-grid"> -->
 							<!--<div class="col-md-4 medicinal-w3-right">
 							  	<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
 									<a href="#" class="hi-icon icon4"></a>
@@ -436,7 +436,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	  <div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="./GetViewOrRemoveOrUpdateMedicalReport?selectedValue=remove"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>Mark McRoberts</h3>
 				   	  <p>New York</p>
@@ -453,7 +453,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	    <div class="box_2">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <a href="./GetViewOrRemoveOrUpdateMedicalReport?selectedValue=update"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>Mark McRoberts</h3>
 				   	  <p>New York</p>
@@ -481,7 +481,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a href="./GetViewOrRemoveOrUpdateMedicalReport?selectedValue=find"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>Mark McRoberts</h3>
 				   	  <p>New York</p>
@@ -498,7 +498,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	 </div>
    </div>
    <!-- Medicine -->
-   <div class="grid_2" id="tender3">
+   <!--  div class="grid_2" id="tender3">
    	 <div class="container" >
 	       <div class="sub-hd">
 						<h3 class="tittle">SUCCESSFUL <span>STORIES</span></h3>
@@ -528,8 +528,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				     <h4>REMOVE MEDICINE</h4>
-				   <p class="p1"><!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
- 				</div>
+				   <p class="p1">--><!--Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
+ 				<!--  </div>
 				<div class="clearfix"></div>
 		</div>
 		<div class="clearfix"></div>
@@ -545,8 +545,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				   <h4>MODIFY MEDICINE</h4>
-				   <p class="p1"><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
- 				</div>
+				   <p class="p1">--><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
+ 				<!--</div>
 				<div class="clearfix"></div>
 		</div>
    	 	<div class="col-md-6">
@@ -559,8 +559,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				   <h4>LIST MEDICINES</h4>
-				   <p class="p1"><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
- 				</div>
+				   <p class="p1">--><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
+ 				<!--</div>
 				<div class="clearfix"></div>
 		</div>
 		<div class="col-md-6">
@@ -573,14 +573,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				   <h4>VIEW MEDICINE</h4>
-				   <p class="p1"><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
- 				</div>
+				   <p class="p1">--><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
+ 				<!--</div>
 				<div class="clearfix"></div>
 		</div>
 		<div class="clearfix"></div>
    	  </div>
    	 </div>
-   </div>
+   </div>-->
 		<!--//team-->
 			<!---news-->
 						<!--  <div class="review-slider">

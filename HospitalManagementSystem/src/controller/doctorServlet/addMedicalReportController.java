@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import model.bean.MedicalReport;
+import model.bean.Medicine;
 import model.bl.DoctorBusinessLogic;
 
 public class addMedicalReportController extends HttpServlet {
@@ -22,23 +23,27 @@ public class addMedicalReportController extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session=request.getSession();
 		int patientId=Integer.parseInt(request.getParameter("patientId"));
 		String visitDateString=(request.getParameter("visitDate"));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-		Date visitDate=null;			//check
-		try {
-			visitDate = (Date)sdf.parse(visitDateString);
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		Date visitDate=java.sql.Date.valueOf(visitDateString);			//check
+//		try {
+//			visitDate = (Date)sdf.parse(visitDateString);
+//		} catch (ParseException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		String diagnosis=request.getParameter("diagnosis");
 		String investigations=request.getParameter("investigations");
 		String tests=request.getParameter("tests");
 		String recommendations=request.getParameter("recommendations");
 		String doctorId=request.getParameter("doctorId");
 		String technicianId=request.getParameter("technicianId");
+		int sNo=Integer.parseInt(request.getParameter("sNo"));
+		String medicineName=request.getParameter("medicineName");
+		int quantity=Integer.parseInt(request.getParameter("quantity"));
+		String dosage=request.getParameter("dosage");
+		int price=Integer.parseInt(request.getParameter("price"));
 		
 		MedicalReport newMedicalReport = new MedicalReport();
 		newMedicalReport.setPatientId(patientId);
@@ -49,12 +54,21 @@ public class addMedicalReportController extends HttpServlet {
 		newMedicalReport.setRecommendations(recommendations);
 		newMedicalReport.setDoctorId(doctorId);
 		newMedicalReport.setTechnicianId(technicianId);
+		Medicine newMedicine = new Medicine();
+		newMedicine.setsNo(sNo);
+		newMedicine.setMedicineName(medicineName);
+		newMedicine.setQuantity(quantity);
+		newMedicine.setDosage(dosage);
+		newMedicine.setPrice(price);
+		newMedicine.setPatientId(patientId);
 		
 		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		boolean result=false;
+		boolean result1=false;
 		try {
 			try {
 				result=dbl.addMedicalReport(newMedicalReport);
+				result1=dbl.addMedicine(newMedicine);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -62,8 +76,9 @@ public class addMedicalReportController extends HttpServlet {
 			e.printStackTrace();
 		}
 		 request.setAttribute("newMedicalReport", newMedicalReport);
+		 request.setAttribute("newMedicine", newMedicine);
 		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addAppointment.jsp");
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReport.jsp");
 		    rd.forward(request, response);
 		    //Change
 //		    if(request.getParameter("doctorId")==null){

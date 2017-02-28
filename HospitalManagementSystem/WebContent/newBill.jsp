@@ -1,11 +1,14 @@
+<%@page import="model.bean.*"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Medical Report</title>
+<title>Bill Details</title>
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -111,9 +114,106 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <br><br>
 
-<!--  need to complete -->
+<div class="leave w3l">
 
-<br><br>
+	  	<h3 align="left" color=black><span>Bill Details :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bill Number : <span>${bill.billNo} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patient's Person ID :<span>${bill.appointmentId}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Discharge Summary No :<span>${bill.serialNo}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Doctor Visit :<span>&#8377 ${bill.doctorVisit}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Bed : <span>&#8377 ${bill.bedCharges}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Tests : <span>&#8377 ${bill.tests}</span></h3>
+             <br> <h3 id="6" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Medicines : <span>&#8377 ${bill.medicines}</span></h3>
+   
+      </div>
+            <br>
+             <div class="single">
+			<div class="container">
+				<div class="article-post w3l">
+				<div class="post-details s-page">
+				
+		<div class="leave w3l">
+            <div class="single-grid">
+						<div class="single-us">
+						<form action="${servlet}">
+								<input  id="button" type="submit" value="${button}" >
+								<input  name="billNo" value="${billNo}" hidden>
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="b" onclick="window.print()"  type="submit" value="PRINT" >
+						   </form>
+						   <form action="./admin.jsp">
+								<input id="c"  type="submit" value="CANCEL" >
+						   </form>
+						   
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   						   </div>
+					   						   
+<script type="text/javascript">
+ 
+ $(document).ready(function(){
+	 $("#c").hide();
+	 if ($("#button").val()=='DELETE') {
+
+		 $("#a").hide();
+		 $("#b").hide();
+		 $("#c").show();
+		 $("#button").click(function(){
+			return confirm("Are You Sure ?")
+		 });
+		 
+	}
+	 
+ });
+function myFunction() {
+}
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("billNotosave").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("1").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("2").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("3").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("4").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("5").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("6").textContent;
+    
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    
+    var fileNameToSaveAs = "Bill";
+ 	
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+</script>
+    
+
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">
@@ -203,7 +303,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="text" placeholder="Email" required="">
 								<textarea placeholder="Message"></textarea>
 								<input type="submit" value="SEND" >
+
 						   </form>
+
 						</div>
 				</form>
 				</div>

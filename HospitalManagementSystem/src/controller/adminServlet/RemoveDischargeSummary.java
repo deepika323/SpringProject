@@ -1,9 +1,8 @@
-package controller.doctorServlet;
+package controller.adminServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,23 +10,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.bean.Department;
-import model.bean.Doctor;
-import model.bean.Medicine;
-import model.bean.Technician;
 import model.bl.AdminBusinessLogic;
-import model.bl.DoctorBusinessLogic;
 
 /**
- * Servlet implementation class RetrieveDoctorList
+ * Servlet implementation class RemoveDischargeSummary
  */
-public class RetrieveDoctorList extends HttpServlet {
+public class RemoveDischargeSummary extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RetrieveDoctorList() {
+    public RemoveDischargeSummary() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,34 +31,26 @@ public class RetrieveDoctorList extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		// TODO Auto-generated method stub
-		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
-		ArrayList<Technician> technicianList=new ArrayList<Technician>();
-		ArrayList<Department> departmentList=new ArrayList<Department>();
- 		
+		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		
-		try {
-			doctorList=abl.listDoctor();
-			technicianList=abl.listTechnician();
-			departmentList=abl.listDepartment();
-			
-		} catch (ClassNotFoundException | SQLException e) {
+			try {
+				boolean status=abl.removeDischargeSummary(regNo);
+			}
+		 catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
-		 request.setAttribute("doctorList", doctorList);
-		 request.setAttribute("technicianList", technicianList);
-		 request.setAttribute("departmentList", departmentList);
-		 
-		 
-//		PrintWriter pw=response.getWriter();
-//		 pw.println(doctorList);
-//		 pw.println(technicianList);
-//		 
-			
-   RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReportForm.jsp");
-	   rd.forward(request, response);
+		}
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Discharge Summary Deleted');");
+			   out.println("location='admin.jsp';");
+			   out.println("</script>");
+		
+	
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

@@ -8,7 +8,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Add MEdical REport</title>
+<title>Insert title here</title>
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -113,78 +113,103 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <br><br>
-<style>
-table {
-    /*border-collapse: collapse;*/
-    align:center;
-    width:50%;
-}
-th {
-background-color: #4CAF50;
-    color: white;
-    height: 50px;
-}
-table,th,td
-{
- 	padding: 15px;
-    border:1px solid black;
-        border-bottom: 1px solid #ddd;
-}
-tr:hover{background-color:#f5f5f5}
-tr:nth-child(even) {background-color: #f2f2f2}
-caption
-{
- text-align:center;
-font-weight: bold;
-}
 
-</style>
+<div class="leave w3l">
+
+	  	<h3 align="left" color=black><span>Appointment Details :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient's Appointment Number : <span>${appointment.regNo} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patient's Person ID :<span>${appointment.personId}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doctor's ID :<span>${appointment.doctorId}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Purpose for the visit :<span>${appointment.purpose}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payment : <span>&#8377 ${appointment.payment}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appointment Date :<span>${appointment.appointmentDate}</span></h3>
+      </div>
+            <br>
+             <div class="single">
+			<div class="container">
+				<div class="article-post w3l">
+				<div class="post-details s-page">
+				
+		<div class="leave w3l">
+            <div class="single-grid">
+						<div class="single-us">
+						<form action="${servlet}">
+								<input  id="button" type="submit" value="${button}" >
+								<input  name="regNo" value="${regNo}" hidden>
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="b" onclick="window.print()"  type="submit" value="PRINT" >
+						   </form>
+						   <form action="./admin.jsp">
+								<input id="c"  type="submit" value="CANCEL" >
+						   </form>
+						   
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   						   </div>
+					   						   
+<script type="text/javascript">
  
-<div style="overflow-x:auto;width:100%">
-<table  border="1" cellpadding="5">
- <caption>&#9; Medical Report</caption>
-	<tr>
-	<th>Patient ID</th>
-	<th>Visit Date</th>
-	<th>Diagnosis</th>
-	<th>investigations</th>
-	<th>Recommendations</th>
-	<th>Doctor ID</th>
-	<th>Technician ID</th>
-	</tr>
-        <tr>
-        	<td>${newMedicalReport.patientId}</td> 
-            <td>${newMedicalReport.visitDate}</td> 
-            <td>${newMedicalReport.diagnosis}</td>
-            <td>${newMedicalReport.investigations}</td>
-            <td>${newMedicalReport.recommendations}</td>
-            <td>${newMedicalReport.doctorId}</td>
-            <td>${newMedicalReport.technicianId}</td>
-        </tr> 
-</table>
-</div>
-<br><br>
-<div style="overflow-x:auto;width:100%">
-<table  border="1" cellpadding="5">
- <caption>&#9; Medical Report</caption>
-	<tr>
-	<th>Serial No</th>
-	<th>Medicine Name</th>
-	<th>Quantity</th>
-	<th>Dosage</th>
-	<th>Price</th>
-	</tr>
-        <tr>
-        	<td>${newMedicine.sNo}</td> 
-            <td>${newMedicine.medicineName}</td> 
-            <td>${newMedicine.quantity}</td>
-            <td>${newMedicine.dosage}</td>
-            <td>${newMedicine.price}</td>
-        </tr> 
-</table>
-</div>
+ $(document).ready(function(){
+	 $("#c").hide();
+	 if ($("#button").val()=='DELETE') {
 
-<br><br>
+		 $("#a").hide();
+		 $("#b").hide();
+		 $("#c").show();
+		 $("#button").click(function(){
+			return confirm("Are You Sure ?")
+		 });
+		 
+	}
+	 
+ });
+function myFunction() {
+}
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("regNotosave").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("1").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("2").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("3").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("4").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("5").textContent;
+    
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    
+    var fileNameToSaveAs = "Appointment";
+ 	
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+</script>
+    
+
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">
