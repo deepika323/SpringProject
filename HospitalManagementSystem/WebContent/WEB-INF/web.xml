@@ -269,4 +269,14 @@
     <servlet-name>removeMedicine</servlet-name>
     <url-pattern>/removeMedicine</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewBillController</display-name>
+    <servlet-name>NewBillController</servlet-name>
+    <servlet-class>controller.adminServlet.NewBillController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewBillController</servlet-name>
+    <url-pattern>/NewBillController</url-pattern>
+  </servlet-mapping>
 </web-app>

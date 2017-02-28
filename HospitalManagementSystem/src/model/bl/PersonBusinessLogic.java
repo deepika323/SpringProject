@@ -32,6 +32,10 @@ public class PersonBusinessLogic {
 		return rd.displayAllAppointments();
 	}
 	
+	public ArrayList<MedicalReport> listMyMedicalReport(String personId) throws ClassNotFoundException, SQLException, IOException
+	{
+		return mrd.displayMyMedicalReports(personId);
+	}
 	public MedicalReport viewMedicalReport(int patientId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return mrd.displayMedicalReport(patientId);
@@ -46,6 +50,11 @@ public class PersonBusinessLogic {
 	{
 		return dsd.displayDischargeSummary(serialNo);
 	}
+	public ArrayList<DischargeSummary> listMyDischargeSummary(String personId) throws ClassNotFoundException, SQLException, IOException
+	{
+		return dsd.displayMyDischargeSummarys(personId);
+	}
+
 	
 //	public boolean addPerson(Person newPerson) throws ClassNotFoundException, SQLException
 //	{

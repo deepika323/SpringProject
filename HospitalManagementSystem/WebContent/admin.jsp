@@ -253,7 +253,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
 								<h4>DISCHARGE SUMMARY</h4>
-								<p></p>
+								<p>&diams;Create Discharge Summary &nbsp;&nbsp;&nbsp;&nbsp;<br>&diams;Remove Discharge Summary <br>&diams;View Discharge Summary &nbsp;</p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -576,7 +576,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddDoctor"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE DOCTOR</h3>
 				   </div>

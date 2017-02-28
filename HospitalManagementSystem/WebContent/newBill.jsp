@@ -8,7 +8,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Bill Details</title>
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -113,61 +113,107 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 </div>
 <br><br>
-<style>
-table {
-    /*border-collapse: collapse;*/
-    align:center;
-    width:50%;
-}
-th {
-background-color: #4CAF50;
-    color: white;
-    height: 50px;
-}
-table,th,td
-{
- 	padding: 15px;
-    border:1px solid black;
-        border-bottom: 1px solid #ddd;
-}
-tr:hover{background-color:#f5f5f5}
-tr:nth-child(even) {background-color: #f2f2f2}
-caption
-{
- text-align:center;
-font-weight: bold;
-}
 
-</style>
+<div class="leave w3l">
+
+	  	<h3 align="left" color=black><span>Bill Details :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bill Number : <span>${bill.billNo} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Patient's Person ID :<span>${bill.appointmentId}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Discharge Summary No :<span>${bill.serialNo}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Doctor Visit :<span>&#8377 ${bill.doctorVisit}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Bed : <span>&#8377 ${bill.bedCharges}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Tests : <span>&#8377 ${bill.tests}</span></h3>
+             <br> <h3 id="6" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Charges for Medicines : <span>&#8377 ${bill.medicines}</span></h3>
+   
+      </div>
+            <br>
+             <div class="single">
+			<div class="container">
+				<div class="article-post w3l">
+				<div class="post-details s-page">
+				
+		<div class="leave w3l">
+            <div class="single-grid">
+						<div class="single-us">
+						<form action="${servlet}">
+								<input  id="button" type="submit" value="${button}" >
+								<input  name="billNo" value="${billNo}" hidden>
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="b" onclick="window.print()"  type="submit" value="PRINT" >
+						   </form>
+						   <form action="./admin.jsp">
+								<input id="c"  type="submit" value="CANCEL" >
+						   </form>
+						   
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   						   </div>
+					   						   
+<script type="text/javascript">
  
-<div style="overflow-x:auto;width:100%">
-<table  border="1" cellpadding="5">
- <caption>&#9; Medical Reports</caption>
-	<tr>
-	<th>Medical Report Id</th>
-	<th>Visit Date</th>
-	<th>Diagnosis</th>
-	<th>Investigations</th>
-	<th>Tests</th>
-	<th>Recommendations</th>
-	<th>Doctor Id</th>
-	<th>Technician Id</th>
-	</tr>
-	 <c:forEach var="report" items="${reportList}">
-        <tr>
-        	<td>${report.appointmentId}</td> 
-            <td>${report.visitDate}</td> 
-            <td>${report.diagnosis}</td>
-            <td>${report.investigations}</td>
-            <td>${report.tests}</td>
-            <td>${report.recommendations}</td>
-            <td>${report.doctorId}</td>
-            <td>${report.technicianId}</td>
-        </tr> 
-    </c:forEach>
-</table>
-</div>
-<br><br>
+ $(document).ready(function(){
+	 $("#c").hide();
+	 if ($("#button").val()=='DELETE') {
+
+		 $("#a").hide();
+		 $("#b").hide();
+		 $("#c").show();
+		 $("#button").click(function(){
+			return confirm("Are You Sure ?")
+		 });
+		 
+	}
+	 
+ });
+function myFunction() {
+}
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("billNotosave").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("1").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("2").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("3").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("4").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("5").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("6").textContent;
+    
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    
+    var fileNameToSaveAs = "Bill";
+ 	
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+</script>
+    
+
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">

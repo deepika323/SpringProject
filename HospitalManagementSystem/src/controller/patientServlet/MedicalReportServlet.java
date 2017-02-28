@@ -1,6 +1,7 @@
 package controller.patientServlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -22,14 +23,15 @@ public class MedicalReportServlet extends HttpServlet {
 		//Code for Getting relevant Medical Report.
 		
 		HttpSession session=request.getSession();
-		String patientId =(String)session.getAttribute("patientId");
+		String personId =(String)session.getAttribute("personId");
 		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		
 		try { 
-			if(pb.viewMedicalReport(Integer.parseInt(patientId)).getPatientId()!=0){
-				
-				request.setAttribute("report", pb.viewMedicalReport(Integer.parseInt(patientId)));
+			if(pb.listMyMedicalReport(personId)!=null){
+				//PrintWriter pw=response.getWriter();
+				request.setAttribute("reportList", pb.listMyMedicalReport(personId)) ;
+				//pw.println(pb.listMyMedicalReport("twahal"));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/medicalReport.jsp");
 			    rd.forward(request, response);
 	

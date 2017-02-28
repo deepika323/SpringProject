@@ -12,4 +12,5 @@ public interface MedicalReportDao {
 	public boolean updateMedicalReport(int patientId, MedicalReport renewMedicalReport) throws ClassNotFoundException, SQLException, IOException;
 	public MedicalReport displayMedicalReport(int patientId) throws ClassNotFoundException, SQLException, IOException;
 	public ArrayList<MedicalReport> displayAllMedicalReports() throws ClassNotFoundException, SQLException, IOException;
+	public ArrayList<MedicalReport> displayMyMedicalReports(String personId) throws ClassNotFoundException, SQLException, IOException;
 }

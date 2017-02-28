@@ -3,7 +3,6 @@ package controller.adminServlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,21 +10,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.bean.Appointment;
-import model.bean.MedicalReport;
 import model.bl.AdminBusinessLogic;
-import model.bl.DoctorBusinessLogic;
 
 /**
- * Servlet implementation class ViewMR
+ * Servlet implementation class RemoveDischargeSummary
  */
-public class ViewMR extends HttpServlet {
+public class RemoveDischargeSummary extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewMR() {
+    public RemoveDischargeSummary() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,33 +31,26 @@ public class ViewMR extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		ArrayList<Appointment> appList=new ArrayList<Appointment>();
 		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
-		MedicalReport mr=new MedicalReport();
-		try {
+		
 			try {
-				mr=abl.viewMedicalReports(regNo);
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
+				boolean status=abl.removeDischargeSummary(regNo);
 			}
-		} catch (SQLException e) {
+		 catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 request.setAttribute("mr", mr);
-		 
-		 String servlet="./admin.jsp";
-			String button="CONTINUE";
-			
-		request.setAttribute("servlet", servlet);
-		request.setAttribute("button", button);
-		//PrintWriter pw=response.getWriter();
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Discharge Summary Deleted');");
+			   out.println("location='admin.jsp';");
+			   out.println("</script>");
 		
-		//pw.println("MR "+mr);
-		 
-		 
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewMR.jsp");
-		    rd.forward(request, response);
+	
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**

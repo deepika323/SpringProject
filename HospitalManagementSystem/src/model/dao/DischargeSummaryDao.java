@@ -12,4 +12,6 @@ public interface DischargeSummaryDao {
 	public boolean updateDischargeSummary(int dischargeSummaryId, DischargeSummary renewDischargeSummary) throws ClassNotFoundException, SQLException, IOException;
 	public DischargeSummary displayDischargeSummary(int dischargeSummaryId) throws ClassNotFoundException, SQLException, IOException;
 	public ArrayList<DischargeSummary> displayAllDischargeSummarys() throws ClassNotFoundException, SQLException, IOException;
+	public ArrayList<DischargeSummary> displayMyDischargeSummarys(String personId)
+			throws ClassNotFoundException, SQLException, IOException;
 }

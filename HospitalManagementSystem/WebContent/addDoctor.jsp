@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>UPDATE APPOINTMENT</title>
+<title>ADD DOCTOR</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">APOINTMENT UPDATE <span>FORM</span></h3>
+						<h3 class="tittle">DOCTOR REGISTRATION <span>FORM</span></h3>
 					</div>
 			</div>
 		</div>
@@ -96,34 +96,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./updateMedicalReport">
+				<form action="./NewAppointmentController">
 					<div class="single-grid">
 						<div class="single-us">
 						
 						   <form>
-						       <h3>APPOINTMENT ID :<span>${appointment.regNo}</span></h3>
-						       <input type="text" id="regNo" name="regNo" value="${appointment.regNo}"  hidden required="" >
-								<input type="text" id="personid" name="personId" value="${appointment.personId}" hidden placeholder="Person ID" required="" >
-								<h3>PERSON ID :<span>${appointment.personId}</span></h3>
-								
+								<input type="text" id="doctorid" name="doctorId" placeholder="Doctor ID" required="" >
+								<input type="text" id="doctorname" name="personId" placeholder="Doctor Name" required="" >
+								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
+								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
+								<input type="text" id="address" name="address" placeholder="address" required="" >
+								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
-								
-	<h3>Previous Doctor ID :<span>${appointment.doctorId}</span></h3><br>							 
-    
-				<div class="section_room">
-						       
-				
-					<select id="doctor" name="doctorId" class="frm-field required" required >
-					<option  id='0' value="">Select Doctor</option>
-					<c:forEach var="element" items="${doctorList}">
-					<!--  <div id=${element.departmentId}>-->
-						<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
-						<!--  </div>-->
-					
-    </c:forEach>						
-					</select>
-				</div>
+		
 				<div class="section_room">
 					<select id="department" class="frm-field required">
 					<option  id='D0' value="Default">Select Department</option>
@@ -132,11 +118,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</c:forEach>						
 					</select>
 				</div>
-								<h3>Previous Registration Fee :<span>&#8377 ${appointment.payment}</span></h3><br>
-								 <input type="number" name="fee" value="${appointment.payment}" placeholder="Appointment Registration Fee" required="">
-								<h3>Previous Purpose For Visit :<span>${appointment.purpose}</span></h3><br>	
-								<input type="text" name="purpose" required value="${appointment.purpose}" placeholder="Purpose For Visit"></input>
-								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
+								<textarea name="comments" required placeholder="Comments"></textarea>
+								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>
 							<form action="./admin.jsp">

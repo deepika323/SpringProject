@@ -24,15 +24,14 @@ public class DischargeSummaryServlet extends HttpServlet {
 		
 		//Code for getting discharge summary using serial number
 		HttpSession session=request.getSession();
-		String serialNo1 =(String)session.getAttribute("serialNo");
-		int serialNo=Integer.parseInt(serialNo1);
+		String personId =(String)session.getAttribute("personId");
 		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
 			
-			if(pb.viewDischargeSummary(serialNo).getPatientId()!=0){
+			if(pb.listMyDischargeSummary("twahal")!=null){
 				
-				request.setAttribute("dischargeSummary", pb.viewDischargeSummary(serialNo));
+				request.setAttribute("dischargeSummaryList", pb.listMyDischargeSummary("twahal"));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/dischargeSummary.jsp");
 			    rd.forward(request, response);
 			}//Add Discharge Summary jsp and recheck logic.

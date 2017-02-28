@@ -1,7 +1,6 @@
 package controller.adminServlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -11,21 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.bean.Appointment;
-import model.bean.MedicalReport;
+import model.bean.Department;
+import model.bean.Doctor;
 import model.bl.AdminBusinessLogic;
-import model.bl.DoctorBusinessLogic;
 
 /**
- * Servlet implementation class ViewMR
+ * Servlet implementation class AddDoctor
  */
-public class ViewMR extends HttpServlet {
+public class AddDoctor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ViewMR() {
+    public AddDoctor() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,32 +33,22 @@ public class ViewMR extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		ArrayList<Appointment> appList=new ArrayList<Appointment>();
-		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
-		AdminBusinessLogic abl=new AdminBusinessLogic();
-		MedicalReport mr=new MedicalReport();
-		try {
-			try {
-				mr=abl.viewMedicalReports(regNo);
-			} catch (ClassNotFoundException e) {
-				e.printStackTrace();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		 request.setAttribute("mr", mr);
-		 
-		 String servlet="./admin.jsp";
-			String button="CONTINUE";
-			
-		request.setAttribute("servlet", servlet);
-		request.setAttribute("button", button);
-		//PrintWriter pw=response.getWriter();
 		
-		//pw.println("MR "+mr);
-		 
-		 
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewMR.jsp");
+		ArrayList<Department> departmentList=new ArrayList<Department>();
+		
+		AdminBusinessLogic abl=new AdminBusinessLogic();
+		
+		try {
+			
+			departmentList=abl.listDepartment();
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}		
+		 request.setAttribute("departmentList", departmentList);
+			
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDoctor.jsp");
 		    rd.forward(request, response);
 	}
 
