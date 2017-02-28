@@ -189,7 +189,7 @@
     <servlet-name>AddDischargeSummary</servlet-name>
     <url-pattern>/AddDischargeSummary</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <description></description>
     <display-name>AddBill</display-name>
     <servlet-name>AddBill</servlet-name>
@@ -198,5 +198,15 @@
   <servlet-mapping>
     <servlet-name>AddBill</servlet-name>
     <url-pattern>/AddBill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewBillController</display-name>
+    <servlet-name>NewBillController</servlet-name>
+    <servlet-class>controller.adminServlet.NewBillController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewBillController</servlet-name>
+    <url-pattern>/NewBillController</url-pattern>
   </servlet-mapping>
 </web-app>
