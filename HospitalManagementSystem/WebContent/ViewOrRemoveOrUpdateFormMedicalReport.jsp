@@ -125,6 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommendations :<span>${medicalReport.recommendations}</span></h3>
            <br> <h3 id="6" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor ID :<span>${medicalReport.doctorId}</span></h3>
            <br> <h3 id="7" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technician ID :<span>${medicalReport.technicianId}</span></h3>
+                    
       </div>
             <br>
              <div class="single">
@@ -135,6 +136,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="leave w3l">
             <div class="single-grid">
 						<div class="single-us">
+						<form action="./removeMedicine">
+								 <h3 align="left" color=black><span>Medicine Details :</span></h3><br>
+    							 <c:set var="count" value="1" scope="page" />
+     							 <c:forEach var="element" items="${medicineList}">
+           						 	 <br> <h3 id="8" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medicine Serial No :<span>${element.sNo}</span></h3>
+           							 <br> <h3 id="9" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Medicine Name :<span>${element.medicineName}</span></h3>
+           							 <br> <h3 id="10" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity :<span>${element.quantity}</span></h3>
+          						 	 <br> <h3 id="11" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dosage :<span>${element.dosage}</span></h3>
+           							 <br> <h3 id="12" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Price :<span>${element.price}</span></h3>
+      	 						  	 <input type="radio" name="radioValue" value="${element.sNo}"/>
+      	 						  	 <br><br>
+      	   						<c:set var="count" value="${count + 1}" scope="page" />
+      							</c:forEach>
+      							<input  name="regNo" value="${regNo}" hidden>
+								<input id="d"   type="submit" value="DELETE MEDICINE" >
+						   </form>
 						<form action="${servlet}">
 								<input  id="button" type="submit" value="${button}" >
 								<input  name="regNo" value="${regNo}" hidden>
@@ -161,10 +178,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  
  $(document).ready(function(){
 	 $("#c").hide();
+	 $("#d").hide();
 	 if ($("#button").val()=='DELETE') {
 
 		 $("#a").hide();
 		 $("#b").hide();
+		 $("#d").show();
 		 $("#c").show();
 		 $("#button").click(function(){
 			return confirm("Are You Sure ?")
@@ -192,6 +211,17 @@ function saveTextAsFile()
     textToSave += document.getElementById("6").textContent;
     textToSave += '\n';
     textToSave += document.getElementById("7").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("8").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("9").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("10").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("11").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("12").textContent;
+    
     
     var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
     var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);

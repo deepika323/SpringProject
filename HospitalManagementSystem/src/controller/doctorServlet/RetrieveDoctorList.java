@@ -13,8 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.bean.Department;
 import model.bean.Doctor;
+import model.bean.Medicine;
 import model.bean.Technician;
 import model.bl.AdminBusinessLogic;
+import model.bl.DoctorBusinessLogic;
 
 /**
  * Servlet implementation class RetrieveDoctorList
@@ -39,7 +41,7 @@ public class RetrieveDoctorList extends HttpServlet {
 		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
 		ArrayList<Technician> technicianList=new ArrayList<Technician>();
 		ArrayList<Department> departmentList=new ArrayList<Department>();
-		
+ 		
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		
 		try {

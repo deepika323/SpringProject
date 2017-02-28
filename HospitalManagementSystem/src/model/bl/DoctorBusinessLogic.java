@@ -95,9 +95,9 @@ public class DoctorBusinessLogic {
 		return md.updateMedicine(sNo,newMedicine);
 	}
 
-	public ArrayList<Medicine> listMedicine() throws ClassNotFoundException, SQLException, IOException
+	public ArrayList<Medicine> listMedicine(int patientId) throws ClassNotFoundException, SQLException, IOException
 	{
-		return md.displayAllMedicines();
+		return md.displayAllMedicines(patientId);
 	}
 	public Medicine viewMedicine(int sNo,int patientId) throws ClassNotFoundException, SQLException, IOException
 	{

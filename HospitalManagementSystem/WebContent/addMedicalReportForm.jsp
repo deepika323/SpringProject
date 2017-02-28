@@ -122,6 +122,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									</select>
 								</div>
 								
+								</hr>
+								
+								<input type="number" placeholder="Medicine Serial No" required="" name="sNo">
+								<input type="text" placeholder="Medicine Name" required="" name="medicineName">
+								<input type="number" placeholder="Quantity" required="" name="quantity">
+								<input type="text" placeholder="Dosage" required="" name="dosage">
+								<input type="number" placeholder="Price" required="" name="price">
+								
 								<input id="confirm" type="submit" value="ADD" >
 
 						   </form>

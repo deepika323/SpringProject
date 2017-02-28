@@ -140,6 +140,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<textarea placeholder="tests" name="tests" value="${medicalReport.tests}"></textarea>
 								<h3>Previous recommendations :<span>${medicalReport.recommendations}</span></h3><br>
 								<textarea placeholder="recommendations" name="recommendations" value="${medicalReport.recommendations}"></textarea>
+								
+								<c:forEach var="element" items="${medicineList}">
+									<h3>Previous Medicine Serial No :<span>${element.sNo}</span></h3><br>
+									<h3>Previous Medicine Name :<span>${element.medicineName}</span></h3><br>
+									<h3>Previous Quantity :<span>${element.quantity}</span></h3><br>
+									<input type="number" required="" name="quantity" value="${element.quantity}"/>
+									<h3>Previous Dosage :<span>${element.dosage}</span></h3><br>
+									<input type="text" required="" name="dosage" value="${element.dosage}"/>
+									<h3>Previous Price :<span>${element.sNo}</span></h3><br>
+									<br><br>
+    							</c:forEach>
 								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
 
 						   </form>

@@ -137,11 +137,12 @@ public class MedicineDaoimpl implements MedicineDao {
 	}
 
 	@Override
-	public ArrayList<Medicine> displayAllMedicines() throws ClassNotFoundException, SQLException , IOException{
+	public ArrayList<Medicine> displayAllMedicines(int patientId) throws ClassNotFoundException, SQLException , IOException{
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("select * from medicine ");
+		pstmt=con.prepareStatement("select * from medicine where patientId = ?");
+		pstmt.setInt(1,patientId);
 		
 		
 		rs=pstmt.executeQuery();

@@ -239,7 +239,7 @@
     <servlet-name>AddDischargeSummary</servlet-name>
     <url-pattern>/AddDischargeSummary</url-pattern>
   </servlet-mapping>
-   <servlet>
+  <servlet>
     <description></description>
     <display-name>AddBill</display-name>
     <servlet-name>AddBill</servlet-name>
@@ -248,5 +248,25 @@
   <servlet-mapping>
     <servlet-name>AddBill</servlet-name>
     <url-pattern>/AddBill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveMedicineList</display-name>
+    <servlet-name>RetrieveMedicineList</servlet-name>
+    <servlet-class>controller.doctorServlet.RetrieveMedicineList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveMedicineList</servlet-name>
+    <url-pattern>/RetrieveMedicineList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeMedicine</display-name>
+    <servlet-name>removeMedicine</servlet-name>
+    <servlet-class>controller.doctorServlet.removeMedicine</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeMedicine</servlet-name>
+    <url-pattern>/removeMedicine</url-pattern>
   </servlet-mapping>
 </web-app>

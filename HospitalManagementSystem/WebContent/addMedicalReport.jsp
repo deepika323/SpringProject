@@ -164,6 +164,27 @@ font-weight: bold;
 </table>
 </div>
 <br><br>
+<div style="overflow-x:auto;width:100%">
+<table  border="1" cellpadding="5">
+ <caption>&#9; Medical Report</caption>
+	<tr>
+	<th>Serial No</th>
+	<th>Medicine Name</th>
+	<th>Quantity</th>
+	<th>Dosage</th>
+	<th>Price</th>
+	</tr>
+        <tr>
+        	<td>${newMedicine.sNo}</td> 
+            <td>${newMedicine.medicineName}</td> 
+            <td>${newMedicine.quantity}</td>
+            <td>${newMedicine.dosage}</td>
+            <td>${newMedicine.price}</td>
+        </tr> 
+</table>
+</div>
+
+<br><br>
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">

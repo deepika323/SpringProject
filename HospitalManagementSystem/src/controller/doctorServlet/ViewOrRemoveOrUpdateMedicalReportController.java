@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.bean.Department;
 import model.bean.Doctor;
+import model.bean.Medicine;
 import model.bean.Technician;
 import model.bl.AdminBusinessLogic;
+import model.bl.DoctorBusinessLogic;
 
 /**
  * Servlet implementation class ViewOrRemoveOrUpdateMedicalReportController
@@ -27,10 +29,11 @@ public class ViewOrRemoveOrUpdateMedicalReportController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
+		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		try {
 			try {
 				request.setAttribute("medicalReport",abl.viewMedicalReports(regNo));
-				//appList=dbl.myAppointments(doctorId);
+				request.setAttribute("medicineList",dbl.listMedicine(regNo));
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
@@ -68,10 +71,12 @@ public class ViewOrRemoveOrUpdateMedicalReportController extends HttpServlet {
 			ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
 			ArrayList<Technician> technicianList=new ArrayList<Technician>();
 			ArrayList<Department> departmentList=new ArrayList<Department>();
+			ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
 			try {
 				doctorList=abl.listDoctor();
 				technicianList=abl.listTechnician();
 				departmentList=abl.listDepartment();
+				medicineList=dbl.listMedicine(regNo);
 				
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
@@ -80,6 +85,7 @@ public class ViewOrRemoveOrUpdateMedicalReportController extends HttpServlet {
 			 request.setAttribute("doctorList", doctorList);
 			 request.setAttribute("technicianList", technicianList);
 			 request.setAttribute("departmentList", departmentList);
+			 request.setAttribute("medicineList", medicineList);
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/updateMedicalReportForm.jsp");
 		    rd.forward(request, response);
 			
