@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>ADD MEDICAL REPORT</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -80,15 +82,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	<!--/single-->
  <div class="single">
-			<div class="container">
-				<div class="article-post w3l">
-				<div class="post-details s-page">
+     <div class="container">
+		<div class="article-post w3l">
+			<div class="post-details s-page">
 				
-		<div class="leave w3l">
-			<h3>Enter <span> required details </span></h3>
-			<br>
-			<br>
-				<form action="./addMedicalReportController">
+				<div class="leave w3l">
+					<h3>Enter <span> required details </span></h3>
+					<br>
+					<br>
+					<form action="./addMedicalReportController">
 					<div class="single-grid">
 						<div class="single-us">
 						
@@ -99,21 +101,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<textarea placeholder="investigations" name="investigations"></textarea>
 								<textarea placeholder="tests" name="tests"></textarea>
 								<textarea placeholder="recommendations" name="recommendations"></textarea>
-								
+							
 								<div class="section_room">
 				
-									<select id="doctor"  class="frm-field required" required >
+									<select id="doctor"  name="doctorId" class="frm-field required" required >
 										<option  id='0' value="">Select Doctor</option>
 										<c:forEach var="element" items="${doctorList}">
-											<option id=${element.departmentId} value=${element.doctorName}></option>
+											<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
 										</c:forEach>						
 									</select>
 								</div>
 								
 								<div class="section_room">
 				
-									<select id="technician"  class="frm-field required" required >
-										<option  id='0' value="">Select Technician</option>x
+									<select id="technician"  name="technicianId" class="frm-field required" required >
+										<option  id='0' value="">Select Technician</option>
 										<c:forEach var="element" items="${technicianList}">
 											<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>
 										</c:forEach>						
@@ -127,13 +129,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
+					</div>
 				</form>
 				
 				</div>
 			</div>			
 		</div>
-			</div>
 	</div>
+</div>
 	
 	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
 

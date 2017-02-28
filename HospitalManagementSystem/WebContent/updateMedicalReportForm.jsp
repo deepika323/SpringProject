@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ADD MEDICAL REPORT</title>
+<title>UPDATE APPOINTMENT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -67,7 +68,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="clearfix"></div>
 			</div>
 	</div>
-</div>
 <!--//header-top-->
  <!-- //Line Slider -->
 		<div class="top_banner two">
@@ -84,16 +84,64 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="post-details s-page">
 				
 		<div class="leave w3l">
-			<h3>The folowing patient details will be <span>deleted</span></h3>
+			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./removeMedicalReportController">
+				<form action="./updateMedicalReport">
 					<div class="single-grid">
 						<div class="single-us">
 						
 						   <form>
-								<input type="text" placeholder="Patient ID" required="" name="patientId">
-								<input id="confirm" type="submit" value="DELETE" >
+						       <h3>MEDICAL REPORT ID :<span>${medicalReport.patientId}</span></h3>
+						       <input type="text" id="regNo" name="regNo" value="${medicalReport.patientId}"  hidden required="" >
+								<!-- <input type="text" id="personid" name="personId" value="${appointment.personId}" hidden placeholder="Person ID" required="" > -->
+								<!-- <h3>PERSON ID :<span>${appointment.personId}</span></h3> -->
+								
+								<!-- Need To Use JSTL to get department and doctor list dynamically-->
+								
+								
+	<h3>Previous Doctor ID :<span>${medicalReport.doctorId}</span></h3><br>		
+	<h3>Previous Technician ID :<span>${medicalReport.technicianId}</span></h3><br>							 
+    
+				<div class="section_room">
+					<select id="doctor" name="doctorId" class="frm-field required" required >
+					<option  id='0' value="">Select Doctor</option>
+					<c:forEach var="element" items="${doctorList}">
+					<!--  <div id=${element.departmentId}>-->
+						<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
+						<!--  </div>-->
+					
+    				</c:forEach>						
+					</select>
+				</div>
+				<div class="section_room">
+					<select id="technician" name="technicianId" class="frm-field required" required >
+					<option  id='0' value="">Select Technician</option>
+					<c:forEach var="element" items="${technicianList}">
+						<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>
+    				</c:forEach>						
+					</select>
+				</div>
+				<div class="section_room">
+					<select id="department" class="frm-field required">
+					<option  id='D0' value="Default">Select Department</option>
+					<c:forEach var="element" items="${departmentList}">
+										<option  value=${element.departmentId}>${element.departmentName}</option>
+					</c:forEach>						
+					</select>
+				</div>
+								<h3>Previous Visit Date :<span>${medicalReport.visitDate}</span></h3><br>
+								<input type="date" required="" name="visitDate" value="${medicalReport.visitDate}"/>
+								<h3>Previous diagnosis :<span>${medicalReport.diagnosis}</span></h3><br>
+								<textarea placeholder="diagnosis" name="diagnosis" value="${medicalReport.diagnosis}"></textarea>
+								<h3>Previous investigations :<span>${medicalReport.investigations}</span></h3><br>
+								<textarea placeholder="investigations" name="investigations" value="${medicalReport.investigations}"></textarea>
+								<h3>Previous tests :<span>${medicalReport.tests}</span></h3><br>
+								<textarea placeholder="tests" name="tests" value="${medicalReport.tests}"></textarea>
+								<h3>Previous recommendations :<span>${medicalReport.recommendations}</span></h3><br>
+								<textarea placeholder="recommendations" name="recommendations" value="${medicalReport.recommendations}"></textarea>
+								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
+
 						   </form>
 							<form action="./doctor.jsp">
 								<input  type="submit" value="CANCEL" >
@@ -107,13 +155,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 	</div>
 	
-	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var valueSelected
+		$("#department").on('change', function (e) {
+		    var optionSelected = $("option:selected", this);
+		    valueSelected = this.value;
+		    $('option').show();
+		    //$('#'+valueSelected).show();
+		    $("#department > option").each(function() {
+		        var docval=this.value;
+		        if(docval!=valueSelected){
+		        	$('#'+docval).hide();
+		        }
+		    });
+		    
+		    if(valueSelected=="Default"){
+		    	$('option').show();
+		    	
+		    }
+		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
+		    $("#doctor").fadeIn();
+		    $("#0").show();
+		    $("#D0").show();
+		    
+		    	    
+		    
+		});
+		
+		
+		
+		
+		});
+	</script>
+	<!-- <script type="text/javascript">
 
 	$(document).ready(function(){
 			{
 		$("#confirm").click(function()
 		{
-		alert("abcd");
+		alert($("#doctor").val());
 			});
 
 
@@ -230,5 +312,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<!--end-smooth-scrolling-->
 		<a href="#house" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<script src="js/bootstrap.js"></script>
+
 </body>
 </html>

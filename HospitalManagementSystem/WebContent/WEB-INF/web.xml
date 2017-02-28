@@ -149,4 +149,54 @@
     <servlet-name>RetrieveDoctorList</servlet-name>
     <url-pattern>/RetrieveDoctorList</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addMedicalReportController</display-name>
+    <servlet-name>addMedicalReportController</servlet-name>
+    <servlet-class>controller.doctorServlet.addMedicalReportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addMedicalReportController</servlet-name>
+    <url-pattern>/addMedicalReportController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewOrRemoveOrUpdateMedicalReportController</display-name>
+    <servlet-name>ViewOrRemoveOrUpdateMedicalReportController</servlet-name>
+    <servlet-class>controller.doctorServlet.ViewOrRemoveOrUpdateMedicalReportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewOrRemoveOrUpdateMedicalReportController</servlet-name>
+    <url-pattern>/ViewOrRemoveOrUpdateMedicalReportController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deleteMedicalReport</display-name>
+    <servlet-name>deleteMedicalReport</servlet-name>
+    <servlet-class>controller.doctorServlet.deleteMedicalReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteMedicalReport</servlet-name>
+    <url-pattern>/deleteMedicalReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetViewOrRemoveOrUpdateMedicalReport</display-name>
+    <servlet-name>GetViewOrRemoveOrUpdateMedicalReport</servlet-name>
+    <servlet-class>controller.doctorServlet.GetViewOrRemoveOrUpdateMedicalReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetViewOrRemoveOrUpdateMedicalReport</servlet-name>
+    <url-pattern>/GetViewOrRemoveOrUpdateMedicalReport</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>updateMedicalReport</display-name>
+    <servlet-name>updateMedicalReport</servlet-name>
+    <servlet-class>controller.doctorServlet.updateMedicalReport</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateMedicalReport</servlet-name>
+    <url-pattern>/updateMedicalReport</url-pattern>
+  </servlet-mapping>
 </web-app>

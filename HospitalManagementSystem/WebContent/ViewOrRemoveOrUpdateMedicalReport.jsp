@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>MODIFY MEDICAL REPORT</title>
+<title>VIEW OR REMOVE OR UPDATE MEDICAL REPORT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">MEDICAL REPORT <span>FORM</span></h3>
+						<h3 class="tittle">Find <span>Medical Report</span></h3>
 					</div>
 			</div>
 		</div>
@@ -82,46 +82,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="article-post w3l">
 				<div class="post-details s-page">
-				
 		<div class="leave w3l">
-			<h3>Edit the details you want to <span>update</span></h3>
+			<h3>Enter <span> Medical Report ID </span></h3>
 			<br>
 			<br>
-			
-				<form action="./modifyMedicalReportController">
+				<form action="./ViewOrRemoveOrUpdateMedicalReportController">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
-								<input type="text" placeholder="Patient ID" required="" name="patientId">
-						  		Select Visit Date: <input type="date" required="" name="visitDate"/>		
-								<textarea placeholder="diagnosis" name="diagnosis"></textarea>
-								<textarea placeholder="investigations" name="investigations"></textarea>
-								<textarea placeholder="tests" name="tests"></textarea>
-								<textarea placeholder="recommendations" name="recommendations"></textarea>
-								
-								<div class="section_room">
-				
-									<select id="doctor"  class="frm-field required" required >
-										<option  id='0' value="">Select Doctor</option>
-										<c:forEach var="element" items="${doctorList}">
-											<option id=${element.departmentId} value=${element.doctorId}>${element.doctorName}</option>
-										</c:forEach>						
-									</select>
-								</div>
-								
-								<div class="section_room">
-				
-									<select id="technician"  class="frm-field required" required >
-										<option  id='0' value="">Select Technician</option>
-										<c:forEach var="element" items="${technicianList}">
-											<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>
-										</c:forEach>						
-									</select>
-								</div>
-								
-								<input id="confirm" type="submit" value="UPDATE" >
-
+						   <form action="./ViewOrRemoveOrUpdateMedicalReportController">
+						   	
+								<input type="text" placeholder="Medical Report ID to ${button}" required="" name="regNo">
+								<input type="text" value="${button}" hidden name="selectedValue">
+								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
 							<form action="./doctor.jsp">
 								<input  type="submit" value="CANCEL" >
@@ -258,6 +231,5 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<!--end-smooth-scrolling-->
 		<a href="#house" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<script src="js/bootstrap.js"></script>
-
 </body>
 </html>

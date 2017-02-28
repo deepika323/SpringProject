@@ -22,17 +22,16 @@ public class addMedicalReportController extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session=request.getSession();
 		int patientId=Integer.parseInt(request.getParameter("patientId"));
 		String visitDateString=(request.getParameter("visitDate"));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
-		Date visitDate=null;			//check
-		try {
-			visitDate = (Date)sdf.parse(visitDateString);
-		} catch (ParseException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
+		Date visitDate=java.sql.Date.valueOf(visitDateString);			//check
+//		try {
+//			visitDate = (Date)sdf.parse(visitDateString);
+//		} catch (ParseException e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
 		String diagnosis=request.getParameter("diagnosis");
 		String investigations=request.getParameter("investigations");
 		String tests=request.getParameter("tests");
@@ -63,7 +62,7 @@ public class addMedicalReportController extends HttpServlet {
 		}
 		 request.setAttribute("newMedicalReport", newMedicalReport);
 		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addAppointment.jsp");
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReport.jsp");
 		    rd.forward(request, response);
 		    //Change
 //		    if(request.getParameter("doctorId")==null){

@@ -1,11 +1,14 @@
+<%@page import="model.bean.*"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Medical Report</title>
+<title>VIEW OR REMOVE OR UPDATE MEDICAL REPORT FORM</title>
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -111,9 +114,108 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <br><br>
 
-<!--  need to complete -->
+<div class="leave w3l">
 
-<br><br>
+	  	<h3 align="left" color=black><span>Medical Report Details :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient's Appointment Number : <span>${medicalReport.patientId} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visit Date :<span>${medicalReport.visitDate}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Diagnosis :<span>${medicalReport.diagnosis}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Investigations :<span>${medicalReport.investigations}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tests : <span>${medicalReport.tests}</span></h3>
+           <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommendations :<span>${medicalReport.recommendations}</span></h3>
+           <br> <h3 id="6" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor ID :<span>${medicalReport.doctorId}</span></h3>
+           <br> <h3 id="7" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Technician ID :<span>${medicalReport.technicianId}</span></h3>
+      </div>
+            <br>
+             <div class="single">
+			<div class="container">
+				<div class="article-post w3l">
+				<div class="post-details s-page">
+				
+		<div class="leave w3l">
+            <div class="single-grid">
+						<div class="single-us">
+						<form action="${servlet}">
+								<input  id="button" type="submit" value="${button}" >
+								<input  name="regNo" value="${regNo}" hidden>
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >
+						   </form>
+						   <form onsubmit="myFunction(); return false;">
+								<input id="b" onclick="window.print()"  type="submit" value="PRINT" >
+						   </form>
+						   <form action="./doctor.jsp">
+								<input id="c"  type="submit" value="CANCEL" >
+						   </form>
+						   
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   </div>
+						   						   </div>
+					   						   
+<script type="text/javascript">
+ 
+ $(document).ready(function(){
+	 $("#c").hide();
+	 if ($("#button").val()=='DELETE') {
+
+		 $("#a").hide();
+		 $("#b").hide();
+		 $("#c").show();
+		 $("#button").click(function(){
+			return confirm("Are You Sure ?")
+		 });
+		 
+	}
+	 
+ });
+function myFunction() {
+}
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("regNotosave").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("1").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("2").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("3").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("4").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("5").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("6").textContent;
+    textToSave += '\n';
+    textToSave += document.getElementById("7").textContent;
+    
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    
+    var fileNameToSaveAs = "MedicalReport";
+ 	
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+</script>
+    
+
 <!--//header-top-->
  <!-- //Line Slider --><!-- 
 		<div class="top_banner two">
@@ -203,7 +305,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="text" placeholder="Email" required="">
 								<textarea placeholder="Message"></textarea>
 								<input type="submit" value="SEND" >
+
 						   </form>
+
 						</div>
 				</form>
 				</div>
