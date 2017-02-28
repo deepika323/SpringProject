@@ -7,10 +7,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Medicinal a Medical Architects Multi purpose Category Flat Bootstrap Responsive Website Template | Single Page :: w3layouts</title>
+<title>ADD APPOINTMENT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -39,48 +40,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
-<!--start-home-->
-
-<div class="main-header" id="house">
-			<div class="header-strip">
-			   <div class="container">
-				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></p>
-				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> + 655 8858 54892</p>
-				<div class="social-icons">
-					<ul>					
-						<li><a href="#"><i class="facebook"> </i></a></li>
-						<li><a href="#"><i class="twitter"> </i></a></li>
-						<li><a href="#"><i class="google-plus"> </i></a></li>	
-						<li><a href="#"><i class="dribble"> </i></a></li>										
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			</div>
-			<div class="header-middle">
-			  <div class="header-search">
-			   <form action="#" method="post">
-				<div class="search">
-					<input type="search" value="Search" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-	</div>
-		<!--header-top-->
+	<!--header-top-->
 			<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
@@ -117,13 +77,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="clearfix"></div>
 			</div>
 	</div>
-</div>
 <!--//header-top-->
  <!-- //Line Slider -->
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">Sign In <span>Page</span></h3>
+						<h3 class="tittle">APOINTMENT REGISTRATION <span>FORM</span></h3>
 					</div>
 			</div>
 		</div>
@@ -134,28 +93,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="post-details s-page">
 				
 		<div class="leave w3l">
-			<h3>Enter <span> your details </span></h3>
+			<h3>Enter <span> required details </span></h3>
 			<br>
-				<form >
+			<br>
+				<form action="./AddDischargeSummary">
 					<div class="single-grid">
 						<div class="single-us">
+						
 						   <form>
-						   		<INPUT TYPE="radio" NAME="radios" VALUE="radio1" CHECKED>
-             					 Staff
-            					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio2">
-             					Patient
-            					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio3">
-             					Doctor
-             					<BR>
-								<input type="text" placeholder=" ID" required="">
-								<input type="text" placeholder="Password" required="">
-								<input type="submit" value="SIGN IN" >
+								<input type="number" id="regNo" name="regNo" placeholder="Enter The Medical Report Id" required="" >
+								
+								<!-- Need To Use JSTL to get department and doctor list dynamically-->
+								
+								
+								 <div id="somediv"></div>
+    
+				
+								<input type="number" required name="bedNo" placeholder="Enter Bed No" >
+
+								<textarea name="history" required placeholder="Enter Patient History"></textarea>
+								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>
-							<form action="./index.jsp">
-								<input type="submit" value="CANCEL" >
+							<form action="./admin.jsp">
+								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
 				</form>
@@ -165,6 +126,78 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 			</div>
 	</div>
+	
+	<script type="text/javascript">
+	$(document).on("focusout", "#regNo", function() { 
+		$("#somediv").empty();
+		
+		
+		$.post(
+	             "DischargeAjax", 
+	             {name : $("#regNo").val()}, //meaasge you want to send
+	             function(result) {
+	            	// Create HTML <ul> element and append it to HTML DOM element with ID "somediv".
+	                 $.each(result, function(index, item) { // Iterate over the JSON array.
+		                 if (item=='Medical Report Not Found') {
+
+							$("#regNo").val("");
+			                 }
+							
+	                     $("<h3>").text(item).appendTo($("#somediv"));      // Create HTML <li> element, set its text content with currently iterated item and append it to the <ul>.
+	                 });	         });  
+
+		   
+    });
+	</script>
+	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var valueSelected
+		$("#department").on('change', function (e) {
+		    var optionSelected = $("option:selected", this);
+		    valueSelected = this.value;
+		    $('option').show();
+		    //$('#'+valueSelected).show();
+		    $("#department > option").each(function() {
+		        var docval=this.value;
+		        if(docval!=valueSelected){
+		        	$('#'+docval).hide();
+		        }
+		    });
+		    
+		    if(valueSelected=="Default"){
+		    	$('option').show();
+		    	
+		    }
+		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
+		    $("#doctor").fadeIn();
+		    $("#0").show();
+		    $("#D0").show();
+		    
+		    	    
+		    
+		});
+		
+		
+		
+		
+		});
+	</script>
+	<!-- <script type="text/javascript">
+
+	$(document).ready(function(){
+			{
+		$("#confirm").click(function()
+		{
+		alert($("#doctor").val());
+			});
+
+
+			}
+		});
+
+	</script>-->
+	
 	<!--//single-->	
 
 	  <!--/start-footer-section-->

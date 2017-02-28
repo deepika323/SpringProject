@@ -146,9 +146,7 @@ font-weight: bold;
 	<tr>
 	<th>Serial No</th>
 	<th>Admission Date</th>
-	<th>Purpose</th>
 	<th>DischargeDate</th>
-	<th>History</th>
 	<th>History</th>
 	<th>On Examination</th>
 	<th>Operation Done</th>
@@ -164,17 +162,17 @@ font-weight: bold;
         <tr>
         	<td>${dischargeSummary.serialNo}</td> 
             <td>${dischargeSummary.admissionDate}</td> 
-            <td>${dischargeSummaryt.dischargeDate}</td>
+            <td>${dischargeSummary.dischargeDate}</td>
             <td>${dischargeSummary.history}</td>
             <td>${dischargeSummary.onExamination}</td>
-            <td>${dischargeSummary.operationDone}</td>
+            <td>${dischargeSummary.getOperationDone()}</td>
             <td>${dischargeSummary.operativeFindings}</td>
             <td>${dischargeSummary.treatmentGiven}</td>
             <td>${dischargeSummary.recommendations}</td>
-            <td>${dischargeSummary.appointmentId}</td>
+            <td>${dischargeSummary.patientId}</td>
             <td>${dischargeSummary.otId}</td>
             <td>${dischargeSummary.doctorId}</td>
-            <td>${dischargeSummary.bedNo}</td>
+            <td>${dischargeSummary.bedNo}</td> 
         </tr> 
 
 </table>

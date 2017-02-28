@@ -1,12 +1,15 @@
-
-
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>Medicinal a Medical Architects Multi purpose Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -99,8 +102,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="about.html" class="menu__link"><span class="menu__helper">About Us</span></a></li>
-										<li class="menu__item"><a href="typography.html" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
+										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">About Us</span></a></li>
+										<li class="menu__item"><a href="doctor.jsp" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
 										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
 										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
 									</ul>
@@ -219,211 +222,151 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- /Line Slider -->
 	</div>
     <!--footer-->
+    
+    <!-- Staff -->
+			<div class="grid_2" id="tender6">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="login.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>VIEW MY WARDS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>VIEW MY WARDS</h4>
+				   <p class="p1">abcd</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="login.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>VIEW ALL WARDS</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>VIEW ALL WARDS</h4>
+				   <p class="p1">qwerty</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+   	  </div>
+   	  
+   	 </div>
+   </div>
+   
+    <!--
+   <div id="abcd">
+   <jsp:include page="ErrorPage.jsp"></jsp:include>
+   </div>
+   
+   
+   <script type="text/javascript">
+   							
+   					$(document).ready(function()
+   					{
+   						//$("#abcd").hide();
+										
+										$("listmr").click(function()
+												{
+													$("abcd").hide();
+												});
+   					});
+										</script>-->
+      <!--//news-->
+   <div class="bottom">
+		<div class="container">
+			<div class="bottom-top">
+				<h3>Opening Hours of <span class="opening">Medicinal</span></h3>
+				<p>Phasellus tempor erat id erat gravida pulvinar. Aenean est felis, ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In sed magna tellus.</p>
+				<div class="opening_hours">
+						 <ul class="times">
+							<h4>Opening <span class="opening">Hours</span></h4>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Monday</span><div class="hours">9:30 am - 3:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Tuesday</span><div class="hours">10:30 am - 5:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Wednesday</span><div class="hours">8:30 am - 1:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Thrusday</span><div class="hours">11:30 am - 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Friday</span><div class="hours">10:00 am - 2:00 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Saturday</span><div class="hours">11:30 am - 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Sunday</span><div class="hours">Family Doctor</div>  <div class="clearfix"></div></li>
 	
-		<!-- Services -->
-				<!-- //Services -->
-		<!--medicinal-->
-			<div class="medicinal-w3">
-				<div class="container">
-				    <div class="sub-hd">
-						<h3 class="tittle two">PATIENT <span>SERVICES</span></h3>
+						 </ul>
 					</div>
-					<div class="medicinal-w3-grids one">
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-8 medicinal-w3-left">
-								<h4>LIST APPOINTMENTS</h4>
-								<p></p>
-							</div>
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
-									<a id="app" class="hi-icon icon1" href="./AppointmentServlet"></a>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/><%--MANAGE VALUES --%>
-									<a id="app3"  class="hi-icon icon2" href="./MedicalReport" ></a>
-								</div>
-							</div>
-							<div class="col-md-8 medicinal-w3-left1">
-								<h4>VIEW MEDICAL REPORT</h4>
-								<p></p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="clearfix"></div>
+			</div>
+		</div>
+</div>
+   <!--/reviews-->
+	<div id="review" class="testimonials-review">
+		<div class="container">
+		<div class="sub-hd">
+						<h3 class="tittle lost">WHAT PATIENTS ARE SAYING <span>ABOUT US</span></h3>
 					</div>
-					<div class="medicinal-w3-grids">
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-8 medicinal-w3-left">
-								<h4>VIEW DISCHARGE SUMMARY</h4>
-								<p></p>
-							</div>
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b" >
-									<c:set var="serialNo" scope="session" value="1"/><%--MANAGE VALUES --%>
-									<a id="app2" class="hi-icon icon3" href="./DischargeSummary" ></a>
-								</div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="billNo" scope="session" value="1"/><%--MANAGE VALUES --%>
-									<a  id="app4" class="hi-icon icon4" href="./Bill"></a>
-								</div>
-							</div>
-							<div class="col-md-8 medicinal-w3-left1">
-								<h4>VIEW BILLS</h4>
-								<p></p>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="medicinal-w3-grids">
-						<div class="col-md-6 medicinal-w3-grid">
-							<div class="col-md-8 medicinal-w3-left">
-								<h4>VIEW MEDICINES</h4>
-								<p></p>
-							</div>
-							<div class="col-md-4 medicinal-w3-right">
-								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
-									<a   id="app5" class="hi-icon icon1" href="./Medicine"></a>
-								</div>
-							</div>
-							
-						<div class="clearfix"></div>
+				<div class="testimonials">
+				  <div class="monials">
+				      <!--//screen-gallery-->
+						<div class="sreen-gallery-cursual">
+							 <!-- required-js-files-->
+							<link href="css/owl.carousel.css" rel="stylesheet">
+							    <script src="js/owl.carousel.js"></script>
+							        <script>
+							    $(document).ready(function() {
+							      $("#owl-demo").owlCarousel({
+							        items : 1,
+							        lazyLoad : true,
+							        autoPlay : true,
+							        navigation : false,
+							        navigationText :  false,
+							        pagination : true,
+							      });
+							    });
+							    </script>
+								 <!--//required-js-files-->
+						       <div id="owl-demo" class="owl-carousel">
+					                   <div class="item-owl">
+
+                                            <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+                                            <div class="client-info">
+                                                <img src="images/t1.jpg" alt=" " />
+
+                                                <h4>John Allen</h4>
+                                                <span>Lorem ipsum dolor</span>
+                                            </div>
+                                        </div><!-- /.item -->
+					                     <div class="item-owl">
+
+                                            <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+                                            <div class="client-info">
+                                                <img src="images/t2.jpg" alt=" " />
+
+                                                <h4>John Doe</h4>
+                                                <span>Lorem ipsum dolor</span>
+                                            </div>
+                                        </div><!-- /.item -->
+					                      <div class="item-owl">
+										  <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+                                            <div class="client-info">
+                                                <img src="images/t3.jpg" alt=" " />
+
+                                                <h4>John Leo</h4>
+                                                <span>Lorem ipsum dolor</span>
+                                            </div>
+                                        </div><!-- /.item -->
+				              </div>
+						<!--//screen-gallery-->
 					</div>
 				</div>
+				<div class="clearfix"> </div>
 			</div>
-			</div>
-			
-			
-			
-			
-			
-			
-			<!--medicinal-->
-			
-			<script type="text/javascript">					
-				$(document).ready(function(){
-
-					$("#tender").hide();
-					$("#tender2").hide();
-					$("#tender3").hide();
-					$("#tender4").hide();
-					$("#tender5").hide();
-					$("#tender6").hide();
-					$("#app").click(function(){
-						
-						$("#tender").show();
-						$("#tender2").hide();	
-						$("#tender3").hide();
-						$("#tender4").hide();
-
-						$("#tender5").hide();
-						$("#tender6").hide();
-						$('html, body').animate({
-						        scrollTop: $("#tender").offset().top
-						    }, 1000);
-						
-													
-						});
-
-					
-
-					$("#app5").click(function(){
-						
-						$("#tender5").show();
-						$("#tender").hide();
-						$("#tender2").hide();	
-						$("#tender3").hide();
-						$("#tender4").hide();
-
-						$("#tender6").hide();
-						$('html, body').animate({
-						        scrollTop: $("#tender5").offset().top
-						    }, 1000);
-						
-													
-						});
-
-					$("#app6").click(function(){
-						
-						$("#tender6").show();
-						$("#tender5").hide();
-						$("#tender").hide();
-						$("#tender2").hide();	
-						$("#tender3").hide();
-						$("#tender4").hide();
-						$('html, body').animate({
-						        scrollTop: $("#tender6").offset().top
-						    }, 1000);
-						
-													
-						});
-						
-					$("#app3").click(function(){
-						
-						$("#tender3").show();
-						$("#tender").hide();	
-						$("#tender2").hide();
-						$("#tender4").hide();
-
-						$("#tender5").hide();
-						$("#tender6").hide();
-						$('html, body').animate({
-						        scrollTop: $("#tender3").offset().top
-						    }, 1000);
-						
-													
-						});
-					$("#app2").click(function(){
-						
-						$("#tender2").show();
-						$("#tender").hide();
-						$("#tender3").hide();
-						$("#tender4").hide();
-
-						$("#tender5").hide();
-						$("#tender6").hide();	
-						$('html, body').animate({
-						        scrollTop: $("#tender2").offset().top
-						    }, 1000);
-						
-													
-						});
-					$("#app4").click(function(){
-						
-						$("#tender2").hide();
-						$("#tender4").show();
-						$("#tender").hide();
-						$("#tender3").hide();
-
-						$("#tender5").hide();
-						$("#tender6").hide();	
-						$('html, body').animate({
-						        scrollTop: $("#tender4").offset().top
-						    }, 1000);
-						
-													
-						});
-					
-				});
-				</script>
-				
-			
-   
-
-   
-		
+		</div>
+	</div>	
+	<!--//reviews-->
 	<!--/start-footer-section-->
 			<div class="footer-section">
 				<div class="container">

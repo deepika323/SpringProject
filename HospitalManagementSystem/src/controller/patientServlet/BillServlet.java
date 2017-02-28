@@ -19,8 +19,13 @@ public class BillServlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//code to get bill using bill number.
+		
 		HttpSession session=request.getSession();
-		int billNo = Integer.parseInt(request.getParameter("billNo"));
+		String billNo1 =(String)session.getAttribute("billNo");
+		int billNo=Integer.parseInt(billNo1);
+		
+		
+		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
 			if(pb.viewDischargeSummary(billNo).getPatientId()!=0){
