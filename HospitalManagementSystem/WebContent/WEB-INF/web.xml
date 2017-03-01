@@ -459,7 +459,7 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
-<<<<<<< HEAD
+
    <servlet>
     <description></description>
     <display-name>FindorRemoveDischargeSummaryController</display-name>
@@ -470,7 +470,7 @@
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
     <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
   </servlet-mapping>
-=======
+
   <servlet>
     <description></description>
     <display-name>RemoveStaff</display-name>
@@ -512,5 +512,4 @@
     <url-pattern>/RemoveDepartment</url-pattern>
   </servlet-mapping>
   
->>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
 </web-app>
