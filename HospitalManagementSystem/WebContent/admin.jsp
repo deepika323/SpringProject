@@ -313,6 +313,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="clearfix"></div>
 					</div>
+					<div class="medicinal-w3-grids">
+						<div class="col-md-6 medicinal-w3-grid">
+							<div class="col-md-8 medicinal-w3-left">
+								<h4>STAFF</h4>
+								<p></p>
+							</div>
+							<div class="col-md-4 medicinal-w3-right">
+								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
+									<a id="app7" class="hi-icon icon3"></a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
 				</div>
 			</div>
 			
@@ -332,6 +346,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$("#tender4").hide();
 					$("#tender5").hide();
 					$("#tender6").hide();
+					$("#tender7").hide();
 					$("#app").click(function(){
 						
 						$("#tender").show();
@@ -341,6 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						$("#tender5").hide();
 						$("#tender6").hide();
+						$("#tender7").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender").offset().top
 						    }, 800);
@@ -357,7 +373,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender2").hide();	
 						$("#tender3").hide();
 						$("#tender4").hide();
-
+						$("#tender7").hide();
 						$("#tender6").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender5").offset().top
@@ -374,6 +390,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						$("#tender2").hide();	
 						$("#tender3").hide();
 						$("#tender4").hide();
+						$("#tender7").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender6").offset().top
 						    }, 800);
@@ -390,6 +407,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						$("#tender5").hide();
 						$("#tender6").hide();
+						$("#tender7").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender3").offset().top
 						    }, 800);
@@ -405,12 +423,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						$("#tender5").hide();
 						$("#tender6").hide();	
+						$("#tender7").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender2").offset().top
 						    }, 800);
 						
 													
 						});
+
+						$("#app7").click(function(){
+						
+						$("#tender7").show();
+						$("#tender").hide();
+						$("#tender3").hide();
+						$("#tender4").hide();
+
+						$("#tender5").hide();
+						$("#tender6").hide();
+						$("#tender2").hide();	
+						$('html, body').animate({
+						        scrollTop: $("#tender7").offset().top
+						    }, 800);
+						
+													
+						});
+					
 					$("#app4").click(function(){
 						
 						$("#tender2").hide();
@@ -420,6 +457,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						$("#tender5").hide();
 						$("#tender6").hide();	
+						$("#tender7").hide();
 						$('html, body').animate({
 						        scrollTop: $("#tender4").offset().top
 						    }, 800);
@@ -742,6 +780,57 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				   <h4>LIST MEDICAL REPORT</h4>
+				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		
+   	  </div>
+   	 </div>
+   </div>
+   
+   <!-- Staff -->
+			<div class="grid_2" id="tender7">
+   	 <div class="container">
+	       <div class="sub-hd">
+						<h3 class="tittle">SELECT <span>FUNCTIONALITY</span></h3>
+					</div>
+   	  <div class="box_1 one">
+   	 	<div class="col-md-6">
+   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="findMR.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>ADD STAFF</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>ADD STAFF</h4>
+				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+   	 	<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>REMOVE STAFF</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>REMOVE STAFF</h4>
+				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+ 				</div>
+				<div class="clearfix"></div>
+		</div>
+		<div class="col-md-6">
+   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
+				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <div class="story_desc">
+				   	  <h3>MODIFY STAFF</h3>
+				   </div>
+ 				</div>
+				<div class="col_1_of_2 span_1_of_2">
+				   <h4>MODIFY STAFF</h4>
 				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
  				</div>
 				<div class="clearfix"></div>

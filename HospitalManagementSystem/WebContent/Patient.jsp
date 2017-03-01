@@ -236,7 +236,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
+								<c:set var="personId" scope="session" value="${personId}"/><%--MANAGE VALUES --%>
 									<a id="app" class="hi-icon icon1" href="./AppointmentServlet"></a>
 								</div>
 							</div>
@@ -245,7 +245,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/><%--MANAGE VALUES --%>
+								<c:set var="personId" scope="session" value="${personId}"/><%--MANAGE VALUES --%>
 									<a id="app3"  class="hi-icon icon2" href="./MedicalReport" ></a>
 								</div>
 							</div>
@@ -265,7 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b" >
-									<c:set var="serialNo" scope="session" value="1"/><%--MANAGE VALUES --%>
+									<c:set var="personId" scope="session" value="${personId}"/><%--MANAGE VALUES --%>
 									<a id="app2" class="hi-icon icon3" href="./DischargeSummary" ></a>
 								</div>
 							</div>
@@ -274,7 +274,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="billNo" scope="session" value="1"/><%--MANAGE VALUES --%>
+								<c:set var="personId" scope="session" value="${personId}"/><%--MANAGE VALUES --%>
 									<a  id="app4" class="hi-icon icon4" href="./Bill"></a>
 								</div>
 							</div>
@@ -294,7 +294,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
-								<c:set var="patientId" scope="session" value="1"/> <%--MANAGE VALUES --%>
+								<c:set var="personId" scope="session" value="${personId}"/><%--MANAGE VALUES --%>
 									<a   id="app5" class="hi-icon icon1" href="./Medicine"></a>
 								</div>
 							</div>
