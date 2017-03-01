@@ -20,7 +20,7 @@ public class AddBill extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		String personId = request.getParameter("personId");
+		String personId = request.getParameter("twahal");
 		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
@@ -28,7 +28,7 @@ public class AddBill extends HttpServlet {
 			
 			if(pb.listMyDischargeSummary(personId)!=null){
 				
-				request.setAttribute(personId, personId);
+				//request.setAttribute("personId", personId);
 				request.setAttribute("dischargeSummaryList", pb.listMyDischargeSummary(personId));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/AddBill.jsp");
 			    rd.forward(request, response);
