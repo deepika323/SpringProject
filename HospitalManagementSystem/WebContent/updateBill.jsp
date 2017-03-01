@@ -98,18 +98,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   <form>
 						       <h3>Bill Number :<span>${bill.billNo}</span></h3>
 						       <input type="text" id="billNo" name="billNo" value="${bill.billNo}"  hidden required="" >
-								<input type="text" id="personid" name="personId" value="${bill.appointmentId}" hidden placeholder="Person ID" required="" >
-								<h3>PERSON ID :<span>${bill.appointmentId}</span></h3>
+								<input type="text" id="discharge" name="discharge" value="${bill.serialNo}"  hidden required="" >
+								<input type="text" id="personid" name="patientId" value="${bill.patientId}" hidden placeholder="Person ID" required="" >
+								<h3>Appointment ID :<span>${bill.patientId}</span></h3>
 								
 								<h3>Discharge Summary Serial Number :<span>${bill.serialNo}</span></h3>
 								 
-								<input type="number" id="docfee" name="docfee" placeholder="Doctor Visting Charges" required="">
+								<input type="number" id="docfee" name="docfee" value="${bill.doctorVisit}" placeholder="Doctor Visting Charges" required="">
 								
-								<input type="number" id="bedfee" name="bedfee" placeholder="Bed Charges" required="">
+								<input type="number" id="bedfee" name="bedfee"  value="${bill.bedCharges}" placeholder="Bed Charges" required="">
 								
-								<input type="number" name="tests" id="tests" placeholder="Test/s Charges" required="">
+								<input type="number" name="tests" id="tests" value="${bill.tests}" placeholder="Tests Charges" required="">
 
-								<input type="number" name="medicines" id="medicines" placeholder="Test/s Charges" required="">
+								<input type="number" name="medicines" id="medicines" value="${bill.medicines}" placeholder="Medicine Charges" required="">
 							
 								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
 

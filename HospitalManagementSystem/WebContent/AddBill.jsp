@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -95,28 +95,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						   <form>
 						   
-								<c:param name="personId" value="${personId}"></c:param>
-								
 								
 								
 								<div class="section_room">
 							
 								<select id="discharge" name="discharge" class="frm-field required" required >
 								<option  id='0' value="">Select Discharge Summary Serial Number</option>
-								<!--<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
-									<option id=${dischargeSummary.serialNo} value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
-			    				</c:forEach>		-->				
+								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
+									<option  value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
+			    				</c:forEach>				
 								</select>
 								</div>
-								 
-    
+								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
+								<h3 class="apps" hidden id=${dischargeSummary.serialNo} value=${dischargeSummary.patientId}>&nbsp;&nbsp; Appointment Id : <span>${dischargeSummary.patientId}</span></h3> 
+    							<input type="number"  hidden  value=${dischargeSummary.patientId} name="${dischargeSummary.serialNo}" required="">
+								
+    							</c:forEach>
 								<input type="number" id="docfee" name="docfee" placeholder="Doctor Visting Charges" required="">
 								
 								<input type="number" id="bedfee" name="bedfee" placeholder="Bed Charges" required="">
 								
-								<input type="number" name="tests" id="tests" placeholder="Test/s Charges" required="">
+								<input type="number" name="tests" id="tests" placeholder="Tests Charges" required="">
 
-								<input type="number" name="medicines" id="medicines" placeholder="Test/s Charges" required="">
+								<input type="number" name="medicines" id="medicines" placeholder="Medicines" required="">
 							
 								<input id="confirm" type="submit" value="CREATE BILL" >
 
@@ -134,38 +135,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	
 	
-	<%-- <script type="text/javascript">
+	<script type="text/javascript">
 	$(document).ready(function(){
 		var valueSelected
-		$("#department").on('change', function (e) {
+		$("#discharge").on('change', function (e) {
 		    var optionSelected = $("option:selected", this);
 		    valueSelected = this.value;
-		    $('option').show();
-		    //$('#'+valueSelected).show();
-		    $("#department > option").each(function() {
-		        var docval=this.value;
-		        if(docval!=valueSelected){
-		        	$('#'+docval).hide();
-		        }
-		    });
+		    $('.apps').hide();
+		    $('#'+valueSelected).show();
+
 		    
-		    if(valueSelected=="Default"){
-		    	$('option').show();
+		    
+		    if(valueSelected==""){
+			    $('.apps').hide();
+
 		    	
-		    }
-		    $("#doctor").fadeOut(function(){$("#doctor").val('');});	
-		    $("#doctor").fadeIn();
-		    $("#0").show();
-		    $("#D0").show();
-		    
-		    	    
-		    
+		    } 
 		});
-		
-		
-		
-		
-		});--%>
+		});
 	</script>
 	<!-- <script type="text/javascript">
 
