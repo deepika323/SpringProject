@@ -12,30 +12,30 @@ import java.util.Properties;
 
 public class ConnectToDb {
 	
-
-	public static Connection openConnection() throws SQLException, ClassNotFoundException, IOException{
 		
-		//FileInputStream fis=new FileInputStream("Connections.properties");
-		
-		//Properties p = new Properties();
-		
-		//p.load(fis);
-		
-		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@localhost:1521:XE";
-		String user = "sapient";
-		String pwd = "sapient";
-		
-		Connection con;
-		Class.forName(driver);
-		//Connect to databases
-		con=DriverManager.getConnection(url, user, pwd);
-		
-		return con;
-		
-	}
-	public static void closeConnection(Connection con) throws SQLException
-	{
-		con.close();
-	}
+		public static Connection openConnection() throws SQLException, ClassNotFoundException, IOException{
+			 
+			FileInputStream fis=new FileInputStream("Connection.properties");
+			 
+			Properties p = new Properties();
+			 
+			p.load(fis);
+			 
+			String driver = p.getProperty("dn");
+			String url = p.getProperty("url");
+			String user = p.getProperty("user");
+			String pwd = p.getProperty("pwd");
+			 
+			Connection con;
+			Class.forName(driver);
+			//Connect to databases 
+			con=DriverManager.getConnection(url, user, pwd);
+			 
+			return con;
+			 
+		} 
+		public static void closeConnection(Connection con) throws SQLException
+		{ 
+			con.close();
+		} 
 }

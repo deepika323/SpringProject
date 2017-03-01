@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
 import model.bl.DoctorBusinessLogic;
 import model.bl.PersonBusinessLogic;
 import model.bl.StaffBusinessLogic;
@@ -22,6 +24,8 @@ import model.bl.StaffBusinessLogic;
 public class LogInController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private static Logger logger=Logger.getLogger("LoggingSample");
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -42,6 +46,7 @@ public class LogInController extends HttpServlet {
 		 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		 		try {
 					if(sbl.staffLogin(id, password)!=null){
+						logger.info("Staff Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);
 						response.sendRedirect("./Staff.jsp");
@@ -63,6 +68,7 @@ public class LogInController extends HttpServlet {
 		 		PersonBusinessLogic pbl = new PersonBusinessLogic();
 		 		try {
 					if(pbl.personLogin(id, password).getPersonAge()!=0){
+						logger.info("Patient Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);
 						response.sendRedirect("./Patient.jsp");
@@ -85,6 +91,7 @@ public class LogInController extends HttpServlet {
 		 		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		 		try {
 					if(dbl.doctorLogin(id, password)!=null){
+						logger.info("Doctor Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("doctorId",id);
 						response.sendRedirect("./Doctor.jsp");
