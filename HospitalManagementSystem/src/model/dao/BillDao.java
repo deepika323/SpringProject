@@ -12,4 +12,5 @@ public interface BillDao {
 	public boolean updateBill(int billId, Bill renewBill) throws ClassNotFoundException, SQLException, IOException;
 	public Bill displayBill(int billId) throws ClassNotFoundException, SQLException, IOException;
 	public ArrayList<Bill> displayAllBills() throws ClassNotFoundException, SQLException, IOException;
+	public ArrayList<Bill> displayMyBills(String personId) throws ClassNotFoundException, SQLException, IOException;
 }

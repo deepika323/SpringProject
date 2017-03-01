@@ -36,6 +36,17 @@ public class PersonBusinessLogic {
 	{
 		return mrd.displayMyMedicalReports(personId);
 	}
+	
+	public ArrayList<Bill> listMyBill(String personId) throws ClassNotFoundException, SQLException, IOException
+	{
+		return bd.displayMyBills(personId);
+	}
+	
+	public ArrayList<Medicine> listMyMedicine(String personId) throws ClassNotFoundException, SQLException, IOException
+	{
+		return md.displayMyMedicines(personId);
+	}
+	
 	public MedicalReport viewMedicalReport(int patientId) throws ClassNotFoundException, SQLException, IOException
 	{
 		return mrd.displayMedicalReport(patientId);
