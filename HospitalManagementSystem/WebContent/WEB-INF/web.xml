@@ -401,6 +401,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>NewStaffController</display-name>
+    <servlet-name>NewStaffController</servlet-name>
+    <servlet-class>controller.adminServlet.NewStaffController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewStaffController</servlet-name>
+    <url-pattern>/NewStaffController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>AddDepartment</display-name>
     <servlet-name>AddDepartment</servlet-name>
     <servlet-class>controller.adminServlet.AddDepartment</servlet-class>
@@ -429,4 +439,5 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
+  
 </web-app>
