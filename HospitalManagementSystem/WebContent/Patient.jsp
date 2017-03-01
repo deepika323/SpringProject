@@ -57,11 +57,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="Patient.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
-										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
-										<li class="menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
-										<li class="menu__item"><a href="HospitalInfo.jsp" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
+										<li class="menu__item menu__item--current"><a href="Patient.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
+										<li class="menu__item"><a href="./LogOutController" class="menu__link"><span class="menu__helper">Log Out</span></a></li>
+										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
 								</nav>
 							</div>

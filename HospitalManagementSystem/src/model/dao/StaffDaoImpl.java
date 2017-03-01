@@ -131,7 +131,7 @@ public class StaffDaoImpl implements StaffDao {
 		con= openConnection();
 		
 		
-		pstmt=con.prepareStatement("select * from staff where staffId = ?");
+		pstmt=con.prepareStatement("select * from staff where staffId like ?");
 		pstmt.setString(1,staffId);
 		
 		rs=pstmt.executeQuery();
@@ -149,7 +149,6 @@ public class StaffDaoImpl implements StaffDao {
 			staff.setStaffPassword(rs.getString("Password"));
 			
 		}
-		
 		closeConnection(con);
 		return staff;
 

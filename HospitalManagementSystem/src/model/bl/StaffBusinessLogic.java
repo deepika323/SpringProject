@@ -25,7 +25,7 @@ public class StaffBusinessLogic {
 		else
 		{
 			staff=sd.displayStaff(staffId);
-			//System.out.println(staff);
+			
 			if(staff.getStaffPassword().equals(staffPassword))
 			{
 				return staff;

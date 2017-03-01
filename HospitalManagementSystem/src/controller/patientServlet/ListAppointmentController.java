@@ -37,16 +37,17 @@ public class ListAppointmentController extends HttpServlet {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+//			if(request.getParameter("personId")==null){
+//				String message="Patient not found";
+//				session.setAttribute("message", message);
+//				response.sendRedirect("ErrorPage.jsp");
+//			}
 		
 		 request.setAttribute("appList", appointmentList);
 		
 		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewAppointment.jsp");
 		    rd.forward(request, response);
-		if(request.getParameter("personId")==null){
-			String message="Patient not found";
-			session.setAttribute("message", message);
-			response.sendRedirect("ErrorPage.jsp");
-		}
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

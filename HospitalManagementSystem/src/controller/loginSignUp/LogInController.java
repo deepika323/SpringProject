@@ -38,10 +38,10 @@ public class LogInController extends HttpServlet {
 		
 		
 		if(request.getParameter("radios").equals("radio1")){
-		 		String id = request.getParameter("id");
+		 		String id = request.getParameter("ID");
 		 		String password = request.getParameter("password");
 		 		
-		 		
+		 		PrintWriter out=response.getWriter();
 		 				 		
 		 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		 		try {
@@ -49,7 +49,14 @@ public class LogInController extends HttpServlet {
 						logger.info("Staff Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);
-						response.sendRedirect("./Staff.jsp");
+						response.sendRedirect("./staff.jsp");
+					}
+					else {
+//						PrintWriter out=response.getWriter();
+						 out.println("<script type=\"text/javascript\">");  
+						 out.println("alert('Login Failed!!!');");
+						 out.println("location='./login.jsp';");
+						 out.println("</script>");
 					}
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -58,6 +65,14 @@ public class LogInController extends HttpServlet {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+		 		catch (Exception e){
+		 			//PrintWriter out=response.getWriter();
+					 out.println("<script type=\"text/javascript\">");  
+					 out.println("alert('Login Failed!!!');");
+					 out.println("location='./login.jsp';");
+					 out.println("</script>");
+		 			
+		 		}
 		 	}
 		 	else if(request.getParameter("radios").equals("radio2")){
 		 		String id = request.getParameter("ID");
@@ -84,6 +99,14 @@ public class LogInController extends HttpServlet {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+		 		catch (Exception e){
+		 			PrintWriter out=response.getWriter();
+					 out.println("<script type=\"text/javascript\">");  
+					 out.println("alert('Login Failed!!!');");
+					 out.println("location='./login.jsp';");
+					 out.println("</script>");
+		 			
+		 		}
 		 	}
 		 	else if(request.getParameter("radios").equals("radio3")){
 		 		String id = request.getParameter("ID");
@@ -96,6 +119,13 @@ public class LogInController extends HttpServlet {
 						session.setAttribute("doctorId",id);
 						response.sendRedirect("./doctor.jsp");
 					}
+					else {
+						PrintWriter out=response.getWriter();
+						 out.println("<script type=\"text/javascript\">");  
+						 out.println("alert('Login Failed!!!');");
+						 out.println("location='./login.jsp';");
+						 out.println("</script>");
+					}
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -103,6 +133,14 @@ public class LogInController extends HttpServlet {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+		 		catch (Exception e){
+		 			PrintWriter out=response.getWriter();
+					 out.println("<script type=\"text/javascript\">");  
+					 out.println("alert('Login Failed!!!');");
+					 out.println("location='./login.jsp';");
+					 out.println("</script>");
+		 			
+		 		}
 		 	}
 	 }
 
