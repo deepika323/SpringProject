@@ -24,7 +24,7 @@ import model.bl.StaffBusinessLogic;
 public class LogInController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static Logger logger=Logger.getLogger("LoggingSample");
+	private static Logger logger=Logger.getLogger("LogInController");
 	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)

@@ -2,12 +2,8 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>HospitalManagementSystem</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -19,16 +15,7 @@
     <servlet-name>viewAppointmentController</servlet-name>
     <url-pattern>/viewAppointmentController</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>PatientServletFile</display-name>
-    <servlet-name>PatientServletFile</servlet-name>
-    <servlet-class>com.project .controller.PatientServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PatientServletFile</servlet-name>
-    <url-pattern>/Patient</url-pattern>
-  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
@@ -271,16 +258,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>RetrieveMedicineList</display-name>
-    <servlet-name>RetrieveMedicineList</servlet-name>
-    <servlet-class>controller.doctorServlet.RetrieveMedicineList</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RetrieveMedicineList</servlet-name>
-    <url-pattern>/RetrieveMedicineList</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>removeMedicine</display-name>
     <servlet-name>removeMedicine</servlet-name>
     <servlet-class>controller.doctorServlet.removeMedicine</servlet-class>
@@ -399,16 +376,7 @@
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RetrieveAppointmentId</display-name>
-    <servlet-name>RetrieveAppointmentId</servlet-name>
-    <servlet-class>controller.doctorServlet.RetrieveAppointmentId</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RetrieveAppointmentId</servlet-name>
-    <url-pattern>/RetrieveAppointmentId</url-pattern>
-  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>NewStaffController</display-name>

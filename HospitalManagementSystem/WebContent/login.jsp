@@ -61,8 +61,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="Patient.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
+										<li class="menu__item menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
+										<li class="menu__item--current"><a href="Patient.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
 										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
 										<li class="menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
 										<li class="menu__item"><a href="HospitalInfo.jsp" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
@@ -109,13 +109,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              					Doctor
              					<BR>
 								<input type="text" placeholder="ID" id="ID" name="ID" required="">
-								<input type="text" placeholder="Password" id="password" name="password" required="">
+								<input type="password" placeholder="Password" id="password" name="password" required="">
 								<input type="submit" value="LogIn" >
 
+						   </form>
+						   	<form action="./signup.jsp">
+								<input type="submit" value="SIGN UP FOR PATIENT" >
 						   </form>
 							<form action="./index.jsp">
 								<input type="submit" value="CANCEL" >
 						   </form>
+<br>
+<br>
+
 						</div>
 				</form>
 				
