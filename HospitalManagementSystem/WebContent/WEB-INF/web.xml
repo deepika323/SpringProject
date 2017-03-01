@@ -401,6 +401,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>RetrieveAppointmentId</display-name>
+    <servlet-name>RetrieveAppointmentId</servlet-name>
+    <servlet-class>controller.doctorServlet.RetrieveAppointmentId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveAppointmentId</servlet-name>
+    <url-pattern>/RetrieveAppointmentId</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>NewStaffController</display-name>
     <servlet-name>NewStaffController</servlet-name>
     <servlet-class>controller.adminServlet.NewStaffController</servlet-class>
@@ -421,16 +431,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>NewDoctorController</display-name>
-    <servlet-name>NewDoctorController</servlet-name>
-    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewDoctorController</servlet-name>
-    <url-pattern>/NewDoctorController</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>NewDepartmentController</display-name>
     <servlet-name>NewDepartmentController</servlet-name>
     <servlet-class>controller.adminServlet.NewDepartmentController</servlet-class>
@@ -439,6 +439,18 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
+
+   <servlet>
+    <description></description>
+    <display-name>FindorRemoveDischargeSummaryController</display-name>
+    <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
+    <servlet-class>controller.adminServlet.FindorRemoveDischargeSummaryController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
+    <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <description></description>
     <display-name>RemoveStaff</display-name>

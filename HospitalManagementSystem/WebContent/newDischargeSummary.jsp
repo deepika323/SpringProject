@@ -116,14 +116,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <div class="leave w3l">
 
-	  	<h3 align="left" color=black><span> Details :</span></h3><br>
-  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor ID : <span>${doctor.doctorId} </span></h3>      
-           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name :<span>${doctor.doctorName}</span></h3>
-           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specialization :<span>${doctor.specialization}</span></h3> 
-           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timing :<span>${doctor.timing}</span></h3>
-            <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address : <span>${doctor.doctorAddress}</span></h3> 
-            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone No. :<span>${doctor.doctorPhoneNo}</span></h3>
-            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department Id :<span>${doctor.departmentId}</span></h3>
+	  	<h3 align="left" color=black><span>Appointment Details :</span></h3><br>
+  	<h3 id="regNotosave" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient's Serial Number : <span>${appointment.serialNo} </span></h3>      
+           <br> <h3 id="1" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Discharge Date :<span>${appointment.dischargeDate}</span></h3>
+           <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Examination :<span>${appointment.onExamination}</span></h3> 
+           <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Operation Done :<span>${appointment.operationDone}</span></h3>
+           <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Recommendation : <span>${appointment.recommendations}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor Id :<span>${appointment.doctorId}</span></h3>
       </div>
             <br>
              <div class="single">
@@ -136,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="single-us">
 						<form action="${servlet}">
 								<input  id="button" type="submit" value="${button}" >
-								<input  name="doctorId" value="${doctorId}" hidden>
+								<input  name="regNo" value="${regNo}" hidden>
 						   </form>
 						   <form onsubmit="myFunction(); return false;">
 								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >

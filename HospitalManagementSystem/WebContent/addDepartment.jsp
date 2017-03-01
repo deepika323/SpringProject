@@ -104,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="number" id="id" name="id" placeholder="ID" required="" >
 								<input type="text" id="name" name="name" placeholder="Name" required="" >
 								<input type="text" id="location" name="location" placeholder="Location" required="" >
-								<textarea rows="3" cols="50" placeholder="Description"></textarea>
+								<textarea rows="3" name="desc" cols="50" placeholder="Description"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>

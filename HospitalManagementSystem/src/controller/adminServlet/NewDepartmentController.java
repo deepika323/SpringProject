@@ -34,11 +34,13 @@ public class NewDepartmentController extends HttpServlet {
 		int id=Integer.parseInt(request.getParameter("id"));
 		String name=request.getParameter("name");
 		String location=request.getParameter("location");
+		String desc=request.getParameter("desc");
 		//String
 		AdminBusinessLogic abl = new AdminBusinessLogic();
 		Department department = new Department();
 		department.setDepartmentId(id);
 		department.setDepartmentName(name);
+		department.setDescription(desc);
 		department.setDepartmentLocation(location);
 		try {
 			abl.addDepartment(department);

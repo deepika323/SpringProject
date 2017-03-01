@@ -95,7 +95,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="single-us">
 						
 						   <form>
-								<input type="text" placeholder="Patient ID" required="" name="patientId">
+								<div class="section_room">
+				
+									<select id="appointmentId"  name="appointmentId" class="frm-field required" required >
+										<option  id='0' value="">Select Appointment ID</option>
+										<c:forEach var="element" items="${appointmentList}">
+											<option id=${element.regNo} value=${element.regNo}>${element.regNo}</option>
+										</c:forEach>						
+									</select>
+								</div>
+								<br><br><br><br>
 						  		Select Visit Date: <input type="date" required="" name="visitDate"/>		
 								<textarea placeholder="diagnosis" name="diagnosis"></textarea>
 								<textarea placeholder="investigations" name="investigations"></textarea>
