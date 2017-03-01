@@ -24,7 +24,7 @@ import model.bl.StaffBusinessLogic;
 public class LogInController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static Logger logger=Logger.getLogger("LoggingSample");
+	private static Logger logger=Logger.getLogger("LogInController");
 	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -94,7 +94,7 @@ public class LogInController extends HttpServlet {
 						logger.info("Doctor Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("doctorId",id);
-						response.sendRedirect("./Doctor.jsp");
+						response.sendRedirect("./doctor.jsp");
 					}
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
