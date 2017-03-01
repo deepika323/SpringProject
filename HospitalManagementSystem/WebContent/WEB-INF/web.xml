@@ -479,14 +479,5 @@
     <servlet-name>RemoveDepartment</servlet-name>
     <url-pattern>/RemoveDepartment</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>RemoveDepartment</display-name>
-    <servlet-name>RemoveDepartment</servlet-name>
-    <servlet-class>controller.adminServlet.RemoveDepartment</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RemoveDepartment</servlet-name>
-    <url-pattern>/RemoveDepartment</url-pattern>
-  </servlet-mapping>
+  
 </web-app>
