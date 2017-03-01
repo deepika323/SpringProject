@@ -319,7 +319,6 @@
     <servlet-name>RemoveDoctor</servlet-name>
     <url-pattern>/RemoveDoctor</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>Findbill</display-name>
@@ -360,6 +359,14 @@
     <servlet-name>UpdateBill</servlet-name>
     <url-pattern>/UpdateBill</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>AddDepartment</display-name>
+    <servlet-name>AddDepartment</servlet-name>
+    <servlet-class>controller.adminServlet.AddDepartment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDepartment</servlet-name>
+    <url-pattern>/AddDepartment</url-pattern>
+  </servlet-mapping>
 </web-app>
