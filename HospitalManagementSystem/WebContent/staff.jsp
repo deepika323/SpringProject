@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Medicinal a Medical Architects Multi purpose Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+<title>Sapient HealthCare</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -38,49 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
-<!--start-home-->
-
-<div class="main-header" id="house">
-			<div class="header-strip">
-			   <div class="container">
-				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">info@example.com</a></p>
-				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> + 655 8858 54892</p>
-				<div class="social-icons">
-					<ul>					
-						<li><a href="#"><i class="facebook"> </i></a></li>
-						<li><a href="#"><i class="twitter"> </i></a></li>
-						<li><a href="#"><i class="google-plus"> </i></a></li>	
-						<li><a href="#"><i class="dribble"> </i></a></li>										
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			</div>
-			<div class="header-middle">
-			  <div class="header-search">
-			   <form action="#" method="post">
-				<div class="search">
-					<input type="search" value="Search" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>
-	</div>
-		<!--header-top-->
-			<div class="header-top">
+<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
 					<!-- Brand and toggle get grouped for better mobile display -->
@@ -92,7 +50,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<span class="icon-bar"></span>
 					  </button>
 						<div class="logo">
-							<h1><a class="navbar-brand" href="index.jsp"><span>M</span>edicinal  <img src="images/logo.png" alt=" " /></a></h1>
+							</a><img src="images/logo.png" alt=" " /></h1>
+							<h1><a class="navbar-brand" href="index.jsp"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sapient</span>HealthCare&nbsp;&nbsp;&nbsp;&nbsp;
 						</div>
 					</div>
 
@@ -102,10 +61,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">About Us</span></a></li>
-										<li class="menu__item"><a href="doctor.jsp" class="menu__link"><span class="menu__helper">Short Codes</span></a></li>
-										<li class="menu__item"><a href="gallery.html" class="menu__link"><span class="menu__helper">Departments</span></a></li>
-										<li class="menu__item"><a href="contact.html" class="menu__link"><span class="menu__helper">Contact Us</span></a></li>
+										<li class="menu__item"><a href="Patient.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
+										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
+										<li class="menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
+										<li class="menu__item"><a href="HospitalInfo.jsp" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
 								</nav>
 							</div>
@@ -116,6 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="clearfix"></div>
 			</div>
 	</div>
+<br><br>
 <!--//header-top-->
  <!-- //Line Slider -->
 	 <div class="top_banner">
@@ -281,7 +241,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    					});
 										</script>-->
       <!--//news-->
-   <div class="bottom">
+   <!--  <div class="bottom">
 		<div class="container">
 			<div class="bottom-top">
 				<h3>Opening Hours of <span class="opening">Medicinal</span></h3>
@@ -303,7 +263,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 </div>
    <!--/reviews-->
-	<div id="review" class="testimonials-review">
+	<!--  <div id="review" class="testimonials-review">
 		<div class="container">
 		<div class="sub-hd">
 						<h3 class="tittle lost">WHAT PATIENTS ARE SAYING <span>ABOUT US</span></h3>
@@ -311,9 +271,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="testimonials">
 				  <div class="monials">
 				      <!--//screen-gallery-->
-						<div class="sreen-gallery-cursual">
+						<!--  <div class="sreen-gallery-cursual">
 							 <!-- required-js-files-->
-							<link href="css/owl.carousel.css" rel="stylesheet">
+							<!--  <link href="css/owl.carousel.css" rel="stylesheet">
 							    <script src="js/owl.carousel.js"></script>
 							        <script>
 							    $(document).ready(function() {
@@ -328,7 +288,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							    });
 							    </script>
 								 <!--//required-js-files-->
-						       <div id="owl-demo" class="owl-carousel">
+						       <!--  <div id="owl-demo" class="owl-carousel">
 					                   <div class="item-owl">
 
                                             <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
@@ -339,7 +299,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <span>Lorem ipsum dolor</span>
                                             </div>
                                         </div><!-- /.item -->
-					                     <div class="item-owl">
+					                    <!--   <div class="item-owl">
 
                                             <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
                                             <div class="client-info">
@@ -349,7 +309,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <span>Lorem ipsum dolor</span>
                                             </div>
                                         </div><!-- /.item -->
-					                      <div class="item-owl">
+					                     <!--   <div class="item-owl">
 										  <p class="speech">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
                                             <div class="client-info">
                                                 <img src="images/t3.jpg" alt=" " />
@@ -358,41 +318,33 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                 <span>Lorem ipsum dolor</span>
                                             </div>
                                         </div><!-- /.item -->
-				              </div>
+				              <!--  </div>
 						<!--//screen-gallery-->
-					</div>
+					<!--  </div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>	
+	</div>-->	
 	<!--//reviews-->
 	<!--/start-footer-section-->
-			<div class="footer-section">
+			 <div class="footer-section">
 				<div class="container">
 					<div class="footer-grids wow bounceIn animated" data-wow-delay="0.4s">
 						<div class="col-md-3 footer-grid">
 						<h4>About <span>Medicinal</span></h4>
 						<div class="border2"></div>
-						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
-						  <p class="sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id arcu neque, at convallis est felis.</p>
+						  <p class="sub">Sapient Healthcare Limited is a leading integrated healthcare delivery service provider in India. The healthcare verticals of the company primarily comprise hospitals, diagnostics and day care specialty facilities. Currently, the company operates its healthcare delivery services in India, Dubai, Mauritius and Sri Lanka with 45 healthcare facilities (including projects under development), approximately 10,000 potential beds and 314 diagnostic centres.</p>
 						</div>
 						<div class="col-md-3 footer-grid tags">
-								<h4>The <span>Tags</span></h4>
+								<h4><span>Contact </span>Us</h4>
 								<div class="border2"></div>
-							<ul class="tag">
-								<li><a href="#">Awesome</a></li>
-								<li><a href="#">Strategy</a></li>
-								<li><a href="#">Photography</a></li>
-								<li><a href="#">Development</a></li>
-								<li><a href="#">Css</a></li>
-								<li><a href="#">photoshop</a></li>
-								<li><a href="#">Html</a></li>
-								<li><a href="#">Awesome</a></li>
-								<li><a href="#">Strategy</a></li>
-								<li><a href="#">Photoshop</a></li>
-								<li><a href="#">Html</a></li>
-							</ul>
+							<p class="sub">Unitech Infospace,<br>
+							 				Tower A Building 2,<br>
+							 				Sector 21 Old Delhi,<br>
+							 				Gurgaon Road Dundahera,<br>
+							 				Gurugram, Haryana 122016<br>
+							 				Phone: 0124 499 6000</p>
 						</div>
 						<div class="col-md-3 footer-grid tweet">
 								<h4>Latest <span>Tweets</span></h4>
@@ -401,7 +353,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<a href="#"><i class="square-3"></i></a>
 									</div>
 							<div class="icon-text">
-								<p>I like this awesome freebie. Check it out By <a href="#"> Admin </a></p>
+								<p>I feel very lucky!!! #SapientHealthCare<a href="#"> @SamuelLJackson </a></p>
 								<h5>15 mins ago</h5>
 							</div>
 								<div class="clearfix"></div>
@@ -409,7 +361,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<a href="#"><i class="square-3"></i></a>
 								</div>
 								<div class="icon-text">
-								    <p>I like this awesome freebie. Check it out  By <a href="#"> Admin </a> </p>
+								    <p>I feel blessed!!! #SapientHealthCare<a href="#"> @JasonStatham </a> </p>
 									<h5>15 mins ago</h5>
 								</div>
 								<div class="clearfix"></div>
@@ -419,24 +371,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="border2"></div>
 								<div class="flickr-grids">
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t1.jpg" alt=" " title="CEO" /></a>
+											<a href="#"><img src="images/t1.jpg" alt=" " title="Senior Surgeon(Cardiology)" /></a>
 										</div>
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t2.jpg" alt=" " title="GM" /></a>
+											<a href="#"><img src="images/t2.jpg" alt=" " title="Surgeon(Cardiology)" /></a>
 										</div>
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t3.jpg" alt=" " title="CEO" /></a>
+											<a href="#"><img src="images/t3.jpg" alt=" " title="Junior Surgeon(Cardiology)" /></a>
 										</div>
 										<div class="clearfix"> </div>
 										
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t2.jpg" alt=" " title="GM" /></a>
+											<a href="#"><img src="images/t2.jpg" alt=" " title="Senior Surgeon(Neurology)" /></a>
 										</div>
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t3.jpg" alt=" " title="CEO" /></a>
+											<a href="#"><img src="images/t3.jpg" alt=" " title="Surgeon(Neurology)" /></a>
 										</div>
 										<div class="flickr-grid">
-											<a href="#"><img src="images/t1.jpg" alt=" " title="GM" /></a>
+											<a href="#"><img src="images/t1.jpg" alt=" " title="Junior Surgeon(Neurology)" /></a>
 										</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -449,7 +401,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!--//footer-->
 	<div class="footer-bottom">
 		<div class="container">
-			<p>© 2016 Medicinal. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+			<p>© 2017 Sapient Hospital. All rights reserved | Design by <a href="http://sapient.com">Deepika,  Chinmay,  Debanjan & Tushar</a></p>
 		</div>
 	</div>
 		<!--start-smooth-scrolling-->
