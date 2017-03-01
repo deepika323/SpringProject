@@ -439,34 +439,5 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>AddDepartment</display-name>
-    <servlet-name>AddDepartment</servlet-name>
-    <servlet-class>controller.adminServlet.AddDepartment</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>AddDepartment</servlet-name>
-    <url-pattern>/AddDepartment</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>NewDoctorController</display-name>
-    <servlet-name>NewDoctorController</servlet-name>
-    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewDoctorController</servlet-name>
-    <url-pattern>/NewDoctorController</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>NewDepartmentController</display-name>
-    <servlet-name>NewDepartmentController</servlet-name>
-    <servlet-class>controller.adminServlet.NewDepartmentController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewDepartmentController</servlet-name>
-    <url-pattern>/NewDepartmentController</url-pattern>
-  </servlet-mapping>
+  
 </web-app>
