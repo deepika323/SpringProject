@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewAppointmentController">
+				<form action="./NewDoctorController">
 					<div class="single-grid">
 						<div class="single-us">
 						
