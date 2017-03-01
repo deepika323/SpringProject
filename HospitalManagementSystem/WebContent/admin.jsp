@@ -666,7 +666,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="removeDepartment.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE DEPARTMENT</h3>
 				   </div>
@@ -692,7 +692,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="./AddBillPID"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddBillPID.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE BILLS</h3>
 				   </div>
@@ -798,7 +798,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="findMR.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="addStaff.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>ADD STAFF</h3>
 				   </div>
@@ -811,7 +811,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="removeStaff.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE STAFF</h3>
 				   </div>
@@ -824,7 +824,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="getStaffId.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>MODIFY STAFF</h3>
 				   </div>
