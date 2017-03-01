@@ -1,8 +1,6 @@
 package controller.adminServlet;
 
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,20 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.bean.Department;
-
-import model.bl.AdminBusinessLogic;
-
 /**
- * Servlet implementation class AddDoctor
+ * Servlet implementation class AddDepartment
  */
-public class AddDoctor extends HttpServlet {
+public class AddDepartment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddDoctor() {
+    public AddDepartment() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,22 +27,7 @@ public class AddDoctor extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		ArrayList<Department> departmentList=new ArrayList<Department>();
-		
-		AdminBusinessLogic abl=new AdminBusinessLogic();
-		
-		try {
-			
-			departmentList=abl.listDepartment();
-			
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}		
-		 request.setAttribute("departmentList", departmentList);
-			
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDoctor.jsp");
+		 RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDepartment.jsp");
 		    rd.forward(request, response);
 	}
 

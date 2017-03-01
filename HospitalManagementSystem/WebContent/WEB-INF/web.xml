@@ -399,4 +399,14 @@
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddDepartment</display-name>
+    <servlet-name>AddDepartment</servlet-name>
+    <servlet-class>controller.adminServlet.AddDepartment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDepartment</servlet-name>
+    <url-pattern>/AddDepartment</url-pattern>
+  </servlet-mapping>
 </web-app>
