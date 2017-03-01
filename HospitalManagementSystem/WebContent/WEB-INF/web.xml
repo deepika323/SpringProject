@@ -33,7 +33,7 @@
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
     <servlet-name>ListAppointmentServlet</servlet-name>
-    <servlet-class>com.project.controller.ListAppointment</servlet-class>
+    <servlet-class>controller.patientServlet.ListAppointmentController</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListAppointmentServlet</servlet-name>
@@ -68,6 +68,26 @@
   <servlet-mapping>
     <servlet-name>FindAppointment</servlet-name>
     <url-pattern>/FindAppointment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayDepartment</display-name>
+    <servlet-name>DisplayDepartment</servlet-name>
+    <servlet-class>controller.adminServlet.DisplayDepartment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayDepartment</servlet-name>
+    <url-pattern>/DisplayDepartment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplayDoctor</display-name>
+    <servlet-name>DisplayDoctor</servlet-name>
+    <servlet-class>controller.adminServlet.DisplayDoctor</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplayDoctor</servlet-name>
+    <url-pattern>/DisplayDoctor</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -300,6 +320,16 @@
     <url-pattern>/LogInController</url-pattern>
   </servlet-mapping>
   <servlet>
+     <description></description>
+     <display-name>HospitalInfo</display-name>
+     <servlet-name>HospitalInfo</servlet-name>
+     <servlet-class>controller.adminServlet.HospitalInfo</servlet-class>
+   </servlet>
+   <servlet-mapping>
+     <servlet-name>HospitalInfo</servlet-name>
+     <url-pattern>/HospitalInfo</url-pattern>
+   </servlet-mapping>
+  <servlet>
     <description></description>
     <display-name>SignUpController</display-name>
     <servlet-name>SignUpController</servlet-name>
@@ -319,7 +349,6 @@
     <servlet-name>RemoveDoctor</servlet-name>
     <url-pattern>/RemoveDoctor</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>Findbill</display-name>
@@ -360,6 +389,14 @@
     <servlet-name>UpdateBill</servlet-name>
     <url-pattern>/UpdateBill</url-pattern>
   </servlet-mapping>
-  
-  
+  <servlet>
+    <description></description>
+    <display-name>SearchBill</display-name>
+    <servlet-name>SearchBill</servlet-name>
+    <servlet-class>controller.adminServlet.SearchBill</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchBill</servlet-name>
+    <url-pattern>/SearchBill</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -29,9 +29,9 @@ public class DischargeSummaryServlet extends HttpServlet {
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
 			
-			if(pb.listMyDischargeSummary("twahal")!=null){
+			if(pb.listMyDischargeSummary(personId)!=null){
 				
-				request.setAttribute("dischargeSummaryList", pb.listMyDischargeSummary("twahal"));
+				request.setAttribute("dischargeSummaryList", pb.listMyDischargeSummary(personId));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/dischargeSummary.jsp");
 			    rd.forward(request, response);
 			}//Add Discharge Summary jsp and recheck logic.

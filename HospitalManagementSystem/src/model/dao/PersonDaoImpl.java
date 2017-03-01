@@ -128,6 +128,7 @@ public class PersonDaoImpl implements PersonDao {
 		Person person = new Person();
 		
 		while(rs.next()){
+		
 			person.setPersonId(rs.getString("personId"));
 			person.setPersonIdType(rs.getString("personIdType"));
 			person.setPersonName(rs.getString("personName"));

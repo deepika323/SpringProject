@@ -224,7 +224,7 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
 								</div>
 								<div class="mask"></div>
 							</div>
-							<div class="item-img"><img src="images/g2.jpg" alt=" " /></div>
+							<div class="item-img"><img src="images/{{x.id}}.gif" alt=" " /></div>
 						</div>
 					</a>
 					<label>{{x.name}}</label>
