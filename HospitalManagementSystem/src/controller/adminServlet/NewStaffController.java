@@ -1,9 +1,7 @@
 package controller.adminServlet;
 
 import java.io.IOException;
-
 import java.sql.SQLException;
-
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,21 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import model.bean.Doctor;
+import model.bean.Staff;
 import model.bl.AdminBusinessLogic;
 
-
 /**
- * Servlet implementation class NewAppointmentController
+ * Servlet implementation class NewStaffController
  */
-public class NewDoctorController extends HttpServlet {
+public class NewStaffController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NewDoctorController() {
+    public NewStaffController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,35 +30,38 @@ public class NewDoctorController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub	
-		String doctorId=request.getParameter("id");
-		String doctorName=request.getParameter("name");
+		
+		String staffId=request.getParameter("id");
+		String staffName=request.getParameter("name");
 		String specialization=request.getParameter("specialization");
 		String timing=request.getParameter("timing");
-		//String address=request.getParameter("address");
-		Long phoneno=Long.parseLong(request.getParameter("phone"));
-		String password=request.getParameter("password");
-		//Integer departmentId=Integer.parseInt(request.getParameter("fee"));
-		//int regNo= Math.abs((int) currentDate.getTime());
+		String staffAddress=request.getParameter("Address");
+		long staffPhoneNo=Long.parseLong(request.getParameter("phone"));
+		String staffPassword=request.getParameter("Password");
+		int departmentId=Integer.parseInt(request.getParameter("department"));
+		
 		AdminBusinessLogic abl=new AdminBusinessLogic();
-		Doctor newDoctor = new Doctor();
-		newDoctor.setDoctorId(doctorId);
-		newDoctor.setDoctorName(doctorName);
-		newDoctor.setSpecialization(specialization);
-		newDoctor.setTiming(timing);
-		//newDoctor.setDoctorAddress(address);
-		newDoctor.setDoctorPhoneNo(phoneno);
-		newDoctor.setDoctorPassword(password);
+		Staff staff=new Staff();
+		
+		staff.setDepartmentId(departmentId);
+		staff.setSpecialization(specialization);
+		staff.setStaffAddress(staffAddress);
+		staff.setStaffId(staffId);
+		staff.setStaffName(staffName);
+		staff.setStaffPassword(staffPassword);
+		staff.setStaffPhoneNo(staffPhoneNo);
+		staff.setTiming(timing);
+		
 		try {
 			try {
-				boolean status=abl.addDoctor(newDoctor);
+				boolean status=abl.addStaff(staff);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		 request.setAttribute("doctor",newDoctor);
+		 request.setAttribute("staff",staff);
 			String servlet="./admin.jsp";
 			String button="CONTINUE";
 			
@@ -70,7 +69,7 @@ public class NewDoctorController extends HttpServlet {
 		request.setAttribute("button", button);
 
 		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDoctor.jsp");
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newStaff.jsp");
 		    rd.forward(request, response);
 		
 	}

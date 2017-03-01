@@ -320,15 +320,15 @@
     <url-pattern>/LogInController</url-pattern>
   </servlet-mapping>
   <servlet>
-     <description></description>
-     <display-name>HospitalInfo</display-name>
-     <servlet-name>HospitalInfo</servlet-name>
-     <servlet-class>controller.adminServlet.HospitalInfo</servlet-class>
-   </servlet>
-   <servlet-mapping>
-     <servlet-name>HospitalInfo</servlet-name>
-     <url-pattern>/HospitalInfo</url-pattern>
-   </servlet-mapping>
+    <description></description>
+    <display-name>HospitalInfo</display-name>
+    <servlet-name>HospitalInfo</servlet-name>
+    <servlet-class>controller.adminServlet.HospitalInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalInfo</servlet-name>
+    <url-pattern>/HospitalInfo</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>SignUpController</display-name>
@@ -401,6 +401,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>NewStaffController</display-name>
+    <servlet-name>NewStaffController</servlet-name>
+    <servlet-class>controller.adminServlet.NewStaffController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewStaffController</servlet-name>
+    <url-pattern>/NewStaffController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>AddDepartment</display-name>
     <servlet-name>AddDepartment</servlet-name>
     <servlet-class>controller.adminServlet.AddDepartment</servlet-class>
@@ -409,4 +419,25 @@
     <servlet-name>AddDepartment</servlet-name>
     <url-pattern>/AddDepartment</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewDoctorController</display-name>
+    <servlet-name>NewDoctorController</servlet-name>
+    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewDoctorController</servlet-name>
+    <url-pattern>/NewDoctorController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewDepartmentController</display-name>
+    <servlet-name>NewDepartmentController</servlet-name>
+    <servlet-class>controller.adminServlet.NewDepartmentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewDepartmentController</servlet-name>
+    <url-pattern>/NewDepartmentController</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ADD DEPARTMENT</title>
+<title>ADD STAFF</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">DEPARTMENT REGISTRATION <span>FORM</span></h3>
+						<h3 class="tittle">STAFF REGISTRATION <span>FORM</span></h3>
 					</div>
 			</div>
 		</div>
@@ -96,15 +96,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewDepartmentController">
+				<form action="./NewStaffController">
 					<div class="single-grid">
 						<div class="single-us">
 						
 						   <form>
-								<input type="number" id="id" name="id" placeholder="ID" required="" >
+								<input type="text" id="id" name="id" placeholder="ID" required="" >
 								<input type="text" id="name" name="name" placeholder="Name" required="" >
-								<input type="text" id="location" name="location" placeholder="Location" required="" >
-								<textarea rows="3" cols="50" placeholder="Description"></textarea>
+								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
+								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
+								<textarea rows="3" cols="50" placeholder="Address"></textarea>
+								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
+								<input type="password" placeholder="Password" required="">
+								<!-- Need To Use JSTL to get department and doctor list dynamically-->
+								
+		
+				<div class="section_room">
+					<select id="department" class="frm-field required">
+					<option  id='D0' value="Default">Select Department</option>
+					<c:forEach var="element" items="${departmentList}">
+										<option  value=${element.departmentId}>${element.departmentName}</option>
+					</c:forEach>						
+					</select>
+				</div>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
 						   </form>
@@ -121,7 +135,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	
 	
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
 	$(document).ready(function(){
 		var valueSelected
 		$("#department").on('change', function (e) {
@@ -153,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		
 		});
-	</script> -->
+	</script>
 	<!-- <script type="text/javascript">
 
 	$(document).ready(function(){
