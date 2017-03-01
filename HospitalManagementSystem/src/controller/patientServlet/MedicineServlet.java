@@ -23,22 +23,22 @@ public class MedicineServlet extends HttpServlet {
 				//Code for Getting Medicine result.
 		
 				HttpSession session=request.getSession();
-				String patientId =(String)session.getAttribute("patientId");
+				String personId =(String)session.getAttribute("personId");
 				
 				PersonBusinessLogic pb = new PersonBusinessLogic();
 				
 				try { 
 					
 					ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
-					medicineList=pb.myMedicines(Integer.parseInt(patientId));
-					if(medicineList.size()==0)
-					{ 
-						String message="Medicine not found";
-						session.setAttribute("message", message);
-						response.sendRedirect("ErrorPage.jsp");
-					} 
-					else  
-					{ 
+					medicineList=pb.listMyMedicine(personId);
+//					if(medicineList.size()==0)
+//					{ 
+//						String message="Medicine not found";
+//						session.setAttribute("message", message);
+//						response.sendRedirect("ErrorPage.jsp");
+//					} 
+//					else  
+//					{ 
 						request.setAttribute("medicineList", medicineList);
 						RequestDispatcher rd = getServletContext().getRequestDispatcher("/medicine.jsp");
 					    rd.forward(request, response);
@@ -46,7 +46,7 @@ public class MedicineServlet extends HttpServlet {
 //					{ 
 //					System.out.println(m);
 //					} 
-					} 
+//					} 
 					
 				} catch (ClassNotFoundException| IOException e) {
 					// TODO Auto-generated catch block 

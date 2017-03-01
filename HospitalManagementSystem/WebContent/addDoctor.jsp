@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewAppointmentController">
+				<form action="./NewDoctorController">
 					<div class="single-grid">
 						<div class="single-us">
 						
@@ -105,15 +105,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="text" id="name" name="name" placeholder="Name" required="" >
 								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
 								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
-								<textarea rows="3" cols="50" placeholder="Address"></textarea>
+								<textarea rows="3" cols="50" name="address" placeholder="Address"></textarea>
 								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
 								<input type="password" placeholder="Password" required="">
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
 		
 				<div class="section_room">
-					<select id="department" class="frm-field required">
-					<option  id='D0' value="Default">Select Department</option>
+					<select id="department" name="department"  class="frm-field required" required="">
+					<option  id='D0' value="">Select Department</option>
 					<c:forEach var="element" items="${departmentList}">
 										<option  value=${element.departmentId}>${element.departmentName}</option>
 					</c:forEach>						

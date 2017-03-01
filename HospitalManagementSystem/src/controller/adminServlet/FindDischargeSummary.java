@@ -37,7 +37,7 @@ public class FindDischargeSummary extends HttpServlet {
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		try {
 			try {
-				request.setAttribute("appointment",abl.viewAppointments(regNo));
+				request.setAttribute("appointment",abl.viewDischargeSummary(regNo));
 				//appList=dbl.myAppointments(doctorId);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
@@ -52,7 +52,7 @@ public class FindDischargeSummary extends HttpServlet {
 		
 		if(operation.equalsIgnoreCase("Remove"))
 		{
-			String servlet="./DeleteAppointment";
+			String servlet="./RemoveDischargeSummary";
 			String button="DELETE";
 			
 		request.setAttribute("servlet", servlet);
@@ -71,30 +71,13 @@ public class FindDischargeSummary extends HttpServlet {
 
 		}
 		
-		//TO UPDATE
-		else {
-			ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
-			ArrayList<Department> departmentList=new ArrayList<Department>();
-			try {
-				doctorList=abl.listDoctor();
-				departmentList=abl.listDepartment();
-				
-			} catch (ClassNotFoundException | SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}		
-			 request.setAttribute("doctorList", doctorList);
-			 request.setAttribute("departmentList", departmentList);
-			RequestDispatcher rd = getServletContext().getRequestDispatcher("/updateForm.jsp");
-		    rd.forward(request, response);
-			
-		}
+		
 
 		//PrintWriter writerA = response.getWriter();
 		//writerA.println(operation);
 		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newAppointment.jsp");
-		    rd.forward(request, response);
+    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDischargeSummary.jsp");
+	    rd.forward(request, response);
 	}
 
 	/**
