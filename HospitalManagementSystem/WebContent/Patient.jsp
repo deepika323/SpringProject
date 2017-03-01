@@ -35,48 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
-<!--start-home-->
-
-<div class="main-header" id="house">
-			<div class="header-strip">
-			   <div class="container">
-				<p class="location"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:abc@sapient.com.com">abc@sapient.com</a></p>
-				<p class="phonenum"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+91 124 499 6000</p>
-				<div class="social-icons">
-					<ul>					
-						<li><a href="https://www.facebook.com/SapientNitro/"><i class="facebook"> </i></a></li>
-						<li><a href="https://twitter.com/sapientnitro?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="twitter"> </i></a></li>
-						<li><a href="https://plus.google.com/105320352790393422818"><i class="google-plus"> </i></a></li>										
-					</ul>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			</div>
-			<!--<div class="header-middle">
-			  <div class="header-search">
-			   <form action="#" method="post">
-				<div class="search">
-					<input type="search" value="Search" name="search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All Tests</option>
-						<option value="null">Blood Test</option>     
-						<option value="AX">Urine Test </option>
-						<option value="AX">Blood Volume Test</option>
-						<option value="AX">Normal Test</option>
-						<option value="AX">Body Scanning</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-				<div class="clearfix"></div>
-			</form>
-		</div>-->
-	</div>
-		<!--header-top-->
-			<div class="header-top">
+<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
 					<!-- Brand and toggle get grouped for better mobile display -->
@@ -113,6 +72,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="clearfix"></div>
 			</div>
 	</div>
+<br><br>
 <!--//header-top-->
  <!-- //Line Slider -->
 	 <div class="top_banner">
