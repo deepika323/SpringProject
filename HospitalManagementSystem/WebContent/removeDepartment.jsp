@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>UPDATE BILL</title>
+<title>REMOVE DEPARTMENT</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="keywords" content="Medicinal Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="applisalonion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -29,11 +28,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 </script>
-
-
 </head>
 <body>
-	<!--header-top-->
+<!--header-top-->
 			<div class="header-top">
 			  <div class="container">
 					 <nav class="navbar navbar-default">
@@ -70,12 +67,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			   <div class="clearfix"></div>
 			</div>
 	</div>
+</div>
 <!--//header-top-->
  <!-- //Line Slider -->
 		<div class="top_banner two">
 			<div class="container">
 			       <div class="sub-hd-inner">
-						<h3 class="tittle">UPDATE <span>BILL</span></h3>
+						<h3 class="tittle">REMOVE <span>DEPARTMENT </span></h3>
 					</div>
 			</div>
 		</div>
@@ -84,61 +82,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="article-post w3l">
 				<div class="post-details s-page">
-				
 		<div class="leave w3l">
-			<h3>Enter <span> required details </span></h3>
+			<h3>Enter <span> Doctor ID </span></h3>
 			<br>
 			<br>
-			
-			
-				<form action="./UpdateBill">
+				<form action="./RemoveDepartment">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
-						       <h3>Bill Number :<span>${bill.billNo}</span></h3>
-						       <input type="text" id="billNo" name="billNo" value="${bill.billNo}"  hidden required="" >
-								<input type="text" id="discharge" name="discharge" value="${bill.serialNo}"  hidden required="" >
-								<input type="text" id="personid" name="patientId" value="${bill.patientId}" hidden placeholder="Person ID" required="" >
-								<h3>Appointment ID :<span>${bill.patientId}</span></h3>
-								
-								<h3>Discharge Summary Serial Number :<span>${bill.serialNo}</span></h3>
-<<<<<<< HEAD
-=======
-								 
-								<input type="number" id="docfee" name="docfee" value="${bill.doctorVisit}" placeholder="Doctor Visting Charges" required="">
->>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
-								
-<<<<<<< HEAD
-								<input type="number" id="docfee" name="docfee" value="${bill.doctorVisit}" placeholder="Doctor Visting Charges" required="">
-=======
-								<input type="number" id="bedfee" name="bedfee"  value="${bill.bedCharges}" placeholder="Bed Charges" required="">
->>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
-								
-<<<<<<< HEAD
-								<input type="number" id="bedfee" name="bedfee"  value="${bill.bedCharges}" placeholder="Bed Charges" required="">
-								
-=======
->>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
-								<input type="number" name="tests" id="tests" value="${bill.tests}" placeholder="Tests Charges" required="">
-
-								<input type="number" name="medicines" id="medicines" value="${bill.medicines}" placeholder="Medicine Charges" required="">
-							
-								<input id="confirm" type="submit" value="CONFIRM UPDATE" >
-
+						   <form action="./RemoveDepartment">
+						   	
+								<input type="text" placeholder="Doctor ID to ${button}" required="" name="regNo">
+								<input type="text" value="${button}" hidden name="selectedValue">
+								<input id="confirm" type="submit" value="DELETE" >
 						   </form>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
 				</form>
+				
 				</div>
 			</div>			
 		</div>
 			</div>
 	</div>
 	
+	<!-- To DISPLAY THE APPOINTMENT ID <script type="text/javascript">
 
+	$(document).ready(function(){
+			{
+		$("#confirm").click(function()
+		{
+		alert("abcd");
+			});
+
+
+			}
+		});
+
+	</script>-->
 	
 	<!--//single-->	
 

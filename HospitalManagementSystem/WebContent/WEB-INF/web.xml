@@ -459,6 +459,7 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
+<<<<<<< HEAD
    <servlet>
     <description></description>
     <display-name>FindorRemoveDischargeSummaryController</display-name>
@@ -469,4 +470,47 @@
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
     <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
   </servlet-mapping>
+=======
+  <servlet>
+    <description></description>
+    <display-name>RemoveStaff</display-name>
+    <servlet-name>RemoveStaff</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveStaff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveStaff</servlet-name>
+    <url-pattern>/RemoveStaff</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStaff</display-name>
+    <servlet-name>UpdateStaff</servlet-name>
+    <servlet-class>controller.adminServlet.UpdateStaff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStaff</servlet-name>
+    <url-pattern>/UpdateStaff</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateStaffController</display-name>
+    <servlet-name>UpdateStaffController</servlet-name>
+    <servlet-class>controller.adminServlet.UpdateStaffController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateStaffController</servlet-name>
+    <url-pattern>/UpdateStaffController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveDepartment</display-name>
+    <servlet-name>RemoveDepartment</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveDepartment</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveDepartment</servlet-name>
+    <url-pattern>/RemoveDepartment</url-pattern>
+  </servlet-mapping>
+  
+>>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
 </web-app>
