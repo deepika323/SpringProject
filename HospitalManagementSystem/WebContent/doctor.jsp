@@ -244,13 +244,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- Navigation Tabs -->
 			<nav class="tabs">
 				<div class="tab-container">
-					<!--  <ul>
+					  <ul>
 						<li class="current"><a href="#"><span>01</span> Slide</a></li>
 						<li><a href="#"><span>02</span> Slide</a></li>
 						<li><a href="#"><span>03</span> Slide</a></li>
 						<li><a href="#"><span>04</span> Slide</a></li>
 						<li><a href="#"><span>05</span> Slide</a></li>
-					</ul>-->
+					</ul>
 				</div>
 			</nav>
 		</div>
@@ -258,6 +258,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- JavaScripts -->
 		<script type="text/javascript" src="js/sleekslider.min.js"></script>
 		<script type="text/javascript" src="js/app.js"></script>
+
       <!--welcome-->
  </div>
 
