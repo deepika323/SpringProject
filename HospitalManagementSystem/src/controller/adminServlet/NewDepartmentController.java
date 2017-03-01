@@ -2,7 +2,6 @@ package controller.adminServlet;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,19 +10,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.bean.Department;
-
 import model.bl.AdminBusinessLogic;
 
 /**
- * Servlet implementation class AddDoctor
+ * Servlet implementation class NewDepartmentController
  */
-public class AddDoctor extends HttpServlet {
+public class NewDepartmentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddDoctor() {
+    public NewDepartmentController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,23 +31,34 @@ public class AddDoctor extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		ArrayList<Department> departmentList=new ArrayList<Department>();
-		
-		AdminBusinessLogic abl=new AdminBusinessLogic();
-		
+		int id=Integer.parseInt(request.getParameter("id"));
+		String name=request.getParameter("name");
+		String location=request.getParameter("location");
+		//String
+		AdminBusinessLogic abl = new AdminBusinessLogic();
+		Department department = new Department();
+		department.setDepartmentId(id);
+		department.setDepartmentName(name);
+		department.setDepartmentLocation(location);
 		try {
-			
-			departmentList=abl.listDepartment();
-			
-		} catch (ClassNotFoundException | SQLException e) {
+			abl.addDepartment(department);
+		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
-		 request.setAttribute("departmentList", departmentList);
-			
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addDoctor.jsp");
-		    rd.forward(request, response);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("department", department);
+		String servlet="./admin.jsp";
+		String button="CONTINUE";
+		
+		request.setAttribute("servlet", servlet);
+		request.setAttribute("button", button);
+
+	
+	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDepartment.jsp");
+	    rd.forward(request, response);
 	}
 
 	/**

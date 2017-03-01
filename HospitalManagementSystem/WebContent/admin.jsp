@@ -290,7 +290,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="col-md-6 medicinal-w3-grid">
 							<div class="col-md-8 medicinal-w3-left">
 								<h4>DEPARTMENT</h4>
-								<p></p>
+								<p>&diams;Create Department &nbsp;&nbsp;&nbsp;&nbsp;<br>&diams;Remove Department &nbsp;</p>
 							</div>
 							<div class="col-md-4 medicinal-w3-right">
 								<div class="hi-icon-wrap hi-icon-effect-7 hi-icon-effect-7b">
@@ -307,7 +307,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="col-md-8 medicinal-w3-left1">
 								<h4>DOCTOR</h4>
-								<p></p>
+								<p>&diams;Add Doctor &nbsp;&nbsp;&nbsp;&nbsp;<br>&diams;Remove Doctor <br>&diams;Doctor Details &nbsp;</p>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -653,7 +653,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./AddDepartment"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE DEPARTMENT</h3>
 				   </div>
