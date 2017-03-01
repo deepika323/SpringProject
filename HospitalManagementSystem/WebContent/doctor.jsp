@@ -268,6 +268,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- Services -->
 				<!-- //Services -->
 		<!--medicinal-->
+		<script>
+		var audio = new Audio('abc.mp3');
+		audio.play();
+		</script>
+		
 			<div class="medicinal-w3">
 				<div class="container">
 				    <div class="sub-hd">
@@ -352,7 +357,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="appointmentForm.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./viewAppointmentController"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>VIEW MY APPOINTMENT</h3>
 				   	 <!--   <p>New York</p>-->

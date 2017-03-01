@@ -83,7 +83,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="article-post w3l">
 				<div class="post-details s-page">
 		<div class="leave w3l">
-			<h3>Enter <span> Doctor ID </span></h3>
+			<h3>Enter <span> Department ID </span></h3>
 			<br>
 			<br>
 				<form action="./RemoveDepartment">
@@ -92,8 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						   <form action="./RemoveDepartment">
 						   	
-								<input type="text" placeholder="Doctor ID to ${button}" required="" name="regNo">
-								<input type="text" value="${button}" hidden name="selectedValue">
+								<input type="text" placeholder="Department ID " required="" name="departmentId">
+							
 								<input id="confirm" type="submit" value="DELETE" >
 						   </form>
 							<form action="./admin.jsp">

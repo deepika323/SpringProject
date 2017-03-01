@@ -21,6 +21,7 @@ public class viewAppointmentController extends HttpServlet {
 		HttpSession session=request.getSession();
 		ArrayList<Appointment> appList=new ArrayList<Appointment>();
 		String doctorId=request.getParameter("doctorId");
+		doctorId=(String) session.getAttribute("doctorId");
 		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		try {
 			try {

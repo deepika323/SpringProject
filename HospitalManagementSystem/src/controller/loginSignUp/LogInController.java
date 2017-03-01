@@ -87,7 +87,7 @@ public class LogInController extends HttpServlet {
 					if(dbl.doctorLogin(id, password)!=null){
 						HttpSession session=request.getSession();
 						session.setAttribute("doctorId",id);
-						response.sendRedirect("./Doctor.jsp");
+						response.sendRedirect("./doctor.jsp");
 					}
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
