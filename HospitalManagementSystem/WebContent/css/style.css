@@ -177,7 +177,7 @@ a i.dribble {
 }
 /*--head-top--*/
 .logo {
-    float: left;
+	float: right;
     margin-top: 22px;
 }
 p.location {

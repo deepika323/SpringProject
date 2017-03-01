@@ -320,15 +320,15 @@
     <url-pattern>/LogInController</url-pattern>
   </servlet-mapping>
   <servlet>
-     <description></description>
-     <display-name>HospitalInfo</display-name>
-     <servlet-name>HospitalInfo</servlet-name>
-     <servlet-class>controller.adminServlet.HospitalInfo</servlet-class>
-   </servlet>
-   <servlet-mapping>
-     <servlet-name>HospitalInfo</servlet-name>
-     <url-pattern>/HospitalInfo</url-pattern>
-   </servlet-mapping>
+    <description></description>
+    <display-name>HospitalInfo</display-name>
+    <servlet-name>HospitalInfo</servlet-name>
+    <servlet-class>controller.adminServlet.HospitalInfo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HospitalInfo</servlet-name>
+    <url-pattern>/HospitalInfo</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>SignUpController</display-name>
@@ -398,5 +398,15 @@
   <servlet-mapping>
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetrieveAppointmentId</display-name>
+    <servlet-name>RetrieveAppointmentId</servlet-name>
+    <servlet-class>controller.doctorServlet.RetrieveAppointmentId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetrieveAppointmentId</servlet-name>
+    <url-pattern>/RetrieveAppointmentId</url-pattern>
   </servlet-mapping>
 </web-app>

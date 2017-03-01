@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.bean.Appointment;
 import model.bean.Department;
 import model.bean.Doctor;
 import model.bean.Medicine;
@@ -41,6 +42,7 @@ public class RetrieveDoctorList extends HttpServlet {
 		ArrayList<Doctor> doctorList=new ArrayList<Doctor>();
 		ArrayList<Technician> technicianList=new ArrayList<Technician>();
 		ArrayList<Department> departmentList=new ArrayList<Department>();
+		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
  		
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		
@@ -48,7 +50,7 @@ public class RetrieveDoctorList extends HttpServlet {
 			doctorList=abl.listDoctor();
 			technicianList=abl.listTechnician();
 			departmentList=abl.listDepartment();
-			
+			appointmentList=abl.listAppointment();
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,7 +58,7 @@ public class RetrieveDoctorList extends HttpServlet {
 		 request.setAttribute("doctorList", doctorList);
 		 request.setAttribute("technicianList", technicianList);
 		 request.setAttribute("departmentList", departmentList);
-		 
+		 request.setAttribute("appointmentList", appointmentList);
 		 
 //		PrintWriter pw=response.getWriter();
 //		 pw.println(doctorList);
