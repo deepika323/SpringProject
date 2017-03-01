@@ -39,10 +39,10 @@ public class NewDoctorController extends HttpServlet {
 		String doctorName=request.getParameter("name");
 		String specialization=request.getParameter("specialization");
 		String timing=request.getParameter("timing");
-		//String address=request.getParameter("address");
+		String address=request.getParameter("address");
 		Long phoneno=Long.parseLong(request.getParameter("phone"));
 		String password=request.getParameter("password");
-		//Integer departmentId=Integer.parseInt(request.getParameter("fee"));
+		Integer departmentId=Integer.parseInt(request.getParameter("department"));
 		//int regNo= Math.abs((int) currentDate.getTime());
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		Doctor newDoctor = new Doctor();
@@ -50,9 +50,10 @@ public class NewDoctorController extends HttpServlet {
 		newDoctor.setDoctorName(doctorName);
 		newDoctor.setSpecialization(specialization);
 		newDoctor.setTiming(timing);
-		//newDoctor.setDoctorAddress(address);
+		newDoctor.setDoctorAddress(address);
 		newDoctor.setDoctorPhoneNo(phoneno);
 		newDoctor.setDoctorPassword(password);
+		newDoctor.setDepartmentId(departmentId);
 		try {
 			try {
 				boolean status=abl.addDoctor(newDoctor);

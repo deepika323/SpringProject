@@ -71,6 +71,16 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>FindDischargeSummary</display-name>
+    <servlet-name>FindDischargeSummary</servlet-name>
+    <servlet-class>controller.adminServlet.FindDischargeSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindDischargeSummary</servlet-name>
+    <url-pattern>/FindDischargeSummary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>DisplayDepartment</display-name>
     <servlet-name>DisplayDepartment</servlet-name>
     <servlet-class>controller.adminServlet.DisplayDepartment</servlet-class>
@@ -108,6 +118,16 @@
   <servlet-mapping>
     <servlet-name>DeleteAppointment</servlet-name>
     <url-pattern>/DeleteAppointment</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveDischargeSummary</display-name>
+    <servlet-name>RemoveDischargeSummary</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveDischargeSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveDischargeSummary</servlet-name>
+    <url-pattern>/RemoveDischargeSummary</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -309,6 +329,16 @@
     <servlet-name>AddDoctor</servlet-name>
     <url-pattern>/AddDoctor</url-pattern>
   </servlet-mapping>
+    <servlet>
+    <description></description>
+    <display-name>NewDoctorController</display-name>
+    <servlet-name>NewDoctorController</servlet-name>
+    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewDoctorController</servlet-name>
+    <url-pattern>/NewDoctorController</url-pattern>
+  </servlet-mapping>
   <servlet>
     <description></description>
     <display-name>LogInController</display-name>
@@ -421,16 +451,6 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>NewDoctorController</display-name>
-    <servlet-name>NewDoctorController</servlet-name>
-    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewDoctorController</servlet-name>
-    <url-pattern>/NewDoctorController</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>NewDepartmentController</display-name>
     <servlet-name>NewDepartmentController</servlet-name>
     <servlet-class>controller.adminServlet.NewDepartmentController</servlet-class>
@@ -439,5 +459,14 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
-  
+   <servlet>
+    <description></description>
+    <display-name>FindorRemoveDischargeSummaryController</display-name>
+    <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
+    <servlet-class>controller.adminServlet.FindorRemoveDischargeSummaryController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
+    <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
+  </servlet-mapping>
 </web-app>

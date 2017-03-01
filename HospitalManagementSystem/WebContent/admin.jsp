@@ -561,7 +561,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="./FindorRemoveDischargeSummaryController?selectedValue=Find"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>VIEW DISCHARGE SUMMARY</h3>
 				   </div>
@@ -576,21 +576,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  </div>
    	  <div class="box_2">
    	 	<div class="col-md-6">
-   	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>UPDATE DISCHARGE SUMMARY</h3>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>UPDATE DISCHARGE SUMMARY</h4>
-				   <p class="p1">abcd</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
-   	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a href="./FindorRemoveDischargeSummaryController?selectedValue=Remove"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>REMOVE DISCHARGE SUMMARY</h3>
 				   </div>
@@ -771,19 +758,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="clearfix"></div>
 		</div>
-   	 	<div class="col-md-6">
-   	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="single.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
-				   <div class="story_desc">
-				   	  <h3>LIST MEDICAL REPORT</h3>
-				   </div>
- 				</div>
-				<div class="col_1_of_2 span_1_of_2">
-				   <h4>LIST MEDICAL REPORT</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
- 				</div>
-				<div class="clearfix"></div>
-		</div>
+   	 	
 		
    	  </div>
    	 </div>
