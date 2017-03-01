@@ -23,14 +23,14 @@ public class MedicineServlet extends HttpServlet {
 				//Code for Getting Medicine result.
 		
 				HttpSession session=request.getSession();
-				String patientId =(String)session.getAttribute("patientId");
+				String personId =(String)session.getAttribute("personId");
 				
 				PersonBusinessLogic pb = new PersonBusinessLogic();
 				
 				try { 
 					
 					ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
-					medicineList=pb.myMedicines(Integer.parseInt(patientId));
+					medicineList=pb.listMyMedicine(personId);
 					if(medicineList.size()==0)
 					{ 
 						String message="Medicine not found";

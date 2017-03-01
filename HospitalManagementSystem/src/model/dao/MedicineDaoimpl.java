@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import model.bean.Bill;
 import model.bean.MedicalReport;
 import model.bean.Medicine;
 
@@ -166,6 +167,36 @@ public class MedicineDaoimpl implements MedicineDao {
 
 		return medicineList;
 	}
+	
+	public ArrayList<Medicine> displayMyMedicines(String personId) throws ClassNotFoundException, SQLException, IOException {
+		con= openConnection();
+				
+				
+				pstmt=con.prepareStatement("select *  from Medicine,appointment where medicine.patientId=appointment.regno and appointment.personId like ?");
+				pstmt.setString(1,personId);
+				
+				rs=pstmt.executeQuery();
+				
+				ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
+				
+				
+				while(rs.next())
+				{	
+					Medicine medicine = new Medicine();
+				
+					medicine.setsNo(rs.getInt("sNo"));
+					medicine.setMedicineName(rs.getString("medicineName"));
+					medicine.setQuantity(rs.getInt("quantity"));
+					medicine.setDosage(rs.getString("dosage"));
+					medicine.setPrice(rs.getFloat("price"));
+					medicine.setPatientId(rs.getInt("patientId"));
+					medicineList.add(medicine);
+				}
+				
+				closeConnection(con);
+				return medicineList;
+			}
+
 
 
 }

@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import model.bean.Bill;
+import model.bean.DischargeSummary;
 
 public class BillDaoImpl implements BillDao {
 	
@@ -166,5 +167,36 @@ public class BillDaoImpl implements BillDao {
 		closeConnection(con);
 		return billList;
 	}
+
+	public ArrayList<Bill> displayMyBills(String personId) throws ClassNotFoundException, SQLException, IOException {
+con= openConnection();
+		
+		
+		pstmt=con.prepareStatement("select *  from Bill,appointment where bill.patientId=appointment.regno and appointment.personId like ?");
+		pstmt.setString(1,personId);
+		
+		rs=pstmt.executeQuery();
+		
+		ArrayList<Bill> billList=new ArrayList<Bill>();
+		
+		
+		while(rs.next())
+		{
+			Bill bill = new Bill();
+			bill.setBillNo(rs.getInt("billNo"));
+			bill.setPatientId(rs.getInt("patientId"));
+			bill.setSerialNo(rs.getInt("serialNo"));
+			bill.setDoctorVisit(rs.getFloat("doctorVisit"));
+			bill.setBedCharges(rs.getFloat("bedCharges"));
+			bill.setTests(rs.getFloat("tests"));
+			bill.setMedicines(rs.getFloat("medicines"));
+			billList.add(bill);
+		}
+		
+		closeConnection(con);
+		return billList;
+	}
+
+	
 
 }

@@ -18,19 +18,19 @@ public class BillServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//code to get bill using bill number.
+		//code to get bill using personId.
 		
 		HttpSession session=request.getSession();
-		String billNo1 =(String)session.getAttribute("billNo");
-		int billNo=Integer.parseInt(billNo1);
+		String personId =(String)session.getAttribute("personId");
+		
 		
 		
 		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 
-			if(pb.viewDischargeSummary(billNo).getPatientId()!=0){
+			if(pb.listMyBill(personId)!=null){
 				
-				request.setAttribute("bill", pb.viewBill(billNo));
+				request.setAttribute("billList", pb.listMyBill(personId));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/bill.jsp");
 			    rd.forward(request, response);
 			}//Add Bill jsp and recheck logic.
