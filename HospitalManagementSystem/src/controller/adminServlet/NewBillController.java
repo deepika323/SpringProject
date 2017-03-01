@@ -21,12 +21,13 @@ public class NewBillController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int appointmentId=Integer.parseInt(request.getParameter("personId"));
-		int serialNo=Integer.parseInt(request.getParameter("discharge"));
+
+		Integer serialNo=Integer.parseInt(request.getParameter("discharge"));
+		int appointmentId=Integer.parseInt(request.getParameter(serialNo.toString()));
 		float doctorVisit=Float.parseFloat(request.getParameter("docfee"));
 		float bedCharges=Float.parseFloat(request.getParameter("bedfee"));
 		float tests=Float.parseFloat(request.getParameter("tests"));
-		float medicines=Float.parseFloat(request.getParameter("medicine"));
+		float medicines=Float.parseFloat(request.getParameter("medicines"));
 		Date currentDate = new Date(Calendar.getInstance().getTime().getTime());
 		int billNo= Math.abs((int) currentDate.getTime());
 		AdminBusinessLogic abl=new AdminBusinessLogic();

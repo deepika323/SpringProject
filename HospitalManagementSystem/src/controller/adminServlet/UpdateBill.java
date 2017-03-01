@@ -1,10 +1,18 @@
 package controller.adminServlet;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.Calendar;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.bean.Bill;
+import model.bl.AdminBusinessLogic;
 
 /**
  * Servlet implementation class UpdateBill
@@ -25,7 +33,43 @@ public class UpdateBill extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		Integer serialNo=Integer.parseInt(request.getParameter("discharge"));
+		Integer billNo=Integer.parseInt(request.getParameter("billNo"));
+		int appointmentId=Integer.parseInt(request.getParameter("patientId"));
+		float doctorVisit=Float.parseFloat(request.getParameter("docfee"));
+		float bedCharges=Float.parseFloat(request.getParameter("bedfee"));
+		float tests=Float.parseFloat(request.getParameter("tests"));
+		float medicines=Float.parseFloat(request.getParameter("medicines"));
+		
+		Bill bill = new Bill();
+		bill.setBedCharges(bedCharges);
+		bill.setBillNo(billNo);
+		bill.setDoctorVisit(doctorVisit);
+		bill.setMedicines(medicines);
+		bill.setPatientId(appointmentId);
+		bill.setSerialNo(serialNo);
+		bill.setTests(tests);
+		AdminBusinessLogic abl=new AdminBusinessLogic();
+		try {
+			try {
+				boolean status=abl.modifyBill(billNo, bill);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		 request.setAttribute("bill",bill);
+			String servlet="./admin.jsp";
+			String button="CONTINUE";
+			
+		request.setAttribute("servlet", servlet);
+		request.setAttribute("button", button);
+
+		
+		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newBill.jsp");
+		    rd.forward(request, response);
+
 	}
 
 	/**

@@ -103,11 +103,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h3>Appointment ID :<span>${bill.patientId}</span></h3>
 								
 								<h3>Discharge Summary Serial Number :<span>${bill.serialNo}</span></h3>
-								
+<<<<<<< HEAD
+=======
+								 
 								<input type="number" id="docfee" name="docfee" value="${bill.doctorVisit}" placeholder="Doctor Visting Charges" required="">
+>>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
 								
+<<<<<<< HEAD
+								<input type="number" id="docfee" name="docfee" value="${bill.doctorVisit}" placeholder="Doctor Visting Charges" required="">
+=======
+								<input type="number" id="bedfee" name="bedfee"  value="${bill.bedCharges}" placeholder="Bed Charges" required="">
+>>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
+								
+<<<<<<< HEAD
 								<input type="number" id="bedfee" name="bedfee"  value="${bill.bedCharges}" placeholder="Bed Charges" required="">
 								
+=======
+>>>>>>> branch 'master' of https://github.com/TusharWahal/HospitalWebApp.git
 								<input type="number" name="tests" id="tests" value="${bill.tests}" placeholder="Tests Charges" required="">
 
 								<input type="number" name="medicines" id="medicines" value="${bill.medicines}" placeholder="Medicine Charges" required="">
