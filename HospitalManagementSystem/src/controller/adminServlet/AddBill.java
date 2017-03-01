@@ -20,7 +20,7 @@ public class AddBill extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		String personId = request.getParameter("twahal");
+		String personId = request.getParameter("personId");
 		
 		PersonBusinessLogic pb = new PersonBusinessLogic();
 		try { 

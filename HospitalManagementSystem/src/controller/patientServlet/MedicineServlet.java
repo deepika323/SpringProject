@@ -31,14 +31,14 @@ public class MedicineServlet extends HttpServlet {
 					
 					ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
 					medicineList=pb.listMyMedicine(personId);
-					if(medicineList.size()==0)
-					{ 
-						String message="Medicine not found";
-						session.setAttribute("message", message);
-						response.sendRedirect("ErrorPage.jsp");
-					} 
-					else  
-					{ 
+//					if(medicineList.size()==0)
+//					{ 
+//						String message="Medicine not found";
+//						session.setAttribute("message", message);
+//						response.sendRedirect("ErrorPage.jsp");
+//					} 
+//					else  
+//					{ 
 						request.setAttribute("medicineList", medicineList);
 						RequestDispatcher rd = getServletContext().getRequestDispatcher("/medicine.jsp");
 					    rd.forward(request, response);
@@ -46,7 +46,7 @@ public class MedicineServlet extends HttpServlet {
 //					{ 
 //					System.out.println(m);
 //					} 
-					} 
+//					} 
 					
 				} catch (ClassNotFoundException| IOException e) {
 					// TODO Auto-generated catch block 

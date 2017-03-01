@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -103,9 +103,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 								<select id="discharge" name="discharge" class="frm-field required" required >
 								<option  id='0' value="">Select Discharge Summary Serial Number</option>
-								<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
+								<!--<c:forEach var="dischargeSummary" items="${dischargeSummaryList}">
 									<option id=${dischargeSummary.serialNo} value=${dischargeSummary.serialNo}>${dischargeSummary.serialNo}</option>
-			    				</c:forEach>						
+			    				</c:forEach>		-->				
 								</select>
 								</div>
 								 
