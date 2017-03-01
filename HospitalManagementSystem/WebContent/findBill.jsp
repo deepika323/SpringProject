@@ -86,11 +86,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> BILL NUMBER </span></h3>
 			<br>
 			<br>
-				<form action="./FindBill">
+				<form action="./SearchBill">
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form action="./FindBill">
+						   <form action="./SearchBill">
 						   	
 								<input type="text" placeholder="Bill ID to ${button}" required="" name="billNo">
 								<input type="text" value="${button}" hidden name="selectedValue">

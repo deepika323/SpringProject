@@ -1,6 +1,7 @@
 package controller.loginSignUp;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -25,9 +26,19 @@ public class LogInController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 	if(request.getParameter("radios").equals("radio1")){
+		String id1= request.getParameter("ID");
+ 		String password1= request.getParameter("password");
+ 		
+ 		PrintWriter pw=response.getWriter();
+ 		//pw.print(request.getParameter("radios")); 
+		
+		
+		if(request.getParameter("radios").equals("radio1")){
 		 		String id = request.getParameter("id");
 		 		String password = request.getParameter("password");
+		 		
+		 		
+		 				 		
 		 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		 		try {
 					if(sbl.staffLogin(id, password)!=null){
@@ -44,14 +55,21 @@ public class LogInController extends HttpServlet {
 				}
 		 	}
 		 	else if(request.getParameter("radios").equals("radio2")){
-		 		String id = request.getParameter("id");
+		 		String id = request.getParameter("ID");
 		 		String password = request.getParameter("password");
+		 		
+		 		
+		 		
 		 		PersonBusinessLogic pbl = new PersonBusinessLogic();
 		 		try {
-					if(pbl.personLogin(id, password)!=null){
+					if(pbl.personLogin(id, password).getPersonAge()!=0){
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);
 						response.sendRedirect("./Patient.jsp");
+					}
+					else
+					{
+						response.sendRedirect("./login.jsp");	
 					}
 				} catch (ClassNotFoundException e) {
 					// TODO Auto-generated catch block
@@ -62,7 +80,7 @@ public class LogInController extends HttpServlet {
 				}
 		 	}
 		 	else if(request.getParameter("radios").equals("radio3")){
-		 		String id = request.getParameter("id");
+		 		String id = request.getParameter("ID");
 		 		String password = request.getParameter("password");
 		 		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		 		try {

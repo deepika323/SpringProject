@@ -23,8 +23,8 @@ public class ConnectToDb {
 		
 		String driver = "oracle.jdbc.driver.OracleDriver";
 		String url = "jdbc:oracle:thin:@localhost:1521:XE";
-		String user = "system";
-		String pwd = "sapient@123";
+		String user = "sapient";
+		String pwd = "sapient";
 		
 		Connection con;
 		Class.forName(driver);
