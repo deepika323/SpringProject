@@ -90,3 +90,24 @@ INFO    2017-03-02 12:01:31,557 [http-nio-4040-exec-6] controller.adminServlet.H
 INFO    2017-03-02 12:01:39,726 [http-nio-4040-exec-10] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
 INFO    2017-03-02 12:57:13,607 [http-nio-4040-exec-4] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
 INFO    2017-03-02 13:14:52,833 [http-nio-4040-exec-4] controller.loginSignUp.LogInController  - Doctor Login Successful
+INFO    2017-03-02 13:26:03,984 [http-nio-4040-exec-1] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 13:30:34,249 [http-nio-4040-exec-4] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 14:12:18,634 [http-nio-4040-exec-9] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 14:40:55,005 [http-nio-4040-exec-1] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 15:32:46,172 [http-nio-4040-exec-9] controller.adminServlet.DisplayDoctor  - Doctor Displayed!!
+INFO    2017-03-02 15:32:47,535 [http-nio-4040-exec-3] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 15:32:49,468 [http-nio-4040-exec-5] controller.adminServlet.DisplayDoctor  - Doctor Displayed!!
+INFO    2017-03-02 15:32:52,755 [http-nio-4040-exec-7] controller.adminServlet.DisplayDoctor  - Doctor Displayed!!
+INFO    2017-03-02 16:08:39,651 [http-nio-4040-exec-12] controller.adminServlet.AddDoctor  - Adding Doctor!!
+INFO    2017-03-02 16:09:07,332 [http-nio-4040-exec-9] controller.adminServlet.AddDoctor  - Adding Doctor!!
+INFO    2017-03-02 16:11:07,474 [http-nio-4040-exec-15] controller.adminServlet.AddDoctor  - Adding Doctor!!
+INFO    2017-03-02 16:14:26,015 [http-nio-4040-exec-19] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 16:14:56,047 [http-nio-4040-exec-17] controller.adminServlet.HospitalInfo  - Hospital Info page visited!!
+INFO    2017-03-02 16:15:55,501 [http-nio-4040-exec-14] controller.loginSignUp.LogInController  - Doctor Login Successful
+INFO    2017-03-02 16:20:23,423 [http-nio-4040-exec-14] controller.loginSignUp.LogInController  - Patient Login Successful
+INFO    2017-03-02 16:21:05,162 [http-nio-4040-exec-19] controller.loginSignUp.LogInController  - Patient Login Successful
+INFO    2017-03-02 16:41:49,633 [http-nio-4040-exec-1] controller.loginSignUp.LogInController  - Admin Login Successful
+INFO    2017-03-02 16:44:04,745 [http-nio-4040-exec-4] controller.loginSignUp.LogInController  - Admin Login Successful
+INFO    2017-03-02 16:45:12,333 [http-nio-4040-exec-16] controller.loginSignUp.LogInController  - Admin Login Successful
+INFO    2017-03-02 16:46:33,017 [http-nio-4040-exec-16] controller.loginSignUp.LogInController  - Admin Login Successful
+INFO    2017-03-02 16:46:44,300 [http-nio-4040-exec-14] controller.adminServlet.ViewMR  - MR View Page visites!!

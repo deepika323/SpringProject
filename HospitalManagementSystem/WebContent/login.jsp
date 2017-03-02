@@ -112,9 +112,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="submit" value="LogIn" >
 
 						   </form>
-						   	<form action="./signup.jsp">
-								<input type="submit" value="SIGN UP FOR PATIENT" >
-						   </form>
 							<form action="./index.jsp">
 								<input type="submit" value="CANCEL" >
 						   </form>

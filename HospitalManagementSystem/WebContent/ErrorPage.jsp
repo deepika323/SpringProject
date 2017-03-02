@@ -13,7 +13,7 @@
 
 <%-- To Display Error Messages on screen --%>
 
-<c:out value="${param.message}"/>
+<c:out value="${sessionScope.message}"/>
 
 </body>
 </html>

@@ -10,7 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 import model.bean.Doctor;
 import model.bl.AdminBusinessLogic;
@@ -43,7 +43,7 @@ public class NewDoctorController extends HttpServlet {
 		Long phoneno=Long.parseLong(request.getParameter("phone"));
 		String password=request.getParameter("password");
 		Integer departmentId=Integer.parseInt(request.getParameter("department"));
-		//int regNo= Math.abs((int) currentDate.getTime());
+		HttpSession session=request.getSession();
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		Doctor newDoctor = new Doctor();
 		newDoctor.setDoctorId(doctorId);
@@ -57,23 +57,37 @@ public class NewDoctorController extends HttpServlet {
 		try {
 			try {
 				boolean status=abl.addDoctor(newDoctor);
+				
+				if(status==true){
+					request.setAttribute("doctor",newDoctor);
+					String servlet="./admin.jsp";
+					String button="CONTINUE";
+					
+				request.setAttribute("servlet", servlet);
+				request.setAttribute("button", button);
+
+				
+				    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDoctor.jsp");
+				    rd.forward(request, response);
+	
+				}
+				else {
+					String message="Doctor Already Exist";
+					session.setAttribute("message", message);
+					response.sendRedirect("ErrorPage.jsp");
+					
+				}
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		 request.setAttribute("doctor",newDoctor);
-			String servlet="./admin.jsp";
-			String button="CONTINUE";
-			
-		request.setAttribute("servlet", servlet);
-		request.setAttribute("button", button);
+			String message="Doctor Already Exist";
+			session.setAttribute("message", message);
+			response.sendRedirect("ErrorPage.jsp");
 
-		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDoctor.jsp");
-		    rd.forward(request, response);
-		
+			
+		}
+		 		
 	}
 
 	/**

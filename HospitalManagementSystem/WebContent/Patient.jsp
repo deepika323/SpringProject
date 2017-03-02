@@ -35,9 +35,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <c:if test="${empty sessionScope.personId}">
 		<c:redirect url="/LogOutController" />
 	</c:if>
-
-
-
+<!--  
+<script>
+		var audio = new Audio('patient.mp3');
+		audio.play();
+		</script> 
+-->
 </head>
 <body>
 <div class="header-top">

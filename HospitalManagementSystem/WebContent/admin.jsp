@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,7 +37,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 </script>
 
-
+<c:if test="${empty sessionScope.admin}">
+		<c:redirect url="/LogOutController" />
+	</c:if>
 </head>
 <body>
 <!--start-home-->
@@ -64,8 +67,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="" onclick="history.go(-1);" class="menu__link"><span class="menu__helper">Back</span></a></li>
 
+										<li class="menu__item"><a href="./LogOutController" class="menu__link"><span class="menu__helper">Log Out</span></a></li>
 										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
 								</nav>

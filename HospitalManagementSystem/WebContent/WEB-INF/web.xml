@@ -494,4 +494,14 @@
     <servlet-name>LogOutController</servlet-name>
     <url-pattern>/LogOutController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminLogInController</display-name>
+    <servlet-name>AdminLogInController</servlet-name>
+    <servlet-class>controller.adminServlet.AdminLogInController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLogInController</servlet-name>
+    <url-pattern>/AdminLogInController</url-pattern>
+  </servlet-mapping>
 </web-app>
