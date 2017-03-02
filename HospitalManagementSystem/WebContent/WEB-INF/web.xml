@@ -3,7 +3,6 @@
   <display-name>HospitalManagementSystem</display-name>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
-    
   </welcome-file-list>
   <servlet>
     <description></description>
@@ -15,7 +14,6 @@
     <servlet-name>viewAppointmentController</servlet-name>
     <url-pattern>/viewAppointmentController</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
@@ -376,7 +374,6 @@
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>NewStaffController</display-name>
@@ -407,8 +404,7 @@
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
   </servlet-mapping>
-
-   <servlet>
+  <servlet>
     <description></description>
     <display-name>FindorRemoveDischargeSummaryController</display-name>
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
@@ -418,7 +414,6 @@
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
     <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <description></description>
     <display-name>RemoveStaff</display-name>
@@ -459,5 +454,14 @@
     <servlet-name>RemoveDepartment</servlet-name>
     <url-pattern>/RemoveDepartment</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <description></description>
+    <display-name>LogOutController</display-name>
+    <servlet-name>LogOutController</servlet-name>
+    <servlet-class>controller.loginSignUp.LogOutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogOutController</servlet-name>
+    <url-pattern>/LogOutController</url-pattern>
+  </servlet-mapping>
 </web-app>
