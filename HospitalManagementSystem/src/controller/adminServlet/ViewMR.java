@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Appointment;
 import model.bean.MedicalReport;
 import model.bl.AdminBusinessLogic;
@@ -21,6 +25,8 @@ import model.bl.DoctorBusinessLogic;
  */
 public class ViewMR extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(ViewMR.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,6 +42,10 @@ public class ViewMR extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ArrayList<Appointment> appList=new ArrayList<Appointment>();
+		
+		BasicConfigurator.configure();
+ 	    logger.info("MR View Page visites!!");
+		
 		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		AdminBusinessLogic abl=new AdminBusinessLogic();
 		MedicalReport mr=new MedicalReport();

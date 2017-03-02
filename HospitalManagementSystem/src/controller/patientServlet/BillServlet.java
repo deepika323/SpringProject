@@ -10,11 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bl.PersonBusinessLogic;
 
 
 public class BillServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(BillServlet.class);
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,6 +37,10 @@ public class BillServlet extends HttpServlet {
 			if(pb.listMyBill(personId)!=null){
 				
 				request.setAttribute("billList", pb.listMyBill(personId));
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Bill viewed by Patient!!");
+				
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/bill.jsp");
 			    rd.forward(request, response);
 			}//Add Bill jsp and recheck logic.

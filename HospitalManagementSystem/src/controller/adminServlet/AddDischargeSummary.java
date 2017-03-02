@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Appointment;
 import model.bean.DischargeSummary;
 import model.bean.MedicalReport;
@@ -22,6 +26,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class AddDischargeSummary extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(AddDischargeSummary.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -75,6 +81,9 @@ public class AddDischargeSummary extends HttpServlet {
 		try {
 			try {
 				boolean status=abl.addDischargeSummary(newDischarge);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Discharge Summary Added!!");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

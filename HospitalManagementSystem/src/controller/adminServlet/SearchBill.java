@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bl.AdminBusinessLogic;
 
 /**
@@ -16,6 +20,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class SearchBill extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(SearchBill.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -36,6 +42,8 @@ public class SearchBill extends HttpServlet {
 		
 		try {
 				request.setAttribute("bill",abl.viewBill(billNo));
+				BasicConfigurator.configure();
+		 	    logger.info("Bill Searched!!");
 				
 		} catch (ClassNotFoundException e) {
 				e.printStackTrace();

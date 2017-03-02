@@ -13,11 +13,7 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="lib" path="C:/Users/Mahe/Desktop/Tuesday/jstl-standard.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
-	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/twahal/Downloads/jstl-1.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Mahe/Desktop/Tuesday/jstl-standard.jar"/>
+	<classpathentry kind="lib" path="E:/Tech101/jstl-1.2.jar.zip"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

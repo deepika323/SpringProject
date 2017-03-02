@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Bill;
 import model.bl.AdminBusinessLogic;
 
@@ -19,6 +23,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class UpdateBill extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(UpdateBill.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -66,6 +72,8 @@ public class UpdateBill extends HttpServlet {
 		request.setAttribute("servlet", servlet);
 		request.setAttribute("button", button);
 
+		BasicConfigurator.configure();
+ 	    logger.info("Bill Updated!!");
 		
 		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newBill.jsp");
 		    rd.forward(request, response);

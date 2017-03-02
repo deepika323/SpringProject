@@ -11,11 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bl.PersonBusinessLogic;
 
 
 public class MedicalReportServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(MedicalReportServlet.class);
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,6 +37,10 @@ public class MedicalReportServlet extends HttpServlet {
 			if(pb.listMyMedicalReport(personId)!=null){
 				//PrintWriter pw=response.getWriter();
 				request.setAttribute("reportList", pb.listMyMedicalReport(personId)) ;
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Medical Report viewed by Patient!!");
+		 	    
 				//pw.println(pb.listMyMedicalReport("twahal"));
 				RequestDispatcher rd = getServletContext().getRequestDispatcher("/medicalReport.jsp");
 			    rd.forward(request, response);

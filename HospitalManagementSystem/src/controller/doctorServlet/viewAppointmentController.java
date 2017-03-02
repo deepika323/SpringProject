@@ -11,11 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.Appointment;
 import model.bl.DoctorBusinessLogic;
 
 public class viewAppointmentController extends HttpServlet {
 	private static final long serialVersionUID = 2L;
+	
+	private static Logger logger=Logger.getLogger(viewAppointmentController.class);
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session=request.getSession();
@@ -26,6 +32,9 @@ public class viewAppointmentController extends HttpServlet {
 		try {
 			try {
 				appList=dbl.myAppointments(doctorId);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Listing Appointment!!");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

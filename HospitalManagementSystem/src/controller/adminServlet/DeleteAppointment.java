@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Appointment;
 import model.bl.AdminBusinessLogic;
 
@@ -20,6 +24,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class DeleteAppointment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(DeleteAppointment.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -39,6 +45,9 @@ public class DeleteAppointment extends HttpServlet {
 		
 			try {
 				boolean status=abl.removeAppointment(regNo);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Appointment Deleted");
 			}
 		 catch (SQLException e) {
 			e.printStackTrace();

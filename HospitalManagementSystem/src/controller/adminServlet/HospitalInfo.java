@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Department;
 import model.bean.Doctor;
 import model.bl.AdminBusinessLogic;
@@ -19,6 +23,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class HospitalInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(HospitalInfo.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -41,6 +47,9 @@ public class HospitalInfo extends HttpServlet {
 		try {
 			doctorList=abl.listDoctor();
 			departmentList=abl.listDepartment();
+			
+			BasicConfigurator.configure();
+	 	    logger.info("Hospital Info page visited!!");
 			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

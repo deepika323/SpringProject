@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.Department;
 import model.bean.Doctor;
 import model.bean.Medicine;
@@ -22,6 +26,8 @@ import model.bl.DoctorBusinessLogic;
  */
 public class ViewOrRemoveOrUpdateMedicalReportController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(ViewOrRemoveOrUpdateMedicalReportController.class);
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,6 +64,9 @@ public class ViewOrRemoveOrUpdateMedicalReportController extends HttpServlet {
 		//TO FIND AND DISPLAY
 		else if(operation.equalsIgnoreCase("Find"))
 		{
+			BasicConfigurator.configure();
+	 	    logger.info("Looking up for Medical Report!!");
+			
 			String servlet="./doctor.jsp";
 			String button="CONTINUE";
 			

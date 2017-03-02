@@ -14,6 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.MedicalReport;
 import model.bean.Medicine;
 import model.bl.DoctorBusinessLogic;
@@ -21,6 +24,7 @@ import model.bl.DoctorBusinessLogic;
 public class addMedicalReportController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private static Logger logger=Logger.getLogger(addMedicalReportController.class);
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int patientId=Integer.parseInt(request.getParameter("patientId"));

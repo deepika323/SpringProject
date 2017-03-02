@@ -11,12 +11,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.Medicine;
 import model.bl.PersonBusinessLogic;
 
 
 public class MedicineServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(MedicineServlet.class);
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,6 +37,9 @@ public class MedicineServlet extends HttpServlet {
 					
 					ArrayList<Medicine> medicineList=new ArrayList<Medicine>();
 					medicineList=pb.listMyMedicine(personId);
+					
+					BasicConfigurator.configure();
+			 	    logger.info("Listing of Medicine by Person!!");
 //					if(medicineList.size()==0)
 //					{ 
 //						String message="Medicine not found";

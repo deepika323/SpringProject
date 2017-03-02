@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.Ward;
 import model.bl.StaffBusinessLogic;
 
@@ -19,6 +23,8 @@ import model.bl.StaffBusinessLogic;
  */
 public class ViewMyWardsController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(ViewMyWardsController.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -40,6 +46,9 @@ public class ViewMyWardsController extends HttpServlet {
 		
 		try {
 			wardList = sbl.myWards(staffId);
+			
+			BasicConfigurator.configure();
+	 	    logger.info("Ward List viewed by Staff!!");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

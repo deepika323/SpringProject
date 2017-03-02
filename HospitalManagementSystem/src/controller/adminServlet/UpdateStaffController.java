@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Staff;
 import model.bl.AdminBusinessLogic;
 
@@ -17,6 +21,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class UpdateStaffController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(UpdateStaffController.class);
        
   
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,9 +48,15 @@ public class UpdateStaffController extends HttpServlet {
 		staff.setStaffPhoneNo(staffPhoneNo);
 		staff.setTiming(timing);
 		
+		
+		
 		try {
 			try {
 				boolean status=abl.modifyStaff(staffId, staff);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Staff Updated");
+				
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

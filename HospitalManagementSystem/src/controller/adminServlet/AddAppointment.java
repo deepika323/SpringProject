@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bean.Department;
 import model.bean.Doctor;
 import model.bl.AdminBusinessLogic;
@@ -22,6 +25,8 @@ import model.bl.DoctorBusinessLogic;
  */
 public class AddAppointment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(AddAppointment.class);
        
     /**
      * @see HttpServlet#HttpServlet()

@@ -8,11 +8,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
+
 /**
  * Servlet implementation class AddDepartment
  */
 public class AddDepartment extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(AddDepartment.class);
        
     /**
      * @see HttpServlet#HttpServlet()

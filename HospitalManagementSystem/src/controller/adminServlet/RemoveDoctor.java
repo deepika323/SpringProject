@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bl.AdminBusinessLogic;
 
 /**
@@ -16,6 +20,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class RemoveDoctor extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(RemoveDoctor.class);
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -35,6 +41,10 @@ public class RemoveDoctor extends HttpServlet {
 		boolean status=false;
 			try {
 				status=abl.removeDoctor(doctorId);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Doctor Removed!");
+				
 			}
 		 catch (SQLException e) {
 			e.printStackTrace();

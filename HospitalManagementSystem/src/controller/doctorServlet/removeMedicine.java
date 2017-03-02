@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bl.DoctorBusinessLogic;
 
 /**
@@ -17,6 +21,8 @@ import model.bl.DoctorBusinessLogic;
  */
 public class removeMedicine extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(removeMedicine.class);
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,6 +36,9 @@ public class removeMedicine extends HttpServlet {
 		try {
 			try {
 				result=dbl.removeMedicine(radioValue, patientId);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Medicine Removed by Doctor!!");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

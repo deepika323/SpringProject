@@ -10,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bl.AdminBusinessLogic;
 import model.bl.DoctorBusinessLogic;
 
@@ -18,6 +22,8 @@ import model.bl.DoctorBusinessLogic;
  */
 public class deleteMedicalReport extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(deleteMedicalReport.class);
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,6 +36,8 @@ public class deleteMedicalReport extends HttpServlet {
 			try {
 				boolean status=abl.removeMedicalReport(regNo);
 				boolean status1=dbl.removeMedicalReport(regNo);
+				BasicConfigurator.configure();
+		 	    logger.info("Medical Report removed by Doctor!!");
 			}
 		 catch (SQLException e) {
 			e.printStackTrace();

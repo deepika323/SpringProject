@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.loginSignUp.LogInController;
 import model.bean.Appointment;
 import model.bean.MedicalReport;
 import model.bl.AdminBusinessLogic;
@@ -20,6 +24,9 @@ import model.bl.AdminBusinessLogic;
  * Servlet implementation class updateMedicalReport
  */
 public class updateMedicalReport extends HttpServlet {
+	
+	private static Logger logger=Logger.getLogger(updateMedicalReport.class);
+	
 	private static final long serialVersionUID = 1L;
 	
 	/**
@@ -56,6 +63,9 @@ public class updateMedicalReport extends HttpServlet {
 		try {
 			try {
 				boolean status=abl.modifyMedicalReport(regNo, newMedicalReport);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Updated Medical Report by Doctor!!");
 				
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();

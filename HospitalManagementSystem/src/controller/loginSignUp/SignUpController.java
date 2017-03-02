@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
 import model.bean.MedicalReport;
 import model.bean.Medicine;
 import model.bean.Person;
@@ -23,6 +26,8 @@ import model.bl.PersonBusinessLogic;
 public class SignUpController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	private static Logger logger=Logger.getLogger(SignUpController.class);
+	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -55,6 +60,8 @@ public class SignUpController extends HttpServlet {
 		try {
 			try {
 				result=pbl.personSignUp(newPerson);
+				BasicConfigurator.configure();
+		 	    logger.info("Signing up!!");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

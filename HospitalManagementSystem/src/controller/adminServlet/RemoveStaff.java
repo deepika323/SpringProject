@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
+
+import controller.doctorServlet.removeMedicine;
 import model.bl.AdminBusinessLogic;
 
 /**
@@ -16,6 +20,8 @@ import model.bl.AdminBusinessLogic;
  */
 public class RemoveStaff extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	private static Logger logger=Logger.getLogger(RemoveStaff.class);
        
   //Delete Staff Member
 	
@@ -25,6 +31,10 @@ public class RemoveStaff extends HttpServlet {
 		boolean status=false;
 			try {
 				status=abl.removeStaff(staffId);
+				
+				BasicConfigurator.configure();
+		 	    logger.info("Staff Removed!!");
+				
 				status=true;
 			}
 		 catch (SQLException e) {
