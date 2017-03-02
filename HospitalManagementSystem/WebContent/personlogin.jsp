@@ -62,9 +62,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="personlogin.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
+										<li class="menu__item--current"><a href="login.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
 										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
-										<li class="menu__item--current"><a href="login.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
+										<li class="menu__item"><a href="login.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
 										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
 								</nav>
@@ -93,19 +93,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="post-details s-page">
 				
 		<div class="leave w3l">
-			<h3>Enter <span> your details </span></h3>
+			<h3>Enter <span> Credentials </span></h3>
 			<br>
 				<form action="./LogInController">
 					<div class="single-grid">
 						<div class="single-us">
 						   <form>
-						   		<INPUT TYPE="radio" NAME="radios" VALUE="radio1" id="radios" CHECKED>
-             					Staff
+						   		<INPUT TYPE="radio" NAME="radios" VALUE="radio1" id="radios" HIDDEN>
+             					
             					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio2" id="radios" HIDDEN>
+            					<INPUT TYPE="radio" NAME="radios" VALUE="radio2" id="radios" CHECKED HIDDEN>
+             					
             					<BR>
-            					<INPUT TYPE="radio" NAME="radios" VALUE="radio3" id="radios">
-             					Doctor
+            					<INPUT TYPE="radio" NAME="radios" VALUE="radio3" id="radios" HIDDEN>
+             					
              					<BR>
 								<input type="text" placeholder="ID" id="ID" name="ID" required="">
 								<input type="password" placeholder="Password" id="password" name="password" required="">

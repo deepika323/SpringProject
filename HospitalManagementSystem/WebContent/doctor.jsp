@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -77,8 +78,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 });
 </script>
+<c:if test="${empty sessionScope.doctorId}">
+		<c:redirect url="/LogOutController" />
+	</c:if>
 
 </head>
+
 <body>
 <!--start-home-->
 
@@ -270,7 +275,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- //Services -->
 		<!--medicinal-->
 		<script>
-		var audio = new Audio('abc.mp3');
+		var audio = new Audio('doctor.mp3');
 		audio.play();
 		</script>
 		

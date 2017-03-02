@@ -53,7 +53,7 @@ public class LogInController extends HttpServlet {
 					if(sbl.staffLogin(id, password)!=null){
 						logger.info("Staff Login Successful");
 						HttpSession session=request.getSession();
-						session.setAttribute("personId",id);
+						session.setAttribute("staffId",id);
 						response.sendRedirect("./staff.jsp");
 					}
 					else {

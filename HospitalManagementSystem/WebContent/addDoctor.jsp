@@ -106,7 +106,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input type="text" id="timing" name="timing" placeholder="timing" required="" >
 								<textarea rows="3" cols="50" name="address" placeholder="Address"></textarea>
 								<input type="number" id="phone" name="phone" placeholder="Phone No" required="" >
-								<input type="password" placeholder="Password" required="">
+								<input type="password" name="password" placeholder="Password" required="">
 								<!-- Need To Use JSTL to get department and doctor list dynamically-->
 								
 		

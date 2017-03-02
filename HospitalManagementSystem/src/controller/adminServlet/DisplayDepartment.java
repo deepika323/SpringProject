@@ -40,6 +40,8 @@ public class DisplayDepartment extends HttpServlet {
 		
 		PrintWriter pw=response.getWriter();
 		pw.println(request.getParameter("deptId"));
+		
+		pw.println("Site Under Construction");
 	}
 
 	/**

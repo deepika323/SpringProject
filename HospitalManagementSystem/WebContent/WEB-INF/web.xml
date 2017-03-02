@@ -126,6 +126,26 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>ViewMyWardsController</display-name>
+    <servlet-name>ViewMyWardsController</servlet-name>
+    <servlet-class>controller.staffServlet.ViewMyWardsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewMyWardsController</servlet-name>
+    <url-pattern>/ViewMyWardsController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewAllWardsController</display-name>
+    <servlet-name>ViewAllWardsController</servlet-name>
+    <servlet-class>controller.staffServlet.ViewAllWardsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewAllWardsController</servlet-name>
+    <url-pattern>/ViewAllWardsController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>BillServlet</display-name>
     <servlet-name>BillServlet</servlet-name>
     <servlet-class>controller.patientServlet.BillServlet</servlet-class>
@@ -403,6 +423,16 @@
   <servlet-mapping>
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NewDoctorController</display-name>
+    <servlet-name>NewDoctorController</servlet-name>
+    <servlet-class>controller.adminServlet.NewDoctorController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NewDoctorController</servlet-name>
+    <url-pattern>/NewDoctorController</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>

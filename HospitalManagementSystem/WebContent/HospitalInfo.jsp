@@ -38,6 +38,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				});
 			});
 </script>
+<script>
+		var audio = new Audio('abc.mp3');
+		audio.play();
+		</script>
 
 
 </head>
@@ -180,7 +184,7 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
 								</div>
 								<div class="mask"></div>
 							</div>
-							<div class="item-img"><img src="images/g1.jpg" alt=" " /></div>
+							<div class="item-img"><img src="images/g1.jpg"  height="280" width="280" alt=" " /></div>
 						</div>
 					</a>
 					<label>{{x.name}}</label>
@@ -202,7 +206,7 @@ angular.module('myApp', []).controller('namesCtrl', function($scope) {
 								</div>
 								<div class="mask"></div>
 							</div>
-							<div class="item-img"><img src="images/{{x.id}}.gif" alt=" " /></div>
+							<div class="item-img"><img src="images/{{x.id}}.gif" height="280" width="280" alt=" " /></div>
 						</div>
 					</a>
 					<label>{{x.name}}</label>

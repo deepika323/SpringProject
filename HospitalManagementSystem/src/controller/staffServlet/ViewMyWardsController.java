@@ -1,6 +1,7 @@
 package controller.staffServlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -40,7 +41,8 @@ public class ViewMyWardsController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
-		String staffId = request.getParameter("staffId");
+		String staffId=(String) session.getAttribute("staffId");
+		//String staffId = request.getParameter("staffId");
 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		ArrayList<Ward> wardList=new ArrayList<Ward>();
 		
@@ -49,15 +51,24 @@ public class ViewMyWardsController extends HttpServlet {
 			
 			BasicConfigurator.configure();
 	 	    logger.info("Ward List viewed by Staff!!");
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (ClassNotFoundException | SQLException e ) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		catch (Exception e)
+		{	
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");  
+			 out.println("alert('No Wards!!!');");
+			 out.println("location='./viewWards.jsp';");
+			 out.println("</script>");
+			
+		}
 		
-		if(request.getParameter("staffId")==null){
+		if(session.getAttribute("staffId")==null){
 			String message="Staff not found";
 			session.setAttribute("message", message);
-			response.sendRedirect("output.jsp");
+			response.sendRedirect("ErrorPage.jsp");
 		}
 		request.setAttribute("staffId", staffId);
 		request.setAttribute("wardList", wardList);

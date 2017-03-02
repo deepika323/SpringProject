@@ -32,6 +32,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 </script>
 
+<c:if test="${empty sessionScope.personId}">
+		<c:redirect url="/LogOutController" />
+	</c:if>
+
+
 
 </head>
 <body>

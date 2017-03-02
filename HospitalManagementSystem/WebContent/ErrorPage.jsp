@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<label>Error Page</label>
+<h1>OOPS SOMETHING WENT WRONG !!! PLEASE TRY AGAIN </h1>
 
 <%-- To Display Error Messages on screen --%>
 

@@ -40,6 +40,8 @@ public class DisplayDoctor extends HttpServlet {
  	    
 		PrintWriter pw=response.getWriter();
 		pw.println(request.getParameter("docId"));
+		
+		pw.println("Site Under Construction");
 	}
 
 	/**
