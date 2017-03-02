@@ -97,7 +97,7 @@ public class LogInController extends HttpServlet {
 					}
 					else
 					{
-						response.sendRedirect("./login.jsp");	
+						response.sendRedirect("./personlogin.jsp");	
 					}
 				} catch (ClassNotFoundException e) {
 					logger.info("Paient Login Failed");
@@ -112,7 +112,7 @@ public class LogInController extends HttpServlet {
 		 			PrintWriter out=response.getWriter();
 					 out.println("<script type=\"text/javascript\">");  
 					 out.println("alert('Login Failed!!!');");
-					 out.println("location='./login.jsp';");
+					 out.println("location='./personlogin.jsp';");
 					 out.println("</script>");
 		 			
 		 		}

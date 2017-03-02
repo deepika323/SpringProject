@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item--current"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
-										<li class="menu__item"><a href="login.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
+										<li class="menu__item"><a href="personlogin.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
 										
 										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 										<li class="menu__item"><a href="" onclick="history.go(-1);" class="menu__link"><span class="menu__helper">Back</span></a></li>
@@ -96,7 +96,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> your details </span></h3>
 			<br>
 			<br>
-				<form action="./SignUpController">
+				<form action="./SignUpController" method="post">
 					<div class="single-grid">
 						<div class="single-us">
 						   <form>
@@ -104,13 +104,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   		<input type="text" name="personIdType" placeholder="ID Type" required="">
 								<input type="text" name="personName" placeholder="Name" required="">
 								Select Date of Birth:&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="personDateOfBirth" placeholder="Date Of Birth" required="">
-								<input type="number" name="personAge" placeholder="Age" required+"">
+								<input type="number" name="personAge" placeholder="Age" required="">
 								<br><br>
 								Select Gender
 								<br><br>
-								<input type="radio" name="radio" value="male">Male
-								&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio" value="female">Female
-								<textarea name="personAddress" rows="3" cols="50" placeholder="Address"></textarea>
+								<input type="radio" name="radio" value="male" required>Male
+								&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio" value="female" required>Female
+								<textarea name="personAddress" rows="3" cols="50" placeholder="Address" required=""></textarea>
 								<input name="personPhoneNo" type="number" placeholder="Phone No" required="">
 								<input name="personPassword" type="password" placeholder="Password" required="">
 								<input type="submit" value="SignUp" >

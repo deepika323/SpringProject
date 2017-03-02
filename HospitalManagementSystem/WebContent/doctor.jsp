@@ -476,20 +476,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  				</div>
 				<div class="clearfix"></div>
 		</div>
-   	 	<div class="col-md-6">
+   	 	<!-- <div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>LIST MEDICAL REPORTS</h3>
 				   	  <!--  <p>New York</p>-->
-				   </div>
+		<!--  		   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
 				   <h4>LIST MEDICAL REPORTS</h4>
 				   <p class="p1"><!--  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>-->
- 				</div>
+ 				<!-- </div>
 				<div class="clearfix"></div>
-		</div>
+		</div>-->
 		<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
 				   <a href="./GetViewOrRemoveOrUpdateMedicalReport?selectedValue=find"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
