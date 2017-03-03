@@ -1,6 +1,7 @@
 package controller.loginSignUp;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -62,16 +63,23 @@ public class SignUpController extends HttpServlet {
 				result=pbl.personSignUp(newPerson);
 				BasicConfigurator.configure();
 		 	    logger.info("Signing up!!");
+		 	   request.setAttribute("newPerson", newPerson);
+				
+			    RequestDispatcher rd = getServletContext().getRequestDispatcher("/personlogin.jsp");
+			    rd.forward(request, response);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		 request.setAttribute("newPerson", newPerson);
+			
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");  
+			 out.println("alert('SignUp Failed !!!');");
+			 out.println("location='./signup.jsp';");
+			 out.println("</script>");		}
 		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
-		    rd.forward(request, response);
+		
+		
 	}
 
 	/**

@@ -56,7 +56,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						  <div class="top-menu">
 							<nav class="menu menu--francisco">
 									<ul class="nav navbar-nav menu__list">
-										<li class="menu__item menu__item--current"><a href="" class="menu__link"><span class="menu__helper">Home</span></a></li>
+									<li class="menu__item menu__item"><a href="doctor.jsp" class="menu__link"><span class="menu__helper">Doctor</span></a></li>
+										<li class="menu__item menu__item--current"><a href="" class="menu__link"><span class="menu__helper">Add Medical Report Form</span></a></li>
+
+
 										<li class="menu__item"><a href="" onclick="history.go(-1);" class="menu__link"><span class="menu__helper">Back</span></a></li>
 
 									</ul>
@@ -104,10 +107,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<br><br><br><br>
 						  		Select Visit Date: <input type="date" required="" name="visitDate"/>		
-								<textarea placeholder="diagnosis" name="diagnosis"></textarea>
-								<textarea placeholder="investigations" name="investigations"></textarea>
-								<textarea placeholder="tests" name="tests"></textarea>
-								<textarea placeholder="recommendations" name="recommendations"></textarea>
+								<textarea placeholder="diagnosis" name="diagnosis" required></textarea>
+								<textarea placeholder="investigations" name="investigations" required></textarea>
+								<textarea placeholder="tests" name="tests" required></textarea>
+								<textarea placeholder="recommendations" name="recommendations" required></textarea>
 							
 								<div class="section_room">
 				
@@ -122,7 +125,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="section_room">
 				
 									<select id="technician"  name="technicianId" class="frm-field required" required >
-										<option  id='0' value="">Select Technician</option>
+										<option  id='0' value="0">Select Technician</option>
 										<c:forEach var="element" items="${technicianList}">
 											<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>
 										</c:forEach>						

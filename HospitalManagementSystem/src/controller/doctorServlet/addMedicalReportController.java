@@ -27,7 +27,7 @@ public class addMedicalReportController extends HttpServlet {
 	private static Logger logger=Logger.getLogger(addMedicalReportController.class);
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int patientId=Integer.parseInt(request.getParameter("patientId"));
+		int patientId=Integer.parseInt(request.getParameter("appointmentId"));
 		String visitDateString=(request.getParameter("visitDate"));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
 		Date visitDate=java.sql.Date.valueOf(visitDateString);			//check
@@ -60,6 +60,7 @@ public class addMedicalReportController extends HttpServlet {
 		newMedicalReport.setTechnicianId(technicianId);
 		Medicine newMedicine = new Medicine();
 		newMedicine.setsNo(sNo);
+		
 		newMedicine.setMedicineName(medicineName);
 		newMedicine.setQuantity(quantity);
 		newMedicine.setDosage(dosage);
