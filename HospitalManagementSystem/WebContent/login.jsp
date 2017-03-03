@@ -63,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="nav navbar-nav menu__list">
 										<li class="menu__item menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
 										<li class="menu__item"><a href="personlogin.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
-										<li class="menu__item"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
+										<li class="menu__item"><a href="adminLoginForm.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
 										<li class="menu__item--current"><a href="login.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
 										<li class="menu__item"><a href="./HospitalInfo" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
