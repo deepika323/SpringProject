@@ -365,34 +365,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="grid_2" id="tender">
    	 <div class="container">
 	       <div class="sub-hd">
-						<h3 class="tittle">SUCCESSFUL <span>STORIES</span></h3>
+						<h3 class="tittle">OUR OTHER<span> PROJECTS</span></h3>
 					</div>
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="http://10.202.48.50:4040/LineParTest/home.jsp"><img src="images/otest.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>ONLINE TEST</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>Online Test Website</h4>
+				   <p class="p1">&diams;Manish <br>&diams;Mohit<br>&diams;Priyank<br>&diams;Shikhar<br>&diams;Supriya </p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n5.jpg" class="img-responsive" alt=""></a>
+				   <a href="http://10.202.48.45:4040/WanderLust"><img src="images/travel.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>WanderLust</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>WanderLust</h4>
+				   <p class="p1">&diams;Priyanka<br>&diams;Rahul <br>&diams;Rupank<br>&diams;Shreyoshi</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
@@ -401,29 +401,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_2">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n3.jpg" class="img-responsive" alt=""></a>
+				   <a href="http://10.202.48.73:4040/AmazonWebApp/"><img src="images/oshop.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>SAB KUCH LELO</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>SAB KUCH LELO</h4>
+				   <p class="p1">&diams;Geetesh<br>&diams;Ishita <br>&diams;Kshitij<br>&diams;Sumit<br>&diams;Vridhi</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>
    	 	<div class="col-md-6">
    	 	      <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="signup.jsp"><img src="images/n4.jpg" class="img-responsive" alt=""></a>
+				   <a href=""><img src="images/tms.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
-				   	  <h3>Mark McRoberts</h3>
-				   	  <p>New York</p>
+				   	  <h3>TMS APPLICATION</h3>
+				   	  <p></p>
 				   </div>
  				</div>
 				<div class="col_1_of_2 span_1_of_2">
-				   <h4>Volunteer Firefighter Threatened By Tongue Tumor</h4>
-				   <p class="p1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim venia.</p>
+				   <h4>TMS APPLICATION</h4>
+				   <p class="p1">&diams;Akshay<br>&diams;Anjali<br>&diams;Anshul<br>&diams;Yash</p>
  				</div>
 				<div class="clearfix"></div>
 		</div>

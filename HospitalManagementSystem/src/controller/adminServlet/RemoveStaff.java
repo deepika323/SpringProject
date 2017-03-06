@@ -38,10 +38,20 @@ public class RemoveStaff extends HttpServlet {
 				status=true;
 			}
 		 catch (SQLException e) {
-			e.printStackTrace();
+				PrintWriter out=response.getWriter();
+				 out.println("<script type=\"text/javascript\">");
+				   out.println("alert('Deletion Failed Due To Dependencies');");
+				   out.println("location='admin.jsp';");
+				   out.println("</script>");
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");
+			   out.println("alert('Deletion Failed Due To Dependencies');");
+			   out.println("location='admin.jsp';");
+			   out.println("</script>");
+
 		}
 			if(status==true){
 			PrintWriter out=response.getWriter();

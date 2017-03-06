@@ -109,7 +109,6 @@ font-weight: bold;
 	<th>Dosage</th>
 	<th>Price</th>
 	<th>Appointment Id</th>
-	<th>Bill No</th>
 	</tr>
 	 <c:forEach var="medicine" items="${medicineList}">
         <tr>
@@ -118,8 +117,7 @@ font-weight: bold;
             <td>${medicine.quantity}</td>
             <td>${medicine.dosage}</td>
             <td>${medicine.price}</td>
-            <td>${medicine.appointmentId}</td>
-            <td>${medicine.billNo}</td>
+            <td>${medicine.patientId}</td>
         </tr> 
     </c:forEach>
 </table>

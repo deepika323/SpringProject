@@ -110,7 +110,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              					
              					<BR>
 								<input type="text" placeholder="ID" id="ID" name="ID" required="">
-								<input type="password" placeholder="Password" id="password" name="password" required="">
+								<input type="password" placeholder="Password (Secured Using SHA-1)" id="password" name="password" required="">
 								<input type="submit" value="LogIn" >
 
 						   </form>

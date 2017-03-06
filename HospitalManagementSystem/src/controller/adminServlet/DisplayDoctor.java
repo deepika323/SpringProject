@@ -2,7 +2,9 @@ package controller.adminServlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +14,8 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
 import controller.doctorServlet.removeMedicine;
+import model.bean.Doctor;
+import model.bl.AdminBusinessLogic;
 
 /**
  * Servlet implementation class DisplayDoctor
@@ -39,9 +43,27 @@ public class DisplayDoctor extends HttpServlet {
  	    logger.info("Doctor Displayed!!");
  	    
 		PrintWriter pw=response.getWriter();
-		pw.println(request.getParameter("docId"));
+		String doctorId=request.getParameter("docId");
 		
-		pw.println("Site Under Construction");
+		Doctor newDoctor=new Doctor();
+		AdminBusinessLogic abl=new AdminBusinessLogic();
+		
+		try {
+			newDoctor=abl.viewDoctor(doctorId);
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("doctor",newDoctor);
+		String servlet="./admin.jsp";
+		String button="CONTINUE";
+		
+	request.setAttribute("servlet", servlet);
+	request.setAttribute("button", button);
+
+	
+	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDoctor.jsp");
+	    rd.forward(request, response);
 	}
 
 	/**

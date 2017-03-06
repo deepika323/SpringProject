@@ -7,9 +7,11 @@ import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
@@ -48,14 +50,20 @@ public class RetrieveDoctorList extends HttpServlet {
 		ArrayList<Technician> technicianList=new ArrayList<Technician>();
 		ArrayList<Department> departmentList=new ArrayList<Department>();
 		ArrayList<Appointment> appointmentList=new ArrayList<Appointment>();
- 		
+		HttpSession session=request.getSession();
+		
+		String doctorId=(String) session.getAttribute("doctorId");
 		AdminBusinessLogic abl=new AdminBusinessLogic();
+		DoctorBusinessLogic dbl=new DoctorBusinessLogic();
 		
 		try {
-			doctorList=abl.listDoctor();
+//			doctorList=abl.listDoctor();
 			technicianList=abl.listTechnician();
 			departmentList=abl.listDepartment();
-			appointmentList=abl.listAppointment();
+			Doctor doctor=abl.viewDoctor(doctorId);
+			doctorList.add(doctor);
+			//appointmentList=abl.listAppointment();
+			appointmentList=dbl.myAppointments(doctorId);
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,8 +74,10 @@ public class RetrieveDoctorList extends HttpServlet {
 		 request.setAttribute("appointmentList", appointmentList);
 		 
 //		PrintWriter pw=response.getWriter();
-//		 pw.println(doctorList);
-//		 pw.println(technicianList);
+//		pw.println(doctorId); 
+//		pw.println();
+//		pw.println(doctorList);
+//		 pw.println(appointmentList);
 //		 
 			
    RequestDispatcher rd = getServletContext().getRequestDispatcher("/addMedicalReportForm.jsp");

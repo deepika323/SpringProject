@@ -2,12 +2,18 @@ package controller.adminServlet;
 
 import java.io.IOException;
 //import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.bean.Appointment;
+import model.bean.DischargeSummary;
+import model.bl.AdminBusinessLogic;
 
 /**
  * Servlet implementation class FindOrRemove
@@ -34,6 +40,17 @@ public class FindOrRemoveController extends HttpServlet {
 		
 		//PrintWriter writerA = response.getWriter();
 		//writerA.println(button);
+		AdminBusinessLogic abl=new AdminBusinessLogic();
+		ArrayList<Appointment> appList=new ArrayList<Appointment>();
+		
+		
+		try {
+			appList=abl.listAppointment();
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		request.setAttribute("appList", appList);
 
 		  RequestDispatcher rd = getServletContext().getRequestDispatcher("/findAppointment.jsp");
 		    rd.forward(request, response);

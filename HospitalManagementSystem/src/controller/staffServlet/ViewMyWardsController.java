@@ -45,7 +45,7 @@ public class ViewMyWardsController extends HttpServlet {
 		//String staffId = request.getParameter("staffId");
 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		ArrayList<Ward> wardList=new ArrayList<Ward>();
-		
+		System.out.println(staffId);
 		try {
 			wardList = sbl.myWards(staffId);
 			
@@ -64,12 +64,10 @@ public class ViewMyWardsController extends HttpServlet {
 			 out.println("</script>");
 			
 		}
+//		PrintWriter out=response.getWriter();
+//		 out.println(wardList);  
 		
-		if(session.getAttribute("staffId")==null){
-			String message="Staff not found";
-			session.setAttribute("message", message);
-			response.sendRedirect("ErrorPage.jsp");
-		}
+		
 		request.setAttribute("staffId", staffId);
 		request.setAttribute("wardList", wardList);
 	    RequestDispatcher rd = getServletContext().getRequestDispatcher("/viewWards.jsp");

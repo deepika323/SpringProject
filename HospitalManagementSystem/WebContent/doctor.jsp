@@ -274,10 +274,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- Services -->
 				<!-- //Services -->
 		<!--medicinal-->
-		<script>
-		var audio = new Audio('doctor.mp3');
-		audio.play();
-		</script>
 		
 			<div class="medicinal-w3">
 				<div class="container">

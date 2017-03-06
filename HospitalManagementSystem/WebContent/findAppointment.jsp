@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+         <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -90,7 +92,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						   <form action="./FindAppointment">
 						   	
-								<input type="text" placeholder="Appointment ID to ${button}" required="" name="regNo">
+				<div class="section_room">
+					<select id="dsummary"  class="frm-field required" required="" name="regNo">
+					<option  id='D0' value="">Select Appointment ID</option>
+					<c:forEach var="element" items="${appList}">
+										<option  value=${element.regNo}>${element.regNo}</option>
+					</c:forEach>						
+					</select>
+				</div>	
 								<input type="text" value="${button}" hidden name="selectedValue">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>

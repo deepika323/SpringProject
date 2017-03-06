@@ -88,8 +88,11 @@ public class LogInController extends HttpServlet {
 		 		
 		 		
 		 		PersonBusinessLogic pbl = new PersonBusinessLogic();
+		 		
+		 		
+
 		 		try {
-					if(pbl.personLogin(id, password).getPersonAge()!=0){
+					if(pbl.personLogin(id, pbl.getHashString(password)).getPersonAge()!=0){
 						logger.info("Patient Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);

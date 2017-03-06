@@ -112,7 +112,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio" value="female" required>Female
 								<textarea name="personAddress" rows="3" cols="50" placeholder="Address" required=""></textarea>
 								<input name="personPhoneNo" type="number" placeholder="Phone No" required="">
-								<input name="personPassword" type="password" placeholder="Password" required="">
+								<input name="personPassword" type="password" placeholder="Password (Secured Using SHA-1)" required="">
 								<input type="submit" value="SignUp" >
 
 						   </form>

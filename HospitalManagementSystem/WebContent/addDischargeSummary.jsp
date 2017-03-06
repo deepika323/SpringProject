@@ -108,7 +108,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								 <div id="somediv"></div>
     
 				
-								<input type="number" required name="bedNo" placeholder="Enter Bed No" >
+								<input type="number" required name="bedNo" placeholder="Enter Bed No (0 if no bed is used)" >
 
 								<textarea name="history" required placeholder="Enter Patient History"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >

@@ -1,9 +1,9 @@
 package controller.adminServlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 import javax.servlet.RequestDispatcher;
@@ -11,12 +11,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 
-import controller.doctorServlet.removeMedicine;
-import model.bean.Appointment;
 import model.bean.DischargeSummary;
 import model.bean.MedicalReport;
 import model.bl.AdminBusinessLogic;
@@ -44,6 +43,7 @@ public class AddDischargeSummary extends HttpServlet {
 		// TODO Auto-generated method stub
 		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		Integer bedNo=null;
+		HttpSession session=request.getSession();
 		if(request.getParameter("bedNo")!=null){
 		bedNo=Integer.parseInt(request.getParameter("bedNo"));
 		}
@@ -84,22 +84,28 @@ public class AddDischargeSummary extends HttpServlet {
 				
 				BasicConfigurator.configure();
 		 	    logger.info("Discharge Summary Added!!");
+				 request.setAttribute("appointment",newDischarge);
+					String servlet="./admin.jsp";
+					String button="CONTINUE";
+					
+				request.setAttribute("servlet", servlet);
+				request.setAttribute("button", button);
+
+				 RequestDispatcher rd = getServletContext().getRequestDispatcher("/newDischargeSummary.jsp");
+				    rd.forward(request, response);
+
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
+			PrintWriter out=response.getWriter();
+			 out.println("<script type=\"text/javascript\">");  
+			 out.println("alert('Discharge Summary Addition Failed!!!');");
+			 out.println("alert('Make Sure The Bed Exist!!!');");
+		 
+			 out.println("location='./addDischargeSummary.jsp';");
+			 out.println("</script>");
 		}
-		 request.setAttribute("discharge",newDischarge);
-			String servlet="./admin.jsp";
-			String button="CONTINUE";
-			
-		request.setAttribute("servlet", servlet);
-		request.setAttribute("button", button);
-
-		
-		    RequestDispatcher rd = getServletContext().getRequestDispatcher("/admin.jsp");
-		    rd.forward(request, response);
 
 	}
 

@@ -56,6 +56,26 @@
   </servlet-mapping>
   <servlet>
     <description></description>
+    <display-name>FindDischargeSummary</display-name>
+    <servlet-name>FindDischargeSummary</servlet-name>
+    <servlet-class>controller.adminServlet.FindDischargeSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindDischargeSummary</servlet-name>
+    <url-pattern>/FindDischargeSummary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RemoveDischargeSummary</display-name>
+    <servlet-name>RemoveDischargeSummary</servlet-name>
+    <servlet-class>controller.adminServlet.RemoveDischargeSummary</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RemoveDischargeSummary</servlet-name>
+    <url-pattern>/RemoveDischargeSummary</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>DisplayDepartment</display-name>
     <servlet-name>DisplayDepartment</servlet-name>
     <servlet-class>controller.adminServlet.DisplayDepartment</servlet-class>

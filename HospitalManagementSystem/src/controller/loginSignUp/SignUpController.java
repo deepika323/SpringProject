@@ -2,6 +2,7 @@ package controller.loginSignUp;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -33,9 +34,10 @@ public class SignUpController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PersonBusinessLogic pbl = new PersonBusinessLogic();
 		String personId=request.getParameter("personId");
 		String personIdType=request.getParameter("personIdType");
-		String personName=request.getParameter("patientName");
+		String personName=request.getParameter("personName");
 		String DateOfBirthString=(request.getParameter("personDateOfBirth"));
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-mm-yyyy");
 		Date personDateOfBirth=java.sql.Date.valueOf(DateOfBirthString);			//check
@@ -44,6 +46,14 @@ public class SignUpController extends HttpServlet {
 		String personAddress=request.getParameter("personAddress");
 		Long personPhoneNo=Long.parseLong(request.getParameter("personPhoneNo"));
 		String personPassword=request.getParameter("personPassword");
+		String password="";
+		try {
+			password=pbl.getHashString(personPassword);
+		} catch (NoSuchAlgorithmException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		
 		Person newPerson = new Person();
 		newPerson.setPersonAddress(personAddress);
@@ -53,10 +63,10 @@ public class SignUpController extends HttpServlet {
 		newPerson.setPersonId(personId);
 		newPerson.setPersonIdType(personIdType);
 		newPerson.setPersonName(personName);
-		newPerson.setPersonPassword(personPassword);
+		newPerson.setPersonPassword(password);
 		newPerson.setPersonPhoneNo(personPhoneNo);
 		
-		PersonBusinessLogic pbl = new PersonBusinessLogic();
+		
 		boolean result=false;
 		try {
 			try {
