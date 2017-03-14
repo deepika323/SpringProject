@@ -68,7 +68,7 @@ public class SignUpController extends HttpServlet {
 		
 		
 		boolean result=false;
-		try {
+		
 			try {
 				result=pbl.personSignUp(newPerson);
 				BasicConfigurator.configure();
@@ -78,15 +78,18 @@ public class SignUpController extends HttpServlet {
 			    RequestDispatcher rd = getServletContext().getRequestDispatcher("/personlogin.jsp");
 			    rd.forward(request, response);
 			} catch (ClassNotFoundException e) {
+				System.out.println();
 				e.printStackTrace();
-			}
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			
 			PrintWriter out=response.getWriter();
 			 out.println("<script type=\"text/javascript\">");  
 			 out.println("alert('SignUp Failed !!!');");
 			 out.println("location='./signup.jsp';");
-			 out.println("</script>");		}
+			 out.println("</script>");		
+			
+			 e.printStackTrace();
+			}
 		
 		
 		
