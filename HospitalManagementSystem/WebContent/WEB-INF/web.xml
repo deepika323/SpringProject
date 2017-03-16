@@ -14,7 +14,7 @@
     <servlet-name>viewAppointmentController</servlet-name>
     <url-pattern>/viewAppointmentController</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
     <servlet-name>ListAppointmentServlet</servlet-name>
@@ -23,7 +23,7 @@
   <servlet-mapping>
     <servlet-name>ListAppointmentServlet</servlet-name>
     <url-pattern>/AppointmentServlet</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>AddAppointment</display-name>
@@ -124,7 +124,7 @@
     <servlet-name>UpdateAppointment</servlet-name>
     <url-pattern>/UpdateAppointment</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>MedicalReportServlet</display-name>
     <servlet-name>MedicalReportServlet</servlet-name>
@@ -133,8 +133,8 @@
   <servlet-mapping>
     <servlet-name>MedicalReportServlet</servlet-name>
     <url-pattern>/MedicalReport</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+ <!--  <servlet>
     <description></description>
     <display-name>DischargeSummaryServlet</display-name>
     <servlet-name>DischargeSummaryServlet</servlet-name>
@@ -143,7 +143,7 @@
   <servlet-mapping>
     <servlet-name>DischargeSummaryServlet</servlet-name>
     <url-pattern>/DischargeSummary</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>ViewMyWardsController</display-name>
@@ -164,7 +164,7 @@
     <servlet-name>ViewAllWardsController</servlet-name>
     <url-pattern>/ViewAllWardsController</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>BillServlet</display-name>
     <servlet-name>BillServlet</servlet-name>
@@ -173,8 +173,8 @@
   <servlet-mapping>
     <servlet-name>BillServlet</servlet-name>
     <url-pattern>/Bill</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+  <!-- <servlet>
     <description></description>
     <display-name>MedicineServlet</display-name>
     <servlet-name>MedicineServlet</servlet-name>
@@ -183,7 +183,7 @@
   <servlet-mapping>
     <servlet-name>MedicineServlet</servlet-name>
     <url-pattern>/Medicine</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>RetrieveDoctorList</display-name>
@@ -524,4 +524,16 @@
     <servlet-name>AdminLogInController</servlet-name>
     <url-pattern>/AdminLogInController</url-pattern>
   </servlet-mapping>
+ 
+ <servlet>
+    <servlet-name>spring</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>spring</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping> 
+  
+  
 </web-app>
