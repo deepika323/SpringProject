@@ -72,7 +72,8 @@ public class DischargeSummaryServlet{
 				
 				
 				dischargeSummaryList= pb.listMyDischargeSummary(personId);
-				
+				System.out.println(personId);
+				System.out.println(dischargeSummaryList);
 				BasicConfigurator.configure();
 		 	    logger.info("Discharge Summary Viewed by Patient!!");
 				
@@ -86,7 +87,7 @@ public class DischargeSummaryServlet{
 			// TODO Auto-generated catch block 
 			e.printStackTrace();
 		} 
-		mv.addObject("dichargeSummaryList", dischargeSummaryList);
+		mv.addObject("dischargeSummaryList", dischargeSummaryList);
 		mv.setViewName("dischargeSummary");
 		return mv;
 	}

@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						  
 						   
-								<input type="text" id="personid" name="personId" placeholder="Person ID" required  >
+								<input type="text" id="personid" name="personId" placeholder="Person ID" required  />
 								
 								<input type="submit" value="CONTINUE" id="submit">
 								

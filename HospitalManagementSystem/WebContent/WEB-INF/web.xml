@@ -154,7 +154,7 @@
     <servlet-name>ViewMyWardsController</servlet-name>
     <url-pattern>/ViewMyWardsController</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>ViewAllWardsController</display-name>
     <servlet-name>ViewAllWardsController</servlet-name>
@@ -163,7 +163,7 @@
   <servlet-mapping>
     <servlet-name>ViewAllWardsController</servlet-name>
     <url-pattern>/ViewAllWardsController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
  <!--  <servlet>
     <description></description>
     <display-name>BillServlet</display-name>
@@ -284,7 +284,7 @@
     <servlet-name>AddDischargeSummary</servlet-name>
     <url-pattern>/AddDischargeSummary</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>AddBill</display-name>
     <servlet-name>AddBill</servlet-name>
@@ -293,7 +293,7 @@
   <servlet-mapping>
     <servlet-name>AddBill</servlet-name>
     <url-pattern>/AddBill</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>removeMedicine</display-name>
@@ -534,6 +534,17 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping> 
+  
+  
+<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+        /WEB-INF/spring-servlet.xml
+    </param-value>
+</context-param> 
   
   
 </web-app>

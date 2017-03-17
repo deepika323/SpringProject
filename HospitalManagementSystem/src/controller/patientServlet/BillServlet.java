@@ -43,7 +43,7 @@ public class BillServlet{
 				
 				BasicConfigurator.configure();
 		 	    logger.info("Bill viewed by Patient!!");
-				
+				System.out.println(billList);
 		 	    return billList;
 			}//Add Bill jsp and recheck logic.
 		} catch (ClassNotFoundException| IOException e) {
@@ -69,7 +69,8 @@ public class BillServlet{
 				
 				billList= pb.listMyBill(personId);
 				//request.setAttribute("billList", pb.listMyBill(personId));
-				
+				System.out.println(billList);
+				System.out.println(personId);
 				BasicConfigurator.configure();
 		 	    logger.info("Bill viewed by Patient!!");
 				

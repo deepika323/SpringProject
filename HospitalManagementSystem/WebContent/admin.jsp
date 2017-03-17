@@ -642,7 +642,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    	  <div class="box_1 one">
    	 	<div class="col-md-6">
    	 	       <div class="col_1_of_2 span_1_of_2 multi-gd-text">
-				   <a href="./AddBillPID.jsp"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
+				   <a href="./PID?selectedValue=create"><img src="images/n1.jpg" class="img-responsive" alt=""></a>
 				   <div class="story_desc">
 				   	  <h3>CREATE BILLS</h3>
 				   </div>
