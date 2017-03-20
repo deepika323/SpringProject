@@ -95,11 +95,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="section_room">
 					<select id="dsummary"  class="frm-field required" required="" name="regNo">
 					<option  id='D0' value="">Select Appointment ID</option>
-					<c:forEach var="element" items="${appList}">
+					<c:forEach var="element" items="${appointmentList}">
 										<option  value=${element.regNo}>${element.regNo}</option>
 					</c:forEach>						
 					</select>
 				</div>	
+				<c:set var="regNo" scope="session" val></c:set>
 								<input type="text" value="${button}" hidden name="selectedValue">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>

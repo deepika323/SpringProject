@@ -94,7 +94,7 @@
     <servlet-name>DisplayDoctor</servlet-name>
     <url-pattern>/DisplayDoctor</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>FindOrRemoveController</display-name>
     <servlet-name>FindOrRemoveController</servlet-name>
@@ -103,7 +103,7 @@
   <servlet-mapping>
     <servlet-name>FindOrRemoveController</servlet-name>
     <url-pattern>/FindOrRemoveController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>DeleteAppointment</display-name>
