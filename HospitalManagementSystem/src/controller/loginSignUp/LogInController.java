@@ -26,7 +26,7 @@ public class LogInController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static Logger logger=Logger.getLogger(LogInController.class);
-	
+	 
 	
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -92,7 +92,7 @@ public class LogInController extends HttpServlet {
 		 		
 
 		 		try {
-					if(pbl.personLogin(id, pbl.getHashString(password)).getPersonAge()!=0){
+					if(pbl.personLogin(id, password)!=null){
 						logger.info("Patient Login Successful");
 						HttpSession session=request.getSession();
 						session.setAttribute("personId",id);

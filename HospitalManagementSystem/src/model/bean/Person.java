@@ -2,6 +2,10 @@ package model.bean;
 
 import java.sql.Date;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+
+
 public class Person implements Comparable<Person>{
 	@Override
 	public String toString() {
@@ -75,6 +79,7 @@ public class Person implements Comparable<Person>{
 			return false;
 		return true;
 	}
+	@NotEmpty
 	private String personId;
 	private String personIdType;
 	private String personName;
@@ -83,6 +88,7 @@ public class Person implements Comparable<Person>{
 	private String personGender;
 	private String personAddress;
 	private long personPhoneNo;
+	@NotEmpty
 	private String personPassword;
 	public String getPersonId() {
 		return personId;

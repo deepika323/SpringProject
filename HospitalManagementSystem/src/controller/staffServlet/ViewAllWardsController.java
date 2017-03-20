@@ -32,7 +32,7 @@ public class ViewAllWardsController{
 	
 	@ModelAttribute("list")
 	public List<Ward> viewWard(){
-		
+		 
 		ArrayList<Ward> wardList=new ArrayList<Ward>();
 		StaffBusinessLogic sbl = new StaffBusinessLogic();
 		

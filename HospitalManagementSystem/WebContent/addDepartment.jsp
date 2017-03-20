@@ -7,6 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+    
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -95,23 +97,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewDepartmentController">
+				
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+						<form:form action="./NewDepartmentController" commandName="department">
+						
+							<form:input path="departmentId" placeholder="ID"/>
+							<form:input path="departmentName" placeholder="Name"/>
+							<form:input path="departmentLocation" placeholder="Location"/>
+							<form:input path="description" placeholder="Description"/>
+							<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
+						</form:form>
+						  <%--  <form>
 								<input type="number" id="id" name="id" placeholder="ID" required="" >
 								<input type="text" id="name" name="name" placeholder="Name" required="" >
 								<input type="text" id="location" name="location" placeholder="Location" required="" >
 								<textarea rows="3" name="desc" cols="50" placeholder="Description"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
-						   </form>
+						   </form> --%>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

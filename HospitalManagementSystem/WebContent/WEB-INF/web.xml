@@ -4,7 +4,7 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>viewAppointmentController</display-name>
     <servlet-name>viewAppointmentController</servlet-name>
@@ -13,7 +13,7 @@
   <servlet-mapping>
     <servlet-name>viewAppointmentController</servlet-name>
     <url-pattern>/viewAppointmentController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
  <!--  <servlet>
     <description></description>
     <display-name>ListAppointmentServlet</display-name>
@@ -24,7 +24,7 @@
     <servlet-name>ListAppointmentServlet</servlet-name>
     <url-pattern>/AppointmentServlet</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>AddAppointment</display-name>
     <servlet-name>AddAppointment</servlet-name>
@@ -33,8 +33,8 @@
   <servlet-mapping>
     <servlet-name>AddAppointment</servlet-name>
     <url-pattern>/AddAppointment</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+  <!-- <servlet>
     <description></description>
     <display-name>NewAppointmentController</display-name>
     <servlet-name>NewAppointmentController</servlet-name>
@@ -43,7 +43,7 @@
   <servlet-mapping>
     <servlet-name>NewAppointmentController</servlet-name>
     <url-pattern>/NewAppointmentController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>FindAppointment</display-name>
@@ -144,7 +144,7 @@
     <servlet-name>DischargeSummaryServlet</servlet-name>
     <url-pattern>/DischargeSummary</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>ViewMyWardsController</display-name>
     <servlet-name>ViewMyWardsController</servlet-name>
@@ -153,7 +153,7 @@
   <servlet-mapping>
     <servlet-name>ViewMyWardsController</servlet-name>
     <url-pattern>/ViewMyWardsController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
  <!--  <servlet>
     <description></description>
     <display-name>ViewAllWardsController</display-name>
@@ -184,7 +184,7 @@
     <servlet-name>MedicineServlet</servlet-name>
     <url-pattern>/Medicine</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>RetrieveDoctorList</display-name>
     <servlet-name>RetrieveDoctorList</servlet-name>
@@ -193,8 +193,8 @@
   <servlet-mapping>
     <servlet-name>RetrieveDoctorList</servlet-name>
     <url-pattern>/RetrieveDoctorList</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+  <!-- <servlet>
     <description></description>
     <display-name>addMedicalReportController</display-name>
     <servlet-name>addMedicalReportController</servlet-name>
@@ -203,7 +203,7 @@
   <servlet-mapping>
     <servlet-name>addMedicalReportController</servlet-name>
     <url-pattern>/addMedicalReportController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>ViewOrRemoveOrUpdateMedicalReportController</display-name>
@@ -274,7 +274,7 @@
     <servlet-name>DischargeAjax</servlet-name>
     <url-pattern>/DischargeAjax</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>AddDischargeSummary</display-name>
     <servlet-name>AddDischargeSummary</servlet-name>
@@ -283,7 +283,7 @@
   <servlet-mapping>
     <servlet-name>AddDischargeSummary</servlet-name>
     <url-pattern>/AddDischargeSummary</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping>  -->
   <!-- <servlet>
     <description></description>
     <display-name>AddBill</display-name>
@@ -314,7 +314,7 @@
     <servlet-name>NewBillController</servlet-name>
     <url-pattern>/NewBillController</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>AddDoctor</display-name>
     <servlet-name>AddDoctor</servlet-name>
@@ -323,7 +323,7 @@
   <servlet-mapping>
     <servlet-name>AddDoctor</servlet-name>
     <url-pattern>/AddDoctor</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>LogInController</display-name>
@@ -344,7 +344,7 @@
     <servlet-name>HospitalInfo</servlet-name>
     <url-pattern>/HospitalInfo</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>SignUpController</display-name>
     <servlet-name>SignUpController</servlet-name>
@@ -353,7 +353,7 @@
   <servlet-mapping>
     <servlet-name>SignUpController</servlet-name>
     <url-pattern>/SignUpController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>RemoveDoctor</display-name>
@@ -414,7 +414,7 @@
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>NewStaffController</display-name>
     <servlet-name>NewStaffController</servlet-name>
@@ -423,8 +423,8 @@
   <servlet-mapping>
     <servlet-name>NewStaffController</servlet-name>
     <url-pattern>/NewStaffController</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+  <!-- <servlet>
     <description></description>
     <display-name>AddDepartment</display-name>
     <servlet-name>AddDepartment</servlet-name>
@@ -433,8 +433,8 @@
   <servlet-mapping>
     <servlet-name>AddDepartment</servlet-name>
     <url-pattern>/AddDepartment</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+ <!--  <servlet>
     <description></description>
     <display-name>NewDepartmentController</display-name>
     <servlet-name>NewDepartmentController</servlet-name>
@@ -443,8 +443,8 @@
   <servlet-mapping>
     <servlet-name>NewDepartmentController</servlet-name>
     <url-pattern>/NewDepartmentController</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+ <!--  <servlet>
     <description></description>
     <display-name>NewDoctorController</display-name>
     <servlet-name>NewDoctorController</servlet-name>
@@ -453,7 +453,7 @@
   <servlet-mapping>
     <servlet-name>NewDoctorController</servlet-name>
     <url-pattern>/NewDoctorController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>FindorRemoveDischargeSummaryController</display-name>

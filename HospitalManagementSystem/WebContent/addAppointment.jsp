@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -94,10 +95,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewAppointmentController">
+				
 					<div class="single-grid">
 						<div class="single-us">
 						
+						<form:form  action="./NewAppointmentController" commandName="appointment">
+							<form:input path="personId"  placeholder="Person ID" />
+							<form:input path="purpose"  placeholder="Purpose" />
+							<form:input path="payment"  placeholder="Payment in float" />
+							<form:input path="doctorId"  placeholder="Doctor ID" />
+							<input type="date" name="appointmentDate" />
+							<form:input path="appointmentDate"   value ="${appointmentDate}" hidden="hidden"/>
+							<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
+						</form:form>
+						
+						<%-- 
 						   <form>
 								<input type="text" id="personid" name="personId" placeholder="Person ID" required="" >
 								
@@ -131,12 +143,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<textarea name="purpose" required placeholder="Purpose For Visit"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
-						   </form>
+						   </form> --%>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

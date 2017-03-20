@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -96,10 +97,66 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> your details </span></h3>
 			<br>
 			<br>
-				<form action="./SignUpController" method="post">
+				
 					<div class="single-grid">
 						<div class="single-us">
-						   <form>
+						
+						<form:form action="./SignUpController" modelAttribute="person" method="post">
+							<table>
+									
+									<tr>
+										
+										<td><form:input path="personId" placeholder="ID(Any identification number for eg. aadhar card, pan card, etc.)" /></td> 
+										<td><form:errors path="personId"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:input path="personIdType" placeholder="ID Type(Any identification number for eg. aadhar card, pan card, etc.)" /></td> 
+										<td><form:errors path="personIdType"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:input path="personName" placeholder="Name" /></td> 
+										<td><form:errors path="personName"></form:errors></td>
+									</tr>
+									<tr>
+										<td><input type="date" name="personDateOfBirth" /></td>
+										<%-- <td><form:input path="personDateOfBirth" value="${personDateOfBirth}"  hidden="hidden"/></td> 
+										<td><form:errors path="personDateOfBirth"></form:errors></td> --%>
+									</tr>
+									<tr>
+										
+										<td><form:input path="personAge" placeholder="Age" /></td> 
+										<td><form:errors path="personAge"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:radiobutton path="personGender" value="m" />Male</td> 
+										<td><form:radiobutton path="personGender" value="f" />Female</td>
+										<td><form:errors path="personGender"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:input path="personAddress" placeholder="Address" /></td> 
+										<td><form:errors path="personAddress"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:input path="personPhoneNo" placeholder="Phone" /></td> 
+										<td><form:errors path="personPhoneNo"></form:errors></td>
+									</tr>
+									<tr>
+										
+										<td><form:password path="personPassword" placeholder="Password" /></td> 
+										<td><form:errors path="personPassword"></form:errors></td>
+									</tr>
+							</table>
+							<input type="submit" value="SignUp" >
+						</form:form>
+						
+						
+						
+						  <%--  <form>
 						   		<input type="text" name="personId" placeholder="ID(Any identification number for eg. aadhar card, pan card, etc.)" required="">
 						   		<input type="text" name="personIdType" placeholder="ID Type" required="">
 								<input type="text" name="personName" placeholder="Name" required="">
@@ -115,12 +172,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input name="personPassword" type="password" placeholder="Password (Secured Using SHA-1)" required="">
 								<input type="submit" value="SignUp" >
 
-						   </form>
+						   </form> --%>
 							<form action="./index.jsp">
 								<input type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

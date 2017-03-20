@@ -7,6 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+    
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -95,11 +97,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./NewStaffController">
+				
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+						<form:form action="./NewStaffController" commandName="staff">
+							<form:input path="staffId" placeholder="ID"/>
+							<form:input path="staffName" placeholder="Name"/>
+							<form:input path="specialization" placeholder="specialization"/>
+							<form:input path="timing" placeholder="timing"/>
+							<form:input path="doctorAddress" placeholder="Address"/>
+							<form:input path="doctorPhoneNo" placeholder="Phone"/>
+							<form:password path="staffPassword" placeholder="Password"/>
+							<form:input path="departmentId" placeholder="Department"/>
+							<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
+						</form:form>
+						
+						 <%--   <form>
 								<input type="text" id="id" name="id" placeholder="ID" required="" >
 								<input type="text" id="name" name="name" placeholder="Name" required="" >
 								<input type="text" id="specialization" name="specialization" placeholder="specialization" required="" >
@@ -120,12 +134,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
-						   </form>
+						   </form> --%>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

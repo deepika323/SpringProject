@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
       <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+      <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -91,11 +92,59 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h3>Enter <span> required details </span></h3>
 					<br>
 					<br>
-					<form action="./addMedicalReportController">
+					
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+						<form:form commandName="medicalReport" action="./addMedicalReportController">
+						
+						<table>
+						
+							<tr>
+								<td><form:input path="appointmentId" placeholder="Appointment Id"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:label path="visitDate">Enter visit date</form:label></td>
+								<td><input type="date" name="visitDate"></td>
+								<td><form:input path="visitDate" value="${visitDate}"  hidden="hidden"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="diagnosis" placeholder="Disgnosis"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="investigations" placeholder="Investigations"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="personId" placeholder="Person Id"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="tests" placeholder="tests"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="recommendations" placeholder="Recommendations"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="doctorId" value="${doctorId}" hidden="hidden"/></td>
+							
+							</tr>
+							<tr>
+								<td><form:input path="technicianId" placeholder="technicianId"/></td>
+							
+							</tr>
+						
+						</table>
+						<input id="confirm" type="submit" value="ADD" >
+						</form:form>
+						
+						
+						   <%-- <form>
 								<div class="section_room">
 				
 									<select id="appointmentId"  name="appointmentId" class="frm-field required" required >
@@ -142,13 +191,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								
 								<input id="confirm" type="submit" value="ADD" >
 
-						   </form>
+						   </form> --%>
 							<form action="./doctor.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
 					</div>
-				</form>
+			
 				
 				</div>
 			</div>			

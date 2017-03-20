@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+       <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -95,14 +96,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> required details </span></h3>
 			<br>
 			<br>
-				<form action="./AddDischargeSummary">
+				
 					<div class="single-grid">
 						<div class="single-us">
 						
-						   <form>
+							<form:form action="./AddDischargeSummary" commandName="dischargeSummary">
+						
+							<form:input path="serialNo" placeholder="Serial number"/>
+							<div id="somediv"></div>
+							<form:input path="bedNo" placeholder="BedNo"/>
+							
+							<form:input path="history" placeholder="History"/>
+							<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
+							
+						</form:form>
+						
+						
+						  <!--  <form>
 								<input type="number" id="regNo" name="regNo" placeholder="Enter The Medical Report Id" required="" >
 								
-								<!-- Need To Use JSTL to get department and doctor list dynamically-->
+								Need To Use JSTL to get department and doctor list dynamically
 								
 								
 								 <div id="somediv"></div>
@@ -113,12 +126,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<textarea name="history" required placeholder="Enter Patient History"></textarea>
 								<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 
-						   </form>
+						   </form> -->
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+			
 				
 				</div>
 			</div>			

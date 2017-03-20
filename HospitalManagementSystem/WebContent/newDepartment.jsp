@@ -87,7 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="leave w3l">
             <div class="single-grid">
 						<div class="single-us">
-						<form action="${servlet}">
+						<form action="admin.jsp">
 								<input  id="button" type="submit" value="${button}" >
 								<input  name="departmentId" value="${departmentId}" hidden>
 						   </form>
