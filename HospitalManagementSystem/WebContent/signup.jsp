@@ -7,6 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -88,6 +90,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	<!--/single-->
+	
+	<h2><span><a href="?lang=de">German</a>|<a href="?lang=en">English</a></span></h2>
  <div class="single">
 			<div class="container">
 				<div class="article-post w3l">
@@ -105,53 +109,55 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<table>
 									
 									<tr>
-										
-										<td><form:input path="personId" placeholder="ID(Any identification number for eg. aadhar card, pan card, etc.)" /></td> 
+										<td><c:set var="id"><spring:message code="id"/></c:set>
+										<form:input path="personId" placeholder="${id}" /></td> 
 										<td><form:errors path="personId"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:input path="personIdType" placeholder="ID Type(Any identification number for eg. aadhar card, pan card, etc.)" /></td> 
+										<td><c:set var="idType"><spring:message code="idType"/></c:set>
+										<form:input path="personIdType" placeholder="${idType}" /></td> 
 										<td><form:errors path="personIdType"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:input path="personName" placeholder="Name" /></td> 
+										<td><c:set var="name"><spring:message code="name"/></c:set>
+										<form:input path="personName" placeholder="${name}" /></td> 
 										<td><form:errors path="personName"></form:errors></td>
 									</tr>
 									<tr>
-										<td><input type="date" name="personDateOfBirth" /></td>
+										<td><c:set var="dob"><spring:message code="dob"/></c:set>
+										<input type="date" name="personDateOfBirth"  placeholder="${dob}"/></td>
 										<%-- <td><form:input path="personDateOfBirth" value="${personDateOfBirth}"  hidden="hidden"/></td> 
 										<td><form:errors path="personDateOfBirth"></form:errors></td> --%>
 									</tr>
 									<tr>
-										
-										<td><form:input path="personAge" placeholder="Age" /></td> 
+										<td><c:set var="age"><spring:message code="age"/></c:set>
+										<form:input path="personAge" placeholder="${age}" /></td> 
 										<td><form:errors path="personAge"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:radiobutton path="personGender" value="m" />Male</td> 
-										<td><form:radiobutton path="personGender" value="f" />Female</td>
+										<td><c:set var="gender"><spring:message code="gender"/></c:set>
+										<form:radiobutton path="personGender" value="m" placeholder="${gender}" />Male</td> 
+										<td><form:radiobutton path="personGender" value="f"  placeholder="${gender}" />Female</td>
 										<td><form:errors path="personGender"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:input path="personAddress" placeholder="Address" /></td> 
+										<td><c:set var="address"><spring:message code="address"/></c:set>
+										<form:input path="personAddress" placeholder="${address}" /></td> 
 										<td><form:errors path="personAddress"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:input path="personPhoneNo" placeholder="Phone" /></td> 
+										<td><c:set var="ph"><spring:message code="ph"/></c:set>
+										<form:input path="personPhoneNo" placeholder="${ph}" /></td> 
 										<td><form:errors path="personPhoneNo"></form:errors></td>
 									</tr>
 									<tr>
-										
-										<td><form:password path="personPassword" placeholder="Password" /></td> 
+										<td><c:set var="password"><spring:message code="password"/></c:set>
+										<form:password path="personPassword" placeholder="${password}" /></td> 
 										<td><form:errors path="personPassword"></form:errors></td>
 									</tr>
 							</table>
-							<input type="submit" value="SignUp" >
+							<c:set var="signup"><spring:message code="signup"/></c:set>
+							<input type="submit" value="${signup}" >
 						</form:form>
 						
 						

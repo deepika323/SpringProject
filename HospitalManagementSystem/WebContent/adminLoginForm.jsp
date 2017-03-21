@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -63,7 +64,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<ul class="nav navbar-nav menu__list">
 																<li class="menu__item menu__item"><a href="index.jsp" class="menu__link"><span class="menu__helper">Home</span></a></li>
 										<li class="menu__item"><a href="personlogin.jsp" class="menu__link"><span class="menu__helper">Patient</span></a></li>
-										<li class="menu__item--current"><a href="admin.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
+										<li class="menu__item--current"><a href="adminLoginForm.jsp" class="menu__link"><span class="menu__helper">Admin</span></a></li>
 										<li class="menu__item"><a href="login.jsp" class="menu__link"><span class="menu__helper">Hospital Employee</span></a></li>
 										<li class="menu__item"><a href="HospitalInfo.jsp" class="menu__link"><span class="menu__helper">Hospital Info</span></a></li>
 									</ul>
@@ -95,11 +96,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="leave w3l">
 			<h3>Enter <span> your details </span></h3>
 			<br>
-				<form action="./AdminLogInController">
+				
 					<div class="single-grid">
 						<div class="single-us">
-						   <form>
-								<input type="text" placeholder="ID" id="ID" name="ID" required="">
+						   <form action="./AdminLogInController" method="get">
+								<input type="text" placeholder="ID" id="id" name="id" required="">
 								<input type="password" placeholder="Password" id="password" name="password" required="">
 								<input type="submit" value="LogIn" >
 						   </form>
@@ -110,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <br>
 
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

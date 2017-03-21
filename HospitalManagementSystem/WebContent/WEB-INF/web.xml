@@ -514,7 +514,7 @@
     <servlet-name>LogOutController</servlet-name>
     <url-pattern>/LogOutController</url-pattern>
   </servlet-mapping>
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>AdminLogInController</display-name>
     <servlet-name>AdminLogInController</servlet-name>
@@ -523,7 +523,7 @@
   <servlet-mapping>
     <servlet-name>AdminLogInController</servlet-name>
     <url-pattern>/AdminLogInController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping>  -->
  
  <servlet>
     <servlet-name>spring</servlet-name>
@@ -546,5 +546,6 @@
     </param-value>
 </context-param> 
   
+ 
   
 </web-app>

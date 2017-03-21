@@ -18,4 +18,22 @@
  		<property name="prefix" value="/"></property>
  		<property name="suffix" value=".jsp"></property>
  	</bean>
+ 	
+ 	 <bean class="org.springframework.context.support.ResourceBundleMessageSource"
+		id="messageSource">
+		<property name="basename" value="messages" />
+  </bean>
+  
+  <bean class="org.springframework.web.servlet.i18n.CookieLocaleResolver" id="localeResolver">
+        <property value="de" name="defaultLocale"/>
+    </bean>
+    
+    <mvc:interceptors>
+              <bean id="localeChangeInterceptor"
+                     class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+                     <property name="paramName" value="lang" />
+              </bean>
+       </mvc:interceptors>
  </beans>
+ 
+ 
