@@ -91,12 +91,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	<!--/single-->
 	
-	<h2><span><a href="?lang=de">German</a>|<a href="?lang=en">English</a></span></h2>
+
  <div class="single">
 			<div class="container">
 				<div class="article-post w3l">
 				<div class="post-details s-page">
-				
+				<h2><span><a href="?lang=de">German</a>|<a href="?lang=en">English</a></span></h2>
 		<div class="leave w3l">
 			<h3>Enter <span> your details </span></h3>
 			<br>

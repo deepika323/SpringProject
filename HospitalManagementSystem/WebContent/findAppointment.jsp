@@ -97,10 +97,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<option  id='D0' value="">Select Appointment ID</option>
 					<c:forEach var="element" items="${appointmentList}">
 										<option  value=${element.regNo}>${element.regNo}</option>
+										<c:set var="regNo" scope="session" value="${element.regNo}"></c:set>
 					</c:forEach>						
 					</select>
 				</div>	
-				<c:set var="regNo" scope="session" val></c:set>
+				
+								<c:set var="selectedValue" scope="request" value="${button}"></c:set>
 								<input type="text" value="${button}" hidden name="selectedValue">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>

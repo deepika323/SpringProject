@@ -34,13 +34,14 @@ import controller.loginSignUp.LogInController;
  			System.out.println(id);
  			//mv.addObject("id",id);
  			mv.setViewName("admin");
- 			//mv.addObject("admin", id);
+ 			mv.addObject("admin", id);
  			System.out.println(mv.getViewName());
  			return mv;
  		}
  		else{
  			System.out.println(id + " "+ password);
  			//mv.addObject( "id",id);
+ 			mv.addObject("admin", id);
  			mv.setViewName("adminLoginForm");
  			return mv;
  		}
