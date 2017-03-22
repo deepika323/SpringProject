@@ -86,10 +86,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> Appointment ID </span></h3>
 			<br>
 			<br>
-				<form action="./FindAppointment">
+				
 					<div class="single-grid">
 						<div class="single-us">
-						
+					
 						   <form action="./FindAppointment">
 						   	
 				<div class="section_room">
@@ -97,20 +97,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<option  id='D0' value="">Select Appointment ID</option>
 					<c:forEach var="element" items="${appointmentList}">
 										<option  value=${element.regNo}>${element.regNo}</option>
-										<c:set var="regNo" scope="session" value="${element.regNo}"></c:set>
-					</c:forEach>						
+								<c:set var="regNo1" scope="session" value="${element.regNo}"></c:set>			
+					</c:forEach>	
+									
 					</select>
 				</div>	
 				
-								<c:set var="selectedValue" scope="request" value="${button}"></c:set>
+								<c:set var="selectedValue" scope="session" value="${button}"></c:set>
 								<input type="text" value="${button}" hidden name="selectedValue">
+								
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+			
 				
 				</div>
 			</div>			

@@ -26,7 +26,7 @@ import model.bl.AdminBusinessLogic;
 @RequestMapping("/")
 public class AddDoctor{
 	
-	@RequestMapping("/addDoctor")
+	@RequestMapping("/AddDoctor")
 	public String addReport(ModelMap model){
 		
 		model.addAttribute("doctor", new Doctor());

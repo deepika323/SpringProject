@@ -21,7 +21,7 @@ import model.bean.MedicalReport;
 @RequestMapping("/")
 public class AddDepartment{
 	
-	@RequestMapping("/addDepartment")
+	@RequestMapping("/AddDepartment")
 	public String addReport(ModelMap model){
 		
 		model.addAttribute("department", new Department());

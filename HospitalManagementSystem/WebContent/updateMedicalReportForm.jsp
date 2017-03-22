@@ -113,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</select>
 				</div>
 				<div class="section_room">
-					<select id="technician" name="technicianId" class="frm-field required" required >
+					<select id="technician" name="technicianId" class="frm-field required"  >
 					<option  id='0' value="">Select Technician</option>
 					<c:forEach var="element" items="${technicianList}">
 						<option id=${element.departmentId} value=${element.technicianId}>${element.technicianName}</option>

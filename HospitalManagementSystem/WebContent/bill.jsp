@@ -109,15 +109,15 @@ font-weight: bold;
 	<th>Medicines</th>
 	
 	</tr>
-	<c:forEach var="billList" items="${billList }">
+	<c:forEach var="bill" items="${billList }">
         <tr>
-        	<td>${billList.billNo}</td> 
-            <td>${billList.patientId}</td> 
-            <td>${billList.serialNo}</td>
-            <td>${billList.doctorVisit}</td>
-            <td>${billList.bedCharges}</td>
-            <td>${billList.tests}</td>
-            <td>${billList.medicines}</td>
+        	<td>${bill.billNo}</td> 
+            <td>${bill.patientId}</td> 
+            <td>${bill.serialNo}</td>
+            <td>${bill.doctorVisit}</td>
+            <td>${bill.bedCharges}</td>
+            <td>${bill.tests}</td>
+            <td>${bill.medicines}</td>
         </tr> 
 	</c:forEach>
 

@@ -41,7 +41,7 @@ public class UpdateAppointment extends HttpServlet {
 		// TODO Auto-generated method stub
 		String personId=request.getParameter("personId");
 		String doctorId=request.getParameter("doctorId");
-		Integer fee=Integer.parseInt(request.getParameter("fee"));
+		Float fee=Float.parseFloat(request.getParameter("fee"));
 		Integer regNo=Integer.parseInt(request.getParameter("regNo"));
 		String puspose=request.getParameter("purpose");
 		Date currentDate = new Date(Calendar.getInstance().getTime().getTime());

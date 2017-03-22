@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -83,13 +84,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<h3>Enter <span> Medical Report ID </span></h3>
 			<br>
 			<br>
-				<form action="./ViewOrRemoveOrUpdateMedicalReportController">
+				
 					<div class="single-grid">
 						<div class="single-us">
 						
 						   <form action="./ViewOrRemoveOrUpdateMedicalReportController">
 						   	
-								<input type="text" placeholder="Medical Report ID to ${button}" required="" name="regNo">
+								<input type="text" placeholder="Registeration Number to ${button}" required="" name="regNo1" id="regNo1" >
+								<c:set var="regNo" scope="session" value="${regNo1}"></c:set>
+								<h1>"${regNo1}"</h1>
 								<input type="text" value="${button}" hidden name="selectedValue">
 								<input id="confirm" type="submit" value="SEARCH" >
 						   </form>
@@ -97,7 +100,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<input  type="submit" value="CANCEL" >
 						   </form>
 						</div>
-				</form>
+				
 				
 				</div>
 			</div>			

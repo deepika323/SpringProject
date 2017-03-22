@@ -278,12 +278,4 @@ INFO    2017-03-06 10:36:27,447 [http-nio-4042-exec-51] controller.loginSignUp.L
 INFO    2017-03-06 10:54:38,693 [http-nio-4040-exec-115] controller.staffServlet.ViewMyWardsController  - Ward List viewed by Staff!!
 INFO    2017-03-06 10:54:50,423 [http-nio-4040-exec-116] controller.loginSignUp.LogInController  - Staff Login Successful
 INFO    2017-03-06 10:54:52,255 [http-nio-4040-exec-122] controller.staffServlet.ViewMyWardsController  - Ward List viewed by Staff!!
-INFO    2017-03-06 10:55:06,965 [http-nio-4040-exec-117] controller.loginSignUp.LogInController  - Doctor Login Successful
-INFO    2017-03-06 10:55:12,416 [http-nio-4040-exec-127] controller.doctorServlet.viewAppointmentController  - Listing Appointment!!
-INFO    2017-03-06 10:55:37,630 [http-nio-4040-exec-121] controller.doctorServlet.ViewOrRemoveOrUpdateMedicalReportController  - Looking up for Medical Report!!
-INFO    2017-03-06 10:55:47,405 [http-nio-4040-exec-125] controller.doctorServlet.ViewOrRemoveOrUpdateMedicalReportController  - Looking up for Medical Report!!
-INFO    2017-03-06 10:57:15,337 [http-nio-4042-exec-69] controller.loginSignUp.LogInController  - Admin Login Successful
-INFO    2017-03-06 11:09:02,634 [http-nio-4042-exec-88] controller.loginSignUp.LogInController  - Doctor Login Successful
-INFO    2017-03-06 11:09:19,503 [http-nio-4042-exec-87] controller.loginSignUp.LogInController  - Admin Login Successful
-INFO    2017-03-06 11:14:00,285 [http-nio-4042-exec-90] controller.loginSignUp.LogInController  - Admin Login Successful
-INFO    2017-03-06 11:31:15,622 [http-nio-4042-exec-6] controller.loginSignUp.LogInController  - Admin Login Successful
+

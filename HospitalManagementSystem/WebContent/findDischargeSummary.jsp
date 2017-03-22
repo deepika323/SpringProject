@@ -93,10 +93,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						   <form action="./FindDischargeSummary">
 						   
 				<div class="section_room">
-					<select id="dsummary"  class="frm-field required" required="" name="regNo">
+					<select id="dsummary"  class="frm-field required" required="" name="serialNo">
 					<option  id='D0' value="">Select Discharge Summary</option>
 					<c:forEach var="element" items="${dList}">
 										<option  value=${element.serialNo}>${element.serialNo}</option>
+										<c:set var="serialNo" scope="session" value="${element.serialNo}"></c:set>
 					</c:forEach>						
 					</select>
 				</div>	

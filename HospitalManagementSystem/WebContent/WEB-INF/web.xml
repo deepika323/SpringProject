@@ -44,7 +44,7 @@
     <servlet-name>NewAppointmentController</servlet-name>
     <url-pattern>/NewAppointmentController</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>FindAppointment</display-name>
     <servlet-name>FindAppointment</servlet-name>
@@ -53,8 +53,8 @@
   <servlet-mapping>
     <servlet-name>FindAppointment</servlet-name>
     <url-pattern>/FindAppointment</url-pattern>
-  </servlet-mapping>
-  <servlet>
+  </servlet-mapping> -->
+  <!-- <servlet>
     <description></description>
     <display-name>FindDischargeSummary</display-name>
     <servlet-name>FindDischargeSummary</servlet-name>
@@ -63,7 +63,7 @@
   <servlet-mapping>
     <servlet-name>FindDischargeSummary</servlet-name>
     <url-pattern>/FindDischargeSummary</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>RemoveDischargeSummary</display-name>
@@ -104,7 +104,7 @@
     <servlet-name>FindOrRemoveController</servlet-name>
     <url-pattern>/FindOrRemoveController</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>DeleteAppointment</display-name>
     <servlet-name>DeleteAppointment</servlet-name>
@@ -113,7 +113,7 @@
   <servlet-mapping>
     <servlet-name>DeleteAppointment</servlet-name>
     <url-pattern>/DeleteAppointment</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>UpdateAppointment</display-name>
@@ -204,7 +204,7 @@
     <servlet-name>addMedicalReportController</servlet-name>
     <url-pattern>/addMedicalReportController</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>ViewOrRemoveOrUpdateMedicalReportController</display-name>
     <servlet-name>ViewOrRemoveOrUpdateMedicalReportController</servlet-name>
@@ -213,7 +213,7 @@
   <servlet-mapping>
     <servlet-name>ViewOrRemoveOrUpdateMedicalReportController</servlet-name>
     <url-pattern>/ViewOrRemoveOrUpdateMedicalReportController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>deleteMedicalReport</display-name>
@@ -384,7 +384,7 @@
     <servlet-name>DeleteBill</servlet-name>
     <url-pattern>/DeleteBill</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>FindOrRemoveBillController</display-name>
     <servlet-name>FindOrRemoveBillController</servlet-name>
@@ -393,7 +393,7 @@
   <servlet-mapping>
     <servlet-name>FindOrRemoveBillController</servlet-name>
     <url-pattern>/FindOrRemoveBillController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>UpdateBill</display-name>
@@ -404,7 +404,7 @@
     <servlet-name>UpdateBill</servlet-name>
     <url-pattern>/UpdateBill</url-pattern>
   </servlet-mapping>
-  <servlet>
+  <!-- <servlet>
     <description></description>
     <display-name>SearchBill</display-name>
     <servlet-name>SearchBill</servlet-name>
@@ -413,7 +413,7 @@
   <servlet-mapping>
     <servlet-name>SearchBill</servlet-name>
     <url-pattern>/SearchBill</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <!-- <servlet>
     <description></description>
     <display-name>NewStaffController</display-name>
@@ -454,7 +454,7 @@
     <servlet-name>NewDoctorController</servlet-name>
     <url-pattern>/NewDoctorController</url-pattern>
   </servlet-mapping> -->
-  <servlet>
+ <!--  <servlet>
     <description></description>
     <display-name>FindorRemoveDischargeSummaryController</display-name>
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
@@ -463,7 +463,7 @@
   <servlet-mapping>
     <servlet-name>FindorRemoveDischargeSummaryController</servlet-name>
     <url-pattern>/FindorRemoveDischargeSummaryController</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
   <servlet>
     <description></description>
     <display-name>RemoveStaff</display-name>

@@ -106,10 +106,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<form:input path="staffName" placeholder="Name"/>
 							<form:input path="specialization" placeholder="specialization"/>
 							<form:input path="timing" placeholder="timing"/>
-							<form:input path="doctorAddress" placeholder="Address"/>
-							<form:input path="doctorPhoneNo" placeholder="Phone"/>
+							<form:input path="staffAddress" placeholder="Address"/>
+							<form:input path="staffPhoneNo" placeholder="Phone"/>
 							<form:password path="staffPassword" placeholder="Password"/>
-							<form:input path="departmentId" placeholder="Department"/>
+							<form:input path="departmentId" placeholder="Department(Int)"/>
 							<input id="confirm" type="submit" value="CONFIRM REGISTRATION" >
 						</form:form>
 						

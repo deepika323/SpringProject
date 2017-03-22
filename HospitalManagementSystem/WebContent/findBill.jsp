@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -91,9 +92,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						
 						   <form action="./SearchBill">
 						   	
-								<input type="text" placeholder="Bill ID to ${button}" required="" name="billNo">
+						   	
+						   	<div class="section_room">
+					<select id="dsummary"  class="frm-field required" required="" name="billNo">
+					<option  id='D0' value="">Select Bill number</option>
+					<c:forEach var="element" items="${billList}">
+										<option  value=${element.billNo}>${element.billNo}</option>
+								<c:set var="billNo" scope="session" value="${element.billNo}"></c:set>			
+					</c:forEach>	
+									
+					</select>
+				</div>	
+				
+								<c:set var="selectedValue" scope="session" value="${button}"></c:set>
 								<input type="text" value="${button}" hidden name="selectedValue">
+								
 								<input id="confirm" type="submit" value="SEARCH" >
+						   	
+						   	
+						   	
+								<%-- <input type="text" placeholder="Bill ID to ${button}" required="" name="billNo"> --%>
+								<%-- <input type="text" value="${button}" hidden name="selectedValue"> --%>
+								<!-- <input id="confirm" type="submit" value="SEARCH" > -->
 						   </form>
 							<form action="./admin.jsp">
 								<input  type="submit" value="CANCEL" >

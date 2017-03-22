@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
            <br> <h3 id="2" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Specialization :<span>${staff.specialization}</span></h3> 
            <br> <h3 id="3" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timing :<span>${staff.timing}</span></h3>
            <br> <h3 id="4" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address : <span> ${staff.staffAddress}</span></h3>
-            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone No. :<span>${staff.staffPhoneno}</span></h3>
+            <br> <h3 id="5" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone No. :<span>${staff.staffPhoneNo}</span></h3>
             <br> <h3 id="6" align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Department :<span>${staff.departmentId}</span></h3>
       </div>
             <br>
@@ -90,9 +90,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="leave w3l">
             <div class="single-grid">
 						<div class="single-us">
-						<form action="${servlet}">
-								<input  id="button" type="submit" value="${button}" >
-								<input  name="doctorId" value="${doctorId}" hidden>
+						<form action="./admin.jsp">
+								<input  id="button" type="submit" value="CONTINUE" >
+								<input  name="staffId" value="${staffId}" hidden>
 						   </form>
 						   <form onsubmit="myFunction(); return false;">
 								<input id="a" onclick="saveTextAsFile()"  type="submit" value="SAVE DETAILS AS FILE" >

@@ -38,7 +38,7 @@ public class FindOrRemoveController{
 		}
 		ModelAndView mv=null;
 		mv=new ModelAndView("findAppointment","appointmentList",appointmentList);
-		mv.addObject(selected);
+		mv.addObject("button",selected);
 		return mv;
 		
 	}
